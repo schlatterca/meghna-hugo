@@ -5,16 +5,8 @@ banner:
   bg_image: images/img3.jpg
   icon: ''
   title: Harfenlabor
-  content: |-
-    In 2018, Harfenlabor asked Thünen Institute for Wood Research (Hamburg) to, for the first time ever, examine the wood on the Barberini Harp’s column, as well as other parts (some of which have been examined using different methods) using
-    new non-invasive methodology,
-    and identify the wood species used in the construction of the Barberini Harp. On December 16–18, 2018, Volker Haag and Valentina Zemke from the Thünen Institute for Wood Research carried out anatomical determination of structural features in order to identify the species of wood used to construct the harp,
-    at the National Museum of Musical Instruments (Rome). In close consultation with the museum’s management, Haag and Zemke used the non-destructive high-resolu- tion 3D Reflected Light Microscope. This special microscope has an integrated image analysis soft-
-    ware enabling production of flat observation surfaces in order to identify structural features of wood. The structural features detected
-    on the examined areas of the harp were compared with data held
-    in the scientific wood collection
-    at the Thünen Institute for Wood Research, and with databases
-    of macro and micro wood data. Volker Haag presented the findings in a report to Harfenlabor, dated February 18, 2019.
+  content: In 2018, Harfenlabor asked Thünen Institute for Wood Research (Hamburg)
+    to, for the first time ever, examine the wood on the Barberini Harp’s column.
   button:
     enable: true
     label: Explore Us
