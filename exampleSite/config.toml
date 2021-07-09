@@ -1,5 +1,5 @@
-baseURL = "https://harfenlabor.netlify.app"
-disableLanguages = []
+baseURL = "https://harfenlabor.netlify.com"
+disableLanguages = ["Fr"]
 disqusShortname = ""
 paginate = "6"
 summaryLength = "15"
