@@ -4,14 +4,14 @@ auto_deploy: false
 admin_path: ''
 webhook_url: 
 sections:
+- type: heading
+  label: Harfenlabor
 - type: directory
-  path: Harfenlabor
+  path: exampleSite/content/harfenlabor
   label: Harfenlabor
   create: all
   match: "**/*"
-- type: document
-  path: HL_home
-  label: HL_home
+  new_doc_ext: md
 - type: heading
   label: Blog Post
 - type: directory
