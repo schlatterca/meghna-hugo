@@ -7,7 +7,7 @@ theme = "meghna-hugo"
 themesDir = "../.."
 title = "Meghna"
 [Languages.en]
-contentDir = "content/english"
+contentDir = "content" #was content/english
 copyright = "Copyright &copy; 2020 Designed by [Themefisher](https://themefisher.com) & Developed by [Gethugothemes](https://gethugothemes.com)"
 home = "Home"
 languageCode = "en-us"
