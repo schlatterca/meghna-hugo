@@ -1,4 +1,28 @@
 ---
 label: HL_home
 hide_body: false
-fields: []
+fields:
+- name: titolo_testo
+  type: text
+  config:
+    required: false
+  label: Titolo Testo
+  description: Descrizione testo
+- name: titolo
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: Titolo
+  description: Testo
+- name: titolo_blocchi
+  type: blocks
+  label: Titolo blocchi
+  template_types: []
+  config:
+    min: 
+    max: 
+  description: descrizione blocchi
