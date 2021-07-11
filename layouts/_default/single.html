@@ -17,11 +17,6 @@
         <div class="post-single-content">
           {{ .Content }}
         </div>
-        {%comment%}
-        {{ if site.Params.post_share }}
-        {{ partial "post-share.html" . }}
-        {{ end }}
-        {%endcomment%}
         <!-- comments -->
         <div class="mt-5">
           {{ template "_internal/disqus.html" . }}
