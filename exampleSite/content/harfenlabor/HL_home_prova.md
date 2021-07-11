@@ -4,3 +4,4 @@ titolo_blocchi = []
 titolo_testo = "Una bella giornata"
 
 +++
+Ma che bella giornata al mare!
