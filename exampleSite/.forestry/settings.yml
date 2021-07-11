@@ -7,7 +7,6 @@ sections:
 - type: document
   path: HL_home
   label: HL_home
-  match: "**/*"
 - type: heading
   label: Blog Post
 - type: directory
