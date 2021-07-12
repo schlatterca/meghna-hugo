@@ -5,3 +5,5 @@ titolo_testo = "Una bella giornata"
 
 +++
 Ma che bella giornata al mare!
+
+![](/images/img3.jpg)
