@@ -7,6 +7,6 @@ titolo_blocchi = []
 titolo_testo = "Una bella giornata"
 
 +++
-Ma che bella giornata al mare!
+Ma che bella giornata al mare, forse.
 
 ![](/images/img3.jpg)
