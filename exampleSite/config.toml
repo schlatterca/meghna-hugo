@@ -5,9 +5,9 @@ paginate = "6"
 summaryLength = "15"
 theme = "meghna-hugo"
 themesDir = "../.."
-title = "Meghna"
+title = "Harfenlabor"
 [Languages.en]
-contentDir = "content" #was content/english
+contentDir = "content"
 copyright = "Copyright &copy; 2020 Designed by [Themefisher](https://themefisher.com) & Developed by [Gethugothemes](https://gethugothemes.com)"
 home = "Home"
 languageCode = "en-us"
