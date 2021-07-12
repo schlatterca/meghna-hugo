@@ -2,9 +2,9 @@
 description = "Una giornata al mare, con tanto di testo descrittivo come qui."
 image = "/images/portfolio/portfolio-7.jpg"
 title = "Una giornata"
-titolo = "Al mare, al lago, in montagna, comunque è bella."
+titolo = "Questo testo non comparirà mai."
 titolo_blocchi = []
-titolo_testo = "Una bella giornata"
+titolo_testo = ""
 
 +++
 Ma che bella giornata al mare, forse.
