@@ -1,7 +1,8 @@
 +++
 description = "Una giornata al mare, con tanto di testo descrittivo come qui."
 image = "/images/portfolio/portfolio-7.jpg"
-title = "Una giornata"
+text-area = "Area di testo di cose ok."
+title = "Barberini Harp species identification by Volker Haag and Valentina Zemke"
 titolo = "Questo testo non comparirà mai."
 titolo_blocchi = []
 titolo_testo = ""
