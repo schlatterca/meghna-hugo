@@ -1,6 +1,6 @@
 +++
 description = "Una giornata al mare, con tanto di testo descrittivo come qui."
-image = "/images/img2.jpg"
+image = "/images/portfolio/portfolio-7.jpg"
 title = "Una giornata"
 titolo = "Al mare, al lago, in montagna, comunque è bella."
 titolo_blocchi = []
