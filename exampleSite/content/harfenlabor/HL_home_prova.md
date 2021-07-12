@@ -1,18 +1,17 @@
 +++
-description = "Una giornata al mare, con tanto di testo descrittivo come qui."
+description = "Descrizione meta dell'articolo"
 image = "/images/portfolio/portfolio-7.jpg"
-text-area = "Area di testo di cose ok."
+text-area = "Area di testo che non credo comparirà mai."
 title = "Barberini Harp species identification by Volker Haag and Valentina Zemke"
 titolo = "Questo testo non comparirà mai."
 titolo_blocchi = []
 titolo_testo = ""
 
 +++
-Ma che bella giornata al mare, forse.
-
 ![img](/images/img3.jpg "img_1")
 
-###### Valentina Zemke and Volker Haag of the Thünen Institute for Wood Research testing image resolution for the 3D Reflected Light Microscope’s integrated image analysis software  
+###### Valentina Zemke and Volker Haag of the Thünen Institute for Wood Research testing image resolution for the 3D Reflected Light Microscope’s integrated image analysis software
+
 National Museum of Musical Instruments, Barberini Harp wood examination, Rome, 2018.
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
