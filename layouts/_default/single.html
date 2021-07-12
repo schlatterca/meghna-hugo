@@ -6,16 +6,15 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-8 offset-lg-2 text-center">
-        <ul class="list-inline mb-50">
+        <ul class="list-inline"> <!--THIS ALSO HAD mb-50 AS CLASS-->
           <!--HERE WERE AUTHOR AND DATE ONCE. CHECK VERSION 10/07-->
-          <li class="list-inline-item">{{ .Params.Author }}</li>
-          <li class="list-inline-item">{{ .Date }}</li>
-          <li class="list-inline-item">{{ .Description }}</li>
+          <li class="list-inline-item">{{ .Section }}</li>
+
         </ul>
 
         <h1>{{ .Title }}</h1>
         
-        <img class="img-fluid mb-50 lozad" data-src="{{ .Params.Image | absURL }}" alt="blog-image">
+        <img class="img-fluid lozad" data-src="{{ .Params.Image | absURL }}" alt="blog-image"> <!--THIS ALSO HAD mb-50 AS CLASS-->
         
       </div>
       <div class="col-lg-8 offset-lg-2">
