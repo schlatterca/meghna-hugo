@@ -1,6 +1,7 @@
 +++
 description = "Descrizione meta dell'articolo"
 image = "/images/portfolio/portfolio-7.jpg"
+section = "Focus"
 text-area = "Area di testo che non credo comparirà mai."
 title = "Barberini Harp species identification by Volker Haag and Valentina Zemke"
 titolo = "Questo testo non comparirà mai."
