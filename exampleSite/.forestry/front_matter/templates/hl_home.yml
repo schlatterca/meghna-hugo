@@ -2,11 +2,11 @@
 label: HL_home
 hide_body: false
 fields:
-- name: article_section
+- name: category
   type: text
   config:
     required: false
-  label: article_section
+  label: category
   description: e.g. Focus, Research…
 - name: title
   type: text
