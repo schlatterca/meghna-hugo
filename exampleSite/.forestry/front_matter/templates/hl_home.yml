@@ -2,6 +2,17 @@
 label: HL_home
 hide_body: false
 fields:
+- name: title
+  type: text
+  config:
+    required: false
+  label: title
+- name: description
+  type: text
+  config:
+    required: false
+  label: description
+  description: meta description
 - name: titolo_testo
   type: text
   config:
