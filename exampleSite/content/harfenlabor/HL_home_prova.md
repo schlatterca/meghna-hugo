@@ -9,4 +9,8 @@ titolo_testo = "Una bella giornata"
 +++
 Ma che bella giornata al mare, forse.
 
-![img_1](/images/img3.jpg "img_1")
+###### ![img_1](/images/img3.jpg "img_1")È stato divertente.
+
+E così quella volta siamo andati.
+
+![img_2](/images/image.jpg "img_2")
