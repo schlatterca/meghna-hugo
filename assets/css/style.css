@@ -31,6 +31,7 @@ h5 {
 
 h6 { /* moved from upper to be edited */
   font-weight: 800;
+  font-family: "Quattrocento Sans", sans-serif;
   font-size: 0.7rem; /*edited against 1rem in bootstrap*/
 }
 
