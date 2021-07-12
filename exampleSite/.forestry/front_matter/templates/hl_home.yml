@@ -2,6 +2,12 @@
 label: HL_home
 hide_body: false
 fields:
+- name: section
+  type: text
+  config:
+    required: false
+  label: section
+  description: e.g. Focus, Research…
 - name: title
   type: text
   config:
