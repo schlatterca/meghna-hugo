@@ -1,4 +1,5 @@
 +++
+article_section = "Focus"
 description = "Descrizione meta dell'articolo"
 image = "/images/portfolio/portfolio-7.jpg"
 section = "Focus"
