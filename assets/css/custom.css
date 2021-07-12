@@ -3,3 +3,7 @@ p > img {
 	border-style: none;
 	width: 100%;
 }
+
+.row {
+	color: black; /* for texts in articles */
+}
