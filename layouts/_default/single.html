@@ -6,16 +6,10 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-8 offset-lg-2 text-center">
-        <ul class="list-inline"> <!--THIS ALSO HAD mb-50 AS CLASS-->
+        <ul class="list-inline">
           <!--HERE WERE AUTHOR AND DATE ONCE. CHECK VERSION 10/07-->
-          <li class="list-inline-item">{{ .Article_Section }}</li>
-
-          <li class="list-inline-item">{{ .Section }}</li>
-
-          <li class="list-inline-item">{{ .Articlesection }}</li>
-
+          <li class="list-inline-item">{{ .Params.Author }}</li>
           <li class="list-inline-item">{{ .Date }}</li>
-
         </ul>
 
         <h1>{{ .Title }}</h1>
