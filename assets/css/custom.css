@@ -7,3 +7,10 @@ p > img {
 .row {
 	color: black; /* for texts in articles */
 }
+
+.list-inline-item { /* Section */
+	color: red;
+	font-weight: 800;
+	font-family: "Quattrocento Sans", sans-serif;
+	font-size: 0.7rem;
+}
