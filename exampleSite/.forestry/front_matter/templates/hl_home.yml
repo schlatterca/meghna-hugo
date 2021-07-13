@@ -2,23 +2,17 @@
 label: HL_home
 hide_body: false
 fields:
-- name: category
+- name: description
   type: text
   config:
     required: false
-  label: category
+  label: description
   description: e.g. Focus, Research…
 - name: title
   type: text
   config:
     required: false
   label: title
-- name: description
-  type: text
-  config:
-    required: false
-  label: description
-  description: meta description
 - name: image
   type: file
   config:
