@@ -244,6 +244,7 @@ a:hover {
 
 .section {
   padding: 30px 0; /*was 100px 0*/
+  margin-left: 50px; /*added, same margin as sidebar's width*/
 }
 
 @media (max-width: 480px) {
