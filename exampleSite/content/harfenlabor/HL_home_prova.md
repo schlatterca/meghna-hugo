@@ -2,7 +2,7 @@
 article_section = "Focus"
 category = "Focus"
 description = "Descrizione meta dell'articolo"
-image = "/images/portfolio/portfolio-7.jpg"
+image = ""
 section = "Focus"
 text-area = "Area di testo che non credo comparirà mai."
 title = "Barberini Harp species identification by Volker Haag and Valentina Zemke"
