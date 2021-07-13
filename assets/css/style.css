@@ -247,7 +247,7 @@ a:hover {
   margin-left: 50px; /*added, same margin as sidebar's width*/
 }
 
-@media (max-width: 480px) {
+/*@media (max-width: 480px) {
   .section {
     padding: 50px 0;
   }
@@ -265,7 +265,7 @@ a:hover {
 
 .section-xs {
   padding: 50px 0;
-}
+}*/
 
 .btn:focus {
   color: #ddd;
@@ -425,6 +425,7 @@ a:hover {
   left: 0;
   overflow-x: hidden;
   padding-top: 20px;
+  transition: 0.3s ease-out;
 }
 
 .navbar-dark .navbar-nav .active>.nav-link,
