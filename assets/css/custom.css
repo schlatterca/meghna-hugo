@@ -1,9 +1,9 @@
 /*SIDE MENU*/
 .navbar-brand {
-	transform: rotate(270deg) scale(0.5);
-	margin-left: -175px; /* edit pls ??? */
-	margin-top: -150px; /* edit pls ??? */
-	transition: none;
+	/*transform: rotate(270deg) scale(0.5);*/
+	/*margin-left: -175px;*/ /* edit pls ??? */
+	/*margin-top: -150px;*/ /* edit pls ??? */
+	/*transition: none;*/
 }
 
 .navbar-expand-lg .navbar-nav {
