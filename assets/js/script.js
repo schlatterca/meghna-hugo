@@ -7,13 +7,13 @@ var mini = true;
 function toggleSidebar() {
   if (mini) {
     console.log("opening sidebar");
-    document.getElementsByClassName("navigation").style.width = "400px";
-    document.getElementsByClassName("section").style.marginLeft = "400px";
+    document.getElementsByClassName("navigation")[0].style.width = "400px";
+    document.getElementsByClassName("section")[0].style.marginLeft = "400px";
     this.mini = false;
   } else {
     console.log("closing sidebar");
-    document.getElementsByClassName("navigation").style.width = "50px";
-    document.getElementsByClassName("section").style.marginLeft = "50px";
+    document.getElementsByClassName("navigation")[0].style.width = "50px";
+    document.getElementsByClassName("section")[0].style.marginLeft = "50px";
     this.mini = true;
   }
 }
