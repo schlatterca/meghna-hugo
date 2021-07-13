@@ -1,4 +1,26 @@
 /* ========================================================================= */
+/*	CARLO SCRIPT: HOVERING SIDEBAR
+/* ========================================================================= */
+
+var mini = true;
+
+function toggleSidebar() {
+  if (mini) {
+    //console.log("opening sidebar");
+    document.getElementsByClassName("navigation").style.width = "400px";
+    document.getElementsByClassName("section").style.marginLeft = "400px";
+    this.mini = false;
+  } else {
+    //console.log("closing sidebar");
+    document.getElementsByClassName("navigation").style.width = "50px";
+    document.getElementsByClassName("section").style.marginLeft = "50px";
+    this.mini = true;
+  }
+}
+
+
+
+/* ========================================================================= */
 /*	Page Preloader
 /* ========================================================================= */
 
