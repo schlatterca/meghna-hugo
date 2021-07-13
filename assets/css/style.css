@@ -70,7 +70,8 @@ figure {
 }
 
 a {
-  color: #fff;
+  color: black; /*was white*/
+  text-decoration: underline;
   transition: all .3s ease-in 0s;
 }
 
@@ -81,7 +82,7 @@ iframe {
 a,
 a:focus,
 a:hover {
-  text-decoration: none;
+  /*text-decoration: none;*/
   outline: 0;
 }
 
@@ -211,12 +212,12 @@ iframe {
   border: 0;
 }
 
-a,
+/*a,
 a:focus,
 a:hover {
   text-decoration: none;
   outline: 0;
-}
+}*/
 
 a:focus,
 a:hover {
