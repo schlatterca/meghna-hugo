@@ -1,3 +1,20 @@
+/*SIDE MENU*/
+.navbar-brand {
+	transform: rotate(270deg);
+	margin-left: -90px; /* edit pls ??? */
+	margin-top: -140px; /* edit pls ??? */
+}
+
+.navbar-expand-lg .navbar-nav {
+	-ms-flex-direction: column;
+	flex-direction: column;
+}
+
+.navbar-collapse {
+	display: block; /* was flex!important */
+}
+
+/*ARTICLES*/
 p > img {
 	vertical-align: top;
 	border-style: none;
