@@ -7,8 +7,8 @@ sections:
 - type: heading
   label: Harfenlabor
 - type: directory
-  path: exampleSite/content/harfenlabor
-  label: Harfenlabor
+  path: exampleSite/content/focus
+  label: Focus
   create: all
   match: "**/*"
   new_doc_ext: md
