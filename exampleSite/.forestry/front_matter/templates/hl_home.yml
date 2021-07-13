@@ -24,15 +24,6 @@ fields:
   config:
     maxSize: 64
   label: image
-- name: text-area
-  type: textarea
-  default: ''
-  config:
-    required: false
-    wysiwyg: false
-    schema:
-      format: markdown
-  label: text-area
 - name: titolo
   type: textarea
   default: ''
