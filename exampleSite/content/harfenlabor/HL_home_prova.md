@@ -1,7 +1,7 @@
 +++
 article_section = "Focus"
 category = "Focus"
-description = "Descrizione meta dell'articolo"
+description = "Focus"
 image = ""
 section = "Focus"
 text-area = "Area di testo che non credo comparirà mai."
