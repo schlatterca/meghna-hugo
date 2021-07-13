@@ -7,7 +7,7 @@ sections:
 - type: heading
   label: Harfenlabor
 - type: directory
-  path: exampleSite/content/focus
+  path: exampleSite/content/harfenlabor
   label: Focus
   create: all
   match: "**/*"
