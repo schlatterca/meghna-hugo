@@ -8,7 +8,7 @@
       <div class="col-lg-8 offset-lg-2 text-center">
         <ul class="list-inline">
           <!--HERE WERE AUTHOR AND DATE ONCE. CHECK VERSION 10/07-->
-          <li class="list-inline-item">{{ .Category }}</li>
+          <li class="list-inline-item">{{ .Description }}</li>
         </ul>
 
         <h1>{{ .Title }}</h1>
@@ -18,14 +18,10 @@
         <div class="post-single-content">
           {{ .Content }}
         </div>
-        {%comment%}
-        {{ if site.Params.post_share }}
-        {{ partial "post-share.html" . }}
-        {{ end }}
-        {%endcomment%}
         <!-- comments -->
         <div class="mt-5">
           {{ template "_internal/disqus.html" . }}
+          {{/* .Date */}} <!--JUST TO TRY THE COMMENT-->
         </div>
       </div>
     </div>
