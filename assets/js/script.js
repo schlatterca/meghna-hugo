@@ -6,14 +6,16 @@ var mini = true;
 
 function toggleSidebar() {
   if (mini) {
-    console.log("opening sidebar");
     document.getElementsByClassName("navigation")[0].style.width = "400px";
     document.getElementsByClassName("section")[0].style.marginLeft = "400px";
+
+    document.getElementById("navbar_sidemenu").style.marginLeft = "50px";
     this.mini = false;
   } else {
-    console.log("closing sidebar");
     document.getElementsByClassName("navigation")[0].style.width = "50px";
     document.getElementsByClassName("section")[0].style.marginLeft = "50px";
+
+    document.getElementById("navbar_sidemenu").style.marginLeft = "-100px";
     this.mini = true;
   }
 }
