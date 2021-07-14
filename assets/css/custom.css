@@ -14,7 +14,7 @@
 }
 
 .nav-link { /* continue from here !!! */
-	color: black;
+	color: black!important;
 }
 
 .navbar-expand-lg .navbar-nav {
