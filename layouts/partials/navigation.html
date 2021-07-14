@@ -34,11 +34,7 @@
 			</div>
 
 			<a class="navbar-brand p-0" href="{{ .Site.BaseURL | relLangURL }}">
-				{{ if site.Params.logo }}
-				<img data-src="{{ site.Params.logo | absURL }}" alt="{{ .Site.Title }}" height="42">
-				{{ else }}
-				{{ site.Title }}
-				{{ end }}
+				<img src="/images/logo.png" alt="Harfenlabor" height="42">
 			</a>
 			
 		</nav>
