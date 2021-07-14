@@ -9,13 +9,13 @@ function toggleSidebar() {
     document.getElementsByClassName("navigation")[0].style.width = "400px";
     document.getElementsByClassName("section")[0].style.marginLeft = "400px";
 
-    document.getElementById("navigation").style.marginLeft = "60px";
+    document.getElementById("navigation").style.marginLeft = "0px";
     this.mini = false;
   } else {
     document.getElementsByClassName("navigation")[0].style.width = "50px";
     document.getElementsByClassName("section")[0].style.marginLeft = "50px";
 
-    document.getElementById("navigation").style.marginLeft = "-120px";
+    document.getElementById("navigation").style.marginLeft = "-290px";
     this.mini = true;
   }
 }
