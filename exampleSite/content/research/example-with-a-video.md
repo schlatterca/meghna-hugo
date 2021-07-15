@@ -1,7 +1,7 @@
 +++
 description = "Research — Interview"
 image = ""
-title = "Example with a video"
+title = "Video Example"
 titolo = ""
 titolo_blocchi = []
 
