@@ -17,37 +17,33 @@ languageCode = "en-us"
 languageName = "En"
 weight = 1
 [[Languages.en.menu.main]]
-name = "about"
-url = "#about"
+name = "focus"
+url = "/focus"
 weight = 1
 [[Languages.en.menu.main]]
-name = "services"
-url = "#services"
+name = "research"
+url = "/research"
 weight = 2
 [[Languages.en.menu.main]]
-name = "portfolio"
+name = "timeline"
 url = "#portfolio"
 weight = 3
 [[Languages.en.menu.main]]
-name = "team"
+name = "map"
 url = "#team"
 weight = 4
 [[Languages.en.menu.main]]
-name = "pricing"
+name = "mediathek"
 url = "#pricing"
 weight = 5
 [[Languages.en.menu.main]]
-name = "blog"
+name = "index"
 url = "#blog"
 weight = 6
 [[Languages.en.menu.main]]
-name = "contact"
-url = "#contact"
+name = "about"
+url = "#about"
 weight = 7
-[[Languages.en.menu.main]]
-name = "themefisher"
-url = "https://themefisher.com/"
-weight = 8
 [Languages.fr]
 contentDir = "content/french"
 copyright = "Copyright &copy; 2020 Designed by [Themefisher](https://themefisher.com) & Developed by [Gethugothemes](https://gethugothemes.com)"
@@ -83,10 +79,6 @@ weight = 6
 name = "contact"
 url = "#contact"
 weight = 7
-[[Languages.fr.menu.main]]
-name = "themefisher"
-url = "https://themefisher.com/"
-weight = 8
 [params]
 author = "Themefisher"
 description = "Responsive Multipurpose Parallax Hugo Template"
