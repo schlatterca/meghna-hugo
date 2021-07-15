@@ -1,6 +1,6 @@
 <section class="sticky-top navigation" onmouseover="toggleSidebar()" onmouseout="toggleSidebar()">
 	<div class="container">
-		<nav class="navbar navbar-expand-lg navbar-dark" style="width: 100%" id="navbar_sidemenu">
+		<nav class="navbar navbar-expand-lg navbar-dark" style="width: 100%; align-items: flex-start" id="navbar_sidemenu">
 			<div class="navbar" id="navigation" style="margin-left: -290px; display: -webkit-box">
 				<ul class="navbar-nav ml-auto">
 					{{ range site.Menus.main }}
@@ -10,27 +10,6 @@
 					</li>
 					{{ end }}
 				</ul>
-				<!-- Language List -->
-				{{- if site.IsMultiLingual }}
-				<select id="select-language" onchange="location = this.value;">
-					{{ $siteLanguages := site.Languages}}
-					{{ $pageLang := .Page.Lang}}
-					{{ range .Page.AllTranslations }}
-					{{ $translation := .}}
-					{{ range $siteLanguages }}
-					{{ if eq $translation.Lang .Lang }}
-					{{ $selected := false }}
-					{{ if eq $pageLang .Lang}}
-					<option id="{{ $translation.Language }}" value="{{ $translation.Permalink }}" selected>{{ .LanguageName }}
-					</option>
-					{{ else }}
-					<option id="{{ $translation.Language }}" value="{{ $translation.Permalink }}">{{ .LanguageName }}</option>
-					{{ end }}
-					{{ end }}
-					{{ end }}
-					{{ end }}
-				</select>
-				{{ end }}
 			</div>
 
 			<a class="navbar-brand p-0" href="{{ .Site.BaseURL | relLangURL }}">
