@@ -1,5 +1,5 @@
 +++
-description = "Research – Performance Practice"
+description = "Research — Performance Practice"
 image = ""
 title = "Who played the Barberini Harp? Harpists of the first half of the 17th century in Rome by Alexandra Ziane"
 titolo = ""
