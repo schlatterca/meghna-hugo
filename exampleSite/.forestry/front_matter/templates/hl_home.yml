@@ -36,3 +36,5 @@ fields:
     min: 
     max: 
   description: descrizione blocchi
+pages:
+- exampleSite/content/research/example-with-a-video.md
