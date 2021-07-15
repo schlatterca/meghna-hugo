@@ -1,5 +1,5 @@
 +++
-description = "Research — Interview"
+description = "Research — Video Example"
 image = ""
 title = "Video Example"
 titolo = ""
@@ -16,4 +16,4 @@ And then again, excepteur sint occaecat cupidatat non proident, sunt in culpa qu
 
 <div class="embed-responsive embed-responsive-16by9"> <iframe src="https://player.vimeo.com/video/430690235" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe> </div>
 
-###### [Night Hawk](https://vimeo.com/367709381 "STARRY NIGHT") from [Cynthia Maar](https://vimeo.com/367709381 "Nicolai") on [Vimeo](https://vimeo.com/367709381 "Vimeo").
+###### [A Mind Sang](https://vimeo.com/367709381 "STARRY NIGHT") from [Cynthia Maar](https://vimeo.com/367709381 "Nicolai") on [Vimeo](https://vimeo.com/367709381 "Vimeo").
