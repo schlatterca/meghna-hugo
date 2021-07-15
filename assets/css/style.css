@@ -105,7 +105,7 @@ a:hover {
 
 .btn {
   background-color: transparent;
-  color: #fff;
+  color: black; /*was white*/
   padding: 10px 30px;
   border-radius: 0;
   transition: all .3s ease-in 0s;
@@ -311,7 +311,7 @@ a:hover {
   text-transform: capitalize;
   font-weight: 700;
   font-size: 38px;
-  color: #fff;
+  color: black; /*was white*/
 }
 
 .title h2 span {
@@ -1238,7 +1238,7 @@ a:hover {
 }
 
 .post-block {
-  background-color: #292F36;
+  background-color: ##eeeae8; /*was #292F36*/
   margin-bottom: 10px;
 }
 
