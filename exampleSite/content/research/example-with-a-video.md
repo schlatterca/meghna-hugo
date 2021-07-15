@@ -16,6 +16,6 @@ Lipsum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod 
 
 And then again, excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
-<div class="embed-responsive embed-responsive-16by9"> <iframe src="[https://player.vimeo.com/video/367709381?color=ffffff&title=0&byline=0&portrait=0](https://player.vimeo.com/video/367709381?color=ffffff&title=0&byline=0&portrait=0 "https://player.vimeo.com/video/367709381?color=ffffff&title=0&byline=0&portrait=0")" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe> </div>
+<div class="embed-responsive embed-responsive-16by9"> <iframe src="" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe> </div>
 
 ###### Another music video.
