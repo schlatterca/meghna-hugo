@@ -15,7 +15,7 @@ function toggleSidebar() {
     document.getElementsByClassName("navigation")[0].style.width = "50px";
     document.getElementsByClassName("section")[0].style.marginLeft = "50px";
 
-    document.getElementsByClassName("navbar-left")[0].style.marginLeft = "-210px";
+    document.getElementsByClassName("navbar-left")[0].style.marginLeft = "-290px";
     this.mini = true;
   }
 }
