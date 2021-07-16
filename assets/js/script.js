@@ -10,12 +10,14 @@ function toggleSidebar() {
     document.getElementsByClassName("section")[0].style.marginLeft = "400px";
 
     document.getElementsByClassName("navbar-left")[0].style.marginLeft = "0px";
+    document.getElementsByClassName("navbar-brand")[0].style.marginLeft = "20px";
     this.mini = false;
   } else {
     document.getElementsByClassName("navigation")[0].style.width = "50px";
     document.getElementsByClassName("section")[0].style.marginLeft = "50px";
 
     document.getElementsByClassName("navbar-left")[0].style.marginLeft = "-290px";
+    document.getElementsByClassName("navbar-brand")[0].style.marginLeft = "-30px";
     this.mini = true;
   }
 }
