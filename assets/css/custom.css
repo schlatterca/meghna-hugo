@@ -1,6 +1,6 @@
 /*SIDE MENU*/
 .navbar {
-	flex-wrap: row nowrap;
+	flex-wrap: row nowrap!important;
 }
 
 .navbar-brand {
@@ -53,6 +53,10 @@
 	background: red;
 	color: black;
 	padding-left: 90px;
+	position: fixed;
+	width: 100vw;
+	bottom: 0;
+	left: 0;
 }
 
 .footer_title {
