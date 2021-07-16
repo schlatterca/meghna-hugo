@@ -1,4 +1,8 @@
 /*SIDE MENU*/
+.navbar {
+	flex-wrap: row nowrap;
+}
+
 .navbar-brand {
 	transition: margin-left 0.3s ease-out;
 	transform: rotate(270deg) scale(0.5);
@@ -29,7 +33,7 @@
 	text-transform: capitalize;
 }
 .nav-link:hover {
-	color: red;
+	color: red!important;
 }
 
 .navbar-expand-lg .navbar-nav {
@@ -42,6 +46,17 @@
 .navbar-collapse {
 	display: flex!important;
 	margin-left: -90px;
+}
+
+/*FOOTER*/
+.footer_bg {
+	background: red;
+	color: black;
+	padding-left: 90px;
+}
+
+.footer_title {
+	margin-bottom: 0px;
 }
 
 /*ARTICLES*/
