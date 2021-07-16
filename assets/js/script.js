@@ -1,24 +1,37 @@
 /* ========================================================================= */
-/*	CARLO SCRIPT: HOVERING SIDEBAR
+/*	CARLO SCRIPT: HOVERING SIDEBAR + FOOTER
 /* ========================================================================= */
 
-var mini = true;
+var sidebar = true;
 
 function toggleSidebar() {
-  if (mini) {
+  if (sidebar) {
     document.getElementsByClassName("navigation")[0].style.width = "400px";
     document.getElementsByClassName("section")[0].style.marginLeft = "400px";
 
     document.getElementsByClassName("navbar-left")[0].style.marginLeft = "0px";
     document.getElementsByClassName("navbar-brand")[0].style.marginLeft = "20px";
-    this.mini = false;
+    this.sidebar = false;
   } else {
     document.getElementsByClassName("navigation")[0].style.width = "50px";
     document.getElementsByClassName("section")[0].style.marginLeft = "50px";
 
     document.getElementsByClassName("navbar-left")[0].style.marginLeft = "-290px";
     document.getElementsByClassName("navbar-brand")[0].style.marginLeft = "-30px";
-    this.mini = true;
+    this.sidebar = true;
+  }
+}
+
+
+var footer = true;
+
+function toggleFooter() {
+  if (footer) {
+    document.getElementsByClassName("footer_bg")[0].style.height = "150px";
+    this.footer = false;
+  } else {
+    document.getElementsByClassName("footer_bg")[0].style.height = "auto";
+    this.footer = true;
   }
 }
 
