@@ -1,6 +1,9 @@
 [markup.goldmark.renderer]
 unsafe = true
 
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
 baseURL = "https://harfenlabor.netlify.com"
 disableLanguages = ["Fr"]
 disqusShortname = ""
