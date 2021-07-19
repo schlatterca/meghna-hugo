@@ -33,7 +33,7 @@
 	text-transform: capitalize;
 }
 .nav-link:hover {
-	color: red!important;
+	color: #EB4C44!important;
 }
 
 .navbar-expand-lg .navbar-nav {
@@ -50,7 +50,7 @@
 
 /*FOOTER*/
 .footer_bg {
-	background: red;
+	background: #EB4C44;
 	color: black;
 	padding-left: 90px;
 	position: fixed;
@@ -83,7 +83,7 @@ p > img {
 }
 
 .list-inline-item { /* Section */
-	color: red;
+	color: #EB4C44;
 	font-weight: 800;
 	font-family: "Quattrocento Sans", sans-serif;
 	font-size: 0.7rem;
