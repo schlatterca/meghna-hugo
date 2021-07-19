@@ -30,7 +30,7 @@ function toggleFooter() {
     document.getElementsByClassName("footer_bg")[0].style.height = "150px";
     this.footer = false;
   } else {
-    document.getElementsByClassName("footer_bg")[0].style.height = "auto";
+    document.getElementsByClassName("footer_bg")[0].style.height = "28px";
     this.footer = true;
   }
 }
