@@ -71,6 +71,19 @@
 
 .footer_title {
 	margin-bottom: 0px;
+	cursor: pointer;
+}
+
+.footer_title a{
+	text-decoration: none;
+}
+
+.footer_title a:hover{
+	color: white;
+}
+
+.footer_inside_text {
+	position: absolute;
 }
 
 /*ARTICLES*/
