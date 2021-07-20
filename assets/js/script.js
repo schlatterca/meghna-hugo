@@ -35,10 +35,18 @@ function toggleFooter() {
   }
 }
 
+var footertexts= document.querySelectorAll('.footer_text_'+e);
 function showFooterText(e) {
-	console.log(e);
-	console.log(document.getElementsByClassName("footer_text_"+e));
-	console.log("ciao");
+	for(var i = 0; i < footertexts.length; ++i) {
+		console.log("ok",i);
+		if(i == e){
+			document.getElementsByClassName("footer_text_"+e)[i+1].classList.add('visible');
+			console.log("ok2",i);
+		} else {
+			document.getElementsByClassName("footer_text_"+e)[i+1].classList.remove('visible');
+			console.log("ok3",i);
+		}
+	}
 }
 
 
