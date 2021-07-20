@@ -27,10 +27,10 @@ var footer = true;
 
 function toggleFooter() {
   if (footer) {
-    document.getElementById("footer")[0].style.height = "150px";
+    document.getElementById("footer").style.height = "150px";
     this.footer = false;
   } else {
-    document.getElementById("footer")[0].style.height = "28px";
+    document.getElementById("footer").style.height = "28px";
     this.footer = true;
   }
 }
