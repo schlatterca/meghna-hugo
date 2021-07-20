@@ -35,16 +35,23 @@ function toggleFooter() {
 function showFooterText(e) {
 	var footertexts= document.querySelectorAll('.footer_text_'+e);
 	for(var i = 0; i < footertexts.length; ++i) {
-		console.log("ok",i);
-		if(i == e){
-			document.getElementsByClassName("footer_text_"+e)[i].classList.remove('notvisible');
-			document.getElementsByClassName("footer_text_"+e)[i].classList.add('visible');
-			console.log("ok2",i);
-		} else {
-			document.getElementsByClassName("footer_text_"+e)[i].classList.remove('visible');
-			document.getElementsByClassName("footer_text_"+e)[i].classList.add('notvisible');
-			console.log("ok3",i);
-		}
+		document.getElementsByClassName("footer_text_1")[i].classList.remove('visible');
+		document.getElementsByClassName("footer_text_1")[i].classList.add('notvisible');
+		document.getElementsByClassName("footer_text_2")[i].classList.remove('visible');
+		document.getElementsByClassName("footer_text_2")[i].classList.add('notvisible');
+		document.getElementsByClassName("footer_text_3")[i].classList.remove('visible');
+		document.getElementsByClassName("footer_text_3")[i].classList.add('notvisible');
+		document.getElementsByClassName("footer_text_4")[i].classList.remove('visible');
+		document.getElementsByClassName("footer_text_4")[i].classList.add('notvisible');
+		document.getElementsByClassName("footer_text_5")[i].classList.remove('visible');
+		document.getElementsByClassName("footer_text_5")[i].classList.add('notvisible');
+		document.getElementsByClassName("footer_text_6")[i].classList.remove('visible');
+		document.getElementsByClassName("footer_text_6")[i].classList.add('notvisible');
+
+		document.getElementsByClassName("footer_text_"+e)[i].classList.remove('notvisible');
+		document.getElementsByClassName("footer_text_"+e)[i].classList.add('visible');
+
+		console.log(e, i);
 	}
 }
 
