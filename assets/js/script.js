@@ -3,7 +3,6 @@
 /* ========================================================================= */
 
 var sidebar = true;
-
 function toggleSidebar() {
   if (sidebar) {
     document.getElementsByClassName("navigation")[0].style.width = "400px";
@@ -22,9 +21,7 @@ function toggleSidebar() {
   }
 }
 
-
 var footer = true;
-
 function toggleFooter() {
   if (footer) {
     document.getElementById("footer").style.height = "150px";
@@ -35,8 +32,8 @@ function toggleFooter() {
   }
 }
 
-var footertexts= document.querySelectorAll('.footer_text_'+e);
 function showFooterText(e) {
+	var footertexts= document.querySelectorAll('.footer_text_'+e);
 	for(var i = 0; i < footertexts.length; ++i) {
 		console.log("ok",i);
 		if(i == e){
