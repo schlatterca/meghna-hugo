@@ -90,3 +90,12 @@ p > img {
 	font-family: "Quattrocento Sans", sans-serif;
 	font-size: 0.7rem;
 }
+
+/*GENERAL*/
+.visible {
+	opacity: 1;
+}
+
+.notvisible {
+	opacity: 0;
+}
