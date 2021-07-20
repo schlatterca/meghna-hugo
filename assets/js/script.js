@@ -37,10 +37,10 @@ function showFooterText(e) {
 	for(var i = 0; i < footertexts.length; ++i) {
 		console.log("ok",i);
 		if(i == e){
-			document.getElementsByClassName("footer_text_"+e)[i+1].classList.add('visible');
+			document.getElementsByClassName("footer_text_"+e)[i].classList.add('visible');
 			console.log("ok2",i);
 		} else {
-			document.getElementsByClassName("footer_text_"+e)[i+1].classList.remove('visible');
+			document.getElementsByClassName("footer_text_"+e)[i].classList.remove('visible');
 			console.log("ok3",i);
 		}
 	}
