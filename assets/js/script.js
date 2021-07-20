@@ -35,6 +35,12 @@ function toggleFooter() {
   }
 }
 
+function showFooterText(e) {
+	console.log(e);
+	console.log(document.getElementsByClassName("footer_text_"+e));
+	console.log("ciao");
+}
+
 
 
 /* ========================================================================= */
