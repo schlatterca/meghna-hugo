@@ -49,7 +49,8 @@
 }
 
 /*FOOTER*/
-.footer_bg {
+#footer {
+	height: 26px;
 	background: #f54238;
 	color: black;
 	padding-left: 90px;
@@ -59,14 +60,12 @@
 	left: 0;
 	height: auto;
 	transition: height 0.3s ease-out;
+}
 
+.footer_bg {
 	display: inline-flex;
 	justify-content: space-between;
 	padding-right: 40px;
-
-	height: 26px;
-
-	transition: height 0.3s ease-out;
 }
 
 .footer_title {
