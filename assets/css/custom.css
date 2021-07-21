@@ -98,7 +98,7 @@ p > img {
 }
 
 .list-inline-item { /* Section */
-	color: #f54238 /*should be #EB4C44*/
+	color: #f54238; /*should be #EB4C44*/
 	font-weight: 800;
 	font-family: "Quattrocento Sans", sans-serif;
 	font-size: 0.7rem;
@@ -111,4 +111,17 @@ p > img {
 
 .notvisible {
 	opacity: 0;
+}
+
+/*OVERRIDE BOOTSTRAP*/
+@media (min-width: 576px) {
+	.container {
+		max-width: 960px!important;
+	}
+}
+
+@media (min-width: 768px) {
+	.container {
+		max-width: 960px!important;
+	}
 }
