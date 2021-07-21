@@ -17,7 +17,7 @@ var fuseOptions = {
 
 
 //var searchQuery = param("t");
-var searchQuery = 'Orazio Michi'
+var searchQuery = 'persontags'
 
 if(searchQuery){
   $("#search-query").val(searchQuery);
