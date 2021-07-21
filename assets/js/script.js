@@ -24,7 +24,7 @@ function toggleSidebar() {
 var footer = true;
 function toggleFooter() {
   if (footer) {
-    document.getElementById("footer").style.height = "150px";
+    document.getElementById("footer").style.height = "250px";
     this.footer = false;
   } else {
     document.getElementById("footer").style.height = "28px";
