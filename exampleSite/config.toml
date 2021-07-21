@@ -1,17 +1,3 @@
-[markup.goldmark.renderer]
-unsafe = true
-
-[outputs]
-  home = ["HTML", "RSS", "JSON"]
-
-baseURL = "https://harfenlabor.netlify.com"
-disableLanguages = ["Fr"]
-disqusShortname = ""
-paginate = "6"
-summaryLength = "15"
-theme = "meghna-hugo"
-themesDir = "../.."
-title = "Harfenlabor"
 [Languages.en]
 contentDir = "content"
 copyright = "Copyright &copy; 2020 Designed by [Themefisher](https://themefisher.com) & Developed by [Gethugothemes](https://gethugothemes.com)"
@@ -82,9 +68,21 @@ weight = 6
 name = "contact"
 url = "#contact"
 weight = 7
+[markup.goldmark.renderer]
+unsafe = true
+[outputs]
+baseURL = "https://harfenlabor.netlify.com"
+disableLanguages = ["Fr"]
+disqusShortname = ""
+home = ["HTML", "RSS", "JSON"]
+paginate = "6"
+summaryLength = "15"
+theme = "meghna-hugo"
+themesDir = "../.."
+title = "Harfenlabor"
 [params]
-author = "Themefisher"
-description = "Responsive Multipurpose Parallax Hugo Template"
+author = "Harfenlabor"
+description = "Hugo Template"
 google_analytics_id = ""
 logo = "images/logo.png"
 post_share = true
