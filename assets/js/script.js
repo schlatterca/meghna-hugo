@@ -4,13 +4,15 @@
 
 function toggleSidebar() {
   if (document.getElementsByClassName("navigation")[0].style.width == "50px") {
-  	var sidebar = true;
+  	var sidebar = false;
+  	return
   } else {
   	var sidebar = false;
+  	return
   }
 
   console.log(sidebar);
-  
+
   if (sidebar) {
     document.getElementsByClassName("navigation")[0].style.width = "400px";
     document.getElementsByClassName("section")[0].style.marginLeft = "400px";
