@@ -17,7 +17,7 @@ var fuseOptions = {
 
 
 //var searchQuery = param("t");
-var searchQuery = 'Video Example'
+var searchQuery = 'persontags'
 
 if(searchQuery){
   $("#search-query").val(searchQuery);
