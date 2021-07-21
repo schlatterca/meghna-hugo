@@ -23,19 +23,35 @@ if(searchQuery){
   $("#search-query").val(searchQuery);
   executeSearch(searchQuery);
   console.log("ok", searchQuery);
+
+  getJsonArray();
+
 }else {
   $('#search-results').append("<p>Please enter a word or phrase above</p>");
 }
 
 
 
+function getJsonArray(){
+  $.ajax({
+      url : '/index.json',
+      type: 'GET',
+      success : socialservice
+  })
+}
 
+
+function socialservice(data){
+  json= data;
+  for (var key in json) {
+      if (json.hasOwnProperty(key)) {
+      var item = json[key];
+      alert(item.persontags); }}
+  return false;
+}
 
 
 function executeSearch(searchQuery){
-  var json = "/index.json";
-  var obj = JSON.parse(json);
-  console.log(obj);
 
 
 
