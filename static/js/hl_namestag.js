@@ -24,7 +24,7 @@ if(searchQuery){
   executeSearch(searchQuery);
   console.log("ok", searchQuery);
 
-  getJsonArray();
+  getJsonArray(); //??? ###
 
 }else {
   $('#search-results').append("<p>Please enter a word or phrase above</p>");
@@ -46,7 +46,7 @@ function socialservice(data){
   for (var key in json) {
       if (json.hasOwnProperty(key)) {
       var item = json[key];
-      alert(item.persontags); }}
+      console.log(item.persontags); }}
   return false;
 }
 
