@@ -3,6 +3,7 @@ article_section = "Focus"
 category = "Focus"
 description = "Focus"
 image = ""
+person_tag = ["Valentina Zemke", "Volker Haag"]
 section = "Focus"
 text-area = "Area di testo che non credo comparirà mai."
 title = "Barberini Harp wood species identification by Volker Haag and Valentina Zemke"

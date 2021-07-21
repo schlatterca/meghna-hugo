@@ -24,5 +24,6 @@ fields:
   label: Person Tag
   description: Person quoted in the article (for indexing purpose).
 pages:
+- exampleSite/content/focus/Zemke_Haag.md
 - exampleSite/content/research/example-with-a-video.md
 - exampleSite/content/research/who-played-the-barberini-harp.md
