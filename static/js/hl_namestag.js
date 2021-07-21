@@ -17,13 +17,14 @@ var fuseOptions = {
 
 
 //var searchQuery = param("t");
-var searchQuery = 'persontags'
+var searchQuery = 'persontags';
+//var this_title = document.getElementById("this_article_title");
 
 if(searchQuery){
   $("#search-query").val(searchQuery);
   executeSearch(searchQuery);
-  console.log("ok", searchQuery);
-  console.log(document.getElementById("this_article_title"));
+  //console.log("ok", searchQuery);
+  //console.log(this_title);
 
   getJsonArray(); //??? ###
 
@@ -47,7 +48,10 @@ function socialservice(data){
   for (var key in json) {
       if (json.hasOwnProperty(key)) {
       var item = json[key];
-      console.log(item.persontags); }}
+      console.log(item);
+      console.log(item.persontags); 
+    } 
+  }
   return false;
 }
 
