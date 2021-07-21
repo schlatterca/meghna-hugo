@@ -44,12 +44,13 @@ function getJsonArray(){
 
 
 function socialservice(data){
-  json= data;
+  json = data;
   for (var key in json) {
       if (json.hasOwnProperty(key)) {
       var item = json[key];
-      console.log(item);
-      console.log(item.persontags); 
+      //console.log(item.title);
+      console.log(item.persontags);
+      console.log(document);
     } 
   }
   return false;
@@ -64,7 +65,7 @@ function executeSearch(searchQuery){
     var pages = data;
     var fuse = new Fuse(pages, fuseOptions);
     var result = fuse.search(searchQuery);
-    console.log({"matches":result});
+    //console.log({"matches":result});
     if(result.length > 0){
       /*populateResults(result);*/
       console.log("risultati: ", result)
