@@ -17,7 +17,7 @@ var fuseOptions = {
 
 
 //var searchQuery = param("t");
-var searchQuery = '<span tag="HL_names">'
+var searchQuery = '<span tag='
 
 if(searchQuery){
   $("#search-query").val(searchQuery);
