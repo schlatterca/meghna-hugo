@@ -1,6 +1,6 @@
 +++
 description = "Research — Performance Practice"
-image = ""
+image = "/images/image.jpg"
 person_tag = ["Marco Marazzoli", "Orazio Michi", "Luigi Rossi", "Giacomo Carissimi"]
 title = "Who played the Barberini Harp? Harpists of the first half of the 17th century in Rome by Alexandra Ziane"
 titolo = ""

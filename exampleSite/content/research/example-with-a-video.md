@@ -1,6 +1,7 @@
 +++
 description = "Research — Video Example"
-image = ""
+image = "/images/img1.jpg"
+person_tag = []
 title = "Video Example"
 titolo = ""
 titolo_blocchi = []

@@ -1,6 +1,7 @@
 +++
 description = "Research — Performance Practice"
-image = ""
+image = "/images/img2.jpg"
+person_tag = []
 title = "NOT who played the Barberini Harp?"
 titolo = ""
 titolo_blocchi = []

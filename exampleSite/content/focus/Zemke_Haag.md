@@ -2,7 +2,7 @@
 article_section = "Focus"
 category = "Focus"
 description = "Focus"
-image = ""
+image = "/images/prova_1.png"
 person_tag = ["Valentina Zemke", "Volker Haag"]
 section = "Focus"
 text-area = "Area di testo che non credo comparirà mai."
