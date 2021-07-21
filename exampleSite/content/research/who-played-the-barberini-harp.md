@@ -8,11 +8,11 @@ titolo = ""
 +++
 I cannot add facts or new hypotheses to the question of who really played the Barberini Harp. Rather, I wish to present a whole panorama of harpists who were active in the first half of the 17th century in Rome, discuss where they performed, the circles and contexts, issues they faced – and in this way, in fact, end up with the question of whether they could have played the Barberini Harp or a similar instrument.
 
-**<span tag="HL_names">Marco Marazzoli</span>**
+**Marco Marazzoli**
 
 (Parma c. 1602/1605 – 1662 Rome)
 
-Unlike **<span tag="HL_names">Orazio Michi**</span>, [Marco Marazzoli](https://it.wikipedia.org/wiki/Marco_Marazzoli "Marco Marazzoli") is remembered more as a composer, than as a singer and harpist, as he left a considerable number of compositions behind. This includes cantate and canzonette, similar to works by **<span tag="HL_names">**[Luigi Rossi](https://it.wikipedia.org/wiki/Luigi_Rossi "Luigi Rossi")**</span>**, **<span tag="HL_names">Giacomo Carissimi**</span> or Michi, but also music for the stage, especially for big productions for the [Palazzo Barberini](https://it.wikipedia.org/wiki/Palazzo_Barberini "Palazzo Barberini") in Rome. His instrumental music, however, is limited to parts of these theatrical works. Furthermore, his radius extended far beyond Rome: he was also active, for example, in Ferrara and Paris. Born around 1602 in Parma, Marazzoli moved to Rome in 1626.
+Unlike **Orazio Michi**, [Marco Marazzoli](https://it.wikipedia.org/wiki/Marco_Marazzoli "Marco Marazzoli") is remembered more as a composer, than as a singer and harpist, as he left a considerable number of compositions behind. This includes cantate and canzonette, similar to works by [Luigi Rossi](https://it.wikipedia.org/wiki/Luigi_Rossi "Luigi Rossi"), **Giacomo Carissimi** or Michi, but also music for the stage, especially for big productions for the [Palazzo Barberini](https://it.wikipedia.org/wiki/Palazzo_Barberini "Palazzo Barberini") in Rome. His instrumental music, however, is limited to parts of these theatrical works. Furthermore, his radius extended far beyond Rome: he was also active, for example, in Ferrara and Paris. Born around 1602 in Parma, Marazzoli moved to Rome in 1626.
 
 ![](/images/image.jpg)
 
