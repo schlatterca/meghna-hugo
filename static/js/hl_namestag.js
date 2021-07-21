@@ -51,6 +51,9 @@ function socialservice(data){
       //console.log(item.title);
       console.log(item.persontags);
       console.log(document);
+      console.log(document.getElementById("this_article_title"));
+      console.log(document.getElementById("this_article_title").value);
+      console.log(document.getElementById("this_article_title").innerHTML);
     } 
   }
   return false;
