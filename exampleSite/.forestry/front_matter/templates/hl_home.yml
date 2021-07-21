@@ -28,13 +28,10 @@ fields:
       format: markdown
   label: Titolo
   description: Testo
-- name: titolo_blocchi
-  type: blocks
-  label: Titolo blocchi
-  template_types: []
-  config:
-    min: 
-    max: 
-  description: descrizione blocchi
+- name: person_tag
+  type: tag_list
+  default: []
+  label: Person Tag
+  description: Person quoted in the article (for indexing purpose).
 pages:
 - exampleSite/content/research/example-with-a-video.md
