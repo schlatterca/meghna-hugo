@@ -23,6 +23,7 @@ if(searchQuery){
   $("#search-query").val(searchQuery);
   executeSearch(searchQuery);
   console.log("ok", searchQuery);
+  console.log(document.getElementById("this_article_title").value);
 
   getJsonArray(); //??? ###
 
