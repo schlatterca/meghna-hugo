@@ -35,3 +35,4 @@ fields:
   description: Person quoted in the article (for indexing purpose).
 pages:
 - exampleSite/content/research/example-with-a-video.md
+- exampleSite/content/research/who-played-the-barberini-harp.md
