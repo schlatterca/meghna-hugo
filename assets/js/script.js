@@ -2,8 +2,15 @@
 /*	CARLO SCRIPT: HOVERING SIDEBAR + FOOTER
 /* ========================================================================= */
 
-var sidebar = true;
 function toggleSidebar() {
+  if (document.getElementsByClassName("navigation")[0].style.width == "50px") {
+  	var sidebar = true;
+  } else {
+  	var sidebar = false;
+  }
+
+  console.log(sidebar);
+  
   if (sidebar) {
     document.getElementsByClassName("navigation")[0].style.width = "400px";
     document.getElementsByClassName("section")[0].style.marginLeft = "400px";
@@ -50,8 +57,6 @@ function showFooterText(e) {
 
 		document.getElementsByClassName("footer_text_"+e)[i].classList.remove('notvisible');
 		document.getElementsByClassName("footer_text_"+e)[i].classList.add('visible');
-
-		console.log(e, i);
 	}
 }
 
