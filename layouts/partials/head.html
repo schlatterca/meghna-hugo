@@ -33,9 +33,10 @@
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.0/fuse.min.js"></script>
 	<!--script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js"></script-->
-	<!--in case Mark not loaded…-->
 	<script src="{{ "js/mark.js" | absURL }}">"></script>
 	<script src="{{ "js/search.js" | absURL }}"></script>
+	<!--SCRIPT TO RECALL HL_names TAG-->
+	<script src="{{ "js/hl_namestag.js" | absURL }}"></script>
 
 	{{ with site.Params.google_analytics_id }}
 	{{ "<!-- Global Site Tag (gtag.js) - Google Analytics -->" | safeHTML }}
