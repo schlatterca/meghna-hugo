@@ -28,10 +28,24 @@ if(searchQuery){
 }
 
 
+//TRYYYYY
+/*var json = '{}' // your data;
+
+// convert to javascript object:
+var obj = JSON.parse(json);
+
+// get last item in array:
+var last = obj.education[obj.education.length - 1].school.name;
+// result: some COLLEGE NAME I WANT TO GET*/
+
+
 
 function executeSearch(searchQuery){
   $.getJSON( "/index.json", function( data ) {
-    var pages = data;
+    //var pages = data;
+    var pages = JSON.parse(data);
+
+
     var fuse = new Fuse(pages, fuseOptions);
     var result = fuse.search(searchQuery);
     console.log({"matches":result});
