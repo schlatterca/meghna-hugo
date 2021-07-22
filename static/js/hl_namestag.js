@@ -44,7 +44,9 @@ function persontags(data){
 function populateWithResults(result){
   var templateDefinition = $('#persontags-result').html();
   //var output = render(templateDefinition, result);
-  $('#persontags-search-results').append(result, " ", "<br>");
+  for (i = 0; i < result.length; i++){
+    $('#persontags-search-results').append(result[i], " ", "<br>"); 
+  }
   
 };
 
