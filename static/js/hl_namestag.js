@@ -22,7 +22,7 @@ var fuseOptions = {
 var searchQuery = 'persontags';
 //var this_title = document.getElementById("this_article_title");
 
-if(searchQuery){
+/*if(searchQuery){
   $("#search-query").val(searchQuery);
   executeSearch(searchQuery);
   console.log("ok", searchQuery);
@@ -30,14 +30,14 @@ if(searchQuery){
 
   getJsonArray(); //??? ###
 }
-
+*/
 
 
 function getJsonArray(){
   $.ajax({
       url : '/index.json',
       type: 'GET',
-      success : socialservice
+      success : persontags
   })
 }
 
@@ -54,6 +54,8 @@ function socialservice(data){
   }
   return false;
 }
+
+getJsonArray();
 
 
 function executeSearch(searchQuery){
