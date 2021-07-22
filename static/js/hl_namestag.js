@@ -26,7 +26,7 @@ function getJsonArray(){
 }
 
 function persontags(data){
-  json = data;
+  void json = data;
   for (var key in json) {
       if (json.hasOwnProperty(key)) {
       var item = json[key];
