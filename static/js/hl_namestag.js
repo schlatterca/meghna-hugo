@@ -42,11 +42,9 @@ function persontags(data){
 }
 
 function populateWithResults(result){
-  //pull template from hugo templarte definition
   var templateDefinition = $('#persontags-result').html();
-  //replace values
-  var output = render(templateDefinition, result);
-  $('#persontags-search-results').append(output);
+  //var output = render(templateDefinition, result);
+  $('#persontags-search-results').append(result);
   
 };
 
