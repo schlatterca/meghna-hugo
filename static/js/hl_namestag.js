@@ -12,6 +12,8 @@ var fuseOptions = {
     {name:"title",weight:0.8},
     {name:"contents",weight:0.5},
     {name:"tags",weight:0.3}
+
+    {name:"persontags",weight:0.7}
   ]
 };
 
@@ -23,13 +25,10 @@ var searchQuery = 'persontags';
 if(searchQuery){
   $("#search-query").val(searchQuery);
   executeSearch(searchQuery);
-  //console.log("ok", searchQuery);
+  console.log("ok", searchQuery);
   //console.log(this_title);
 
   getJsonArray(); //??? ###
-
-}else {
-  return
 }
 
 
@@ -49,8 +48,8 @@ function socialservice(data){
       if (json.hasOwnProperty(key)) {
       var item = json[key];
       //console.log(item.title);
-      console.log(item.persontags);
-      console.log(document.getElementById("this_article_title").innerHTML);
+      console.log("items: ", item.persontags);
+      //console.log(document.getElementById("this_article_title").innerHTML);
     } 
   }
   return false;
@@ -69,8 +68,6 @@ function executeSearch(searchQuery){
     if(result.length > 0){
       /*populateResults(result);*/
       console.log("risultati: ", result)
-    }else{
-      return
     }
   });
 }
