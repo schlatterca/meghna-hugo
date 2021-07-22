@@ -47,9 +47,9 @@ function populateWithResults(result){
   /*for (let i = 0; i < result.length; i++){
     $('#persontags-search-results').append(result[i], " ", "<br>"); 
   }*/
-  result.forEach(function(element, index) {
+  /*result.forEach(function(element, index) {
     console.log(element);
-  });
+  });*/
   
 };
 
