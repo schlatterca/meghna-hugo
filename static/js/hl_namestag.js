@@ -43,10 +43,10 @@ function persontags(data){
 
 function populateWithResults(result){
   var templateDefinition = $('#persontags-result').html();
-  //var output = render(templateDefinition, result);
-  for (i = 0; i < result.length; i++){
+  console.log(result);
+  /*for (i = 0; i < result.length; i++){
     $('#persontags-search-results').append(result[i], " ", "<br>"); 
-  }
+  }*/
   
 };
 
