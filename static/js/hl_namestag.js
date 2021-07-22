@@ -42,7 +42,7 @@ function getJsonArray(){
 }
 
 
-function socialservice(data){
+function persontags(data){
   json = data;
   for (var key in json) {
       if (json.hasOwnProperty(key)) {
