@@ -17,9 +17,34 @@ var fuseOptions = {
   ]
 };
 
+function getJsonArray(){
+  $.ajax({
+      url : '/index.json',
+      type: 'GET',
+      success : persontags
+  })
+}
+
+function persontags(data){
+  json = data;
+  for (var key in json) {
+      if (json.hasOwnProperty(key)) {
+      var item = json[key];
+
+      console.log(item);
+      //console.log(item.title);
+      console.log("items: ", item.persontags);
+      //console.log(document.getElementById("this_article_title").innerHTML);
+    } 
+  }
+  return false;
+}
+
+getJsonArray();
+
 
 //var searchQuery = param("t");
-var searchQuery = 'persontags';
+//var searchQuery = 'persontags';
 //var this_title = document.getElementById("this_article_title");
 
 /*if(searchQuery){
@@ -32,30 +57,6 @@ var searchQuery = 'persontags';
 }
 */
 
-
-function getJsonArray(){
-  $.ajax({
-      url : '/index.json',
-      type: 'GET',
-      success : persontags
-  })
-}
-
-
-function persontags(data){
-  json = data;
-  for (var key in json) {
-      if (json.hasOwnProperty(key)) {
-      var item = json[key];
-      //console.log(item.title);
-      console.log("items: ", item.persontags);
-      //console.log(document.getElementById("this_article_title").innerHTML);
-    } 
-  }
-  return false;
-}
-
-getJsonArray();
 
 
 function executeSearch(searchQuery){
