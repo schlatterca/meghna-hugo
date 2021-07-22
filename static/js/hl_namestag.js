@@ -45,7 +45,7 @@ function populateWithResults(result){
   var templateDefinition = $('#persontags-result').html();
   console.log(result);
 
-  if(empty($result)){
+  if(!empty($result)){
     console.log("no persontags: ", result);
   } else {
     console.log(result.persontags);
