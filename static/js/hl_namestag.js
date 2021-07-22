@@ -40,42 +40,7 @@ function persontags(data){
   return false;
 }
 
-getJsonArray();
-
-
-//var searchQuery = param("t");
-//var searchQuery = 'persontags';
-//var this_title = document.getElementById("this_article_title");
-
-/*if(searchQuery){
-  $("#search-query").val(searchQuery);
-  executeSearch(searchQuery);
-  console.log("ok", searchQuery);
-  //console.log(this_title);
-
-  getJsonArray(); //??? ###
-}
-*/
-
-
-
-function executeSearch(searchQuery){
-
-
-
-  $.getJSON( "/index.json", function( data ) {
-    var pages = data;
-    var fuse = new Fuse(pages, fuseOptions);
-    var result = fuse.search(searchQuery);
-    //console.log({"matches":result});
-    if(result.length > 0){
-      /*populateResults(result);*/
-      console.log("risultati: ", result)
-    }
-  });
-}
-
-/*function populateResults(result){
+function populateResults(result){
   $.each(result,function(key,value){
     var contents= value.item.contents;
     var snippet = "";
@@ -100,13 +65,46 @@ function executeSearch(searchQuery){
       snippet += contents.substring(0,summaryInclude*2);
     }
     //pull template from hugo templarte definition
-    var templateDefinition = $('#search-result-template').html();
+    var templateDefinition = $('#persontags-result').html();
     //replace values
     var output = render(templateDefinition,{key:key,title:value.item.title,link:value.item.permalink,tags:value.item.tags,categories:value.item.categories,snippet:snippet});
-    $('#search-results').append(output);
+    $('#persontags-search-results').append(output);
     
   });
-}*/
+}
+
+getJsonArray();
+
+
+//var searchQuery = param("t");
+//var searchQuery = 'persontags';
+//var this_title = document.getElementById("this_article_title");
+
+/*if(searchQuery){
+  $("#search-query").val(searchQuery);
+  executeSearch(searchQuery);
+  console.log("ok", searchQuery);
+  //console.log(this_title);
+
+  getJsonArray(); //??? ###
+}
+*/
+
+
+
+function executeSearch(searchQuery){
+
+  $.getJSON( "/index.json", function( data ) {
+    var pages = data;
+    var fuse = new Fuse(pages, fuseOptions);
+    var result = fuse.search(searchQuery);
+    //console.log({"matches":result});
+    if(result.length > 0){
+      /*populateResults(result);*/
+      console.log("risultati: ", result)
+    }
+  });
+}
 
 function param(name) {
     return decodeURIComponent((location.search.split(name + '=')[1] || '').split('&')[0]).replace(/\+/g, ' ');
