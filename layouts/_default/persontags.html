@@ -1,0 +1,22 @@
+{{ define "footerfiles" }}
+{%comment%}
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.0/fuse.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js"></script>
+<script src="{{ "js/search.js" | absURL }}"></script>
+{%endcomment%}
+{{ end }}
+
+{{ define "main" }}
+{{ partial "navigation.html" . }}
+
+<section class="section">
+  <div id="persontags-search-results">Person tags: </div>
+</section>
+<script id="persontags-result" type="text/x-js-template">
+    <div id="summary-${key}">
+      <h4>${title}</h4>
+      <p>${snippet}</p>{ end }
+    </div>
+</script>
+{{ end }}
