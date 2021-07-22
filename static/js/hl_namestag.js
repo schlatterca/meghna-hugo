@@ -45,9 +45,9 @@ function populateWithResults(result){
   var templateDefinition = $('#persontags-result').html();
   console.log(result);
   if(result != null){
-    console.log(result.persontags.length);
+    console.log(result.persontags);
   } else {
-    console.log(result);
+    console.log("no persontags: ", result);
   }
   /*for (let i = 0; i < result.length; i++){
     $('#persontags-search-results').append(result[i], " ", "<br>"); 
