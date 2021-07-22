@@ -35,7 +35,7 @@ function persontags(data){
       //console.log(item.title);
       //console.log("items: ", item.persontags);
       //console.log(document.getElementById("this_article_title").innerHTML);
-      populateWithResults(item.persontags);
+      populateWithResults(item);
     }
   }
   return false;
@@ -44,8 +44,10 @@ function persontags(data){
 function populateWithResults(result){
   var templateDefinition = $('#persontags-result').html();
   console.log(result);
-  if(result.length > 0){
-    console.log(result.length);
+  if(result != null){
+    console.log(result.persontags.length);
+  } else {
+    console.log(result);
   }
   /*for (let i = 0; i < result.length; i++){
     $('#persontags-search-results').append(result[i], " ", "<br>"); 
