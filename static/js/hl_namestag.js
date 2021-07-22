@@ -29,7 +29,7 @@ if(searchQuery){
   getJsonArray(); //??? ###
 
 }else {
-  $('#search-results').append("<p>Please enter a word or phrase above</p>");
+  return
 }
 
 
@@ -50,9 +50,6 @@ function socialservice(data){
       var item = json[key];
       //console.log(item.title);
       console.log(item.persontags);
-      console.log(document);
-      console.log(document.getElementById("this_article_title"));
-      console.log(document.getElementById("this_article_title").value);
       console.log(document.getElementById("this_article_title").innerHTML);
     } 
   }
@@ -73,7 +70,7 @@ function executeSearch(searchQuery){
       /*populateResults(result);*/
       console.log("risultati: ", result)
     }else{
-      $('#search-results').append("<p>No matches found</p>");
+      return
     }
   });
 }
