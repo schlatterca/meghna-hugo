@@ -44,11 +44,13 @@ function persontags(data){
 function populateWithResults(result){
   var templateDefinition = $('#persontags-result').html();
   console.log(result);
-  if(result.persontags != "null"){
-    console.log(result.persontags);
-  } else {
+
+  if(empty($result){
     console.log("no persontags: ", result);
+  } else {
+    console.log(result.persontags);
   }
+  
   /*for (let i = 0; i < result.length; i++){
     $('#persontags-search-results').append(result[i], " ", "<br>"); 
   }*/
