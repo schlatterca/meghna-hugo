@@ -42,37 +42,13 @@ function persontags(data){
 }
 
 function populateWithResults(result){
-  $.each(result,function(key,value){
-    var contents= value.item.contents;
-    var snippet = "";
-    var snippetHighlights=[];
-    var tags =[];
-    if( fuseOptions.tokenize ){
-      snippetHighlights.push(searchQuery);
-    }else{
-      $.each(value.matches,function(matchKey,mvalue){
-        if(mvalue.key == "tags"){
-          snippetHighlights.push(mvalue.value);
-        }else if(mvalue.key == "contents"){
-          start = mvalue.indices[0][0]-summaryInclude>0?mvalue.indices[0][0]-summaryInclude:0;
-          end = mvalue.indices[0][1]+summaryInclude<contents.length?mvalue.indices[0][1]+summaryInclude:contents.length;
-          snippet += contents.substring(start,end);
-          snippetHighlights.push(mvalue.value.substring(mvalue.indices[0][0],mvalue.indices[0][1]-mvalue.indices[0][0]+1));
-        }
-      });
-    }
-
-    if(snippet.length<1){
-      snippet += contents.substring(0,summaryInclude*2);
-    }
-    //pull template from hugo templarte definition
-    var templateDefinition = $('#persontags-result').html();
-    //replace values
-    var output = render(templateDefinition,{key:key,title:value.item.title,link:value.item.permalink,tags:value.item.tags,categories:value.item.categories,snippet:snippet});
-    $('#persontags-search-results').append(output);
-    
-  });
-}
+  //pull template from hugo templarte definition
+  var templateDefinition = $('#persontags-result').html();
+  //replace values
+  var output = render(templateDefinition,{result});
+  $('#persontags-search-results').append(output);
+  
+};
 
 getJsonArray();
 
