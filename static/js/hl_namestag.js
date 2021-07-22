@@ -31,9 +31,9 @@ function persontags(data){
       if (json.hasOwnProperty(key)) {
       var item = json[key];
 
-      console.log(item);
+      //console.log(item);
       //console.log(item.title);
-      console.log("items: ", item.persontags);
+      //console.log("items: ", item.persontags);
       //console.log(document.getElementById("this_article_title").innerHTML);
       populateWithResults(item.persontags);
     }
@@ -43,7 +43,8 @@ function persontags(data){
 
 function populateWithResults(result){
   var templateDefinition = $('#persontags-result').html();
-  console.log(result);
+  result.forEach(name => console.log(name));
+  result.forEach(name => $('#persontags-search-results').append(name, " ", "<br>"));
   /*for (i = 0; i < result.length; i++){
     $('#persontags-search-results').append(result[i], " ", "<br>"); 
   }*/
