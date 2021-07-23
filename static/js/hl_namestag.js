@@ -49,7 +49,7 @@ function populateWithResults(myResults){
 
   var templateDefinition = $('#persontags-result').html();
   //var output = render(templateDefinition, result);
-  $('#persontags-search-results').append(myResults.persontags, "<br>");
+  $('#persontags-search-results').append(myResults, "<br>");
 
   //console.log(myResults.persontags);
   //console.log(Object.keys(result));
