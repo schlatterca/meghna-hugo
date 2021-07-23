@@ -54,11 +54,13 @@ function populateWithResults(myResults){
     for (let i = 0; i < myResults.persontags.length; i++) {
       console.log(myResults.persontags[i]);
 
+      var data = myResults.persontags[i];
+      data = data.split(' ');
 
-      //console.log(myResults.persontags.sort((a, b) => b.split(' ')[1].localeCompare(a.split(' ')[1])));
-      console.log(myResults.persontags.sort(x => myResults.persontags.map(y => y.split(' ')[1]) ).reverse());
+      var okData = data[1] + ' ' + data[0];
+      console.log(okData);
 
-      $('#persontags-search-results').append(myResults.persontags[i], "<br>");
+      $('#persontags-search-results').append(okData, "<br>");
     }
   }
 
@@ -67,6 +69,8 @@ function populateWithResults(myResults){
   //console.log(myResults.persontags);
   //console.log(Object.keys(myResults));
   //console.log(document.getElementById("this_article_title").innerHTML);
+  //console.log(myResults.persontags.sort((a, b) => b.split(' ')[1].localeCompare(a.split(' ')[1])));
+  //console.log(myResults.persontags.sort(x => myResults.persontags.map(y => y.split(' ')[1]) ).reverse());
 
 };
 
