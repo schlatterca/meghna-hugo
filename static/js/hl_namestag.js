@@ -67,7 +67,7 @@ function populateWithResults(myResults){
     $('#persontags-search-results').append(sortedNames[i], "<br>");
   }
 
-  console.log(sortedNames);
+  console.log(sortedNames.length);
 
   //$('#persontags-search-results').append(myResults.persontags, "<br>");
 
