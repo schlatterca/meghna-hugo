@@ -51,12 +51,13 @@ function persontags(data){
             data[j] = data[j].charAt(0).toUpperCase() + data[j].slice(1);
           }
 
-          if (data.length == 3) { //rearrange
+          /*if (data.length == 3) { //rearrange
             console.log(data.length);
           } if (data.length == 2) {
             var SurnameName = data[1] + ' ' + data[0];
-          }
+          }*/
 
+          var SurnameName = data[2] + ' ' + data[1] + ' ' + data[0];
           sortedNames.push(SurnameName); //and append it to the sortedNames array.
         }
       }
