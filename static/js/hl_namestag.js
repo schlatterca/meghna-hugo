@@ -25,7 +25,7 @@ function getJsonArray(){
   })
 }
 
-function clean(obj) {
+function clean(array) {
   for (var key in array) {
     if (array[key] === null || array[key] === undefined) {
       delete array[key];
