@@ -49,9 +49,14 @@ function persontags(data){
 
           for (var j = 0; j < data.length; j++) { //capitalize first letter
             data[j] = data[j].charAt(0).toUpperCase() + data[j].slice(1);
-           }
+          }
 
-          var SurnameName = data[2] + ' ' + data[1] + ' ' + data[0];
+          if (data.length == 3) { //rearrange
+            var SurnameName = data[2] + ' ' + data[1] + ' ' + data[0];
+          } else if (data.length == 2) {
+            var SurnameName = data[1] + ' ' + data[0];
+          }
+
           sortedNames.push(SurnameName); //and append it to the sortedNames array.
         }
       }
