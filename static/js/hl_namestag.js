@@ -58,15 +58,14 @@ function persontags(data){
 
 
 function checkCorrespondance(myResults){
-  /*for (let i = 0; i < myResults.length; i++) {
-    console.log(myResults[i]);
-  }*/
-  for (var key in json) {
-    if (json.hasOwnProperty(key)) {
-      var result = clean(json[key]);
+  for (let i = 0; i < myResults.length; i++) {
+    for (var key in json) {
+      if (json.hasOwnProperty(key)) {
+        var result = clean(json[key]);
 
-      if (result.hasOwnProperty("persontags")) {
-        console.log(result);
+        if ((result.hasOwnProperty("persontags"))&&(result.persontags.includes(myResults[i])) {
+          console.log(myResults[i], result.title);
+        }
       }
     }
   }
