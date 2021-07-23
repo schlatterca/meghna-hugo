@@ -54,14 +54,14 @@ function populateWithResults(myResults){
 
   if (myResults.hasOwnProperty("persontags")) {
     for (let i = 0; i < myResults.persontags.length; i++) {
-      //console.log(myResults.persontags[i]);
-
       var data = myResults.persontags[i];
       data = data.split(' ');
       var SurnameName = data[1] + ' ' + data[0];
       sortedNames.push(SurnameName);
     }
   }
+
+  sortedNames.sort();
 
   for (let i = 0; i < sortedNames.length; i++) {
     $('#persontags-search-results').append(sortedNames[i], "<br>");
