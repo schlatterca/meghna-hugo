@@ -52,21 +52,22 @@ function persontags(data){
           }
 
           if (data.length == 4) { //rearrange
-            var SurnameName = data[3] + ' ' + data[2] + ' ' + data[1] + ' ' + data[0];
+            var SurnameName = data[3] + ' ' + data[0] + ' ' + data[1] + ' ' + data[2];
           } if (data.length == 3) {
-            var SurnameName = data[2] + ' ' + data[1] + ' ' + data[0];
+            var SurnameName = data[2] + ' ' + data[0] + ' ' + data[1];
           } if (data.length == 2) {
             var SurnameName = data[1] + ' ' + data[0];
           }
 
-          console.log(data.length);
           sortedNames.push(SurnameName); //and append it to the sortedNames array.
         }
       }
     }
   }
   sortedNames.sort(); //sort sortedNames alphabetically.
-  populateWithResults(sortedNames);
+  let uniqueSortedNames = [...new Set(sortedNames)]; //erase duplicates
+
+  populateWithResults(uniqueSortedNames);
   return false;
 }
 
