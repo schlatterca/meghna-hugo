@@ -26,7 +26,7 @@ function getJsonArray(){
 }
 
 function persontags(data){
-  void json = data;
+  json = data;
   for (var key in json) {
       if (json.hasOwnProperty(key)) {
       var item = json[key];
@@ -44,12 +44,13 @@ function persontags(data){
 function populateWithResults(result){
   var templateDefinition = $('#persontags-result').html();
   console.log(result);
+  console.log(result.persontags);
 
-  if(result == null){
+  /*if(result == null){
     console.log("null");
   } else {
     console.log(result.persontags);
-  }
+  }*/
 
   /*for (let i = 0; i < result.length; i++){
     $('#persontags-search-results').append(result[i], " ", "<br>"); 
