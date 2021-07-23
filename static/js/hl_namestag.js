@@ -51,11 +51,11 @@ function persontags(data){
             data[j] = data[j].charAt(0).toUpperCase() + data[j].slice(1);
           }
 
-          if (data.length == 3) { //rearrange
-            console.log("3", data.length);
-          } if (data.length == 2) { //rearrange
+          if (data.length == 2) { //rearrange
             console.log("2", data.length);
-          } if (data.length == 1) { //rearrange
+          }if (data.length == 3) { //rearrange
+            console.log("3", data.length);
+          }if (data.length == 1) { //rearrange
             console.log("1", data.length);
           }
 
