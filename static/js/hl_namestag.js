@@ -55,7 +55,7 @@ function populateWithResults(myResults){
   }*/
 
   if (myResults.hasOwnProperty("persontags")) {
-    console.log(myResults.persontags);
+    console.log(myResults.persontags.length);
   }
 
   $('#persontags-search-results').append(myResults.persontags, "<br>");
