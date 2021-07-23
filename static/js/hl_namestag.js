@@ -25,62 +25,39 @@ function getJsonArray(){
   })
 }
 
+function clean(obj) {
+  for (var key in array) {
+    if (array[key] === null || array[key] === undefined) {
+      delete array[key];
+    }
+  }
+  return array
+}
+
 function persontags(data){
   json = data;
   for (var key in json) {
       if (json.hasOwnProperty(key)) {
-      var item = json[key];
+      var dirtyArray = json[key];
 
       //console.log(item);
       //console.log(item.title);
       //console.log("items: ", item.persontags);
       //console.log(document.getElementById("this_article_title").innerHTML);
-      populateWithResults(item);
+
+      var result = clean(dirtyArray);
+
+      populateWithResults(result);
     }
   }
   return false;
 }
 
-function populateWithResults(result){
+function populateWithResults(myResults){
   var templateDefinition = $('#persontags-result').html();
   //console.log(result);
   //console.log(result.persontags);
   //console.log(Object.keys(result));
-
-
-  var test = {
-    test1: null,
-    test2: 'somestring',
-    test3: 3,
-  }
-
-  function clean(obj) {
-    for (var propName in obj) {
-      if (obj[propName] === null || obj[propName] === undefined) {
-        delete obj[propName];
-      }
-    }
-    return obj
-  }
-
-  console.log(result);
-  console.log(clean(result));
-
-
-
-  /*if(result == null){
-    console.log("null");
-  } else {
-    console.log(result.persontags);
-  }*/
-
-  /*for (let i = 0; i < result.length; i++){
-    $('#persontags-search-results').append(result[i], " ", "<br>"); 
-  }*/
-  /*result.forEach(function(element, index) {
-    console.log(element);
-  });*/
-  
 };
 
 getJsonArray();
