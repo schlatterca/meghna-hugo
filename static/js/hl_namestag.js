@@ -46,6 +46,11 @@ function persontags(data){
         for (let i = 0; i < result.persontags.length; i++) { //for each result in "persontags"…
           var data = result.persontags[i]; //split it and change name with surname…
           data = data.split(' ');
+
+          for (var i = 0; i < data.length; i++) { //capitalize first letter
+            data[i] = data[i].charAt(0).toUpperCase() + data[i].slice(1);
+           }
+
           var SurnameName = data[1] + ' ' + data[0];
           sortedNames.push(SurnameName); //and append it to the sortedNames array.
         }
@@ -58,7 +63,6 @@ function persontags(data){
 }
 
 function populateWithResults(myResults){
-
   var templateDefinition = $('#persontags-result').html();
   //var output = render(templateDefinition, result);
   for (let i = 0; i < sortedNames.length; i++) {
@@ -66,15 +70,11 @@ function populateWithResults(myResults){
   }
 
   //console.log(sortedNames.length);
-
-
-
   //console.log(myResults.persontags);
   //console.log(Object.keys(myResults));
   //console.log(document.getElementById("this_article_title").innerHTML);
   //console.log(myResults.persontags.sort((a, b) => b.split(' ')[1].localeCompare(a.split(' ')[1])));
   //console.log(myResults.persontags.sort(x => myResults.persontags.map(y => y.split(' ')[1]) ).reverse());
-
 };
 
 getJsonArray();
