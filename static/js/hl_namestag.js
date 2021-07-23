@@ -58,7 +58,7 @@ function persontags(data){
 
 function populateWithResults(myResults){
   var templateDefinition = $('#persontags-result').html();
-  $('#persontags-search-result').append(myResults);
+  $('#persontags-search-result').append("ciaoooo");
   //console.log(result);
   //console.log(result.persontags);
   //console.log(Object.keys(result));
