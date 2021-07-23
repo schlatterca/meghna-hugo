@@ -1,3 +1,5 @@
+getJsonArray();
+
 function getJsonArray(){
   $.ajax({
       url: '/index.json',
@@ -5,7 +7,6 @@ function getJsonArray(){
       success: persontags
   })
 }
-getJsonArray();
 
 function clean(array) {
   for (var key in array) {
@@ -50,9 +51,25 @@ function persontags(data){
   sortedNames.sort(); //sort sortedNames alphabetically.
   let uniqueSortedNames = [...new Set(sortedNames)]; //erase duplicates and get final array.
 
+  checkCorrespondance(uniqueSortedNames);
   populateWithResults(uniqueSortedNames);
   return false;
 }
+
+
+function checkCorrespondance(myResults){
+  for (let i = 0; i < myResults.length; i++) {
+    console.log(myResults[i]);
+  }
+  for (var key in json) { //for each key in the json…
+    if (json.hasOwnProperty(key)) {
+      console.log(key);
+    }
+  }
+
+}
+
+
 
 function populateWithResults(myResults){
   var templateDefinition = $('#persontags-result').html();
@@ -60,7 +77,6 @@ function populateWithResults(myResults){
   for (let i = 0; i < myResults.length; i++) {
     $('#persontags-search-results').append(myResults[i], "<br>");
   }
-
   //console.log(sortedNames.length);
   //console.log(myResults.persontags);
   //console.log(Object.keys(myResults));
