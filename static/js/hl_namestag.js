@@ -50,19 +50,24 @@ function populateWithResults(myResults){
   var templateDefinition = $('#persontags-result').html();
   //var output = render(templateDefinition, result);
 
+  let sortedNames = [];
+
   if (myResults.hasOwnProperty("persontags")) {
     for (let i = 0; i < myResults.persontags.length; i++) {
-      console.log(myResults.persontags[i]);
+      //console.log(myResults.persontags[i]);
 
       var data = myResults.persontags[i];
       data = data.split(' ');
-
-      var okData = data[1] + ' ' + data[0];
-      console.log(okData);
-
-      $('#persontags-search-results').append(okData, "<br>");
+      var SurnameName = data[1] + ' ' + data[0];
+      sortedNames.push(SurnameName);
     }
   }
+
+  for (let i = 0; i < sortedNames.length; i++) {
+    $('#persontags-search-results').append(sortedNames[i], "<br>");
+  }
+
+  console.log(sortedNames);
 
   //$('#persontags-search-results').append(myResults.persontags, "<br>");
 
