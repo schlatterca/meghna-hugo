@@ -42,7 +42,7 @@ function persontags(data){
       var dirtyArray = json[key];
       var result = clean(dirtyArray);
 
-      console.log(result); //###
+      console.log(key, result); //###
 
       populateWithResults(result);
     }
