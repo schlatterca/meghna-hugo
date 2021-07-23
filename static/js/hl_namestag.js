@@ -1,21 +1,3 @@
-/*summaryInclude=100;
-var fuseOptions = {
-  shouldSort: true,
-  includeMatches: true,
-  threshold: 0.0,
-  tokenize:true,
-  location: 0,
-  distance: 100,
-  maxPatternLength: 32,
-  minMatchCharLength: 3,
-  keys: [
-    {name:"title",weight:0.8},
-    {name:"contents",weight:0.5},
-    {name:"tags",weight:0.3},
-    {name:"persontags",weight:0.7}
-  ]
-};*/
-
 function getJsonArray(){
   $.ajax({
       url: '/index.json',
@@ -23,6 +5,7 @@ function getJsonArray(){
       success: persontags
   })
 }
+getJsonArray();
 
 function clean(array) {
   for (var key in array) {
@@ -66,8 +49,6 @@ function persontags(data){
   }
   sortedNames.sort(); //sort sortedNames alphabetically.
   let uniqueSortedNames = [...new Set(sortedNames)]; //erase duplicates and get final array.
-  console.log(sortedNames);
-  console.log(uniqueSortedNames);
 
   populateWithResults(uniqueSortedNames);
   return false;
@@ -87,5 +68,3 @@ function populateWithResults(myResults){
   //console.log(myResults.persontags.sort((a, b) => b.split(' ')[1].localeCompare(a.split(' ')[1])));
   //console.log(myResults.persontags.sort(x => myResults.persontags.map(y => y.split(' ')[1]) ).reverse());
 };
-
-getJsonArray();
