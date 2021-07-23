@@ -52,7 +52,7 @@ function persontags(data){
           }
 
           if (data.length === 3) { //rearrange
-            var SurnameName = data[2] + ' ' + data[1] + ' ' + data[0];
+            console.log(data.length);
           } else if (data.length === 2) {
             var SurnameName = data[1] + ' ' + data[0];
           }
