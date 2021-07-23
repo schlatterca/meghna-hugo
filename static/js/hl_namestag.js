@@ -50,15 +50,14 @@ function populateWithResults(myResults){
   var templateDefinition = $('#persontags-result').html();
   //var output = render(templateDefinition, result);
 
-  /*for (let i = 0; i < myResults.length; i++) {
-    console.log(myResults[i]);
-  }*/
-
   if (myResults.hasOwnProperty("persontags")) {
-    console.log(myResults.persontags.length);
+    for (let i = 0; i < myResults.persontags.length; i++) {
+      console.log(myResults.persontags[i]);
+      $('#persontags-search-results').append(myResults.persontags[i], "<br>");
+    }
   }
 
-  $('#persontags-search-results').append(myResults.persontags, "<br>");
+  //$('#persontags-search-results').append(myResults.persontags, "<br>");
 
   //console.log(myResults.persontags);
   //console.log(Object.keys(myResults));
