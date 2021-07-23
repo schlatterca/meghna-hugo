@@ -55,7 +55,7 @@ function populateWithResults(myResults){
       console.log(myResults.persontags[i]);
 
 
-      myResults.persontags.sort((a, b) => b.split(' ')[1].localeCompare(a.split(' ')[1]));
+      console.log(myResults.persontags.sort((a, b) => b.split(' ')[1].localeCompare(a.split(' ')[1])));
 
 
       $('#persontags-search-results').append(myResults.persontags[i], "<br>");
