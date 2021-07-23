@@ -1,7 +1,7 @@
 +++
 description = "Research — Video Example"
 image = "/images/img1.jpg"
-person_tag = []
+person_tag = ["luigi rossi", "volker haag", "jean paul sartre "]
 title = "Video Example"
 titolo = ""
 titolo_blocchi = []
