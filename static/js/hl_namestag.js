@@ -12,8 +12,7 @@ var fuseOptions = {
     {name:"title",weight:0.8},
     {name:"contents",weight:0.5},
     {name:"tags",weight:0.3},
-
-    {name:"persontags",weight:0.7} //### ???
+    {name:"persontags",weight:0.7}
   ]
 };
 
@@ -39,15 +38,8 @@ function persontags(data){
   for (var key in json) {
       if (json.hasOwnProperty(key)) {
       var dirtyArray = json[key];
-
-      //console.log(item);
-      //console.log(item.title);
-      //console.log("items: ", item.persontags);
-      //console.log(document.getElementById("this_article_title").innerHTML);
-
       var result = clean(dirtyArray);
-
-      populateWithResults(result);
+      populateWithResults(result.persontags); //dig deeper!
     }
   }
   return false;
@@ -57,12 +49,12 @@ function populateWithResults(myResults){
 
   var templateDefinition = $('#persontags-result').html();
   //var output = render(templateDefinition, result);
-  $('#persontags-search-results').append(myResults.persontags);
+  $('#persontags-search-results').append(myResults.persontags, "<br>");
 
-  console.log(myResults.persontags);
-  //console.log(result);
-  //console.log(result.persontags);
+  //console.log(myResults.persontags);
   //console.log(Object.keys(result));
+  //console.log(document.getElementById("this_article_title").innerHTML);
+
 };
 
 getJsonArray();
