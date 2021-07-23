@@ -46,8 +46,12 @@ function populateWithResults(result){
   console.log(result);
   console.log(result.persontags);
   //console.log(Object.keys(result));
-  var xxx = array_keys($result, null, false);
-  console.log(xxx);
+  
+  var filtered = result.filter(function (el) {
+    return el != null;
+  });
+
+  console.log(filtered);
 
   /*if(result == null){
     console.log("null");
