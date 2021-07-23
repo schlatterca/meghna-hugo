@@ -45,11 +45,13 @@ function persontags(data){
   return false;
 }
 
-let sortedNames = [];
-
 function populateWithResults(myResults){
+
   var templateDefinition = $('#persontags-result').html();
   //var output = render(templateDefinition, result);
+
+  let sortedNames = [];
+
   if (myResults.hasOwnProperty("persontags")) {
     for (let i = 0; i < myResults.persontags.length; i++) {
       var data = myResults.persontags[i];
@@ -58,11 +60,13 @@ function populateWithResults(myResults){
       sortedNames.push(SurnameName);
     }
   }
-  
+
   sortedNames.sort();
+
   for (let i = 0; i < sortedNames.length; i++) {
     $('#persontags-search-results').append(sortedNames[i], "<br>");
   }
+
   console.log(sortedNames.length);
 
   //$('#persontags-search-results').append(myResults.persontags, "<br>");
