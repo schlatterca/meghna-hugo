@@ -65,10 +65,9 @@ function checkCorrespondance(myResults){
 
         if (result.hasOwnProperty("persontags")){
           console.log("a", result);
-        }
-
-        if (result.persontags.includes(myResults[i])){
-          console.log("b", result.title);
+          if (result.persontags.includes(myResults[i])){
+            console.log("b", result.title);
+          }
         }
 
         if ((result.hasOwnProperty("persontags"))&&(result.persontags.includes(myResults[i]))) {
