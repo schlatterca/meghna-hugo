@@ -45,8 +45,6 @@ function persontags(data){
   return false;
 }
 
-
-
 let sortedNames = [];
 
 function populateWithResults(myResults){
@@ -60,20 +58,21 @@ function populateWithResults(myResults){
       sortedNames.push(SurnameName);
     }
   }
+  
+  sortedNames.sort();
+  for (let i = 0; i < sortedNames.length; i++) {
+    $('#persontags-search-results').append(sortedNames[i], "<br>");
+  }
+  console.log(sortedNames.length);
+
   //$('#persontags-search-results').append(myResults.persontags, "<br>");
+
   //console.log(myResults.persontags);
   //console.log(Object.keys(myResults));
   //console.log(document.getElementById("this_article_title").innerHTML);
   //console.log(myResults.persontags.sort((a, b) => b.split(' ')[1].localeCompare(a.split(' ')[1])));
   //console.log(myResults.persontags.sort(x => myResults.persontags.map(y => y.split(' ')[1]) ).reverse());
+
 };
-
-sortedNames.sort();
-for (let i = 0; i < sortedNames.length; i++) {
-  $('#persontags-search-results').append(sortedNames[i], "<br>");
-}
-console.log(sortedNames.length);
-
-
 
 getJsonArray();
