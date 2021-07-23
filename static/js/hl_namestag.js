@@ -45,6 +45,7 @@ function populateWithResults(result){
   var templateDefinition = $('#persontags-result').html();
   console.log(result);
   console.log(result.persontags);
+  console.log(Object.keys(result));
 
   /*if(result == null){
     console.log("null");
