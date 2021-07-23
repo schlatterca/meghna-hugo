@@ -39,7 +39,7 @@ function persontags(data){
       if (json.hasOwnProperty(key)) {
       var dirtyArray = json[key];
       var result = clean(dirtyArray);
-      populateWithResults(result.persontags); //dig deeper!
+      populateWithResults(result);
     }
   }
   return false;
@@ -53,11 +53,14 @@ function populateWithResults(myResults){
   /*for (let i = 0; i < myResults.length; i++) {
     console.log(myResults[i]);
   }*/
-  console.log(myResults);
 
-  $('#persontags-search-results').append(myResults, "<br>");
+  if (myResults.hasOwnProperty("persontags")) {
+    console.log(myResults.persontags);
+  }
 
-  //console.log(myResults);
+  $('#persontags-search-results').append(myResults.persontags, "<br>");
+
+  //console.log(myResults.persontags);
   //console.log(Object.keys(myResults));
   //console.log(document.getElementById("this_article_title").innerHTML);
 
