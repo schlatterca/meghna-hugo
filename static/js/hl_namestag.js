@@ -25,54 +25,46 @@ function getJsonArray(){
   })
 }
 
+function clean(array) {
+  for (var key in array) {
+    if (array[key] === null || array[key] === undefined) {
+      delete array[key];
+    }
+  }
+  return array
+}
+
 function persontags(data){
   json = data;
   for (var key in json) {
       if (json.hasOwnProperty(key)) {
-      var item = json[key];
+      var dirtyArray = json[key];
 
-      console.log(item);
+      //console.log(item);
       //console.log(item.title);
-      console.log("items: ", item.persontags);
+      //console.log("items: ", item.persontags);
       //console.log(document.getElementById("this_article_title").innerHTML);
-      populateWithResults(item.persontags);
+
+      var result = clean(dirtyArray);
+
+      console.log("ciao");
+
+      populateWithResults(result);
     }
   }
   return false;
 }
 
-function populateWithResults(result){
+function populateWithResults(myResults){
+
   var templateDefinition = $('#persontags-result').html();
   //var output = render(templateDefinition, result);
-  $('#persontags-search-results').append(result);
-  
+  $('#persontags-search-results').append(myResults);
+
+  console.log(myResults);
+  //console.log(result);
+  //console.log(result.persontags);
+  //console.log(Object.keys(result));
 };
 
 getJsonArray();
-
-
-
-function render(templateString, data) {
-  var conditionalMatches,conditionalPattern,copy;
-  conditionalPattern = /\$\{\s*isset ([a-zA-Z]*) \s*\}(.*)\$\{\s*end\s*}/g;
-  //since loop below depends on re.lastInxdex, we use a copy to capture any manipulations whilst inside the loop
-  copy = templateString;
-  while ((conditionalMatches = conditionalPattern.exec(templateString)) !== null) {
-    if(data[conditionalMatches[1]]){
-      //valid key, remove conditionals, leave contents.
-      copy = copy.replace(conditionalMatches[0],conditionalMatches[2]);
-    }else{
-      //not valid, remove entire section
-      copy = copy.replace(conditionalMatches[0],'');
-    }
-  }
-  templateString = copy;
-  //now any conditionals removed we can do simple substitution
-  var key, find, re;
-  for (key in data) {
-    find = '\\$\\{\\s*' + key + '\\s*\\}';
-    re = new RegExp(find, 'g');
-    templateString = templateString.replace(re, data[key]);
-  }
-  return templateString;
-}
