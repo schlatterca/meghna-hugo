@@ -53,6 +53,11 @@ function populateWithResults(myResults){
   if (myResults.hasOwnProperty("persontags")) {
     for (let i = 0; i < myResults.persontags.length; i++) {
       console.log(myResults.persontags[i]);
+
+
+      myResults.persontags[i].sort((a, b) => b.split(' ')[1].localeCompare(a.split(' ')[1]));
+
+
       $('#persontags-search-results').append(myResults.persontags[i], "<br>");
     }
   }
