@@ -33,12 +33,17 @@ function clean(array) {
   return array
 }
 
+let dirtyGroup = [];
+
 function persontags(data){
   json = data;
   for (var key in json) {
       if (json.hasOwnProperty(key)) {
       var dirtyArray = json[key];
       var result = clean(dirtyArray);
+
+      console.log(result); //###
+
       populateWithResults(result);
     }
   }
@@ -67,9 +72,10 @@ function populateWithResults(myResults){
     $('#persontags-search-results').append(sortedNames[i], "<br>");
   }
 
-  console.log(sortedNames.length);
+  //console.log(sortedNames.length);
 
-  //$('#persontags-search-results').append(myResults.persontags, "<br>");
+
+
 
   //console.log(myResults.persontags);
   //console.log(Object.keys(myResults));
