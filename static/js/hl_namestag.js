@@ -51,7 +51,9 @@ function persontags(data){
             data[j] = data[j].charAt(0).toUpperCase() + data[j].slice(1);
           }
 
-          if (data.length == 3) { //rearrange
+          if (data.length == 4) { //rearrange
+            var SurnameName = data[3] + ' ' + data[2] + ' ' + data[1] + ' ' + data[0];
+          } if (data.length == 3) {
             var SurnameName = data[2] + ' ' + data[1] + ' ' + data[0];
           } if (data.length == 2) {
             var SurnameName = data[1] + ' ' + data[0];
