@@ -54,9 +54,9 @@ function persontags(data){
           if (data.length == 3) { //rearrange
             console.log("3", data.length);
           } if (data.length == 2) { //rearrange
-            console.log("3", data.length);
+            console.log("2", data.length);
           } if (data.length == 1) { //rearrange
-            console.log("3", data.length);
+            console.log("1", data.length);
           }
 
           var SurnameName = data[2] + ' ' + data[1] + ' ' + data[0];
