@@ -47,6 +47,9 @@ function persontags(data){
 
       var result = clean(dirtyArray);
 
+      console.log(result);
+      console.log(result.persontags);
+
       populateWithResults(result);
     }
   }
@@ -55,8 +58,8 @@ function persontags(data){
 
 function populateWithResults(myResults){
   var templateDefinition = $('#persontags-result').html();
-  console.log(result);
-  console.log(result.persontags);
+  //console.log(result);
+  //console.log(result.persontags);
   //console.log(Object.keys(result));
 };
 
