@@ -47,8 +47,7 @@ function persontags(data){
 
       var result = clean(dirtyArray);
 
-      console.log(result);
-      console.log(result.persontags);
+      console.log("ciao");
 
       populateWithResults(result);
     }
@@ -57,8 +56,13 @@ function persontags(data){
 }
 
 function populateWithResults(myResults){
+
+  console.log("ciao_2");
+
   var templateDefinition = $('#persontags-result').html();
   $('#persontags-search-result').append("ciaoooo");
+
+  console.log("ciao_3");
   //console.log(result);
   //console.log(result.persontags);
   //console.log(Object.keys(result));
