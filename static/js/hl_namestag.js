@@ -49,6 +49,11 @@ function populateWithResults(myResults){
 
   var templateDefinition = $('#persontags-result').html();
   //var output = render(templateDefinition, result);
+
+  for (let i = 0; i < myResults.length; i++) {
+    console.log(myResults[i]);
+  }
+
   $('#persontags-search-results').append(myResults, "<br>");
 
   //console.log(myResults.persontags);
