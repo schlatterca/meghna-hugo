@@ -1,4 +1,4 @@
-summaryInclude=100;
+/*summaryInclude=100;
 var fuseOptions = {
   shouldSort: true,
   includeMatches: true,
@@ -14,13 +14,13 @@ var fuseOptions = {
     {name:"tags",weight:0.3},
     {name:"persontags",weight:0.7}
   ]
-};
+};*/
 
 function getJsonArray(){
   $.ajax({
-      url : '/index.json',
+      url: '/index.json',
       type: 'GET',
-      success : persontags
+      success: persontags
   })
 }
 
@@ -33,26 +33,26 @@ function clean(array) {
   return array
 }
 
-let sortedNames = [];
+let sortedNames = []; //prepare an array for sorted names.
 
 function persontags(data){
-  json = data;
-  for (var key in json) {
-    if (json.hasOwnProperty(key)) {
-      var dirtyArray = json[key];
-      var result = clean(dirtyArray);
+  json = data; //fetch my json
+  for (var key in json) { //for each key in the json…
+    if (json.hasOwnProperty(key)) { //unless that key is not used…
+      var dirtyArray = json[key]; //create an array of those results…
+      var result = clean(dirtyArray); //and clean it.
 
-      if (result.hasOwnProperty("persontags")) {
-        for (let i = 0; i < result.persontags.length; i++) {
-          var data = result.persontags[i];
+      if (result.hasOwnProperty("persontags")) { //and if the key "personags" exists…
+        for (let i = 0; i < result.persontags.length; i++) { //for each result in "persontags"…
+          var data = result.persontags[i]; //split it and change name with surname…
           data = data.split(' ');
           var SurnameName = data[1] + ' ' + data[0];
-          sortedNames.push(SurnameName);
+          sortedNames.push(SurnameName); //and append it to the sortedNames array.
         }
       }
     }
   }
-  sortedNames.sort();
+  sortedNames.sort(); //sort sortedNames alphabetically.
   populateWithResults(sortedNames);
   return false;
 }
