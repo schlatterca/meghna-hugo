@@ -58,12 +58,12 @@ function persontags(data){
 
 
 function checkCorrespondance(myResults){
-  for (let i = 0; i < myResults.length; i++) {
+  /*for (let i = 0; i < myResults.length; i++) {
     console.log(myResults[i]);
-  }
+  }*/
   for (var key in json) { //for each key in the json…
     if (json.hasOwnProperty(key)) {
-      console.log(key);
+      console.log(json[key]);
     }
   }
 
