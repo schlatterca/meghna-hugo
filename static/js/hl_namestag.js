@@ -53,10 +53,11 @@ function persontags(data){
 
           if (data.length == 2) { //rearrange
             var SurnameName = data[1] + ' ' + data[0];
-            console.log(data)
-          } /*lse if (data.length == 3) {
+            console.log(data);
+          } if (data.length == 3) {
             var SurnameName = data[2] + ' ' + data[1] + ' ' + data[0];
-          }*/
+            console.log(data);
+          }
 
           sortedNames.push(SurnameName); //and append it to the sortedNames array.
         }
