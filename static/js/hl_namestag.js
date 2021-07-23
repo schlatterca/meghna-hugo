@@ -51,14 +51,13 @@ function persontags(data){
             data[j] = data[j].charAt(0).toUpperCase() + data[j].slice(1);
           }
 
-          if (data.length == 2) { //rearrange
-            var SurnameName = data[1] + ' ' + data[0];
-            console.log(data);
-          } if (data.length == 3) {
+          if (data.length == 3) { //rearrange
             var SurnameName = data[2] + ' ' + data[1] + ' ' + data[0];
-            console.log(data);
+          } if (data.length == 2) {
+            var SurnameName = data[1] + ' ' + data[0];
           }
 
+          console.log(data.length);
           sortedNames.push(SurnameName); //and append it to the sortedNames array.
         }
       }
