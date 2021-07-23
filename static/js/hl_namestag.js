@@ -55,8 +55,8 @@ function populateWithResults(myResults){
       console.log(myResults.persontags[i]);
 
 
-      console.log(myResults.persontags.sort((a, b) => b.split(' ')[1].localeCompare(a.split(' ')[1])));
-
+      //console.log(myResults.persontags.sort((a, b) => b.split(' ')[1].localeCompare(a.split(' ')[1])));
+      console.log(myResults.persontags.sort(x => myResults.persontags.map(y => y.split(' ')[1]) ).reverse());
 
       $('#persontags-search-results').append(myResults.persontags[i], "<br>");
     }
