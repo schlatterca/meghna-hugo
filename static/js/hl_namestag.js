@@ -33,20 +33,27 @@ function clean(array) {
   return array
 }
 
-let dirtyGroup = [];
+let sortedNames = [];
 
 function persontags(data){
   json = data;
   for (var key in json) {
-      if (json.hasOwnProperty(key)) {
+    if (json.hasOwnProperty(key)) {
       var dirtyArray = json[key];
       var result = clean(dirtyArray);
 
-      console.log(key, result); //###
-
-      populateWithResults(result);
+      if (result.hasOwnProperty("persontags")) {
+        for (let i = 0; i < result.persontags.length; i++) {
+          var data = result.persontags[i];
+          data = data.split(' ');
+          var SurnameName = data[1] + ' ' + data[0];
+          sortedNames.push(SurnameName);
+        }
+      }
+      //populateWithResults(result);
     }
   }
+  console.log(sortedNames);
   return false;
 }
 
@@ -55,16 +62,7 @@ function populateWithResults(myResults){
   var templateDefinition = $('#persontags-result').html();
   //var output = render(templateDefinition, result);
 
-  let sortedNames = [];
-
-  if (myResults.hasOwnProperty("persontags")) {
-    for (let i = 0; i < myResults.persontags.length; i++) {
-      var data = myResults.persontags[i];
-      data = data.split(' ');
-      var SurnameName = data[1] + ' ' + data[0];
-      sortedNames.push(SurnameName);
-    }
-  }
+  
 
   sortedNames.sort();
 
