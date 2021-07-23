@@ -25,47 +25,29 @@ function getJsonArray(){
   })
 }
 
-function clean(array) {
-  for (var key in array) {
-    if (array[key] === null || array[key] === undefined) {
-      delete array[key];
-    }
-  }
-  return array
-}
-
 function persontags(data){
   json = data;
   for (var key in json) {
       if (json.hasOwnProperty(key)) {
-      var dirtyArray = json[key];
+      var item = json[key];
 
-      //console.log(item);
+      console.log(item);
       //console.log(item.title);
-      //console.log("items: ", item.persontags);
+      console.log("items: ", item.persontags);
       //console.log(document.getElementById("this_article_title").innerHTML);
-
-      var result = clean(dirtyArray);
-
-      console.log("ciao");
-
-      populateWithResults(result);
+      populateWithResults(item.persontags);
     }
   }
   return false;
 }
 
-function populateWithResults(myResults){
-
-  console.log("ciao_2");
-
+function populateWithResults(result){
   var templateDefinition = $('#persontags-result').html();
-  $('#persontags-search-result').append("ciaoooo");
-
-  console.log("ciao_3");
-  //console.log(result);
-  //console.log(result.persontags);
-  //console.log(Object.keys(result));
+  //var output = render(templateDefinition, result);
+  for (i = 0; i < result.length; i++){
+    $('#persontags-search-results').append(result[i], " ", "<br>"); 
+  }
+  
 };
 
 getJsonArray();
