@@ -47,8 +47,8 @@ function persontags(data){
           var data = result.persontags[i]; //split it and change name with surname…
           data = data.split(' ');
 
-          for (var i = 0; i < data.length; i++) { //capitalize first letter
-            data[i] = data[i].charAt(0).toUpperCase() + data[i].slice(1);
+          for (var j = 0; j < data.length; j++) { //capitalize first letter
+            data[j] = data[j].charAt(0).toUpperCase() + data[j].slice(1);
            }
 
           var SurnameName = data[1] + ' ' + data[0];
