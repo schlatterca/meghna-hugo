@@ -63,7 +63,9 @@ function checkCorrespondance(myResults){
   }*/
   for (var key in json) { //for each key in the json…
     if (json.hasOwnProperty(key)) {
-      console.log(json[key]);
+      if (result.hasOwnProperty("persontags")) {
+        console.log(result);
+      }
     }
   }
 
