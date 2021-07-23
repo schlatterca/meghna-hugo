@@ -43,15 +43,30 @@ function persontags(data){
 
 function populateWithResults(result){
   var templateDefinition = $('#persontags-result').html();
-  console.log(result);
-  console.log(result.persontags);
+  //console.log(result);
+  //console.log(result.persontags);
   //console.log(Object.keys(result));
-  
-  var filtered = result.filter(function (el) {
-    return el != null;
-  });
 
-  console.log(filtered);
+
+  var test = {
+    test1: null,
+    test2: 'somestring',
+    test3: 3,
+  }
+
+  function clean(obj) {
+    for (var propName in obj) {
+      if (obj[propName] === null || obj[propName] === undefined) {
+        delete obj[propName];
+      }
+    }
+    return obj
+  }
+
+  console.log(result);
+  console.log(clean(result));
+
+
 
   /*if(result == null){
     console.log("null");
