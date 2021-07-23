@@ -50,10 +50,10 @@ function persontags(data){
           sortedNames.push(SurnameName);
         }
       }
-      //populateWithResults(result);
     }
   }
-  console.log(sortedNames);
+  sortedNames.sort();
+  populateWithResults(sortedNames);
   return false;
 }
 
@@ -61,17 +61,11 @@ function populateWithResults(myResults){
 
   var templateDefinition = $('#persontags-result').html();
   //var output = render(templateDefinition, result);
-
-  
-
-  sortedNames.sort();
-
   for (let i = 0; i < sortedNames.length; i++) {
     $('#persontags-search-results').append(sortedNames[i], "<br>");
   }
 
   //console.log(sortedNames.length);
-
 
 
 
