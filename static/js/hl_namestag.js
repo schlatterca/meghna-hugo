@@ -65,7 +65,9 @@ function persontags(data){
     }
   }
   sortedNames.sort(); //sort sortedNames alphabetically.
-  let uniqueSortedNames = [...new Set(sortedNames)]; //erase duplicates
+  let uniqueSortedNames = [...new Set(sortedNames)]; //erase duplicates and get final array.
+  console.log(sortedNames);
+  console.log(uniqueSortedNames);
 
   populateWithResults(uniqueSortedNames);
   return false;
