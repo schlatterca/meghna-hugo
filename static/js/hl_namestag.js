@@ -73,14 +73,7 @@ function persontags(data){
     }
   }
   //sortedNames.sort(); //sort sortedNames alphabetically.
-  sortedNames.sort(function(a, b) {
-    var keyA = new Date(a.name),
-      keyB = new Date(b.name);
-    // Compare the 2 dates
-    if (keyA < keyB) return -1;
-    if (keyA > keyB) return 1;
-    return 0;
-  });
+  sortedNames.sort((a,b)=> (a.name > b.name ? 1 : -1));
   console.log(sortedNames);
   //let uniqueSortedNames = [...new Set(sortedNames)]; //erase duplicates and get final array.
 
