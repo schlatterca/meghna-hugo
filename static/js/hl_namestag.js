@@ -17,7 +17,8 @@ function clean(array) {
   return array
 }
 
-let unsortedNames = [];
+var unsortedNames = [];
+
 let sortedNames = []; //prepare an array for sorted names.
 
 function persontags(data){
@@ -30,7 +31,21 @@ function persontags(data){
       if (result.hasOwnProperty("persontags")) { //and if the key "personags" exists…
         for (let i = 0; i < result.persontags.length; i++) { //for each result in "persontags"…
 
-          unsortedNames.push(result.persontags[i]);
+
+
+          //unsortedNames.push({result.persontags[i], result.title});
+
+          var element = {};
+          element.name = result.persontags[i];
+          element.link = result.title;
+          console.log(element.name, element.link);
+          unsortedNames.push({element: element});
+
+
+          console.log(unsortedNames);
+
+
+
 
           var data = result.persontags[i]; //split it and change name with surname…
           data = data.split(' ');
@@ -55,25 +70,31 @@ function persontags(data){
   sortedNames.sort(); //sort sortedNames alphabetically.
   let uniqueSortedNames = [...new Set(sortedNames)]; //erase duplicates and get final array.
 
-  checkCorrespondance(unsortedNames);
+
+
+
+
+
+  //checkCorrespondance(unsortedNames);
   populateWithResults(uniqueSortedNames);
   return false;
 }
 
 
+/*
 function checkCorrespondance(myResults){
   for (let i = 0; i < myResults.length; i++) {
     for (var key in json) {
       if (json.hasOwnProperty(key)) {
         var result = clean(json[key]);
 
-        /*if (result.hasOwnProperty("persontags")){
+        //if (result.hasOwnProperty("persontags")){
           console.log("a", result);
           console.log("a", myResults[i]);
           if (result.persontags.includes(myResults[i])){
             console.log("b", result.title);
           }
-        }*/
+        }
 
         if ((result.hasOwnProperty("persontags"))&&(result.persontags.includes(myResults[i]))) {
           console.log(myResults[i], result.title);
@@ -82,7 +103,7 @@ function checkCorrespondance(myResults){
     }
   }
 
-}
+}*/
 
 
 
