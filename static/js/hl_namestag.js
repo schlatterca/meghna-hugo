@@ -26,9 +26,6 @@ function persontags(data){
   for (var key in json) { //for each key in the json…
     if (json.hasOwnProperty(key)) { //unless that key is not used…
       var dirtyArray = json[key]; //create an array of those results…
-
-
-      console.log(dirtyArray);
       var result = clean(dirtyArray); //and clean it.
 
       if (result.hasOwnProperty("persontags")) { //and if the key "personags" exists…
@@ -39,7 +36,7 @@ function persontags(data){
 
           var element = {};
           element.name = result.persontags[i];
-          element.link = result.title;
+          element.link = result.permalink;
           unsortedNames.push({element: element});
 
 
