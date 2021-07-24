@@ -68,7 +68,6 @@ function persontags(data){
 
 
           console.log(sortedNames.element);
-          console.log(sortedNames.element.name);
 
           //sortedNames.push(SurnameName); //and append it to the sortedNames array.
         }
