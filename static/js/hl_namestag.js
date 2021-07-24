@@ -18,8 +18,7 @@ function clean(array) {
 }
 
 var unsortedNames = [];
-
-let sortedNames = []; //prepare an array for sorted names.
+var sortedNames = []; //prepare an array for sorted names.
 
 function persontags(data){
   json = data; //fetch my json
