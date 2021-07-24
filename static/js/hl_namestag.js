@@ -73,11 +73,9 @@ function persontags(data){
   }
   //sortedNames.sort(); //sort sortedNames alphabetically.
   sortedNames.sort(function(a, b) {
-    console.log(a.element.name, b.element.name);
     return parseFloat(a.name) - parseFloat(b.name);
   });
-  console.log(sortedNames[0]);
-  console.log(sortedNames[0].element);
+  console.log(sortedNames);
   //let uniqueSortedNames = [...new Set(sortedNames)]; //erase duplicates and get final array.
 
 
