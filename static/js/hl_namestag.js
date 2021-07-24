@@ -79,22 +79,17 @@ function persontags(data){
   }
 
   const sortedNames = allNames.map((key, ind) => ({ 'name': key, 'link': allLinks[ind]}));
-
   sortedNames.sort((a, b) => (a.name > b.name) ? 1 : -1);
-  //ultimate.sort((a, b) => parseFloat(a.name) - parseFloat(b.name));
-  
+
   console.log(sortedNames);
 
   //let uniqueSortedNames = [...new Set(sortedNames)]; //erase duplicates and get final array.
 
 
 
-
-
-
   //checkCorrespondance(unsortedNames);
   //populateWithResults(uniqueSortedNames);
-  populateWithResults(sortedNames);
+  populateWithResults(sortedNames.name);
   return false;
 }
 
