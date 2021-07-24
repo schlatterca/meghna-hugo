@@ -19,6 +19,8 @@ function clean(array) {
 
 var unsortedNames = [];
 var sortedNames = []; //prepare an array for sorted names.
+var allNames = [];
+var allLinks= [];
 
 function persontags(data){
   json = data; //fetch my json
@@ -60,10 +62,17 @@ function persontags(data){
           }
 
 
-          var element = {};
+          /*var element = {};
           element.name = SurnameName;
           element.link = result.permalink;
-          sortedNames.push({element: element});
+          sortedNames.push({element: element});*/
+
+
+          allNames.push(SurnameName);
+          allLinks.push(result.permalink);
+
+          const res = allNames.map((key, ind) => ({ 'name': key, 'link': allLinks[ind]}));
+          console.log(res);
 
 
           //sortedNames.push(SurnameName); //and append it to the sortedNames array.
@@ -75,12 +84,12 @@ function persontags(data){
   //sortedNames.sort(); //sort sortedNames alphabetically.
 
 
-  for (var i = 0; i < sortedNames.length; i++) {
-    sortedNames.sort(function(a, b) {
-      console.log(a[i].element.name, b[i].element.name);
-      return parseFloat(a[i].element.name) - parseFloat(b[i].element.name);
+  /*for (var i = 0; i < sortedNames.length; i++) {
+    sortedNames[i].sort(function(a, b) {
+      console.log(a.element.name, b.element.name);
+      return parseFloat(a.element.name) - parseFloat(b.element.name);
     });
-  }
+  }*/
   /*sortedNames.sort(function(a, b) {
     console.log(a.element.name, b.element.name);
     return parseFloat(a.element.name) - parseFloat(b.element.name);
