@@ -79,18 +79,17 @@ function persontags(data){
   }
 
   const ultimate = allNames.map((key, ind) => ({ 'name': key, 'link': allLinks[ind]}));
-  ultimate.sort((a, b) => parseFloat(a.name) - parseFloat(b.name));
+
+
+  console.log(ultimate);
+
+  ultimate.sort((a, b) => (a.name > b.name) ? 1 : -1);
+  //ultimate.sort((a, b) => parseFloat(a.name) - parseFloat(b.name));
+  
   console.log(ultimate);
 
   //sortedNames.sort(); //sort sortedNames alphabetically.
 
-
-  /*for (var i = 0; i < sortedNames.length; i++) {
-    sortedNames[i].sort(function(a, b) {
-      console.log(a.element.name, b.element.name);
-      return parseFloat(a.element.name) - parseFloat(b.element.name);
-    });
-  }*/
   /*sortedNames.sort(function(a, b) {
     console.log(a.element.name, b.element.name);
     return parseFloat(a.element.name) - parseFloat(b.element.name);
