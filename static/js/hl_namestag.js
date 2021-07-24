@@ -17,8 +17,8 @@ function clean(array) {
   return array
 }
 
-var unsortedNames = [];
-var sortedNames = []; //prepare an array for sorted names.
+//var unsortedNames = [];
+//var sortedNames = []; //prepare an array for sorted names.
 var allNames = [];
 var allLinks= [];
 
@@ -78,27 +78,13 @@ function persontags(data){
     }
   }
 
-  const ultimate = allNames.map((key, ind) => ({ 'name': key, 'link': allLinks[ind]}));
+  const sortedNames = allNames.map((key, ind) => ({ 'name': key, 'link': allLinks[ind]}));
 
-
-  console.log(ultimate);
-
-  ultimate.sort((a, b) => (a.name > b.name) ? 1 : -1);
+  sortedNames.sort((a, b) => (a.name > b.name) ? 1 : -1);
   //ultimate.sort((a, b) => parseFloat(a.name) - parseFloat(b.name));
   
-  console.log(ultimate);
-
-  //sortedNames.sort(); //sort sortedNames alphabetically.
-
-  /*sortedNames.sort(function(a, b) {
-    console.log(a.element.name, b.element.name);
-    return parseFloat(a.element.name) - parseFloat(b.element.name);
-  });*/
-  //sortedNames.sort((a, b) => (a.element.color > b.element.color) ? 1 : -1)
-  //sortedNames.sort((a, b) => parseFloat(a.element.name) - parseFloat(b.element.name));
   console.log(sortedNames);
-  console.log(sortedNames[0]);
-  console.log(sortedNames[0].element);
+
   //let uniqueSortedNames = [...new Set(sortedNames)]; //erase duplicates and get final array.
 
 
