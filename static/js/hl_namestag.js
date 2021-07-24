@@ -71,15 +71,16 @@ function persontags(data){
           allNames.push(SurnameName);
           allLinks.push(result.permalink);
 
-          const res = allNames.map((key, ind) => ({ 'name': key, 'link': allLinks[ind]}));
-          console.log(res);
-
 
           //sortedNames.push(SurnameName); //and append it to the sortedNames array.
         }
       }
     }
   }
+
+  const ultimate = allNames.map((key, ind) => ({ 'name': key, 'link': allLinks[ind]}));
+  ultimate.sort((a, b) => parseFloat(a.name) - parseFloat(b.name));
+  console.log(ultimate);
 
   //sortedNames.sort(); //sort sortedNames alphabetically.
 
