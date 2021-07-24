@@ -34,13 +34,13 @@ function persontags(data){
 
 
 
-          var element = {};
+          /*var element = {};
           element.name = result.persontags[i];
           element.link = result.permalink;
           unsortedNames.push({element: element});
 
 
-          console.log(unsortedNames);
+          console.log(unsortedNames);*/
 
 
 
@@ -60,7 +60,16 @@ function persontags(data){
             var SurnameName = data[1] + ' ' + data[0];
           }
 
-          sortedNames.push(SurnameName); //and append it to the sortedNames array.
+
+          var element = {};
+          element.name = SurnameName;
+          element.link = result.permalink;
+          sortedNames.push({element: element});
+
+
+          console.log(unsortedNames);
+
+          //sortedNames.push(SurnameName); //and append it to the sortedNames array.
         }
       }
     }
