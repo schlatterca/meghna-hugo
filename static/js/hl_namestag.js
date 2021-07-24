@@ -67,15 +67,15 @@ function persontags(data){
           sortedNames.push({element: element});
 
 
-          console.log(unsortedNames);
+          console.log(sortedNames);
 
           //sortedNames.push(SurnameName); //and append it to the sortedNames array.
         }
       }
     }
   }
-  sortedNames.sort(); //sort sortedNames alphabetically.
-  let uniqueSortedNames = [...new Set(sortedNames)]; //erase duplicates and get final array.
+  //sortedNames.sort(); //sort sortedNames alphabetically.
+  //let uniqueSortedNames = [...new Set(sortedNames)]; //erase duplicates and get final array.
 
 
 
@@ -83,7 +83,8 @@ function persontags(data){
 
 
   //checkCorrespondance(unsortedNames);
-  populateWithResults(uniqueSortedNames);
+  //populateWithResults(uniqueSortedNames);
+  populateWithResults(sortedNames);
   return false;
 }
 
