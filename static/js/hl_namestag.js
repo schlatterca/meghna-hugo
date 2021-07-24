@@ -73,7 +73,7 @@ function persontags(data){
   }
 
   //sortedNames.sort(); //sort sortedNames alphabetically.
-  sortedNames.element.sort();
+  sortedNames.sort();
   /*sortedNames.sort(function(a, b) {
     console.log(a.element.name, b.element.name);
     return parseFloat(a.element.name) - parseFloat(b.element.name);
