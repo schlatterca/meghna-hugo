@@ -89,7 +89,7 @@ function persontags(data){
 
   //checkCorrespondance(unsortedNames);
   //populateWithResults(uniqueSortedNames);
-  populateWithResults(sortedNames.name);
+  populateWithResults(sortedNames[name]);
   return false;
 }
 
