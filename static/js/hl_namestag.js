@@ -75,10 +75,10 @@ function persontags(data){
   //sortedNames.sort(); //sort sortedNames alphabetically.
 
 
-  let allEntries = Object.entries(sortedNames);
+  /*let allEntries = Object.entries(sortedNames);
   let sortedEntries = allEntries.sort((a,b) => a[1].name.localeCompare(b[1].name));
   let obj = Object.fromEntries(sortedEntries);
-  console.log(obj);
+  console.log(obj);*/
   /*sortedNames.sort(function(a, b) {
     console.log(a.element.name, b.element.name);
     return parseFloat(a.element.name) - parseFloat(b.element.name);
@@ -86,6 +86,7 @@ function persontags(data){
   //sortedNames.sort((a, b) => (a.element.color > b.element.color) ? 1 : -1)
   //sortedNames.sort((a, b) => parseFloat(a.element.name) - parseFloat(b.element.name));
   console.log(sortedNames);
+  console.log(sortedNames[0]);
   console.log(sortedNames.element[0]);
   //let uniqueSortedNames = [...new Set(sortedNames)]; //erase duplicates and get final array.
 
