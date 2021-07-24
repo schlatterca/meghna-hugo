@@ -76,7 +76,10 @@ function persontags(data){
     console.log(a.name, b.name);
     return parseFloat(a.name) - parseFloat(b.name);
   });
-  console.log(sortedNames);
+  console.log(sortedNames[0]);
+  console.log(sortedNames[0].element);
+  console.log(sortedNames[0].name);
+  console.log(sortedNames[0][0]);
   //let uniqueSortedNames = [...new Set(sortedNames)]; //erase duplicates and get final array.
 
 
