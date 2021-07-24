@@ -76,9 +76,9 @@ function persontags(data){
 
 
   for (var i = 0; i < sortedNames.length; i++) {
-    sortedNames[i].sort(function(a, b) {
-      console.log(a.element.name, b.element.name);
-      return parseFloat(a.element.name) - parseFloat(b.element.name);
+    sortedNames.sort(function(a, b) {
+      console.log(a[i].element.name, b[i].element.name);
+      return parseFloat(a[i].element.name) - parseFloat(b[i].element.name);
     });
   }
   /*sortedNames.sort(function(a, b) {
