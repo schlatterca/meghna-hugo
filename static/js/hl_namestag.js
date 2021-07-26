@@ -83,8 +83,16 @@ function persontags(data){
   const sortedNames = allNames.map((key, ind) => ({ 'name': key, 'link': allLinks[ind], 'title': allTitles[ind]}));
   sortedNames.sort((a, b) => (a.name > b.name) ? 1 : -1);
 
-  //let uniqueSortedNames = [...new Set(sortedNames)]; //erase duplicates and get final array.
 
+
+  //var obj = [ { id:1, store: "10", items: [{name:"sample1", total: 20}, {name:"sample2", total: 10}] }, { id:1, store: "11", items: [{name:"sample3", total: 10}, {name:"sample4", total: 10}] }];
+  //var ultimate = obj.map(val=>(val.items = val.items.map(p=>({...p,store:val.store})), val));
+  var ultimate = sortedNames.map(val=>(val.link = val.link.map(p=>({...p,link[-1]:val.link[-1]})), val));
+  console.log(sortedNames);
+  console.log(ultimate);
+
+
+  //let uniqueSortedNames = [...new Set(sortedNames)]; //erase duplicates and get final array.
   //checkCorrespondance(unsortedNames);
   populateWithResults(sortedNames);
   return false;
@@ -124,31 +132,32 @@ function populateWithResults(myResults){
     console.log(myResults[i].name, myResults[i].link, myResults[i].title);
     //$('#persontags-search-results').append(myResults[i].name, "<br>");
 
-    if ((i != 0)&&(myResults[i].name != myResults[i-1].name)){
-      const persona = document.createElement("div");
-      const quinome = document.createElement("p");
-      const quilink = document.createElement("a");
-
-      persona.id = "persona";
-      persona.setAttribute("style", "margin-bottom: 10px");
-      quinome.id = "quinome";
-      quinome.setAttribute("style", "font-size: 16px; color: black; margin-bottom: 0px");
-      quilink.id = "quilink";
-      quilink.setAttribute("href", myResults[i].link);
-      quilink.innerHTML = myResults[i].title;
-
-
-
-      quinome.append(myResults[i].name);
-
-      persona.append(quinome);
-
-      $('#main_person_tags').append(persona);
-    } else {
-      console.log("ciao");
+    //forse servira un if (i != 0)
+    if ((i != 0)&&(myResults[i].name == myResults[i-1].name)){
+      console.log(myResults[i].name, myResults[i-1].name);
     }
 
-    
+
+
+    const persona = document.createElement("div");
+    const quinome = document.createElement("p");
+    const quilink = document.createElement("a");
+
+    persona.id = "persona";
+    persona.setAttribute("style", "margin-bottom: 10px");
+    quinome.id = "quinome";
+    quinome.setAttribute("style", "font-size: 16px; color: black; margin-bottom: 0px");
+    quilink.id = "quilink";
+    quilink.setAttribute("href", myResults[i].link);
+    quilink.innerHTML = myResults[i].title;
+
+
+
+    quinome.append(myResults[i].name);
+
+    persona.append(quinome);
+
+    $('#main_person_tags').append(persona);
 
   }
 
