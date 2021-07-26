@@ -140,6 +140,8 @@ function populateWithResults(myResults){
 
 
 
+    quinome.append(myResults[i].name);
+    
     persona.append(quinome);
 
     $('#main_person_tags').append(persona);
