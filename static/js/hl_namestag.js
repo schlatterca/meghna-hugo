@@ -125,7 +125,7 @@ function populateWithResults(myResults){
     //$('#persontags-search-results').append(myResults[i].name, "<br>");
 
     //forse servira un if (i != 0)
-    if (myResults[i].name != myResults[i-1].name){
+    if ((i != 0)&&(myResults[i].name != myResults[i-1].name)){
       console.log(myResults[i].name, myResults[i-1].name);
     }
 
