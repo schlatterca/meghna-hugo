@@ -89,7 +89,8 @@ function persontags(data){
     if ((i != 0)&&(sortedNames[i].name == sortedNames[i-1].name)){
       console.log(sortedNames[i].name, sortedNames[i-1].name);
       sortedNames[i-1].link.push(sortedNames[i].link[0]);
-      delete sortedNames[i];
+      sortedNames.pop(sortedNames[i]);
+      //delete sortedNames[i];
     }
   }
   
