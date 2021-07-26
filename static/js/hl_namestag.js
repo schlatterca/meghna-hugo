@@ -84,12 +84,11 @@ function persontags(data){
   sortedNames.sort((a, b) => (a.name > b.name) ? 1 : -1);
 
 
-
   for (var i = 0; i < sortedNames.length; i++) {
     if ((i != 0)&&(sortedNames[i].name == sortedNames[i-1].name)){
       console.log(sortedNames[i].name, sortedNames[i-1].name);
       sortedNames[i-1].link.push(sortedNames[i].link[0]);
-      sortedNames.splice(0, i);
+      sortedNames.splice(i, 1);
       //delete sortedNames[i];
     }
   }
