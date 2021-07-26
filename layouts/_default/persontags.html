@@ -11,7 +11,16 @@
 {{ partial "navigation.html" . }}
 
 <section class="section">
-  <div id="persontags-search-results">Person tags: </div>
+  <div class="col-lg-8 offset-lg-2 text-center">
+    <h1>Index</h1>  
+  </div>
+  <div class="col-lg-8 offset-lg-2">
+    <div class="post-single-content">
+      <h2>Person tags:</h2>
+      <div id="persontags-search-results"></div>
+    </div>
+  </div>
+
 </section>
 <script id="persontags-result" type="text/x-js-template">
     <div id="summary-${key}">
