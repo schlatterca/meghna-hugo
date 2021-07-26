@@ -88,7 +88,8 @@ function persontags(data){
   for (var i = 0; i < sortedNames.length; i++) {
     if ((i != 0)&&(sortedNames[i].name == sortedNames[i-1].name)){
       console.log(sortedNames[i].name, sortedNames[i-1].name);
-      sortedNames[i-1].link = sortedNames[i].link;
+      //sortedNames[i-1].link = sortedNames[i].link;
+      sortedNames[i-1].link.append(sortedNames[i].link);
     }
   }
   
