@@ -120,9 +120,30 @@ function checkCorrespondance(myResults){
 function populateWithResults(myResults){
   var templateDefinition = $('#persontags-result').html();
 
-  for (var i = 0; i < myResults.length; i++) {  
+  for (var i = 0; i < myResults.length; i++) {
     console.log(myResults[i].name, myResults[i].link, myResults[i].title);
-    $('#persontags-search-results').append(myResults[i].name, "<br>");
+    //$('#persontags-search-results').append(myResults[i].name, "<br>");
+
+    const persona = document.createElement("div");
+    const quinome = document.createElement("p");
+
+    //qui un bel ciclo for…
+    const link = document.createElement("a");
+
+    persona.className = "persona";
+    persona.id = "persona";
+    persona.setAttribute("style", "margin-bottom: 10px");
+    quinome.id = "quinome";
+    quinome.setAttribute("style", "color: black; margin-bottom: 0px");
+
+    console.log(persona, quinome);
+
+
+
+    persona.append(quinome);
+
+    $('#main_person_tags').append(persona);
+
   }
 
   //console.log(sortedNames.length);
