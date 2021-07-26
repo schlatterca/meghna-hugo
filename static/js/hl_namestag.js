@@ -85,9 +85,18 @@ function persontags(data){
 
 
 
-  //var ultimate = sortedNames.map(val=>(val.link = val.link.map(p=>({...p,link:val.link})), val));
+  for (var i = 0; i < sortedNames.length; i++) {
+    if ((i != 0)&&(sortedNames[i].name == sortedNames[i-1].name)){
+      console.log(sortedNames[i].name, sortedNames[i-1].name);
+      sortedNames[i-1].link = sortedNames[i].link;
+    }
+  }
+  
   console.log(sortedNames);
-  //console.log(ultimate);
+
+  
+
+
 
 
   //let uniqueSortedNames = [...new Set(sortedNames)]; //erase duplicates and get final array.
