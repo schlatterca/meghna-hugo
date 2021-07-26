@@ -89,7 +89,7 @@ function persontags(data){
       console.log(sortedNames[i].name, sortedNames[i-1].name);
       sortedNames[i-1].link.push(sortedNames[i].link[0]);
       sortedNames.splice(i, 1);
-      //delete sortedNames[i];
+      i = i-1;
     }
   }
   
