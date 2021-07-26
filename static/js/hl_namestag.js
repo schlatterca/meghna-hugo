@@ -87,7 +87,7 @@ function persontags(data){
 
   //var obj = [ { id:1, store: "10", items: [{name:"sample1", total: 20}, {name:"sample2", total: 10}] }, { id:1, store: "11", items: [{name:"sample3", total: 10}, {name:"sample4", total: 10}] }];
   //var ultimate = obj.map(val=>(val.items = val.items.map(p=>({...p,store:val.store})), val));
-  var ultimate = sortedNames.map(val=>(val.link = val.link.map(p=>({...p,link[-1]:val.link[-1]})), val));
+  var ultimate = sortedNames.map(val=>(val.link = val.link.map(p=>({...p,link:val.link[-1]})), val));
   console.log(sortedNames);
   console.log(ultimate);
 
