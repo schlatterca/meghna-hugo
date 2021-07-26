@@ -70,6 +70,7 @@ function persontags(data){
 
           allNames.push(SurnameName);
           allLinks.push(result.permalink);
+          console.log(result);
 
 
           //sortedNames.push(SurnameName); //and append it to the sortedNames array.
