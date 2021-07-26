@@ -124,30 +124,31 @@ function populateWithResults(myResults){
     console.log(myResults[i].name, myResults[i].link, myResults[i].title);
     //$('#persontags-search-results').append(myResults[i].name, "<br>");
 
-    //forse servira un if (i != 0)
     if ((i != 0)&&(myResults[i].name != myResults[i-1].name)){
-      console.log(myResults[i].name, myResults[i-1].name);
+      const persona = document.createElement("div");
+      const quinome = document.createElement("p");
+      const quilink = document.createElement("a");
+
+      persona.id = "persona";
+      persona.setAttribute("style", "margin-bottom: 10px");
+      quinome.id = "quinome";
+      quinome.setAttribute("style", "font-size: 16px; color: black; margin-bottom: 0px");
+      quilink.id = "quilink";
+      quilink.setAttribute("href", myResults[i].link);
+      quilink.innerHTML = myResults[i].title;
+
+
+
+      quinome.append(myResults[i].name);
+
+      persona.append(quinome);
+
+      $('#main_person_tags').append(persona);
+    } else {
+      console.log("ciao");
     }
 
-    const persona = document.createElement("div");
-    const quinome = document.createElement("p");
-    const quilink = document.createElement("a");
-
-    persona.id = "persona";
-    persona.setAttribute("style", "margin-bottom: 10px");
-    quinome.id = "quinome";
-    quinome.setAttribute("style", "font-size: 16px; color: black; margin-bottom: 0px");
-    quilink.id = "quilink";
-    quilink.setAttribute("href", myResults[i].link);
-    quilink.innerHTML = myResults[i].title;
-
-
-
-    quinome.append(myResults[i].name);
-
-    persona.append(quinome);
-
-    $('#main_person_tags').append(persona);
+    
 
   }
 
