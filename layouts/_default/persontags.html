@@ -1,139 +1,38 @@
-getJsonArray();
+{{ define "footerfiles" }}
+{%comment%}
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.0/fuse.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js"></script>
+<script src="{{ "js/search.js" | absURL }}"></script>
+{%endcomment%}
+{{ end }}
 
-function getJsonArray(){
-  $.ajax({
-      url: '/index.json',
-      type: 'GET',
-      success: persontags
-  })
-}
+{{ define "main" }}
+{{ partial "navigation.html" . }}
 
-function clean(array) {
-  for (var key in array) {
-    if (array[key] === null || array[key] === undefined) {
-      delete array[key];
-    }
-  }
-  return array
-}
+<section class="section">
+  <div class="col-lg-8 offset-lg-2 text-center">
+    <h1>Index</h1>  
+  </div>
+  <div class="col-lg-8 offset-lg-2">
+    <div class="post-single-content">
+      <h2 id="main_person_tags">Person tags:</h2>
 
-//var unsortedNames = [];
-//var sortedNames = []; //prepare an array for sorted names.
-var allNames = [];
-var allLinks= [];
-var allTitles= [];
+      <!--div id="PERSONA" style="margin-bottom: 10px">
+        <p id="quinome" style="color: black; margin-bottom: 0px">quinome</p>
+        <a href="http://www.ansa.it">quititle1</a>
+        <a href="https://www.ansa.it">quititle2</a>
+      </div-->
 
-function persontags(data){
-  json = data; //fetch my json
-  for (var key in json) { //for each key in the json…
-    if (json.hasOwnProperty(key)) { //unless that key is not used…
-      var dirtyArray = json[key]; //create an array of those results…
-      var result = clean(dirtyArray); //and clean it.
+      <div id="persontags-search-results"></div>
+    </div>
+  </div>
 
-      if (result.hasOwnProperty("persontags")) { //and if the key "personags" exists…
-        for (let i = 0; i < result.persontags.length; i++) { //for each result in "persontags"…
-
-
-
-
-          /*var element = {};
-          element.name = result.persontags[i];
-          element.link = result.permalink;
-          unsortedNames.push({element: element});
-
-
-          console.log(unsortedNames);*/
-
-
-
-
-          var data = result.persontags[i]; //split it and change name with surname…
-          data = data.split(' ');
-
-          for (var j = 0; j < data.length; j++) { //capitalize first letter
-            data[j] = data[j].charAt(0).toUpperCase() + data[j].slice(1);
-          }
-
-          if (data.length == 4) { //rearrange
-            var SurnameName = data[3] + ' ' + data[0] + ' ' + data[1] + ' ' + data[2];
-          } if (data.length == 3) {
-            var SurnameName = data[2] + ' ' + data[0] + ' ' + data[1];
-          } if (data.length == 2) {
-            var SurnameName = data[1] + ' ' + data[0];
-          }
-
-
-          /*var element = {};
-          element.name = SurnameName;
-          element.link = result.permalink;
-          sortedNames.push({element: element});*/
-
-
-          allNames.push(SurnameName);
-          allLinks.push(result.permalink);
-          allTitles.push(result.title);
-
-
-          //sortedNames.push(SurnameName); //and append it to the sortedNames array.
-        }
-      }
-    }
-  }
-
-  const sortedNames = allNames.map((key, ind) => ({ 'name': key, 'link': [allLinks[ind]], 'title': [allTitles[ind]]}));
-  sortedNames.sort((a, b) => (a.name > b.name) ? 1 : -1);
-
-  //adjust, remove duplicates
-  for (var i = 0; i < sortedNames.length; i++) {
-    if ((i != 0)&&(sortedNames[i].name == sortedNames[i-1].name)){
-      sortedNames[i-1].link.push(sortedNames[i].link[0]);
-      sortedNames[i-1].title.push(sortedNames[i].title[0]);
-      sortedNames.splice(i, 1);
-      i = i-1;
-    }
-  }
-
-  populateWithResults(sortedNames);
-  return false;
-}
-
-
-
-function populateWithResults(myResults){
-  var templateDefinition = $('#persontags-result').html();
-
-  for (var i = 0; i < myResults.length; i++) {
-    console.log(myResults[i].name, myResults[i].link, myResults[i].title);
-    //$('#persontags-search-results').append(myResults[i].name, "<br>");
-
-    const persona = document.createElement("div");
-    const quinome = document.createElement("p");
-
-    persona.id = "persona";
-    persona.setAttribute("style", "margin-bottom: 10px");
-    quinome.id = "quinome";
-    quinome.setAttribute("style", "font-size: 16px; color: black; margin-bottom: 0px");
-
-    quinome.innerHTML = myResults[i].name;
-    persona.append(quinome);
-
-    for (var j = 0; j < myResults[i].link.length; j++) {
-      const quilink = document.createElement("a");
-      quilink.id = "quilink";
-      quilink.setAttribute("href", myResults[i].link[j]);
-      quilink.setAttribute("style", "font-size: 16px; color: grey;")
-      quilink.innerHTML = myResults[i].title[j];
-      persona.append(quilink);
-    }    
-
-    $('#main_person_tags').append(persona);
-
-  }
-
-  //console.log(sortedNames.length);
-  //console.log(myResults.persontags);
-  //console.log(Object.keys(myResults));
-  //console.log(document.getElementById("this_article_title").innerHTML);
-  //console.log(myResults.persontags.sort((a, b) => b.split(' ')[1].localeCompare(a.split(' ')[1])));
-  //console.log(myResults.persontags.sort(x => myResults.persontags.map(y => y.split(' ')[1]) ).reverse());
-};
+</section>
+<script id="persontags-result" type="text/x-js-template">
+    <div id="summary-${key}">
+      <h4>${title}</h4>
+      <p>${snippet}</p>{ end }
+    </div>
+</script>
+{{ end }}
