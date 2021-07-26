@@ -96,7 +96,7 @@ function populateWithResults(myResults){
       quilink.setAttribute("href", myResults[i].link[j]);
       quilink.setAttribute("style", "font-size: 16px; color: grey;")
       quilink.innerHTML = myResults[i].title[j];
-      persona.append(quilink, <br>);
+      persona.append(quilink, "<br>");
     }    
 
     $('#main_person_tags').append(persona);
