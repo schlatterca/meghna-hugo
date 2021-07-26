@@ -124,19 +124,22 @@ function populateWithResults(myResults){
     console.log(myResults[i].name, myResults[i].link, myResults[i].title);
     //$('#persontags-search-results').append(myResults[i].name, "<br>");
 
+    //forse servira un if (i != 0)
+    if (myResults[i].name != myResults[i-1].name){
+      console.log(myResults[i].name, myResults[i-1].name);
+    }
+
     const persona = document.createElement("div");
     const quinome = document.createElement("p");
+    const quilink = document.createElement("a");
 
-    //qui un bel ciclo for…
-    const link = document.createElement("a");
-
-    persona.className = "persona";
     persona.id = "persona";
     persona.setAttribute("style", "margin-bottom: 10px");
     quinome.id = "quinome";
     quinome.setAttribute("style", "font-size: 16px; color: black; margin-bottom: 0px");
-
-    //console.log(persona, quinome);
+    quilink.id = "quilink";
+    quilink.setAttribute("href", myResults[i].link);
+    quilink.innerHTML = myResults[i].title;
 
 
 
