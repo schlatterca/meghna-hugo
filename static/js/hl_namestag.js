@@ -17,8 +17,6 @@ function clean(array) {
   return array
 }
 
-//var unsortedNames = [];
-//var sortedNames = []; //prepare an array for sorted names.
 var allNames = [];
 var allLinks= [];
 var allTitles= [];
@@ -32,20 +30,6 @@ function persontags(data){
 
       if (result.hasOwnProperty("persontags")) { //and if the key "personags" exists…
         for (let i = 0; i < result.persontags.length; i++) { //for each result in "persontags"…
-
-
-
-
-          /*var element = {};
-          element.name = result.persontags[i];
-          element.link = result.permalink;
-          unsortedNames.push({element: element});
-
-
-          console.log(unsortedNames);*/
-
-
-
 
           var data = result.persontags[i]; //split it and change name with surname…
           data = data.split(' ');
@@ -62,19 +46,9 @@ function persontags(data){
             var SurnameName = data[1] + ' ' + data[0];
           }
 
-
-          /*var element = {};
-          element.name = SurnameName;
-          element.link = result.permalink;
-          sortedNames.push({element: element});*/
-
-
           allNames.push(SurnameName);
           allLinks.push(result.permalink);
           allTitles.push(result.title);
-
-
-          //sortedNames.push(SurnameName); //and append it to the sortedNames array.
         }
       }
     }
@@ -103,8 +77,7 @@ function populateWithResults(myResults){
   var templateDefinition = $('#persontags-result').html();
 
   for (var i = 0; i < myResults.length; i++) {
-    console.log(myResults[i].name, myResults[i].link, myResults[i].title);
-    //$('#persontags-search-results').append(myResults[i].name, "<br>");
+    //console.log(myResults[i].name, myResults[i].link, myResults[i].title);
 
     const persona = document.createElement("div");
     const quinome = document.createElement("p");
@@ -112,7 +85,7 @@ function populateWithResults(myResults){
     persona.id = "persona";
     persona.setAttribute("style", "margin-bottom: 10px");
     quinome.id = "quinome";
-    quinome.setAttribute("style", "font-size: 16px; color: black; margin-bottom: 0px");
+    quinome.setAttribute("style", "font-size: 16px; color: black; margin-bottom: 0px; margin-top: 0px; line-height: 0px");
 
     quinome.innerHTML = myResults[i].name;
     persona.append(quinome);
@@ -123,7 +96,7 @@ function populateWithResults(myResults){
       quilink.setAttribute("href", myResults[i].link[j]);
       quilink.setAttribute("style", "font-size: 16px; color: grey;")
       quilink.innerHTML = myResults[i].title[j];
-      persona.append(quilink);
+      persona.append(quilink, "<br>");
     }    
 
     $('#main_person_tags').append(persona);
