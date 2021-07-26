@@ -21,6 +21,7 @@ function clean(array) {
 //var sortedNames = []; //prepare an array for sorted names.
 var allNames = [];
 var allLinks= [];
+var allTitles= [];
 
 function persontags(data){
   json = data; //fetch my json
@@ -70,7 +71,7 @@ function persontags(data){
 
           allNames.push(SurnameName);
           allLinks.push(result.permalink);
-          console.log(result);
+          allTitles.push(result.title);
 
 
           //sortedNames.push(SurnameName); //and append it to the sortedNames array.
@@ -79,7 +80,7 @@ function persontags(data){
     }
   }
 
-  const sortedNames = allNames.map((key, ind) => ({ 'name': key, 'link': allLinks[ind]}));
+  const sortedNames = allNames.map((key, ind) => ({ 'name': key, 'link': allLinks[ind], 'title': allTitles[ind]}));
   sortedNames.sort((a, b) => (a.name > b.name) ? 1 : -1);
 
   //let uniqueSortedNames = [...new Set(sortedNames)]; //erase duplicates and get final array.
@@ -120,7 +121,7 @@ function populateWithResults(myResults){
   var templateDefinition = $('#persontags-result').html();
 
   for (var i = 0; i < myResults.length; i++) {  
-    console.log(myResults[i].name, myResults[i].link);
+    console.log(myResults[i].name, myResults[i].link, myResults[i].title);
     $('#persontags-search-results').append(myResults[i].name, "<br>");
   }
 
