@@ -136,7 +136,7 @@ function populateWithResults(myResults){
     quinome.id = "quinome";
     quinome.setAttribute("style", "font-size: 16px; color: black; margin-bottom: 0px");
 
-    console.log(persona, quinome);
+    //console.log(persona, quinome);
 
 
 
