@@ -82,7 +82,10 @@ function persontags(data){
   sortedNames.sort((a, b) => (a.name > b.name) ? 1 : -1);
 
   console.log(sortedNames[0].name, sortedNames[0].link);
-  console.log(sortedNames.name, sortedNames.link);
+  
+  foreach ($sortedNames as $item) {
+      console.log($item);
+  }
 
   //let uniqueSortedNames = [...new Set(sortedNames)]; //erase duplicates and get final array.
 
