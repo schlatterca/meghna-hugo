@@ -80,11 +80,9 @@ function persontags(data){
 
   const sortedNames = allNames.map((key, ind) => ({ 'name': key, 'link': allLinks[ind]}));
   sortedNames.sort((a, b) => (a.name > b.name) ? 1 : -1);
-
-  console.log(sortedNames[0].name, sortedNames[0].link);
   
-  foreach ($sortedNames as $item) {
-      console.log($item);
+  for (var i = 0; i < sortedNames.length; i++) {  
+    console.log(sortedNames[i].name, sortedNames[i].link);  
   }
 
   //let uniqueSortedNames = [...new Set(sortedNames)]; //erase duplicates and get final array.
