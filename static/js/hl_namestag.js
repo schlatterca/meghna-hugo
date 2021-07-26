@@ -120,8 +120,9 @@ function populateWithResults(myResults){
     for (var j = 0; j < myResults[i].link.length; j++) {
       const quilink = document.createElement("a");
       quilink.id = "quilink";
-      quilink.setAttribute("href", myResults[i].link);
-      quilink.innerHTML = myResults[i].title;
+      quilink.setAttribute("href", myResults[i].link[j]);
+      quilink.setAttribute("style", "font-size: 16px; color: grey;")
+      quilink.innerHTML = myResults[i].title[j];
       persona.append(quilink);
     }    
 
