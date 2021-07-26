@@ -134,14 +134,14 @@ function populateWithResults(myResults){
     persona.id = "persona";
     persona.setAttribute("style", "margin-bottom: 10px");
     quinome.id = "quinome";
-    quinome.setAttribute("style", "color: black; margin-bottom: 0px");
+    quinome.setAttribute("style", "font-size: 16px; color: black; margin-bottom: 0px");
 
     console.log(persona, quinome);
 
 
 
     quinome.append(myResults[i].name);
-    
+
     persona.append(quinome);
 
     $('#main_person_tags').append(persona);
