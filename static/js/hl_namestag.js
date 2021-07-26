@@ -81,7 +81,8 @@ function persontags(data){
   const sortedNames = allNames.map((key, ind) => ({ 'name': key, 'link': allLinks[ind]}));
   sortedNames.sort((a, b) => (a.name > b.name) ? 1 : -1);
 
-  console.log(sortedNames);
+  console.log(sortedNames[0].name, sortedNames[0].link);
+  console.log(sortedNames.name, sortedNames.link);
 
   //let uniqueSortedNames = [...new Set(sortedNames)]; //erase duplicates and get final array.
 
@@ -89,7 +90,7 @@ function persontags(data){
 
   //checkCorrespondance(unsortedNames);
   //populateWithResults(uniqueSortedNames);
-  populateWithResults(sortedNames[name]);
+  populateWithResults(sortedNames);
   return false;
 }
 
@@ -122,10 +123,13 @@ function checkCorrespondance(myResults){
 
 function populateWithResults(myResults){
   var templateDefinition = $('#persontags-result').html();
-  //var output = render(templateDefinition, result);
-  for (let i = 0; i < myResults.length; i++) {
+
+  console.log()
+
+  /*for (let i = 0; i < myResults.length; i++) {
     $('#persontags-search-results').append(myResults[i], "<br>");
-  }
+  }*/
+
   //console.log(sortedNames.length);
   //console.log(myResults.persontags);
   //console.log(Object.keys(myResults));
