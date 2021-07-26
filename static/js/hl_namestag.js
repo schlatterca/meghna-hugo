@@ -80,56 +80,22 @@ function persontags(data){
     }
   }
 
-  const sortedNames = allNames.map((key, ind) => ({ 'name': key, 'link': [allLinks[ind]], 'title': allTitles[ind]}));
+  const sortedNames = allNames.map((key, ind) => ({ 'name': key, 'link': [allLinks[ind]], 'title': [allTitles[ind]]}));
   sortedNames.sort((a, b) => (a.name > b.name) ? 1 : -1);
 
-
+  //adjust, remove duplicates
   for (var i = 0; i < sortedNames.length; i++) {
     if ((i != 0)&&(sortedNames[i].name == sortedNames[i-1].name)){
-      console.log(sortedNames[i].name, sortedNames[i-1].name);
       sortedNames[i-1].link.push(sortedNames[i].link[0]);
+      sortedNames[i-1].title.push(sortedNames[i].title[0]);
       sortedNames.splice(i, 1);
       i = i-1;
     }
   }
-  
-  console.log(sortedNames);
 
-  
-
-
-
-
-  //let uniqueSortedNames = [...new Set(sortedNames)]; //erase duplicates and get final array.
-  //checkCorrespondance(unsortedNames);
   populateWithResults(sortedNames);
   return false;
 }
-
-
-/*
-function checkCorrespondance(myResults){
-  for (let i = 0; i < myResults.length; i++) {
-    for (var key in json) {
-      if (json.hasOwnProperty(key)) {
-        var result = clean(json[key]);
-
-        //if (result.hasOwnProperty("persontags")){
-          console.log("a", result);
-          console.log("a", myResults[i]);
-          if (result.persontags.includes(myResults[i])){
-            console.log("b", result.title);
-          }
-        }
-
-        if ((result.hasOwnProperty("persontags"))&&(result.persontags.includes(myResults[i]))) {
-          console.log(myResults[i], result.title);
-        }
-      }
-    }
-  }
-
-}*/
 
 
 
@@ -140,30 +106,24 @@ function populateWithResults(myResults){
     console.log(myResults[i].name, myResults[i].link, myResults[i].title);
     //$('#persontags-search-results').append(myResults[i].name, "<br>");
 
-    //forse servira un if (i != 0)
-    if ((i != 0)&&(myResults[i].name == myResults[i-1].name)){
-      console.log(myResults[i].name, myResults[i-1].name);
-    }
-
-
-
     const persona = document.createElement("div");
     const quinome = document.createElement("p");
-    const quilink = document.createElement("a");
 
     persona.id = "persona";
     persona.setAttribute("style", "margin-bottom: 10px");
     quinome.id = "quinome";
     quinome.setAttribute("style", "font-size: 16px; color: black; margin-bottom: 0px");
-    quilink.id = "quilink";
-    quilink.setAttribute("href", myResults[i].link);
-    quilink.innerHTML = myResults[i].title;
 
-
-
-    quinome.append(myResults[i].name);
-
+    quinome.innerHTML = myResults[i].name;
     persona.append(quinome);
+
+    for (var j = 0; j < myResults[i].link.length; j++) {
+      const quilink = document.createElement("a");
+      quilink.id = "quilink";
+      quilink.setAttribute("href", myResults[i].link);
+      quilink.innerHTML = myResults[i].title;
+      persona.append(quilink);
+    }    
 
     $('#main_person_tags').append(persona);
 
