@@ -80,7 +80,7 @@ function persontags(data){
     }
   }
 
-  const sortedNames = allNames.map((key, ind) => ({ 'name': key, 'link': allLinks[ind], 'title': allTitles[ind]}));
+  const sortedNames = allNames.map((key, ind) => ({ 'name': key, 'link': [allLinks[ind]], 'title': allTitles[ind]}));
   sortedNames.sort((a, b) => (a.name > b.name) ? 1 : -1);
 
 
