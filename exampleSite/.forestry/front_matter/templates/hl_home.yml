@@ -2,17 +2,12 @@
 label: HL_article
 hide_body: false
 fields:
-- name: description
-  type: text
-  config:
-    required: false
-  label: description
-  description: e.g. Focus, Research…
 - name: type
   type: text
   config:
     required: false
   label: type
+  description: e.g. Focus, Research…
 - name: title
   type: text
   config:
@@ -23,7 +18,7 @@ fields:
   config:
     required: false
   label: author
-- name: synopsis
+- name: description
   type: textarea
   default: ''
   config:
@@ -31,7 +26,7 @@ fields:
     wysiwyg: false
     schema:
       format: markdown
-  label: synopsis
+  label: description
   description: The article's synopsis.
 - name: image
   type: file
