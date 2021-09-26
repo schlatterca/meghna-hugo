@@ -9,7 +9,7 @@ Tags: one-page, single-page, portfolio, custom-colors, post-formats, responsive,
 /*=== MEDIA QUERY ===*/
 @font-face{
   font-family: Jungka;
-  src: url('https://github.com/schlatterca/meghna-hugo/blob/master/assets/css/Jungka-Book.woff');
+  src: url('https://github.com/schlatterca/meghna-hugo/blob/master/assets/css/Jungka-Book.woff?raw=true');
   font-style: normal;
 }
 
