@@ -14,11 +14,15 @@ fields:
     required: false
   label: title
 - name: synopsis
-  type: text
+  type: textarea
+  default: ''
   config:
     required: false
+    wysiwyg: false
+    schema:
+      format: markdown
   label: synopsis
-  description: The article’s synopsis.
+  description: The article's synopsis.
 - name: image
   type: file
   config:
