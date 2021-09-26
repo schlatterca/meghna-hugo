@@ -13,6 +13,11 @@ fields:
   config:
     required: false
   label: title
+- name: author
+  type: text
+  config:
+    required: false
+  label: author
 - name: synopsis
   type: textarea
   default: ''
