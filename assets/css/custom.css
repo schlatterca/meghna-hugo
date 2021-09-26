@@ -1,3 +1,7 @@
+:root {
+  --purpleColor: #B44BEB;
+}
+
 /*SIDE MENU*/
 .navbar {
 	flex-wrap: row nowrap!important;
@@ -99,7 +103,7 @@ p > img {
 }
 
 .list-inline-item { /* Section */
-	color: #f54238; /*should be #EB4C44*/
+	color: var(--purpleColor);
 	font-weight: 800;
 	font-family: "Quattrocento Sans", sans-serif;
 	font-size: 0.7rem;
