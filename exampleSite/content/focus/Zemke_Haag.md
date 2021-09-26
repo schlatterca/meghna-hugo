@@ -12,6 +12,7 @@ title = "Barberini Harp wood species identification"
 titolo = "Questo testo non comparirà mai."
 titolo_blocchi = []
 titolo_testo = ""
+type = "Hello"
 
 +++
 In 2018 Harfenlabor asked [Thünen Institute](www.google.it "thunen_institute") for Wood Research (Hamburg) to for the first time ever [examine](www.google.it "examine") the wood on the Barberini Harp’s column as well as other parts (some of which have been examined using different methods) using new non-invasive methodology and identify the wood species used in the construction of the [Barberini Harp](www.google.it "barberini_harp").
