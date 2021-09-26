@@ -13,11 +13,11 @@ Tags: one-page, single-page, portfolio, custom-colors, post-formats, responsive,
   font-style: normal;
 }
 
-@font-face{
+/*@font-face{
   font-family: Jungka;
   src: url('Jungka-BookItalic.woff');
   font-style: italic;
-}
+}*/
 
 *{font-family: Jungka;}
 
