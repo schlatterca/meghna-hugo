@@ -12,18 +12,18 @@
         </ul>
 
         <h1 id="this_article_title">{{ .Title }}</h1>
-        
+        <div class="post-single-content">by {{/* .Author */}}</div>
         
       </div>
 
-      
+      <div class="post-single-content" style="color:red">{{/* .Synopsis */}}</div-->
 
       <div class="col-lg-8 offset-lg-2">
         <div class="post-single-content">
           {{ .Content }}
         </div>
         <!--div class="mt-5"-->
-          {{/* .Datteri */}} <!--JUST TO TRY THE COMMENT-->
+          {{/* .Date */}} <!--JUST TO TRY THE COMMENT-->
         <!--/div-->
       </div>
     </div>
