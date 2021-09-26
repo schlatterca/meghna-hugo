@@ -17,7 +17,7 @@ fields:
   type: text
   config:
     required: false
-  label: Synopsis
+  label: synopsis
   description: The article’s synopsis.
 - name: image
   type: file
