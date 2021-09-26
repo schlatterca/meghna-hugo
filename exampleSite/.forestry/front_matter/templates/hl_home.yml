@@ -8,6 +8,11 @@ fields:
     required: false
   label: description
   description: e.g. Focus, Research…
+- name: type
+  type: text
+  config:
+    required: false
+  label: type
 - name: title
   type: text
   config:
