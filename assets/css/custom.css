@@ -95,7 +95,10 @@
 p > img {
 	vertical-align: top;
 	border-style: none;
-	width: 100%;
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
 }
 
 .row {
@@ -104,9 +107,9 @@ p > img {
 
 .list-inline-item { /* Section */
 	color: var(--purpleColor);
-	font-weight: 800;
-	font-family: "Quattrocento Sans", sans-serif;
-	font-size: 0.7rem;
+	font-size: 1.5rem;
+	/*font-weight: 800;
+	font-family: "Quattrocento Sans", sans-serif;*/
 }
 
 /*GENERAL*/
