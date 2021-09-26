@@ -16,7 +16,7 @@ titolo_testo = ""
 +++
 In 2018 Harfenlabor asked [Thünen Institute](www.google.it "thunen_institute") for Wood Research (Hamburg) to for the first time ever [examine](www.google.it "examine") the wood on the Barberini Harp’s column as well as other parts (some of which have been examined using different methods) using new non-invasive methodology and identify the wood species used in the construction of the [Barberini Harp](www.google.it "barberini_harp").
 
-![](/images/prova_1.png)Valentina Zemke and Volker Haag of the Thünen Institute for Wood Research testing image resolution for the 3D Reflected Light Microscope’s integrated image analysis software
+###### ![](/images/prova_1.png)Valentina Zemke and Volker Haag of the Thünen Institute for Wood Research testing image resolution for the 3D Reflected Light Microscope’s integrated image analysis software
 
 Lipsum: _Lorem ipsum dolor sit amet_, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
