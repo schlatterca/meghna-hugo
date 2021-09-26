@@ -13,6 +13,12 @@ fields:
   config:
     required: false
   label: title
+- name: synopsis
+  type: text
+  config:
+    required: false
+  label: Synopsis
+  description: The article’s synopsis.
 - name: image
   type: file
   config:
