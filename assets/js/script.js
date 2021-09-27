@@ -49,6 +49,10 @@ function untoggleSidebar() {
   }
 }
 
+
+
+
+
 var footer = true;
 function toggleFooter() {
   if (footer) {
