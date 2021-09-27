@@ -9,6 +9,7 @@ Tags: one-page, single-page, portfolio, custom-colors, post-formats, responsive,
 /*=== MEDIA QUERY ===*/
 :root {
   --purpleColor: #B44BEB;
+  --greyColor: #F1F2F2;
 }
 
 @font-face{
@@ -443,19 +444,32 @@ a:hover {
   Navigation
 ==================================================================*/
 .navigation {
-  /*background-color: #1d2024;
-  width: 100%;
+  /*width: 100%;
   margin-bottom: 0;*/
-  background-color: #F1F2F2;
+  display: block;
+  background-color: var(--greyColor);
+  position: fixed;
   width: 50px;
   height: 100%;
-  position: fixed;
   z-index: 1;
   top: 0;
   left: 0;
   overflow-x: hidden;
   padding-top: 20px;
   transition: 0.3s ease-out;
+}
+
+#menu_lid_desktop{
+  width: 60px;
+  position: fixed;
+  margin-left: -5px;
+  display: block;
+  transition: .3s ease-out;
+  z-index: 2;
+  top: 0; /*was 50*/
+  transform: translateY(0%); /*was -50*/
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
 .navbar-dark .navbar-nav .active>.nav-link,
