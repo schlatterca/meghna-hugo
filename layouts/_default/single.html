@@ -6,11 +6,7 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-8 offset-lg-2 text-center">
-        <ul class="list-inline">
-          <!--HERE WERE AUTHOR AND DATE ONCE. CHECK VERSION 10/07-->
-          <li class="list-inline-item">{{ .Type }}</li>
-        </ul>
-
+        <li id="this_article_type">{{ .Type }}</li>
         <h1 id="this_article_title">{{ .Title }}</h1>
         <div id="this_article_author">by {{ .Params.author }}</div>
         
