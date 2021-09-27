@@ -472,6 +472,20 @@ a:hover {
   margin-bottom: auto;
 }
 
+#actual_lid{
+  display: block;
+}
+
+#logo{
+  position: fixed;
+  top: 50%;
+  left: 0;
+  margin-top: 0px;
+  margin-left: 0px;
+  width: auto;
+  transform: translateY(-360%) rotate(270deg) scale(3);
+}
+
 .navbar-dark .navbar-nav .active>.nav-link,
 .navbar-dark .navbar-nav .nav-link.active,
 .navbar-dark .navbar-nav .nav-link.show,
