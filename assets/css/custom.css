@@ -106,6 +106,13 @@
 	height: 15%;
 	overflow: auto;
 	margin-left: 4em;
+
+	-ms-overflow-style: none;  /* IE and Edge */
+	scrollbar-width: none;  /* Firefox */
+}
+
+.synopsis_box::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for Chrome, Safari and Opera */
 }
 
 .synopsis {
