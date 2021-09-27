@@ -113,6 +113,10 @@
 }
 
 /*ARTICLES*/
+.article_info{
+	margin-bottom: 1em;
+}
+
 #this_article_title{
 	padding-left: 0;
 	list-style: none;
