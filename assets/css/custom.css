@@ -3,11 +3,6 @@
 }
 
 /*SIDE MENU*/
-.nav-item {
-	line-height: 1.2em;
-	color: var(--purpleColor);
-}
-
 .social_row {
   margin-top: auto;
   display:flex;
@@ -46,8 +41,12 @@
 	/*display: -webkit-box*/
 }
 
+.nav-item {
+	line-height: 1.2em;
+}
+
 .nav-link {
-	color: black!important;
+	color: var(--purpleColor)!important;
 	font-size: 32px;
 	text-decoration: none;
 	text-transform: capitalize;
