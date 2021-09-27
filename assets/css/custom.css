@@ -92,8 +92,17 @@
 }
 
 /*ARTICLES SYNOPSIS*/
+.synopsis_box {
+	display: block;
+	position: absolute;
+	background-color: white;
+	z-index: 1;
+	border-radius: 0.8em;
+	border: 1.5px solid var(--purpleColor);
+}
+
 .synopsis {
-	color: red;
+	color: var(--purpleColor);
 }
 
 /*ARTICLES*/
