@@ -98,7 +98,14 @@
 	background-color: white;
 	z-index: 1;
 	border-radius: 0.8em;
-	border: 1.5px solid var(--purpleColor);
+	border: 0.15em solid var(--purpleColor);
+	padding: 1em;
+	padding-top: 0.4em;
+	padding-right: 2em;
+	width: 20%;
+	height: 15%;
+	overflow: auto;
+	margin-left: 4em;
 }
 
 .synopsis {
@@ -106,10 +113,20 @@
 }
 
 /*ARTICLES*/
+#this_article_title{
+	max-width: 60%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#this_article_author{
+	font-size: 1.5rem;
+}
+
 p > img {
 	vertical-align: top;
 	border-style: none;
-	width: 80%;
+	max-width: 70%;
 	margin-left: auto;
 	margin-right: auto;
 	display: block;
@@ -162,6 +179,6 @@ p > img {
 
 @media (min-width: 768px) {
 	.container {
-		max-width: 960px!important;
+		max-width: 100%!important; /* was 960px!important */
 	}
 }
