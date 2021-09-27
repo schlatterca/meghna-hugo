@@ -3,6 +3,21 @@
 }
 
 /*SIDE MENU*/
+.nav-item {
+	line-height: 0em;
+}
+
+.social_row {
+  margin-top: auto;
+  display:flex;
+  margin-bottom: 40px;
+
+  scroll-behavior: smooth;
+  width: 15vw;
+  justify-content: space-between;
+
+}
+
 .navbar {
 	flex-wrap: row nowrap!important;
 }
@@ -18,7 +33,7 @@
 	float: left;
 
 	flex-basis: 0;
-  	flex-grow: 999;
+  flex-grow: 999;
 }
 
 .navbar-left {
