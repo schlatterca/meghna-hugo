@@ -448,7 +448,7 @@ a:hover {
   margin-bottom: 0;*/
   display: block;
   background-color: var(--greyColor);
-  position: fixed;
+  /*position: fixed;
   width: 50px;
   height: 100%;
   z-index: 1;
@@ -456,7 +456,25 @@ a:hover {
   left: 0;
   overflow-x: hidden;
   padding-top: 20px;
-  transition: 0.3s ease-out;
+  transition: 0.3s ease-out;*/
+
+  width: 0px;
+  height: calc(100% - 50px);
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+  transition: .3s ease-out;
+  padding-top: 35px;
+  padding-bottom: 15px;
+  padding-left: 0px;
+  padding-right: 0px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: top;
 }
 
 #menu_lid{
