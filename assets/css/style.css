@@ -459,7 +459,7 @@ a:hover {
   transition: 0.3s ease-out;
 }
 
-#menu_lid_desktop{
+#menu_lid{
   width: 60px;
   position: fixed;
   margin-left: -5px;
