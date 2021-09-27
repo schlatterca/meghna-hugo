@@ -97,11 +97,11 @@
 	position: absolute;
 	background-color: white;
 	z-index: 1;
-	border-radius: 0.8em;
+	border-radius: 1.2em;
 	border: 0.15em solid var(--purpleColor);
 	padding: 1em;
 	padding-top: 0.4em;
-	padding-right: 2em;
+	padding-right: 3em;
 	width: 20%;
 	height: 15%;
 	overflow: auto;
@@ -120,7 +120,7 @@
 }
 
 /*ARTICLES*/
-.article_info{
+.article_info{ /*unused?*/
 	margin-bottom: 1em;
 }
 
@@ -129,6 +129,7 @@
 	list-style: none;
 	margin-top: 0px;
 	margin-bottom: 0px;
+	color: var(--purpleColor);
 }
 
 #this_article_title{
