@@ -2,7 +2,7 @@
 /*	CARLO SCRIPT: HOVERING SIDEBAR + FOOTER
 /* ========================================================================= */
 
-var sidebar = true;
+/*var sidebar = true;
 function toggleSidebar() {
   if (sidebar) {
     document.getElementsByClassName("navigation")[0].style.width = "400px";
@@ -18,6 +18,34 @@ function toggleSidebar() {
     document.getElementsByClassName("navbar-left")[0].style.marginLeft = "-290px";
     document.getElementsByClassName("navbar-brand")[0].style.marginLeft = "-30px";
     this.sidebar = true;
+  }
+}*/
+
+//DESKTOP
+document.getElementById('menu_lid').addEventListener('mouseover', function(e) {
+  toggleSidebar();
+});
+document.getElementById('menu_lid').addEventListener('mouseout', function(e) {
+  untoggleSidebar();
+});
+
+document.getElementById("navigation").addEventListener('mouseover', function(e) {
+  toggleSidebar();
+});
+document.getElementById("navigation").addEventListener('mouseout', function(e) {
+  untoggleSidebar();
+});
+
+function toggleSidebar() {
+  if(window.innerWidth >= 768){
+    document.getElementById("menu_lid").style.marginLeft = "calc(50vw - 5px)";
+    document.getElementById("navigation").style.width = "50vw";
+  }
+}
+function untoggleSidebar() {
+  if(window.innerWidth >= 768){
+    document.getElementById("menu_lid").style.marginLeft = "-5px";
+    document.getElementById("navigation").style.width = "0px";
   }
 }
 
