@@ -459,7 +459,7 @@ a:hover {
 
   background-color: var(--greyColor);
   width: 0px;
-  height: calc(100% - 50px);
+  height: 100%; /* calc(100% - 50px); */
   position: fixed;
   z-index: 2;
   top: 0;
