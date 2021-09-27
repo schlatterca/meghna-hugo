@@ -114,6 +114,13 @@
 
 /*ARTICLES*/
 #this_article_title{
+	padding-left: 0;
+	list-style: none;
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+#this_article_title{
 	max-width: 60%;
 	margin-left: auto;
 	margin-right: auto;
