@@ -4,7 +4,8 @@
 
 /*SIDE MENU*/
 .nav-item {
-	line-height: 0em;
+	line-height: 1.2em;
+	color: var(--purpleColor);
 }
 
 .social_row {
