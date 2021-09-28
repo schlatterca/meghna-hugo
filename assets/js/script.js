@@ -71,43 +71,35 @@ var authors_initial = document.getElementById('this_article_author').innerHTML;
 var authors_without_by = authors_initial.replace('by', '');
 
 if (authors_without_by.includes(', ')){
+
+	document.getElementById('this_article_author').innerHTML="";
+	document.getElementById('this_article_author').append('by ');
+
 	var single_authors = authors_without_by.split(', ');
 
-	console.log(single_authors[0]);
-	console.log(single_authors[1]);
-	console.log(single_authors[2]);
+	for (let i = 0; i < single_authors.length; i++) { //for each result in "persontags"…
 
-	//for (let i = 0; i < result.persontags.length; i++) { //for each result in "persontags"…
-
-    //var data = result.persontags[i]; //split it and change name with surname…
-    data = single_authors[0].split(' ');
+    data = single_authors[i].split(' ');
 
     for (var j = 0; j < data.length; j++) { //capitalize first letter
       data[j] = data[j].charAt(0).toUpperCase() + data[j].slice(1);
     }
 
     if (data.length == 4) { //rearrange
-      var author_0 = data[3] + ' ' + data[0] + ' ' + data[1] + ' ' + data[2];
+      var author[i] = data[3] + ' ' + data[0] + ' ' + data[1] + ' ' + data[2];
     } if (data.length == 3) {
-      var author_0 = data[2] + ' ' + data[0] + ' ' + data[1];
+      var author[i] = data[2] + ' ' + data[0] + ' ' + data[1];
     } if (data.length == 2) {
-      var author_0 = data[1] + ' ' + data[0];
+      var author[i] = data[1] + ' ' + data[0];
     }
   //}
 
-	var name_0 = document.createElement('a');
-	var name_0Text = document.createTextNode(single_authors[0]);
-	name_0.setAttribute('href', 'https://harfenlabor.netlify.app/persontags#'+author_0);
-	name_0.appendChild(name_0Text);
+	var name[i] = document.createElement('a');
+	var nameText[i] = document.createTextNode(single_authors[i]);
+	name[i].setAttribute('href', 'https://harfenlabor.netlify.app/persontags#'+author[i]);
+	name[i].appendChild(nameText[i]);
 
-
-	var name_1 = document.createElement('a');
-	var name_1Text = document.createTextNode(single_authors[1]);
-	name_1.setAttribute('href', 'http://www.'+single_authors[1]+'.com');
-	name_1.appendChild(name_1Text);
-
-	document.getElementById('this_article_author').innerHTML="";
-	document.getElementById('this_article_author').append("by ", name_0, ", ", name_1);
+	document.getElementById('this_article_author').append(name[i]);
 	
 } else {
 
