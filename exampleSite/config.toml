@@ -41,7 +41,7 @@ url = "/persontags"
 weight = 5
 [[Languages.en.menu.main]]
 name = "search"
-url = "#search"
+url = "/search"
 weight = 6
 [[Languages.en.menu.main]]
 name = "mediathek"
