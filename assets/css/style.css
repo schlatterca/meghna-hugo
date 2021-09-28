@@ -106,6 +106,7 @@ a:focus,
 a:hover,
 a:active,
 a:visited {
+  color: var(--purpleColor);
   text-decoration: underline;
 }
 
