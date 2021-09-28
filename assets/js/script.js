@@ -69,9 +69,15 @@ function toggleSynopsisBox() {
 //MAKE AUTHOR'S NAME A LINK
 console.log(document.getElementById('this_article_author'));
 var authors_initial = document.getElementById('this_article_author').innerHTML;
-var authors_splitted = authors_initial.split("by");
+var authors_without_by = authors_initial.replace('by', '');
 
-console.log(authors_splitted[0], authors_splitted[1]);
+if (authors_without_by.includes(', ')){
+	authors_without_by.split(', ');
+	console.log(authors_without_by[0], authors_without_by[1]);
+} else {
+	console.log(authors_without_by);
+}
+
 
 
 var authors_with_links = [];
