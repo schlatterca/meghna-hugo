@@ -67,15 +67,14 @@ function toggleSynopsisBox() {
 }
 
 //MAKE AUTHOR'S NAME A LINK
-console.log(document.getElementById('this_article_author'));
 var authors_initial = document.getElementById('this_article_author').innerHTML;
 var authors_without_by = authors_initial.replace('by', '');
 
 if (authors_without_by.includes(', ')){
 	authors_without_by.split(', ');
-	console.log(authors_without_by[0], authors_without_by[1]);
+	console.log("includes ,");
 } else {
-	console.log(authors_without_by);
+	console.log("nope");
 }
 
 
