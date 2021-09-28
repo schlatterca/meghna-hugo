@@ -143,6 +143,10 @@
 	color: var(--purpleColor);
 }
 
+.open_synopsis_box {
+	
+}
+
 /*ARTICLES*/
 .article_info{ /*unused?*/
 	margin-bottom: 1em;
