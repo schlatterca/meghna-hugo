@@ -21,7 +21,7 @@ function toggleSidebar() {
   }
 }*/
 
-//DESKTOP
+//DESKTOP SIDEBAR
 document.getElementById('menu_lid').addEventListener('mouseover', function(e) {
   toggleSidebar();
 });
@@ -49,10 +49,28 @@ function untoggleSidebar() {
   }
 }
 
+//OPEN SYNOPSIS BOX
+document.getElementsByClassName('open_synopsis_box')[0].addEventListener('click', function(e) {
+  toggleSynopsisBox();
+});
+var synopsisboxisclosed = true;
+function toggleSynopsisBox() {
+	if (synopsisboxisclosed) {
+		document.getElementsByClassName('open_synopsis_box')[0].style.transform = "rotate(45deg)";
+		//document.getElementsByClassName('synopsis_box')[0]
+		this.synopsisboxisclosed = false;
+	} else {
+		document.getElementsByClassName('open_synopsis_box')[0].style.transform = "rotate(0deg)";
+		//document.getElementsByClassName('synopsis_box')[0]
+		this.synopsisboxisclosed = true;
+	}
+	
+}
 
 
 
 
+//FOOTER
 var footer = true;
 function toggleFooter() {
   if (footer) {
