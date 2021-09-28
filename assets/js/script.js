@@ -126,7 +126,7 @@ if (authors_without_by.includes(', ')){
 	name_0.appendChild(name_0Text);
 
 	document.getElementById('this_article_author').innerHTML="";
-	document.getElementById('this_article_author').append("by ", name_0, ", ", name_1);
+	document.getElementById('this_article_author').append("by ", author_0);
 }
 
 
