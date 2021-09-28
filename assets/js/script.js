@@ -104,7 +104,7 @@ if (authors_without_by.includes(', ')){
 
 		name.appendChild(nameText);
 
-		document.getElementById('this_article_author').append(name);*/
+		document.getElementById('this_article_author').append(name);
 
 	}
 	
