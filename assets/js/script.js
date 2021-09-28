@@ -73,6 +73,10 @@ var authors_without_by = authors_initial.replace('by', '');
 if (authors_without_by.includes(', ')){
 	var single_authors = authors_without_by.split(', ');
 
+	console.log(single_authors[0]);
+	console.log(single_authors[1]);
+	console.log(single_authors[2]);
+
 	//for (let i = 0; i < result.persontags.length; i++) { //for each result in "persontags"…
 
     //var data = result.persontags[i]; //split it and change name with surname…
@@ -104,14 +108,13 @@ if (authors_without_by.includes(', ')){
 
 	document.getElementById('this_article_author').innerHTML="";
 	document.getElementById('this_article_author').append("by ", name_0, ", ", name_1);
+	
 } else {
 
 	data = authors_without_by.split(' ');
-
 	for (var j = 0; j < data.length; j++) { //capitalize first letter
     data[j] = data[j].charAt(0).toUpperCase() + data[j].slice(1);
   }
-
   if (data.length == 4) { //rearrange
     var author_0 = data[3] + ' ' + data[0] + ' ' + data[1] + ' ' + data[2];
   } if (data.length == 3) {
@@ -119,12 +122,10 @@ if (authors_without_by.includes(', ')){
   } if (data.length == 2) {
     var author_0 = data[1] + ' ' + data[0];
   }
-
   var name_0 = document.createElement('a');
 	var name_0Text = document.createTextNode(authors_without_by);
 	name_0.setAttribute('href', 'https://harfenlabor.netlify.app/persontags#'+author_0);
 	name_0.appendChild(name_0Text);
-
 	document.getElementById('this_article_author').innerHTML="";
 	document.getElementById('this_article_author').append("by ", name_0);
 }
