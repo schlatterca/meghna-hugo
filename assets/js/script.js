@@ -68,7 +68,7 @@ function toggleSynopsisBox() {
 
 //MAKE AUTHOR'S NAME A LINK
 console.log(document.getElementById('this_article_author'));
-by = document.getElementById('this_article_author').split("by");
+by = document.getElementById('this_article_author').toString.split("by");
 
 console.log(by);
 
