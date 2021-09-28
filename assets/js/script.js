@@ -84,11 +84,11 @@ if (authors_without_by.includes(', ')){
     }
 
     if (data.length == 4) { //rearrange
-      var single_authors[0] = data[3] + ' ' + data[0] + ' ' + data[1] + ' ' + data[2];
+      var author_0 = data[3] + ' ' + data[0] + ' ' + data[1] + ' ' + data[2];
     } if (data.length == 3) {
-      var single_authors[0] = data[2] + ' ' + data[0] + ' ' + data[1];
+      var author_0 = data[2] + ' ' + data[0] + ' ' + data[1];
     } if (data.length == 2) {
-      var single_authors[0] = data[1] + ' ' + data[0];
+      var author_0 = data[1] + ' ' + data[0];
     }
     //allNames.push(SurnameName);
     //allLinks.push(result.permalink);
@@ -96,7 +96,7 @@ if (authors_without_by.includes(', ')){
   //}
 
 	var name_0 = document.createElement('a');
-	var name_0Text = document.createTextNode(single_authors[0]);
+	var name_0Text = document.createTextNode(author_0);
 	name_0.setAttribute('href', 'https://harfenlabor.netlify.app/persontags#'+single_authors[0]);
 	name_0.appendChild(name_0Text);
 
