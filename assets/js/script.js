@@ -68,7 +68,7 @@ function toggleSynopsisBox() {
 
 //MAKE AUTHOR'S NAME A LINK
 var authors_initial = document.getElementById('this_article_author').innerHTML;
-var authors_without_by = authors_initial.replace('by', '');
+var authors_without_by = authors_initial.replace('by ', '');
 
 if (authors_without_by.includes(', ')){
 
@@ -92,23 +92,6 @@ if (authors_without_by.includes(', ')){
     } if (data.length == 2) {
       var author = data[1] + ' ' + data[0];
     }
-
-    //var name = document.createElement('a');
-		//var nameText = document.createTextNode(single_authors[i]);
-
-		//console.log(i, name[i], name[0], name, nameText);
-		//0, undef, undef, "", "Tizio Tizi"
-
-		//name[i].setAttribute('href', 'https://harfenlabor.netlify.app/persontags#'+author);
-		
-
-		/*if (i>0) {
-			name.append(', ');
-		}*/
-
-		//name.appendChild(nameText);
-
-		//document.getElementById('this_article_author').append(name);
 
 		let name = document.createElement('a');
 		let nameText = document.createTextNode(single_authors[i]);
