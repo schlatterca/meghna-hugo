@@ -76,8 +76,13 @@ if (authors_without_by.includes(', ')){
 	console.log(single_authors[0]);
 	console.log(single_authors[1]);
 
+	var name_1 = document.createElement('a');
+	name_1.setAttribute('href', 'http://google.com/'+single_authors[0]);
+	var name_2 = document.createElement('a');
+	name_2.setAttribute('href', 'http://www.'+single_authors[1]+'com');
+
 	document.getElementById('this_article_author').innerHTML="";
-	document.getElementById('this_article_author').append("by "+single_authors[0]+", "+single_authors[1]+"ok");
+	document.getElementById('this_article_author').append("by "+name_1+", "+name_2);
 } else {
 	console.log("one author");
 }
