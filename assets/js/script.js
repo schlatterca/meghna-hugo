@@ -73,6 +73,9 @@ var authors_without_by = authors_initial.replace('by', '');
 if (authors_without_by.includes(', ')){
 	authors_without_by.split(', ');
 	console.log("includes ,");
+	console.log(authors_without_by);
+	console.log(authors_without_by[0]);
+	console.log(authors_without_by[1]);
 } else {
 	console.log("nope");
 }
