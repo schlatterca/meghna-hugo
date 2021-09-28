@@ -150,8 +150,9 @@
 	color: var(--purpleColor);
 	font-size: 1.5rem;
 	height: fit-content;
-	margin-right: -30px;
-	margin-left: 20px;
+	margin-right: -1.5em;
+	margin-left: 1em;
+	position: fixed;
 }
 
 /*ARTICLES*/
