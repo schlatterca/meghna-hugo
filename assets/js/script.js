@@ -73,25 +73,41 @@ var authors_without_by = authors_initial.replace('by', '');
 if (authors_without_by.includes(', ')){
 	var single_authors = authors_without_by.split(', ');
 	console.log("more authors");
-	console.log(single_authors[0]);
-	console.log(single_authors[1]);
+
+	//for (let i = 0; i < result.persontags.length; i++) { //for each result in "persontags"…
+
+    //var data = result.persontags[i]; //split it and change name with surname…
+    data = single_authors[0].split(' ');
+
+    for (var j = 0; j < data.length; j++) { //capitalize first letter
+      data[j] = data[j].charAt(0).toUpperCase() + data[j].slice(1);
+    }
+
+    if (data.length == 4) { //rearrange
+      var single_authors[0] = data[3] + ' ' + data[0] + ' ' + data[1] + ' ' + data[2];
+    } if (data.length == 3) {
+      var single_authors[0] = data[2] + ' ' + data[0] + ' ' + data[1];
+    } if (data.length == 2) {
+      var single_authors[0] = data[1] + ' ' + data[0];
+    }
+    //allNames.push(SurnameName);
+    //allLinks.push(result.permalink);
+    //allTitles.push(result.title);
+  //}
 
 	var name_0 = document.createElement('a');
 	var name_0Text = document.createTextNode(single_authors[0]);
-	name_0.setAttribute('href', 'http://google.com/'+single_authors[0]);
+	name_0.setAttribute('href', 'https://harfenlabor.netlify.app/persontags#'+single_authors[0]);
 	name_0.appendChild(name_0Text);
+
+
 	var name_1 = document.createElement('a');
 	var name_1Text = document.createTextNode(single_authors[1]);
 	name_1.setAttribute('href', 'http://www.'+single_authors[1]+'.com');
 	name_1.appendChild(name_1Text);
-	//name_2.appendChild(single_authors[1]);
 
 	document.getElementById('this_article_author').innerHTML="";
 	document.getElementById('this_article_author').append("by ", name_0, ", ", name_1);
-	/*document.getElementById('this_article_author').append("by ");
-	document.getElementById('this_article_author').appendChild(name_1);
-	document.getElementById('this_article_author').append(", ");
-	document.getElementById('this_article_author').appendChild(name_2);*/
 } else {
 	console.log("one author");
 }
