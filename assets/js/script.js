@@ -69,8 +69,6 @@ function toggleSynopsisBox() {
 //MAKE AUTHOR'S NAME A LINK
 console.log(document.getElementById('this_article_author'));
 
-console.log({{ .Description }});
-
 
 
 //FOOTER
