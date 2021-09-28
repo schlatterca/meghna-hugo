@@ -121,7 +121,7 @@ if (authors_without_by.includes(', ')){
   }
 
   var name_0 = document.createElement('a');
-	var name_0Text = document.createTextNode(author_0);
+	var name_0Text = document.createTextNode(authors_without_by);
 	name_0.setAttribute('href', 'https://harfenlabor.netlify.app/persontags#'+author_0);
 	name_0.appendChild(name_0Text);
 
