@@ -76,20 +76,22 @@ if (authors_without_by.includes(', ')){
 	console.log(single_authors[0]);
 	console.log(single_authors[1]);
 
+	var name_0 = document.createElement('a');
+	var name_0Text = document.createTextNode(single_authors[0]);
+	name_0.setAttribute('href', 'http://google.com/'+single_authors[0]);
+	name_0.appendChild(name_0Text);
 	var name_1 = document.createElement('a');
-	var name_1Text = document.createTextNode(single_authors[0]);
-	name_1.setAttribute('href', 'http://google.com/'+single_authors[0]);
+	var name_1Text = document.createTextNode(single_authors[1]);
+	name_1.setAttribute('href', 'http://www.'+single_authors[1]+'.com');
 	name_1.appendChild(name_1Text);
-	var name_2 = document.createElement('a');
-	name_2.setAttribute('href', 'http://www.'+single_authors[1]+'.com');
 	//name_2.appendChild(single_authors[1]);
 
 	document.getElementById('this_article_author').innerHTML="";
-	//document.getElementById('this_article_author').append("by ", name_1, ", ", name_2);
-	document.getElementById('this_article_author').append("by ");
+	document.getElementById('this_article_author').append("by ", name_0, ", ", name_1);
+	/*document.getElementById('this_article_author').append("by ");
 	document.getElementById('this_article_author').appendChild(name_1);
 	document.getElementById('this_article_author').append(", ");
-	document.getElementById('this_article_author').appendChild(name_2);
+	document.getElementById('this_article_author').appendChild(name_2);*/
 } else {
 	console.log("one author");
 }
