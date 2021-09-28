@@ -97,24 +97,18 @@ figure {
   margin: 0;
 }
 
-/*a {
-  color: black;
-  text-decoration: underline;
+a {
+  color: var(--purpleColor);
+  text-decoration: none;
   transition: all .3s ease-in 0s;
 }
-
-a,
 a:focus,
-a:hover {
-  text-decoration: none;
-  outline: 0;
+a:hover,
+a:active,
+a:visited {
+  text-decoration: underline;
 }
 
-a:focus,
-a:hover {
-  color: #6CB670;
-}
-*/
 
 iframe {
   border: 0;
@@ -246,12 +240,12 @@ a:focus,
 a:hover {
   text-decoration: none;
   outline: 0;
-}*/
+}
 
 a:focus,
 a:hover {
   color: #57cbcc;
-}
+}*/
 
 .btn-main {
   background: #57cbcc;
