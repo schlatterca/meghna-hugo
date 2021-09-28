@@ -27,7 +27,7 @@ fields:
     schema:
       format: markdown
   label: description
-  description: The article's synopsis.
+  description: The article's synopsis. Please type &amp;&amp; to break lines.
 - name: image
   type: file
   config:
