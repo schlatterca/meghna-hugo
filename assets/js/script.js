@@ -78,10 +78,10 @@ if (authors_without_by.includes(', ')){
 
 	var name_1 = document.createElement('a');
 	name_1.setAttribute('href', 'http://google.com/'+single_authors[0]);
-	name_1.setAttribute('innerHTML', single_authors[0]);
+	name_1.appendChild(single_authors[0]);
 	var name_2 = document.createElement('a');
 	name_2.setAttribute('href', 'http://www.'+single_authors[1]+'.com');
-	name_2.setAttribute('innerHTML', single_authors[1]);
+	name_2.appendChild(single_authors[1]);
 
 	document.getElementById('this_article_author').innerHTML="";
 	document.getElementById('this_article_author').append("by ", name_1, ", ", name_2);
