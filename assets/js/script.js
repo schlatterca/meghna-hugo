@@ -76,6 +76,7 @@ if (authors_without_by.includes(', ')){
 	console.log(single_authors[0]);
 	console.log(single_authors[1]);
 
+	document.getElementById('this_article_author').remove();
 	document.getElementById('this_article_author').append("by "+single_authors[0]+", "+single_authors[1]+"ok");
 } else {
 	console.log("one author");
