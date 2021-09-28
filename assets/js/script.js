@@ -95,11 +95,14 @@ if (authors_without_by.includes(', ')){
 
     var name = document.createElement('a');
 		var nameText = document.createTextNode(single_authors[i]);
-		//name.setAttribute('href', 'https://harfenlabor.netlify.app/persontags#'+author);
-		console.log(name, nameText);
+
+		console.log(i, name, nameText);
+		
+		name[i].setAttribute('href', 'https://harfenlabor.netlify.app/persontags#'+author);
+		
 
 		if (i>0) {
-			name.append(', ');
+			//name.append(', ');
 		}
 
 		//name.appendChild(nameText);
