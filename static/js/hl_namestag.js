@@ -84,7 +84,8 @@ function populateWithResults(myResults){
 
     persona.id = "persona";
     persona.setAttribute("style", "margin-bottom: 10px");
-    quinome.id = "quinome";
+    //quinome.id = "quinome";
+    quinome.id = myResults[i].name;
     quinome.setAttribute("style", "font-size: 20px; color: black; margin-bottom: 0px; margin-top: 20px; line-height: 0px");
 
     quinome.innerHTML = myResults[i].name;
