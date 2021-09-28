@@ -72,11 +72,13 @@ var authors_without_by = authors_initial.replace('by', '');
 
 if (authors_without_by.includes(', ')){
 	var single_authors = authors_without_by.split(', ');
-	console.log("includes ,");
+	console.log("more authors");
 	console.log(single_authors[0]);
 	console.log(single_authors[1]);
+
+	document.getElementById('this_article_author') = "by "+single_authors[0]+", "+single_authors[1]+"ok";
 } else {
-	console.log("nope");
+	console.log("one author");
 }
 
 
