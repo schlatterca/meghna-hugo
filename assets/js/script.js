@@ -77,7 +77,7 @@ if (authors_without_by.includes(', ')){
 	console.log(single_authors[1]);
 
 	var name_1 = document.createElement('a');
-	var name_1Text = document.createTextNode("ciao");
+	var name_1Text = document.createTextNode(single_authors[0]);
 	name_1.setAttribute('href', 'http://google.com/'+single_authors[0]);
 	name_1.appendChild(name_1Text);
 	var name_2 = document.createElement('a');
