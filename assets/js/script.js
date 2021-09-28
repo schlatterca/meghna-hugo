@@ -96,9 +96,9 @@ if (authors_without_by.includes(', ')){
     var name = document.createElement('a');
 		var nameText = document.createTextNode(single_authors[i]);
 
-		console.log(i, name, nameText);
-		
-		name[i].setAttribute('href', 'https://harfenlabor.netlify.app/persontags#'+author);
+		console.log(i, name[i], name[0], name, nameText);
+
+		//name[i].setAttribute('href', 'https://harfenlabor.netlify.app/persontags#'+author);
 		
 
 		if (i>0) {
