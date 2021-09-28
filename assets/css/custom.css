@@ -160,7 +160,7 @@
 	line-height: 1.7rem;
 	height: fit-content;
 	margin-left: 1.2em;
-	position: fixed;
+	position: absolute;
 	transition: transform 0.3s ease-out;
 	transform-origin: center; /* this will be a svg turning + into - */
 }
