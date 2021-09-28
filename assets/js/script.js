@@ -84,11 +84,11 @@ if (authors_without_by.includes(', ')){
 	name_2.appendChild(single_authors[1]);
 
 	document.getElementById('this_article_author').innerHTML="";
-	//document.getElementById('this_article_author').append("by ", name_1, ", ", name_2);
-	document.getElementById('this_article_author').append("by ");
+	document.getElementById('this_article_author').append("by ", name_1, ", ", name_2);
+	/*document.getElementById('this_article_author').append("by ");
 	document.getElementById('this_article_author').appendChild(name_1);
 	document.getElementById('this_article_author').append(", ");
-	document.getElementById('this_article_author').appendChild(name_2);
+	document.getElementById('this_article_author').appendChild(name_2);*/
 } else {
 	console.log("one author");
 }
