@@ -71,11 +71,10 @@ var authors_initial = document.getElementById('this_article_author').innerHTML;
 var authors_without_by = authors_initial.replace('by', '');
 
 if (authors_without_by.includes(', ')){
-	authors_without_by.split(', ');
+	var single_authors = authors_without_by.split(', ');
 	console.log("includes ,");
-	console.log(authors_without_by);
-	console.log(authors_without_by[0]);
-	console.log(authors_without_by[1]);
+	console.log(single_authors[0]);
+	console.log(single_authors[1]);
 } else {
 	console.log("nope");
 }
