@@ -78,30 +78,30 @@
 }
 
 /*FOOTER*/
-#footer {
+#footer_1 {
 	background: var(--greyColor);
 	color: black;
 	padding: 0px;
 	position: fixed;
 	width: 1.5em;
-	height: 100vh!important;
+	height: 100vh;
 	top: 0;
 	right: 0;
-	transition: height 0.3s ease-out;
+	transition: width 0.3s ease-out;
 }
 
-.footer_bg {
+.footer_1_title {
+	margin-bottom: 0px;
+	cursor: pointer;
+}
+
+/*.footer_bg {
 	display: inline-flex;
 	justify-content: space-between;
 	padding-right: 40px;
 	width: 100%;
 	height: auto;
 	margin-bottom: 10px;
-}
-
-.footer_title {
-	margin-bottom: 0px;
-	cursor: pointer;
 }
 
 .footer_title a{
@@ -114,7 +114,7 @@
 
 .footer_inside_text {
 	position: absolute;
-}
+}*/
 
 /*ARTICLES SYNOPSIS*/
 .synopsis_box {
