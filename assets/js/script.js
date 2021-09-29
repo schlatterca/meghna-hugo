@@ -140,11 +140,11 @@ if ( synopsis ) {
 	var synopsisInnerText = document.getElementsByClassName('synopsis')[0].innerHTML;
 	console.log(synopsisInnerText);
 
-	var synopsis_paragraphs = synopsisInnerText.split('&& ');
+	var synopsis_paragraphs = synopsisInnerText.split('&amp;&amp;');
 
-	console.log(synopsis_paragraphs[0]);
-	console.log(synopsis_paragraphs[1]);
-	console.log(synopsis_paragraphs[4]);
+	for (let i = 0; i < single_authors.length; i++) {
+		console.log(synopsis_paragraphs[i]);
+	}
 } else {
 	console.log("is empty!");
 }
