@@ -58,6 +58,36 @@ fields:
     schema:
       format: markdown
   label: barberiniharpproject
+- name: externallinks
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: externallinks
+  description: External links.
+- name: tags
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: tags
+  description: Tags.
+- name: downloads
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: downloads
+  description: Downloads.
 - name: person_tag
   type: tag_list
   default: []
