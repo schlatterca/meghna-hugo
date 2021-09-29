@@ -31,19 +31,23 @@ function persontags(data){
       if (result.hasOwnProperty("persontags")) { //and if the key "personags" exists…
         for (let i = 0; i < result.persontags.length; i++) { //for each result in "persontags"…
 
-          var data = result.persontags[i]; //split it and change name with surname…
-          data = data.split(' ');
+          if (result.persontags[i].includes(" ")){
 
-          for (var j = 0; j < data.length; j++) { //capitalize first letter
-            data[j] = data[j].charAt(0).toUpperCase() + data[j].slice(1);
-          }
+            var data = result.persontags[i]; //split it and change name with surname…
+            data = data.split(' ');
 
-          if (data.length == 4) { //rearrange
-            var SurnameName = data[3] + ' ' + data[0] + ' ' + data[1] + ' ' + data[2];
-          } if (data.length == 3) {
-            var SurnameName = data[2] + ' ' + data[0] + ' ' + data[1];
-          } if (data.length == 2) {
-            var SurnameName = data[1] + ' ' + data[0];
+            for (var j = 0; j < data.length; j++) { //capitalize first letter
+              data[j] = data[j].charAt(0).toUpperCase() + data[j].slice(1);
+            }
+
+            if (data.length == 4) { //rearrange
+              var SurnameName = data[3] + ' ' + data[0] + ' ' + data[1] + ' ' + data[2];
+            } if (data.length == 3) {
+              var SurnameName = data[2] + ' ' + data[0] + ' ' + data[1];
+            } if (data.length == 2) {
+              var SurnameName = data[1] + ' ' + data[0];
+            }
+
           }
 
           allNames.push(SurnameName);
