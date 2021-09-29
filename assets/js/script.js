@@ -50,9 +50,9 @@ function untoggleSidebar() {
 }
 
 //OPEN SYNOPSIS BOX
-var myDiv = document.getElementsByClassName('open_synopsis_box')[0];
+var synopsisBoxExists = document.getElementsByClassName('open_synopsis_box')[0];
 
-if ( myDiv ) {
+if ( synopsisBoxExists ) {
 	document.getElementsByClassName('open_synopsis_box')[0].addEventListener('click', function(e) {
 	  toggleSynopsisBox();
 	});
@@ -71,73 +71,77 @@ if ( myDiv ) {
 }
 
 //MAKE AUTHOR'S NAME A LINK
-var authors_initial = document.getElementById('this_article_author').innerHTML;
-var authors_without_by = authors_initial.replace('by ', '');
+var authorsNameExists = document.getElementById('this_article_author');
 
-if (authors_without_by.includes(', ')){
+if ( authorsNameExists ) {
+	var authors_initial = document.getElementById('this_article_author').innerHTML;
+	var authors_without_by = authors_initial.replace('by ', '');
 
-	document.getElementById('this_article_author').innerHTML="";
-	document.getElementById('this_article_author').append('by ');
+	if (authors_without_by.includes(', ')){
 
-	var single_authors = authors_without_by.split(', ');
+		document.getElementById('this_article_author').innerHTML="";
+		document.getElementById('this_article_author').append('by ');
 
-	for (let i = 0; i < single_authors.length; i++) { //for each result in "persontags"…
+		var single_authors = authors_without_by.split(', ');
 
-    data = single_authors[i].split(' ');
+		for (let i = 0; i < single_authors.length; i++) { //for each result in "persontags"…
 
-    for (var j = 0; j < data.length; j++) { //capitalize first letter
-      data[j] = data[j].charAt(0).toUpperCase() + data[j].slice(1);
-    }
+	    data = single_authors[i].split(' ');
 
-    if (data.length == 4) { //rearrange
-      var author = data[3] + ' ' + data[0] + ' ' + data[1] + ' ' + data[2];
-    } if (data.length == 3) {
-      var author = data[2] + ' ' + data[0] + ' ' + data[1];
-    } if (data.length == 2) {
-      var author = data[1] + ' ' + data[0];
-    }
+	    for (var j = 0; j < data.length; j++) { //capitalize first letter
+	      data[j] = data[j].charAt(0).toUpperCase() + data[j].slice(1);
+	    }
 
-		let name = document.createElement('a');
-		let nameText = document.createTextNode(single_authors[i]);
-		name.setAttribute('href', 'https://harfenlabor.netlify.app/persontags#'+author);
-		if (i>0) {
-			this_article_author.append(', ');
+	    if (data.length == 4) { //rearrange
+	      var author = data[3] + ' ' + data[0] + ' ' + data[1] + ' ' + data[2];
+	    } if (data.length == 3) {
+	      var author = data[2] + ' ' + data[0] + ' ' + data[1];
+	    } if (data.length == 2) {
+	      var author = data[1] + ' ' + data[0];
+	    }
+
+			let name = document.createElement('a');
+			let nameText = document.createTextNode(single_authors[i]);
+			name.setAttribute('href', 'https://harfenlabor.netlify.app/persontags#'+author);
+			if (i>0) {
+				this_article_author.append(', ');
+			}
+			name.appendChild(nameText);
+			document.getElementById('this_article_author').append(name);
+
 		}
-		name.appendChild(nameText);
-		document.getElementById('this_article_author').append(name);
 
+		/*for (let i = 0; i < single_authors.length; i++) {
+			let name = document.createElement('a');
+			let nameText = document.createTextNode(single_authors[i]);
+			name.setAttribute('href', 'https://harfenlabor.netlify.app/persontags#'+author);
+			if (i>0) {
+				this_article_author.append(', ');
+			}
+			name.appendChild(nameText);
+			document.getElementById('this_article_author').append(name);
+		}*/
+		
+	} else {
+
+		data = authors_without_by.split(' ');
+		for (var j = 0; j < data.length; j++) { //capitalize first letter
+	    data[j] = data[j].charAt(0).toUpperCase() + data[j].slice(1);
+	  }
+	  if (data.length == 4) { //rearrange
+	    var author_0 = data[3] + ' ' + data[0] + ' ' + data[1] + ' ' + data[2];
+	  } if (data.length == 3) {
+	    var author_0 = data[2] + ' ' + data[0] + ' ' + data[1];
+	  } if (data.length == 2) {
+	    var author_0 = data[1] + ' ' + data[0];
+	  }
+	  var name_0 = document.createElement('a');
+		var name_0Text = document.createTextNode(authors_without_by);
+		name_0.setAttribute('href', 'https://harfenlabor.netlify.app/persontags#'+author_0);
+		name_0.appendChild(name_0Text);
+		document.getElementById('this_article_author').innerHTML="";
+		document.getElementById('this_article_author').append("by ", name_0);
 	}
-
-	/*for (let i = 0; i < single_authors.length; i++) {
-		let name = document.createElement('a');
-		let nameText = document.createTextNode(single_authors[i]);
-		name.setAttribute('href', 'https://harfenlabor.netlify.app/persontags#'+author);
-		if (i>0) {
-			this_article_author.append(', ');
-		}
-		name.appendChild(nameText);
-		document.getElementById('this_article_author').append(name);
-	}*/
-	
-} else {
-
-	data = authors_without_by.split(' ');
-	for (var j = 0; j < data.length; j++) { //capitalize first letter
-    data[j] = data[j].charAt(0).toUpperCase() + data[j].slice(1);
-  }
-  if (data.length == 4) { //rearrange
-    var author_0 = data[3] + ' ' + data[0] + ' ' + data[1] + ' ' + data[2];
-  } if (data.length == 3) {
-    var author_0 = data[2] + ' ' + data[0] + ' ' + data[1];
-  } if (data.length == 2) {
-    var author_0 = data[1] + ' ' + data[0];
-  }
-  var name_0 = document.createElement('a');
-	var name_0Text = document.createTextNode(authors_without_by);
-	name_0.setAttribute('href', 'https://harfenlabor.netlify.app/persontags#'+author_0);
-	name_0.appendChild(name_0Text);
-	document.getElementById('this_article_author').innerHTML="";
-	document.getElementById('this_article_author').append("by ", name_0);
 }
 
 
