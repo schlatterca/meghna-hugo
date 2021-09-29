@@ -151,7 +151,7 @@ iframe {
 }
 
 .border-meghna {
-  border-top: 2px solid var(--purpleColor);
+  border-top: 0px;
   height: 1px;
   margin: 15px auto 0;
   position: relative;
@@ -167,7 +167,7 @@ iframe {
   position: absolute;
   top: -4px;
   width: 50px;
-  background-color: #57cbcc;
+  background-color: var(--purpleColor);
 }
 
 .color {
