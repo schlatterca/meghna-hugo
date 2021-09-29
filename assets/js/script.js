@@ -136,7 +136,7 @@ if ( authorsNameExists ) {
 //BREAK LINES IN SYNOPSIS
 var synopsisExists = document.getElementsByClassName('synopsis')[0];
 
-if (( synopsisExists ) && (!(synopsisInnerText === ""))) {
+if (( synopsisExists ) && (!(synopsisInnerText.length == 0))) {
 	var synopsisInnerText = document.getElementsByClassName('synopsis')[0].innerHTML;
 	console.log(synopsisInnerText);
 } else {
