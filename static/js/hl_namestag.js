@@ -33,6 +33,8 @@ function persontags(data){
 
           if (result.persontags[i].includes(" ")){
 
+            console.log("ok", result.persontags[i]);
+
             var data = result.persontags[i]; //split it and change name with surname…
             data = data.split(' ');
 
@@ -48,6 +50,8 @@ function persontags(data){
               var SurnameName = data[1] + ' ' + data[0];
             }
 
+          } else {
+            console.log("ye", result.persontags[i]);
           }
 
           allNames.push(SurnameName);
