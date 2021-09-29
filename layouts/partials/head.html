@@ -29,15 +29,6 @@
 	<!--STYLESHEET FOR ICONS-->
 	<!--link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"-->
 
-	{{ "<!-- JS Plugins -->" | safeHTML }}
-	{{ range site.Params.plugins.js }}
-	<script src="{{ .link | absURL }}"></script>
-	{{ end }}
-
-	{{ "<!-- Main Script -->" | safeHTML }}
-	{{ $script := resources.Get "js/script.js" | minify | fingerprint "sha384" }}
-	<script src="{{ $script.Permalink }}" integrity="{{ $script.Data.Integrity }}"></script>
-
 	<!--SCRIPTS FOR SEARCH-->
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.0/fuse.min.js"></script>
