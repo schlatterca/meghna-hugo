@@ -197,7 +197,7 @@
 	margin-top: 2em;
 
 	display: flex;
-	flex-direction: row; /*was row-reverse ???*/
+	flex-direction: row-reverse;
 
 	transition: width 0.3s ease-out;
 
@@ -233,6 +233,10 @@
 	position: sticky;
 	bottom: 0;
 	top: 0;
+}
+
+.paragraph_box {
+	flex-direction: column;
 }
 
 /*ARTICLES*/
