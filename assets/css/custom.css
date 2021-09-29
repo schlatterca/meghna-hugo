@@ -91,7 +91,7 @@
 	border-radius: 1.5em 0 0 1.5em;
 }
 
-#footer_title {
+.footer_title {
 	margin-bottom: .5em;
 	margin-left: 1.8em;
 	cursor: pointer;
