@@ -153,6 +153,13 @@ if ( authorsNameExists ) {
 var footer_1 = true;
 function toggleFooter(e) {
 	console.log(e);
+	if (footer_1) {
+		e.style.width = "30vw";
+		this.footer_1 = false;
+	} else {
+		e.style.width = "2em";
+		this.footer_1 = true;
+	}
   /*if (footer_1) {
     document.getElementById("footer_1").style.width = "30vw";
     this.footer_1 = false;
