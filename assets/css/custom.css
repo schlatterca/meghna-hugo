@@ -88,6 +88,7 @@
 	transition: width 0.3s ease-out;
 
 	border-radius: 1.5em 0 0 1.5em;
+	border: 2px solid white;
 }
 
 .footer_title {
@@ -107,9 +108,30 @@
 .foot1 {
 	height: 28vh;
 }
-
 .footitle1{
 	width: 28vh;
+}
+
+.foot2 {
+	height: 21vh;
+}
+.footitle2{
+	width: 21vh;
+}
+
+.foot3, .foot4 {
+	height: 18vh;
+}
+.footitle3, .footitle4{
+	width: 18vh;
+}
+
+.foot5 {
+	height: 15vh;
+	border-radius: 1.5em 0 0 0!important;
+}
+.footitle5{
+	width: 15vh;
 }
 
 /*.footer_bg {
