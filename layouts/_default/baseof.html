@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="{{ with site.LanguageCode }}{{ . }}{{ else }}en-us{{ end }}">
 
-{{ partial "main" }} <!--added-->
-
 {{ partial "head.html" . }}
 
 {{/* partial "navigation.html" . */}} <!--added, cut from single.html-->
@@ -12,7 +10,7 @@
     {{ partial "preloader.html" . }}
     {{- block "main" . }}{{- end }}
   </div>
-  {{/* - partial "footer.html" . - */}} <!--cut, now in single.html-->
+  {{ partial "footer.html" . }} <!--cut, now in single.html-->
 </body>
 
 </html>
