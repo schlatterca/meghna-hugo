@@ -2,7 +2,7 @@
 author = "Tizio Tizi, Caio Cai, Sempronio Semproni"
 description = ""
 image = "/images/img1.jpg"
-person_tag = ["luigi rossi", "volker haag", "Franco Maria Mario Ricci", "jean Paul sartre", "carlo Azeglio ciampi", "Tizio Tizi", "Caio Cai", " Sempronio Semproni", "    Michelangelo", "Tiziano", "Raffaello", "Stuart Little", "Chet Baker", "Michelangelo Michelangelo", "Raffaello Raffaello"]
+person_tag = ["luigi rossi", "volker haag", "Franco Maria Mario Ricci", "jean Paul sartre", "carlo Azeglio ciampi", "Tizio Tizi", "Caio Cai", " Sempronio Semproni", "Tiziano", "Raffaello", "Stuart Little", "Chet Baker", "Michelangelo Michelangelo", "Raffaello Raffaello", "Michelangelo"]
 status = ""
 title = "Video Example"
 titolo = ""
