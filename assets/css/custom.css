@@ -83,7 +83,6 @@
 	padding: 0px;
 	position: fixed;
 	width: 2em;
-	height: 28vh;
 	top: 0;
 	right: 0;
 	transition: width 0.3s ease-out;
@@ -99,10 +98,18 @@
 	transform: rotate(-90deg);
 	bottom: 0;
 	position: absolute;
-	width: 28vh;
 	font-size: 1rem;
 	color: var(--purpleColor);
 	text-align: center;
+	pointer-events: none;
+}
+
+.foot1 {
+	height: 28vh;
+}
+
+.footitle1{
+	width: 28vh;
 }
 
 /*.footer_bg {
