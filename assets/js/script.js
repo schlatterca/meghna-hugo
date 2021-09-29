@@ -142,18 +142,20 @@ if ( synopsis ) {
 
 	var synopsis_paragraphs = synopsisInnerText.split('&amp;&amp;');
 
+	var paragraphBox = document.createElement('div');
+	paragraphBox.setAttribute('class', 'paragraphBox');
+
 	for (let i = 0; i < synopsis_paragraphs.length; i++) {
-		var paragraphBox = document.createElement('div');
 		var paragraph = document.createElement('p');
 		var paragraphText = document.createTextNode(synopsis_paragraphs[i]);
-		paragraphBox.setAttribute('class', 'paragraphBox');
-		paragraphBox.appendChild(paragraph);
 		paragraph.setAttribute('class', 'synopsis');
 		paragraph.appendChild(paragraphText);
-		document.getElementsByClassName('synopsis')[0].innerHTML="";
-
-		document.getElementsByClassName('synopsis_box')[0].append(paragraphBox);
+		paragraphBox.appendChild(paragraph);
 	}
+	document.getElementsByClassName('synopsis')[0].innerHTML="";
+	document.getElementsByClassName('synopsis_box')[0].append(paragraphBox);
+
+
 	
 } else {
 	console.log("is empty!");
