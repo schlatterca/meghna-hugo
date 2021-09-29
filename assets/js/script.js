@@ -144,14 +144,15 @@ if ( synopsis ) {
 
 	for (let i = 0; i < synopsis_paragraphs.length; i++) {
 		console.log(synopsis_paragraphs[i]);
-	}
 
-	var paragraph = document.createElement('p');
-	var paragraphText = document.createTextNode(synopsis_paragraphs[i]);
-	paragraph.setAttribute('class', 'synopsis');
-	paragraph.appendChild(paragraphText);
-	document.getElementsByClassName('synopsis')[0].innerHTML="";
-	document.getElementsByClassName('synopsis_box')[0].append(paragraph);
+		var paragraph = document.createElement('p');
+		var paragraphText = document.createTextNode(synopsis_paragraphs[i]);
+		paragraph.setAttribute('class', 'synopsis');
+		paragraph.appendChild(paragraphText);
+		document.getElementsByClassName('synopsis')[0].innerHTML="";
+		document.getElementsByClassName('synopsis_box')[0].append(paragraph);
+	}
+	
 } else {
 	console.log("is empty!");
 }
