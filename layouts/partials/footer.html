@@ -2,48 +2,16 @@
 <footer id="footer" onmouseover="toggleFooter()" onmouseout="toggleFooter()">
 	<div class="footer_bg">
 		<p onmouseover="showFooterText(1)" class="footer_title">THE BARBERINI HARP PROJECT</p>
-		<p onmouseover="showFooterText(2)" class="footer_title">Related Research</p>
-		<p onmouseover="showFooterText(3)" class="footer_title"><a href="/search">Search <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16"><path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/></svg></a></p>
-		<p onmouseover="showFooterText(4)" class="footer_title">External Links <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-up-right" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"/><path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"/></svg></p>
-		<p onmouseover="showFooterText(5)" class="footer_title">Tags</p>
-		<p onmouseover="showFooterText(6)" class="footer_title">Downloads <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-download" viewBox="0 0 16 16"><path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/><path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/></svg></p>
+
 	</div>
 	<div class="footer_inside">
 		<p class="footer_inside_text footer_text_1 visible" style="font-size: 18px; column-count: 2;">Tiohne most important surviving Italian Baroque harp, the Barberini Harp is a chromatic harp with three parallel rows of strings, constructed (1632-33) for the harpist Marco Marazzoli by the instrument maker Girolamo Acciari and the wood-carver Giovanni Tubi, under the patronage of Cardinal Antonio Barberini. As we lack crucial understanding of this famous harp, Harfenlabor has initiated The Barberini Harp Project in order to conduct and share basic research on this harp in the fields of organology, musicology, and performance practice, and within relevant historical and art-historical contexts. This publication presents three stages of The Barberini Harp Project: 1. Convening around the Barberini Harp Project, 2. Interviews with Experts, and 3. Examinations.</p>
-		<p class="footer_inside_text footer_text_2 notvisible">Related articles:</p>
-		<div class="footer_inside_text footer_text_3 notvisible">
-
-			<section class="section resume-section d-flex flex-column" style="padding: 0px; margin: 0px">
-			  <div class="my-auto" style="display: flex">
-			    <form action="{{ .Permalink }}">
-			      <input id="search-query" name="s"/>
-			    </form>
-			    <div id="search-results" style="display: flex">
-			     <!--h3>Matching pages</h3-->
-			    </div>
-			  </div>
-			</section>
-			<script id="search-result-template" type="text/x-js-template">
-			    <div id="summary-${key}" style="width: 14rem; margin-right: 1rem; margin-left: 1rem">
-			      <h5><a href="${link}">${title}</a></h5>
-			      <p>${snippet}</p>
-			      ${ isset tags }<p>Tags: ${tags}</p>${ end }
-			      ${ isset categories }<p>Categories: ${categories}</p>${ end }
-			    </div>
-			</script>
-
-		</div>
-		<p class="footer_inside_text footer_text_4 notvisible">External Links:</p>
-		<div class="footer_inside_text footer_text_5 notvisible">
-			<p>Persons:</p>
-			<p>Subjects:</p>
-			<p>Timeline:</p>
-			<p>Map:</p>
-		</div>
-		<p class="footer_inside_text footer_text_6 notvisible">Download:</p>
 	</div>
 </footer>
 {{"<!-- /footer -->" | safeHTML}}
+
+
+
 
 {{ "<!-- Google Map API -->" | safeHTML }}
 {{ if site.Params.map.enable }}
