@@ -151,8 +151,8 @@ if ( authorsNameExists ) {
 
 //FOOTER
 var footer_1 = true;
-function toggleFooter() {
-	console.log(this)
+function toggleFooter(e) {
+	console.log(e);
   /*if (footer_1) {
     document.getElementById("footer_1").style.width = "30vw";
     this.footer_1 = false;
