@@ -115,31 +115,31 @@
 }
 
 .foot2 {
-	height: 21vh;
+	height: 24vh; /*was 21*/
 	margin-bottom: 51vh;
 }
 .footitle2 {
-	width: 21vh;
+	width: 24vh; /*was 21*/
 }
 
 .foot3 {
-	height: 18vh;
+	height: 21vh; /*was 18*/
 	margin-bottom: 33vh;
 }
 .foot4 {
-	height: 18vh;
+	height: 21vh; /*was 18*/
 	margin-bottom: 15vh;
 }
 .footitle3, .footitle4 {
-	width: 18vh;
+	width: 21vh;
 }
 
 .foot5 {
-	height: 15vh;
+	height: 18vh; /*was 15, add 3 to overlay over the top one*/
 	border-radius: 1.5em 0 0 0!important;
 }
 .footitle5 {
-	width: 15vh;
+	width: 18vh;
 }
 
 /*.footer_bg {
