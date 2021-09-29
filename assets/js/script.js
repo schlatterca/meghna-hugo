@@ -151,14 +151,15 @@ if ( authorsNameExists ) {
 
 //FOOTER
 var footer_1 = true;
-function toggleFooter_1() {
-  if (footer_1) {
-    document.getElementById("footer_1").style.width = "20em";
+function toggleFooter() {
+	console.log(this)
+  /*if (footer_1) {
+    document.getElementById("footer_1").style.width = "30vw";
     this.footer_1 = false;
   } else {
-    document.getElementById("footer_1").style.width = "1.5em";
+    document.getElementById("footer_1").style.width = "2em";
     this.footer_1 = true;
-  }
+  }*/
 }
 
 function showFooterText(e) {
