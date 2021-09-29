@@ -29,7 +29,14 @@
 <script src="{{ site.Params.map.gmap_api | safeURL }}"></script>
 {{ end }}
 
-<!--here were the scripts-->
+{{ "<!-- JS Plugins -->" | safeHTML }}
+{{ range site.Params.plugins.js}}
+<script src="{{ .link | absURL }}"></script>
+{{ end }}
+
+{{ "<!-- Main Script -->" | safeHTML }}
+{{ $script := resources.Get "js/script.js" | minify | fingerprint "sha384"}}
+<script src="{{ $script.Permalink }}" integrity="{{ $script.Data.Integrity }}"></script>
 
 <!-- cookie -->
 {{ if site.Params.cookies.enable }}
