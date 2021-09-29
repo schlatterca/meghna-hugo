@@ -225,12 +225,11 @@
 	font-size: 1.5rem;
 	line-height: 1.7rem;
 	height: fit-content;
-	margin-left: 1.2em;
 	transition: transform 0.3s ease-out;
 	transform-origin: center; /* this will be a svg turning + into - */
 
 	margin-left: 0px;
-	margin-right: 0px;
+	margin-right: -.5em;
 	position: sticky;
 	bottom: 0;
 	top: 0;
