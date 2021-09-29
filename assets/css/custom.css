@@ -125,7 +125,7 @@
 	border: 0.15em solid var(--purpleColor);
 	padding: 1em;
 	padding-top: 0.4em;
-	padding-right: 3em;
+	/*padding-right: 3em;*/
 	width: 20%;
 	height: 15%;
 	overflow: auto;
@@ -160,9 +160,14 @@
 	line-height: 1.7rem;
 	height: fit-content;
 	margin-left: 1.2em;
-	position: absolute;
 	transition: transform 0.3s ease-out;
 	transform-origin: center; /* this will be a svg turning + into - */
+
+	margin-left: 0px;
+	margin-right: 0px;
+	position: sticky;
+	bottom: 0;
+	top: 0;
 }
 
 /*ARTICLES*/
