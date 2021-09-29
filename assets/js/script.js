@@ -134,11 +134,17 @@ if ( authorsNameExists ) {
 }
 
 //BREAK LINES IN SYNOPSIS
-var synopsisExists = document.getElementsByClassName('synopsis')[0];
+var synopsis = document.getElementsByClassName('synopsis')[0];
 
-if (( synopsisExists ) && (!(synopsisInnerText.length == 0))) {
+if ( synopsis ) {
 	var synopsisInnerText = document.getElementsByClassName('synopsis')[0].innerHTML;
 	console.log(synopsisInnerText);
+
+	var synopsis_paragraphs = synopsisInnerText.split('&& ');
+
+	console.log(synopsis_paragraphs[0]);
+	console.log(synopsis_paragraphs[1]);
+	console.log(synopsis_paragraphs[4]);
 } else {
 	console.log("is empty!");
 }
