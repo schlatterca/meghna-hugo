@@ -153,10 +153,10 @@ if ( authorsNameExists ) {
 var footer = true;
 function toggleFooter() {
   if (footer) {
-    document.getElementById("footer").style.height = "250px";
+    document.getElementById("footer").style.width = "20em";
     this.footer = false;
   } else {
-    document.getElementById("footer").style.height = "28px";
+    document.getElementById("footer").style.width = "1.5em";
     this.footer = true;
   }
 }
@@ -166,19 +166,6 @@ function showFooterText(e) {
 	for(var i = 0; i < footertexts.length; ++i) {
 		document.getElementsByClassName("footer_text_1")[i].classList.remove('visible');
 		document.getElementsByClassName("footer_text_1")[i].classList.add('notvisible');
-		document.getElementsByClassName("footer_text_2")[i].classList.remove('visible');
-		document.getElementsByClassName("footer_text_2")[i].classList.add('notvisible');
-		document.getElementsByClassName("footer_text_3")[i].classList.remove('visible');
-		document.getElementsByClassName("footer_text_3")[i].classList.add('notvisible');
-		document.getElementsByClassName("footer_text_4")[i].classList.remove('visible');
-		document.getElementsByClassName("footer_text_4")[i].classList.add('notvisible');
-		document.getElementsByClassName("footer_text_5")[i].classList.remove('visible');
-		document.getElementsByClassName("footer_text_5")[i].classList.add('notvisible');
-		document.getElementsByClassName("footer_text_6")[i].classList.remove('visible');
-		document.getElementsByClassName("footer_text_6")[i].classList.add('notvisible');
-
-		document.getElementsByClassName("footer_text_"+e)[i].classList.remove('notvisible');
-		document.getElementsByClassName("footer_text_"+e)[i].classList.add('visible');
 	}
 }
 
