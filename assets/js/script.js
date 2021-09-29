@@ -143,8 +143,6 @@ if ( synopsis ) {
 	var synopsis_paragraphs = synopsisInnerText.split('&amp;&amp;');
 
 	for (let i = 0; i < synopsis_paragraphs.length; i++) {
-		console.log(synopsis_paragraphs[i]);
-
 		var paragraph = document.createElement('p');
 		var paragraphText = document.createTextNode(synopsis_paragraphs[i]);
 		paragraph.setAttribute('class', 'synopsis');
