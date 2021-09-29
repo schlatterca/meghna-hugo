@@ -78,22 +78,22 @@
 }
 
 /*FOOTER*/
-#footer_1 {
+#footer {
 	background: var(--greyColor);
 	padding: 0px;
 	position: fixed;
-	width: 1.5em;
+	width: 2em;
 	height: 28vh;
 	top: 0;
 	right: 0;
 	transition: width 0.3s ease-out;
-	
+
 	border-radius: 1.5em 0 0 1.5em;
 }
 
-.footer_1_title {
+#footer_title {
 	margin-bottom: .5em;
-	margin-left: 1.5em;
+	margin-left: 1.8em;
 	cursor: pointer;
 	transform-origin: bottom left;
 	transform: rotate(-90deg);
