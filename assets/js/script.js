@@ -137,7 +137,7 @@ if ( authorsNameExists ) {
 var synopsisExists = document.getElementsByClassName('synopsis')[0];
 
 if ( synopsisExists ) {
-	var synopsisInnerText = document.getElementByClassName('synopsis')[0].innerHTML;
+	var synopsisInnerText = document.getElementsByClassName('synopsis')[0].innerHTML;
 	console.log(synopsisInnerText);
 }
 
