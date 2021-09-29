@@ -2,6 +2,8 @@
 
 {{ partial "navigation.html" . }}
 
+{{ partial "footer.html" . }} <!--added, cut from baseof.html-->
+
 <section class="section">
   <div class="container">
     <div class="row">
@@ -13,8 +15,8 @@
       </div>
 
       <div class="synopsis_box">
-        <div class="open_synopsis_box">+</div>
         <p class="synopsis">{{ .Description }}</p>
+        <div class="open_synopsis_box">+</div>
       </div>
 
       <div class="col-lg-8 offset-lg-2">
