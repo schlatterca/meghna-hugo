@@ -49,6 +49,15 @@ fields:
   config:
     maxSize: 64
   label: image
+- name: barberiniharpproject
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: barberiniharpproject
 - name: person_tag
   type: tag_list
   default: []
