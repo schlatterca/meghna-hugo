@@ -150,14 +150,14 @@ if ( authorsNameExists ) {
 
 
 //FOOTER
-var footer = true;
-function toggleFooter() {
-  if (footer) {
-    document.getElementById("footer").style.width = "20em";
-    this.footer = false;
+var footer_1 = true;
+function toggleFooter_1() {
+  if (footer_1) {
+    document.getElementById("footer_1").style.width = "20em";
+    this.footer_1 = false;
   } else {
-    document.getElementById("footer").style.width = "1.5em";
-    this.footer = true;
+    document.getElementById("footer_1").style.width = "1.5em";
+    this.footer_1 = true;
   }
 }
 
