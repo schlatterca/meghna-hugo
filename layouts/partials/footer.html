@@ -1,56 +1,273 @@
-{{"<!-- end Contact Area -->" | safeHTML}}
-<footer>
-	<div id="footer" class="foot1" onmouseover="toggleFooter(this)" onmouseout="toggleFooter(this)">
-		<p class="footer_title footitle1">Barberini Harp Project</p>
-		<!--div class="footer_inside">
-			<p class="footer_inside_text footer_text_1 visible" style="font-size: 18px; column-count: 2;">The one most important surviving Italian Baroque harp, the Barberini Harp is a chromatic harp with three parallel rows of strings, constructed (1632-33) for the harpist Marco Marazzoli by the instrument maker Girolamo Acciari and the wood-carver Giovanni Tubi, under the patronage of Cardinal Antonio Barberini. As we lack crucial understanding of this famous harp, Harfenlabor has initiated The Barberini Harp Project in order to conduct and share basic research on this harp in the fields of organology, musicology, and performance practice, and within relevant historical and art-historical contexts. This publication presents three stages of The Barberini Harp Project: 1. Convening around the Barberini Harp Project, 2. Interviews with Experts, and 3. Examinations.</p>
-		</div-->
-	</div>
-	<div id="footer" class="foot1" onmouseover="toggleFooter(this)" onmouseout="toggleFooter(this)">
-		<p class="footer_title footitle1">Two</p>
-	</div>
-	<div id="footer" class="foot1" onmouseover="toggleFooter(this)" onmouseout="toggleFooter(this)">
-		<p class="footer_title footitle1">Three</p>
-	</div>
-</footer>
-{{"<!-- /footer -->" | safeHTML}}
+:root {
+  --purpleColor: #B44BEB;
+  --greyColor: #F1F2F2;
+}
+
+/*SIDE MENU*/
+.social_row {
+  margin-top: auto;
+  display:flex;
+  margin-bottom: 0px;
+
+  scroll-behavior: smooth;
+  width: 15vw;
+  justify-content: space-between;
+}
 
 
+.social_row a{
+	color: var(--purpleColor);
+}
 
+.navbar {
+	flex-wrap: row nowrap!important;
+}
 
-{{ "<!-- Google Map API -->" | safeHTML }}
-{{ if site.Params.map.enable }}
-<script src="{{ site.Params.map.gmap_api | safeURL }}"></script>
-{{ end }}
+.navbar-brand {
+	transition: margin-left 0.3s ease-out;
+	transform: rotate(270deg) scale(0.5);
 
-{{ "<!-- JS Plugins -->" | safeHTML }}
-{{ range site.Params.plugins.js}}
-<script src="{{ .link | absURL }}"></script>
-{{ end }}
+	margin-left: -30px;
+	margin-top: 60px;
+	display: inline-flex;
+	height: fit-content;
+	float: left;
 
-{{ "<!-- Main Script -->" | safeHTML }}
-{{ $script := resources.Get "js/script.js" | minify | fingerprint "sha384"}}
-<script src="{{ $script.Permalink }}" integrity="{{ $script.Data.Integrity }}"></script>
+	flex-basis: 0;
+  flex-grow: 999;
+}
 
-<!-- cookie -->
-{{ if site.Params.cookies.enable }}
-<script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.2.1/js.cookie.min.js"></script>
-<div id="js-cookie-box" class="cookie-box cookie-box-hide">
-	This site uses cookies. By continuing to use this website, you agree to their use. <span id="js-cookie-button" class="btn btn-transparent">I Accept</span>
-</div>
-<script>
-	(function ($) {
-		const cookieBox = document.getElementById('js-cookie-box');
-		const cookieButton = document.getElementById('js-cookie-button');
-		if (!Cookies.get('cookie-box')) {
-			cookieBox.classList.remove('cookie-box-hide');
-			cookieButton.onclick = function () {
-				Cookies.set('cookie-box', true, {
-					expires: {{ site.Params.cookies.expire_days }}
-				});
-				cookieBox.classList.add('cookie-box-hide');
-			};
-		}
-	})(jQuery);
-</script>
-{{ end }}
+.navbar-left {
+	transition: margin-left 0.3s ease-out;
+	margin-left: 0px /*-290px;*/
+	flex-basis: 20rem!important;
+	flex-grow: 1!important;
+	padding: 0px!important;
+	/*display: -webkit-box*/
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	height: -webkit-fill-available;
+}
+
+.nav-item {
+	line-height: 1.6em;
+}
+
+.nav-link {
+	color: var(--purpleColor)!important;
+	font-size: 32px;
+	text-decoration: none;
+	text-transform: capitalize;
+}
+
+.nav-link:hover {
+	color: black!important;
+}
+
+.navbar-expand-lg .navbar-nav {
+	-ms-flex-direction: column;
+	flex-direction: column;
+	transition: margin-left 0.3s ease-out;
+	width: 100%;
+}
+
+.navbar-collapse {
+	display: flex!important;
+	margin-left: -90px;
+}
+
+/*FOOTER*/
+#footer {
+	background: var(--greyColor);
+	padding: 0px;
+	position: fixed;
+	width: 2em;
+	top: 0;
+	right: 0;
+	transition: width 0.3s ease-out;
+
+	border-radius: 1.5em 0 0 1.5em;
+}
+
+.footer_title {
+	margin-bottom: .5em;
+	margin-left: 1.8em;
+	cursor: pointer;
+	transform-origin: bottom left;
+	transform: rotate(-90deg);
+	bottom: 0;
+	position: absolute;
+	font-size: 1rem;
+	color: var(--purpleColor);
+	text-align: center;
+	pointer-events: none;
+}
+
+.foot1 {
+	height: 28vh;
+}
+
+.footitle1{
+	width: 28vh;
+}
+
+/*.footer_bg {
+	display: inline-flex;
+	justify-content: space-between;
+	padding-right: 40px;
+	width: 100%;
+	height: auto;
+	margin-bottom: 10px;
+}
+
+.footer_title a{
+	text-decoration: none;
+}
+
+.footer_title a:hover{
+	color: white;
+}
+
+.footer_inside_text {
+	position: absolute;
+}*/
+
+/*ARTICLES SYNOPSIS*/
+.synopsis_box {
+	/*display: block;*/
+	position: absolute;
+	background-color: white;
+	z-index: 1;
+	border-radius: 1.2em;
+	border: 0.15em solid var(--purpleColor);
+	padding: 1em;
+	padding-top: 0.4em;
+	/*padding-right: 3em;*/
+	width: 20%;
+	height: 15%;
+	overflow: auto;
+	margin-left: 3vw; /*was 4em*/
+	margin-top: 2em;
+
+	display: flex;
+	flex-direction: row-reverse;
+
+	transition: width 0.3s ease-out;
+
+	-ms-overflow-style: none;  /* hide scrollbar in IE and Edge */
+	scrollbar-width: none;  /* hide scrollbar in Firefox */
+}
+
+.synopsis_box::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for Chrome, Safari and Opera */
+}
+
+.isopen{
+	width: 40%;
+	height: auto;
+}
+
+.synopsis {
+	color: var(--purpleColor);
+	padding-right: .5em;
+}
+
+.open_synopsis_box {
+	color: var(--purpleColor);
+	font-size: 1.5rem;
+	line-height: 1.7rem;
+	height: fit-content;
+	margin-left: 1.2em;
+	transition: transform 0.3s ease-out;
+	transform-origin: center; /* this will be a svg turning + into - */
+
+	margin-left: 0px;
+	margin-right: 0px;
+	position: sticky;
+	bottom: 0;
+	top: 0;
+}
+
+/*ARTICLES*/
+.article_info{ /*unused?*/
+	margin-bottom: 1em;
+}
+
+#this_article_type{
+	padding-left: 0;
+	list-style: none;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	color: var(--purpleColor);
+}
+
+#this_article_title{
+	max-width: 60%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#this_article_author{
+	font-size: 1.5rem;
+}
+
+p > img {
+	vertical-align: top;
+	border-style: none;
+	max-width: 70%;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+	border-radius: 0.8em;
+}
+
+.row {
+	color: black; /* for texts in articles */
+}
+
+.list-inline-item { /* Section */
+	color: var(--purpleColor);
+	font-size: 1.5rem;
+	/*font-weight: 800;
+	font-family: "Quattrocento Sans", sans-serif;*/
+}
+
+/*GENERAL*/
+.visible {
+	opacity: 1;
+}
+
+.notvisible {
+	opacity: 0;
+}
+
+/*OVERRIDE BOOTSTRAP*/
+/*.navbar-expand-lg .navbar-nav {
+	-ms-flex-direction: row!important;
+	flex-direction: row!important;
+}*/
+
+.navbar-expand-lg .navbar-nav .nav-link {
+	padding-right: 0px; /* was .5rem!important;*/
+	padding-left: 0px; /* was .5rem!important;*/
+}
+
+@media (min-width: 576px) {
+	.container {
+		max-width: 960px!important;
+	}
+
+	.navbar-expand-lg {
+		-ms-flex-flow: row nowrap;
+		flex-flow: row nowrap;
+		-ms-flex-pack: start;
+		justify-content: flex-start;
+	}
+}
+
+@media (min-width: 768px) {
+	.container {
+		max-width: 100%!important; /* was 960px!important */
+	}
+}
