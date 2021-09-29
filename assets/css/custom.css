@@ -89,6 +89,7 @@
 
 	border-radius: 1.5em 0 0 1.5em;
 	border: 2px solid white;
+	border-right: 0;
 }
 
 .footer_title {
@@ -108,29 +109,36 @@
 .foot1 {
 	height: 28vh;
 }
-.footitle1{
+.footitle1 {
 	width: 28vh;
 }
 
 .foot2 {
 	height: 21vh;
+	margin-top: 28vh;
 }
-.footitle2{
+.footitle2 {
 	width: 21vh;
 }
 
-.foot3, .foot4 {
+.foot3 {
 	height: 18vh;
+	margin-top: 49vh;
 }
-.footitle3, .footitle4{
+.foot4 {
+	height: 18vh;
+	margin-top: 67vh;
+}
+.footitle3, .footitle4 {
 	width: 18vh;
 }
 
 .foot5 {
 	height: 15vh;
+	margin-top: 85vh;
 	border-radius: 1.5em 0 0 0!important;
 }
-.footitle5{
+.footitle5 {
 	width: 15vh;
 }
 
