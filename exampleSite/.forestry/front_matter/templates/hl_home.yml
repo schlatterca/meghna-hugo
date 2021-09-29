@@ -18,6 +18,22 @@ fields:
   config:
     required: false
   label: author
+- name: status
+  type: select
+  default: draft
+  config:
+    required: false
+    options:
+    - draft
+    - to be approved by author
+    - approved by author
+    source:
+      type: simple
+      section: 
+      file: 
+      path: 
+  label: status
+  description: Status of this article.
 - name: description
   type: textarea
   default: ''
