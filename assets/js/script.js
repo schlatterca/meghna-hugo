@@ -110,17 +110,6 @@ if ( authorsNameExists ) {
 			document.getElementById('this_article_author').append(name);
 
 		}
-
-		/*for (let i = 0; i < single_authors.length; i++) {
-			let name = document.createElement('a');
-			let nameText = document.createTextNode(single_authors[i]);
-			name.setAttribute('href', 'https://harfenlabor.netlify.app/persontags#'+author);
-			if (i>0) {
-				this_article_author.append(', ');
-			}
-			name.appendChild(nameText);
-			document.getElementById('this_article_author').append(name);
-		}*/
 		
 	} else {
 
@@ -144,6 +133,13 @@ if ( authorsNameExists ) {
 	}
 }
 
+//BREAK LINES IN SYNOPSIS
+var synopsisExists = document.getElementsByClassName('synopsis')[0];
+
+if ( synopsisExists ) {
+	var synopsisInnerText = document.getElementById('synopsis').innerHTML;
+	console.log(synopsisInnerText);
+}
 
 
 
