@@ -217,6 +217,7 @@
 .synopsis {
 	color: var(--purpleColor);
 	padding-right: .5em;
+	margin-bottom: .5em;
 }
 
 .open_synopsis_box {
