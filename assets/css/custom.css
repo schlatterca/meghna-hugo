@@ -80,19 +80,29 @@
 /*FOOTER*/
 #footer_1 {
 	background: var(--greyColor);
-	color: black;
 	padding: 0px;
 	position: fixed;
 	width: 1.5em;
-	height: 100vh;
+	height: 28vh;
 	top: 0;
 	right: 0;
 	transition: width 0.3s ease-out;
+	
+	border-radius: 1.5em 0 0 1.5em;
 }
 
 .footer_1_title {
-	margin-bottom: 0px;
+	margin-bottom: .5em;
+	margin-left: 1.5em;
 	cursor: pointer;
+	transform-origin: bottom left;
+	transform: rotate(-90deg);
+	bottom: 0;
+	position: absolute;
+	width: 28vh;
+	font-size: 1rem;
+	color: var(--purpleColor);
+	text-align: center;
 }
 
 /*.footer_bg {
