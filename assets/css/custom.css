@@ -142,6 +142,19 @@
 	width: 18vh;
 }
 
+.footer_insidebox {
+	width: 35vw;
+	right: 0;
+	position: absolute;
+	margin-right: 1em;
+}
+
+.footer_insidetext {
+	color: black;
+	font-size: 1rem;
+	line-height: 1.2rem;
+}
+
 /*.footer_bg {
 	display: inline-flex;
 	justify-content: space-between;
