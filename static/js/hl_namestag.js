@@ -88,11 +88,16 @@ function populateWithResults(myResults){
     const persona = document.createElement("div");
     const quinome = document.createElement("p");
 
-    //persona.id = "persona";
-    persona.id = myResults[i].name;
+    persona.id = "persona";
+    //persona.id = myResults[i].name;
     persona.setAttribute("style", "margin-bottom: 10px");
-    quinome.id = "quinome";
-    //quinome.id = myResults[i].name;
+    //quinome.id = "quinome";
+    if (myResults[i].name.includes(" ")){
+      var nameForID = myResults[i].name.replace(" ", "%20");
+      quinome.id = nameForID;
+    } else {
+      quinome.id = myResults[i].name;
+    }
     quinome.setAttribute("style", "font-size: 20px; color: black; margin-bottom: 0px; margin-top: 20px; line-height: 0px");
 
     quinome.innerHTML = myResults[i].name;
