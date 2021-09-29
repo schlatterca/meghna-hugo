@@ -8,15 +8,27 @@
 	</div>
 	<div id="footer" class="foot2" onmouseover="toggleFooter(this)" onmouseout="toggleFooter(this)">
 		<p class="footer_title footitle2">Related Research</p>
+		<div class="footer_insidebox">
+			<!--p class="footer_insidetext">Related Research here</p-->
+		</div>
 	</div>
 	<div id="footer" class="foot3" onmouseover="toggleFooter(this)" onmouseout="toggleFooter(this)">
 		<p class="footer_title footitle3">External Links</p>
+		<div class="footer_insidebox">
+			<p class="footer_insidetext">{{ .Params.externallinks }}</p>
+		</div>
 	</div>
 	<div id="footer" class="foot4" onmouseover="toggleFooter(this)" onmouseout="toggleFooter(this)">
 		<p class="footer_title footitle4">Tags</p>
+		<div class="footer_insidebox">
+			<p class="footer_insidetext">{{ .Params.tags }}</p>
+		</div>
 	</div>
 	<div id="footer" class="foot5" onmouseover="toggleFooter(this)" onmouseout="toggleFooter(this)">
 		<p class="footer_title footitle5">Downloads</p>
+		<div class="footer_insidebox">
+			<p class="footer_insidetext">{{ .Params.downloads }}</p>
+		</div>
 	</div>
 </footer>
 {{"<!-- /footer -->" | safeHTML}}
