@@ -1,5 +1,6 @@
 :root {
   --purpleColor: #B44BEB;
+  --greyColor: #F1F2F2;
 }
 
 /*SIDE MENU*/
@@ -78,14 +79,14 @@
 
 /*FOOTER*/
 #footer {
-	height: 26px;
-	background: #f54238;
+	background: var(--greyColor);
 	color: black;
-	padding-left: 90px;
+	padding: 0px;
 	position: fixed;
-	width: 100vw;
-	bottom: 0;
-	left: 0;
+	width: 1.5em;
+	height: 100vh!important;
+	top: 0;
+	right: 0;
 	transition: height 0.3s ease-out;
 }
 
@@ -152,6 +153,7 @@
 
 .synopsis {
 	color: var(--purpleColor);
+	padding-right: .5em;
 }
 
 .open_synopsis_box {
