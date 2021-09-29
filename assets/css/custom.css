@@ -145,8 +145,11 @@
 .footer_insidebox {
 	width: 35vw;
 	right: 0;
-	position: absolute;
+	margin-left: 2.5em;
 	margin-right: 1em;
+	margin-top: 1vh;
+	height: 25vh;
+	overflow: auto;
 }
 
 .footer_insidetext {
