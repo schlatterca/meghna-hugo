@@ -82,10 +82,11 @@ function populateWithResults(myResults){
     const persona = document.createElement("div");
     const quinome = document.createElement("p");
 
-    persona.id = "persona";
+    //persona.id = "persona";
+    persona.id = myResults[i].name;
     persona.setAttribute("style", "margin-bottom: 10px");
-    //quinome.id = "quinome";
-    quinome.id = myResults[i].name;
+    quinome.id = "quinome";
+    //quinome.id = myResults[i].name;
     quinome.setAttribute("style", "font-size: 20px; color: black; margin-bottom: 0px; margin-top: 20px; line-height: 0px");
 
     quinome.innerHTML = myResults[i].name;
