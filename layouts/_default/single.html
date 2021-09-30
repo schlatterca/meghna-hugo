@@ -90,11 +90,9 @@
         link.setAttribute('href', 'https://harfenlabor.netlify.app/persontags#'+nameSwapped);
         link.appendChild(linkText);
 
-        console.log(paragraphs[j].innerText);
-
-        var replacedText = paragraphs[j].innerText.replace('a', 'lero');
+        var replacedText = paragraphs[j].innerText.replace(persontags_list[i], link);
         console.log(replacedText);
-        
+
         paragraphs[j].appendChild(link);
 
         /*var paragraphSplit = paragraphs[j].innerHTML.split(persontags_list[i]);
