@@ -74,7 +74,10 @@ if ( synopsisBoxExists ) {
 var synopsis = document.getElementsByClassName('synopsis')[0];
 
 if ( synopsis ) {
-	console.log(synopsis.innerHTML, synopsis.toString());
+	console.log(synopsis.innerHTML, synopsis.innerHTML.toString());
+	if (synopsis.innerHTML = ""){
+		console.log("is empty");
+	}
 
 	var synopsis_paragraphs = synopsis.innerHTML.split('&amp;&amp;');
 
