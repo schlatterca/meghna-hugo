@@ -75,11 +75,8 @@ var synopsis = document.getElementsByClassName('synopsis')[0];
 var plainSynopsis = synopsis.innerHTML.toString();
 
 if (( synopsis ) && (synopsis.innerHTML.toString() == "")) {
-	console.log("empty", synopsis.innerHTML.toString());
 	document.getElementsByClassName('synopsis_box')[0].remove();
 } else if (( synopsis ) && (synopsis.innerHTML.toString() != "")) {
-	console.log("not empty", synopsis.innerHTML.toString());
-
 	var synopsis_paragraphs = synopsis.innerHTML.split('&amp;&amp;');
 
 	var paragraphBox = document.createElement('div');
