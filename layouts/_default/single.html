@@ -100,11 +100,12 @@
         const proof_2 = paragraphs[j].innerText.replace(test, "<a href=\"www.ansa.it\">$&</a>");
         const proof_3 = paragraphs[j].innerText.replace(test, "<a href=\"www.ansa.it\">$&</a>");
 
-        console.log(proof_2, proof_3);
+        //console.log(proof_2, proof_3);
 
         paragraphs[j].innerText = "";
-        paragraphs[j].append(proof_2);
-        paragraphs[j].append(proof_3);
+        console.log(paragraphs[j].children);
+        paragraphs[j].appendChild(proof_2);
+        paragraphs[j].appendChild(proof_3);
 
 
 
