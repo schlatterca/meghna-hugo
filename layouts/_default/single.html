@@ -71,9 +71,16 @@
   for (let i = 0; i < persontags_list.length; i++) {
     for(var j = 0; j < paragraphs.length; j++) {
       if ((typeof paragraphs[j].innerHTML !== 'undefined') && (paragraphs[j].innerHTML.includes(persontags_list[i]))){
+
+        var link = document.createElement('a');
+        var linkText = document.createTextNode(persontags_list[i]);
+        link.setAttribute('href', 'https://harfenlabor.netlify.app/index#'+persontags_list[i]);
+        link.appendChild(linkText);
+
+        paragraphs[j].append(link);
         
-        paragraphs[j].innerHTML.toString().replace('a', 'lero');
-        console.log(paragraphs[j].innerHTML.toString(), persontags_list[i]);
+        //paragraphs[j].innerHTML.replace('a', 'lero');
+        console.log(paragraphs[j].innerHTML, persontags_list[i]);
       }
     }
   }
