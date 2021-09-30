@@ -20,7 +20,7 @@
       </div>
 
       <div class="col-lg-8 offset-lg-2">
-        <div class="post-single-content">
+        <div class="post-single-content articleContent">
           {{ .Content }}
         </div>
         <!--div class="mt-5"-->
@@ -65,14 +65,14 @@
 </footer>
 
 <script>
-  console.log({{ .Params.person_tag }});
-
   var persontags_list = {{ .Params.person_tag }};
-
-  console.log(persontags_list.length);
 
   for (let i = 0; i < persontags_list.length; i++) {
     console.log(persontags_list[i]);
+
+    if (document.getElementsByClassName("articleContent")[0].includes(persontags_list[i])){
+      console.log(persontags_list[i]);
+    }
   }
 
 </script>
