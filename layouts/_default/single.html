@@ -93,11 +93,11 @@
 
         console.log(paragraphs[j], paragraphs[j].innerText, paragraphs[j].innerHTML);
 
-        var proof_1 = paragraphs[j].replace(/\bpersontags_list[i]\b(?![^<]*?<\/a>)/gi, "<a href=\"www.ansa.it\">$&</a>");
+        //var proof_1 = paragraphs[j].replace(/\bpersontags_list[i]\b(?![^<]*?<\/a>)/gi, "<a href=\"www.ansa.it\">$&</a>");
         var proof_2 = paragraphs[j].innerText.replace(/\bpersontags_list[i]\b(?![^<]*?<\/a>)/gi, "<a href=\"www.ansa.it\">$&</a>");
         var proof_3 = paragraphs[j].innerHTML.replace(/\bpersontags_list[i]\b(?![^<]*?<\/a>)/gi, "<a href=\"www.ansa.it\">$&</a>");
 
-        console.log(proof_1, proof_2, proof_3);
+        console.log(proof_2, proof_3);
 
 
 
