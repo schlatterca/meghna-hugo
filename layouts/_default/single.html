@@ -91,29 +91,32 @@
         link.appendChild(linkText);
 
 
-        //console.log(paragraphs[j], paragraphs[j].innerText, paragraphs[j].innerHTML);
+        console.log(paragraphs[j], paragraphs[j].innerText, paragraphs[j].innerHTML);
 
-        var paragText = paragraphs[j].innerText.split(persontags_list[i]);
+        var proof_1 = paragraphs[j].replace(/\bpersontags_list[i]\b(?![^<]*?<\/a>)/gi, "<a href=\"www.ansa.it\">$&</a>");
+        var proof_2 = paragraphs[j].innerText.replace(/\bpersontags_list[i]\b(?![^<]*?<\/a>)/gi, "<a href=\"www.ansa.it\">$&</a>");
+        var proof_3 = paragraphs[j].innerHTML.replace(/\bpersontags_list[i]\b(?![^<]*?<\/a>)/gi, "<a href=\"www.ansa.it\">$&</a>");
 
+        console.log(proof_1, proof_2, proof_3);
+
+
+
+
+        /*var paragText = paragraphs[j].innerText.split(persontags_list[i]);
         console.log(paragraphs[j].innerHTML);
         console.log(paragText[0]);
         console.log(paragText[1]);
-
-        var span_0 = document.createElement('span');
-        var spanText_0 = document.createTextNode(paragText[0]);
-        span_0.appendChild(spanText_0);
-        var span_1 = document.createElement('span');
-        var spanText_1 = document.createTextNode(paragText[1]);
-        span_1.appendChild(spanText_1);
-
-        //paragraphs[j].innerText = "";
-        paragraphs[j].append(span_0);
-        paragraphs[j].append(span_1);
-        paragraphs[j].insertBefore(link, span_0);
-
-
-
-        paragraphs[j].appendChild(link);
+        //var span_0 = document.createElement('span');
+        //var spanText_0 = document.createTextNode(paragText[0]);
+        //span_0.appendChild(spanText_0);
+        //var span_1 = document.createElement('span');
+        //var spanText_1 = document.createTextNode(paragText[1]);
+        //span_1.appendChild(spanText_1);
+        paragraphs[j].innerText = "";
+        paragraphs[j].append(paragText[0]);
+        paragraphs[j].append(link);
+        paragraphs[j].append(paragText[1]);
+        paragraphs[j].appendChild(link);*/
 
 
         /*var targetWord = persontags_list[i];
