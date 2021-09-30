@@ -75,7 +75,7 @@ var synopsis = document.getElementsByClassName('synopsis')[0];
 
 if ( synopsis ) {
 	console.log(synopsis.innerHTML, synopsis.innerHTML.toString());
-	if (synopsis.innerHTML = ""){
+	if (synopsis.innerHTML.toString() = ""){
 		console.log("is empty");
 	}
 
