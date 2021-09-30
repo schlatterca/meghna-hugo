@@ -91,7 +91,10 @@
         link.appendChild(linkText);
 
         console.log(paragraphs[j].innerText);
-        paragraphs[j].innerText.replace('a', 'lero');
+
+        var replacedText = paragraphs[j].innerText.replace('a', 'lero');
+        console.log(replacedText);
+        
         paragraphs[j].appendChild(link);
 
         /*var paragraphSplit = paragraphs[j].innerHTML.split(persontags_list[i]);
