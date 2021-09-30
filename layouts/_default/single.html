@@ -65,15 +65,7 @@
 </footer>
 
 <script>
-  console.log({{ .Params.persontags }});
-  console.log({{ .Params.persontags[0] }});
-  console.log({{ .Params.persontags[1] }});
-
-  var persontags_list = {{ .Params.persontags }};
-
-  for (let i = 0; i < persontags_list.length; i++) {
-    console.log(persontags_list[i]);
-  }
+  console.log({{ .Params.tags }});
 
 </script>
 
