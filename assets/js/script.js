@@ -72,10 +72,11 @@ if ( synopsisBoxExists ) {
 
 //BREAK LINES IN SYNOPSIS
 var synopsis = document.getElementsByClassName('synopsis')[0];
+var plainSynopsis = synopsis.innerHTML.toString();
 
 if ( synopsis ) {
 	console.log(synopsis.innerHTML, synopsis.innerHTML.toString());
-	if (synopsis.innerHTML.toString() = ""){
+	if (synopsis.innerHTML.toString() == ""){
 		console.log("is empty");
 	}
 
