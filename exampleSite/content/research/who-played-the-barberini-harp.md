@@ -1,8 +1,13 @@
 +++
 author = "Alexandra Ziane"
+barberiniharpproject = ""
 description = ""
+downloads = ""
+externallinks = ""
 image = "/images/image.jpg"
-person_tag = ["Marco Marazzoli", "Orazio Michi", "Luigi Rossi", "Giacomo Carissimi", "Volker Haag", "Alexandra Ziane"]
+person_tag = ["Marco Marazzoli", "Orazio Michi", "Luigi Rossi", "Giacomo Carissimi", "Volker Haag", "Alexandra Ziane", "Antonio Barberini", "Giovanni Lanfranco", "François Collignon", "Andrea Sacchi", "Virgilio Mazzocchi"]
+status = ""
+tags = ""
 title = "Who played the Barberini Harp? Harpists of the first half of the 17th century in Rome"
 titolo = ""
 type = "Research — Performance Practice"
