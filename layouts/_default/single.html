@@ -97,12 +97,15 @@
         console.log(test);
         //const proof_2 = paragraphs[j].innerText.replace(/\btest\b(?![^<]*?<\/a>)/gi, "<a href=\"www.ansa.it\">$&</a>");
         //const proof_3 = paragraphs[j].innerHTML.replace(/\btest\b(?![^<]*?<\/a>)/gi, "<a href=\"www.ansa.it\">$&</a>");
-        const proof_2 = paragraphs[j].innerText.replace(test, "<a href=\"www.ansa.it\">$&</a>");
-        const proof_3 = paragraphs[j].innerText.replace(test, "<a href=\"www.ansa.it\">$&</a>");
+        const proof_2 = paragraphs[j].children[0].innerText.replace(test, "<a href=\"www.ansa.it\">$&</a>");
+        const proof_3 = paragraphs[j].children[1].innerText.replace(test, "<a href=\"www.ansa.it\">$&</a>");
 
         let proof_2_par = document.createElement("p");
+        proof_2_par.setAttribute('class', 'proof_2_par');
         proof_2_par.append(proof_2);
+
         let proof_3_par = document.createElement("p");
+        proof_3_par.setAttribute('class', 'proof_3_par');
         proof_3_par.append(proof_3);
 
         //console.log(proof_2, proof_3);
