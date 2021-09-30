@@ -41,7 +41,9 @@
   var url = window.location.href;
   if(url.includes('#')) {
     var url = url.split('#');
-    console.log(url[0], url[1]);
+    console.log(url[1]);
+
+    document.getElementById(url[1]).scrollIntoView();
   }
 </script>
 
