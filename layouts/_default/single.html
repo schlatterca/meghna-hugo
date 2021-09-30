@@ -69,8 +69,8 @@
   var persontags_list = {{ .Params.person_tag }};
   var paragraphs = document.getElementsByClassName("articleContent")[0].childNodes;
 
-  for(var j = 0; j < paragraphs.length; j++) {
-    for (let i = 0; i < persontags_list.length; i++) {
+  for (let i = 0; i < persontags_list.length; i++) {
+    for(var j = 0; j < paragraphs.length; j++) {
       if ((typeof paragraphs[j].innerHTML !== 'undefined') && (paragraphs[j].innerHTML.includes(persontags_list[i]))){
 
         //create link with the name
