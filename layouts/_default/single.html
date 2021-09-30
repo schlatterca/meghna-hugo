@@ -90,15 +90,18 @@
         link.setAttribute('href', 'https://harfenlabor.netlify.app/persontags#'+nameSwapped);
         link.appendChild(linkText);
 
-        var paragraphSplit = paragraphs[j].innerHTML.split(persontags_list[i]);
+        paragraphs[j].innerHTML = '';
+        paragraphs[j].appendChild(link);
+
+        /*var paragraphSplit = paragraphs[j].innerHTML.split(persontags_list[i]);
         console.log(paragraphSplit[0]);
         console.log(paragraphSplit[1]);
 
-        paragraphs[j].appendChild(link);
+        paragraphs[j].appendChild(link);*/
+
 
         //paragraphSplit[0].append(link);
         //paragraphs[j] = paragraphSplit.innerHTML.join(persontags_list[i]);
-        
         //paragraphs[j].innerHTML.replace('a', 'lero');
         //console.log(paragraphs[j].innerHTML, persontags_list[i]);
       }
