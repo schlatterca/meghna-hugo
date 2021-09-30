@@ -94,8 +94,9 @@
         console.log(paragraphs[j], paragraphs[j].innerText, paragraphs[j].innerHTML);
 
         //var proof_1 = paragraphs[j].replace(/\bpersontags_list[i]\b(?![^<]*?<\/a>)/gi, "<a href=\"www.ansa.it\">$&</a>");
-        var proof_2 = paragraphs[j].innerText.replace(/\bMarco Marazzoli\b(?![^<]*?<\/a>)/gi, "<a href=\"www.ansa.it\">$&</a>");
-        var proof_3 = paragraphs[j].innerHTML.replace(/\bMarco Marazzoli\b(?![^<]*?<\/a>)/gi, "<a href=\"www.ansa.it\">$&</a>");
+        var test = persontags_list[i];
+        var proof_2 = paragraphs[j].innerText.replace(/\btest\b(?![^<]*?<\/a>)/gi, "<a href=\"www.ansa.it\">$&</a>");
+        var proof_3 = paragraphs[j].innerHTML.replace(/\btest\b(?![^<]*?<\/a>)/gi, "<a href=\"www.ansa.it\">$&</a>");
 
         console.log(proof_2, proof_3);
 
