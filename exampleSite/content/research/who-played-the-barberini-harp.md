@@ -1,7 +1,7 @@
 +++
 author = "Alexandra Ziane"
 barberiniharpproject = ""
-description = "This is a description.&&\nHello! Together all together we can save the world tonight from everyone.&&HELLO."
+description = ""
 downloads = ""
 externallinks = ""
 image = "/images/image.jpg"
