@@ -69,18 +69,12 @@
   var paragraphs = document.getElementsByTagName("p");
 
   for (let i = 0; i < persontags_list.length; i++) {
-    console.log(persontags_list[i]);
-
     for(var j = 0; j < paragraphs.length; j++) {
-      console.log(paragraphs[j].innerHTML);
       if (paragraphs[j].innerHTML.includes(persontags_list[i])){
         console.log("found: ", persontags_list[i]);
+        paragraphs[j].innerHTML.replace(persontags_list[i], "coso");
       }
     }
-
-    /*if (document.getElementsByClassName("articleContent")[0].includes(persontags_list[i])){
-      console.log(persontags_list[i]);
-    }*/
   }
 
 </script>
