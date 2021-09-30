@@ -38,11 +38,10 @@
 
 <!--Delay and scroll down to selected ID-->
 <script>
-  console.log(window.location.href);
-
   var url = window.location.href;
   if(url.includes('#')) {
-    console.log("included");
+    var url = url.split('#');
+    console.log(url[0], url[1]);
   }
 </script>
 
