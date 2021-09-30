@@ -108,8 +108,8 @@
 
         paragraphs[j].innerText = "";
         paragraphs[j].append(paragText[0]);
-        paragraphs[j].append(link);
         paragraphs[j].append(paragText[1]);
+        paragraphs[j].insertBefore(link, paragText[1]);
 
 
 
