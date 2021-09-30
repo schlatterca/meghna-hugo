@@ -100,12 +100,17 @@
         const proof_2 = paragraphs[j].innerText.replace(test, "<a href=\"www.ansa.it\">$&</a>");
         const proof_3 = paragraphs[j].innerText.replace(test, "<a href=\"www.ansa.it\">$&</a>");
 
+        let proof_2_par = document.createElement("p");
+        proof_2_par.append(proof_2);
+        let proof_3_par = document.createElement("p");
+        proof_3_par.append(proof_3);
+
         //console.log(proof_2, proof_3);
 
         paragraphs[j].innerText = "";
         console.log(paragraphs[j].children);
-        paragraphs[j].appendChild(proof_2);
-        paragraphs[j].appendChild(proof_3);
+        paragraphs[j].appendChild(proof_2_par);
+        paragraphs[j].appendChild(proof_3_par);
 
 
 
