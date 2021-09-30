@@ -1,162 +1,329 @@
-{{ define "main" }}
+/* ========================================================================= */
+/*	CARLO SCRIPT: HOVERING SIDEBAR + FOOTER
+/* ========================================================================= */
 
-{{ partial "navigation.html" . }}
+/*var sidebar = true;
+function toggleSidebar() {
+  if (sidebar) {
+    document.getElementsByClassName("navigation")[0].style.width = "400px";
+    document.getElementsByClassName("section")[0].style.marginLeft = "400px";
 
-{{/* - partial "footer.html" . -*/}}
+    document.getElementsByClassName("navbar-left")[0].style.marginLeft = "0px";
+    document.getElementsByClassName("navbar-brand")[0].style.marginLeft = "20px";
+    this.sidebar = false;
+  } else {
+    document.getElementsByClassName("navigation")[0].style.width = "50px";
+    document.getElementsByClassName("section")[0].style.marginLeft = "50px";
 
-<section class="section">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-8 offset-lg-2 text-center">
-        <p id="this_article_type"><a href="..\"{{ .Type }}>{{ .Type }}</a></p>
-        <h1 id="this_article_title">{{ .Title }}</h1>
-        <p id="this_article_author">by {{ .Params.author }}</p>
-        
-      </div>
-
-      <div class="synopsis_box">
-        <p class="synopsis">{{ .Description }}</p>
-        <div class="open_synopsis_box">+</div>
-      </div>
-
-      <div class="col-lg-8 offset-lg-2">
-        <div class="post-single-content articleContent">
-          {{ .Content }}
-        </div>
-        <!--div class="mt-5"-->
-          {{/* .Date */}} <!--JUST TO TRY THE COMMENT-->
-        <!--/div-->
-      </div>
-    </div>
-  </div>
-</section>
-
-<footer>
-  <div id="footer" class="foot1" onmouseover="toggleFooter(this)" onmouseout="toggleFooter(this)">
-    <p class="footer_title footitle1">Barberini Harp Project</p>
-    <div class="footer_insidebox">
-      <p class="footer_insidetext">{{ .Params.barberiniharpproject }}</p>
-    </div>
-  </div>
-  <div id="footer" class="foot2" onmouseover="toggleFooter(this)" onmouseout="toggleFooter(this)">
-    <p class="footer_title footitle2">Related Research</p>
-    <div class="footer_insidebox">
-      <!--p class="footer_insidetext">Related Research here</p-->
-    </div>
-  </div>
-  <div id="footer" class="foot3" onmouseover="toggleFooter(this)" onmouseout="toggleFooter(this)">
-    <p class="footer_title footitle3">External Links</p>
-    <div class="footer_insidebox">
-      <p class="footer_insidetext">{{ .Params.externallinks }}</p>
-    </div>
-  </div>
-  <div id="footer" class="foot4" onmouseover="toggleFooter(this)" onmouseout="toggleFooter(this)">
-    <p class="footer_title footitle4">Tags</p>
-    <div class="footer_insidebox">
-      <p class="footer_insidetext">{{ .Params.tags }}</p>
-    </div>
-  </div>
-  <div id="footer" class="foot5" onmouseover="toggleFooter(this)" onmouseout="toggleFooter(this)">
-    <p class="footer_title footitle5">Downloads</p>
-    <div class="footer_insidebox">
-      <p class="footer_insidetext">{{ .Params.downloads }}</p>
-    </div>
-  </div>
-</footer>
-
-<script>
-  /*add links to each person that appears in the person_tag section*/
-  var persontags_list = {{ .Params.person_tag }};
-  var paragraphs = document.getElementsByClassName("articleContent")[0].childNodes;
-
-  for(var j = 0; j < paragraphs.length; j++) {
-    for (let i = 0; i < persontags_list.length; i++) {
-      if ((typeof paragraphs[j].innerHTML !== 'undefined') && (paragraphs[j].innerHTML.includes(persontags_list[i]))){
-
-        var link = document.createElement('a');
-        var linkText = document.createTextNode(persontags_list[i]);
-
-        if (persontags_list[i].includes(' ')){
-          var nameToSwap = persontags_list[i].split(' ');
-          var first = nameToSwap[0];
-          var last = nameToSwap[nameToSwap.length - 1];
-          nameToSwap[0] = last;
-          nameToSwap[nameToSwap.length - 1] = first;
-          var nameSwapped = nameToSwap.join(' ');
-        } else {
-          var nameSwapped = persontags_list[i];
-        }
-
-        link.setAttribute('href', 'https://harfenlabor.netlify.app/persontags#'+nameSwapped);
-        link.appendChild(linkText);
-
-
-        var targetWord = persontags_list[i];
-        var textNode = paragraphs[j].firstChild.innerHTML;
-
-        console.log(paragraphs[j].firstChild, paragraphs[j].firstChild.innerText, paragraphs[j].firstChild.innerHTML);
-
-        // Find our text in the text node
-        var index = textNode.nodeValue.indexOf(targetWord);
-        if (index !== -1) {
-          // Split at the beginning of the text
-          var nodeWord = textNode.splitText(index);
-
-          // Split the new node again at the end of the word
-          var nodeAfter = nodeWord.splitText(targetWord.length);
-
-          // Insert a new anchor in front of the word
-          //var anchor = document.createElement('a');
-          //var anchor.href = "http://stackoverflow.com";
-          //p.insertBefore(anchor, nodeWord);
-          p.insertBefore(link, nodeWord);
-
-          // Now move the word *into* the anchor
-          anchor.appendChild(nodeWord);
-        }
-
-
-
-
-        /*var paragText = paragraphs[j].innerText.split(persontags_list[i]);
-
-        console.log(paragText[0]);
-        console.log(paragText[1]);
-
-        var span_0 = document.createElement('span');
-        var spanText_0 = document.createTextNode(paragText[0]);
-        span_0.appendChild(spanText_0);
-        var span_1 = document.createElement('span');
-        var spanText_1 = document.createTextNode(paragText[1]);
-        span_1.appendChild(spanText_1);
-
-        paragraphs[j].innerText = "";
-        paragraphs[j].append(span_0);
-        paragraphs[j].append(link);
-        paragraphs[j].append(span_1);*/
-
-
-
-        /*var replacedText = paragraphs[j].innerText.replace(persontags_list[i], link);
-        console.log(replacedText);
-        paragraphs[j].appendChild(link);*/
-
-
-
-        /*var paragraphSplit = paragraphs[j].innerHTML.split(persontags_list[i]);
-        console.log(paragraphSplit[0]);
-        console.log(paragraphSplit[1]);
-        paragraphs[j].appendChild(link);*/
-
-
-        //paragraphSplit[0].append(link);
-        //paragraphs[j] = paragraphSplit.innerHTML.join(persontags_list[i]);
-        //paragraphs[j].innerHTML.replace('a', 'lero');
-        //console.log(paragraphs[j].innerHTML, persontags_list[i]);
-      }
-    }
+    document.getElementsByClassName("navbar-left")[0].style.marginLeft = "-290px";
+    document.getElementsByClassName("navbar-brand")[0].style.marginLeft = "-30px";
+    this.sidebar = true;
   }
+}*/
 
-</script>
+//DESKTOP SIDEBAR
+document.getElementById('menu_lid').addEventListener('mouseover', function(e) {
+  toggleSidebar();
+});
+document.getElementById('menu_lid').addEventListener('mouseout', function(e) {
+  untoggleSidebar();
+});
 
-{{ end }}
+document.getElementById("navigation").addEventListener('mouseover', function(e) {
+  toggleSidebar();
+});
+document.getElementById("navigation").addEventListener('mouseout', function(e) {
+  untoggleSidebar();
+});
+
+function toggleSidebar() {
+  if(window.innerWidth >= 768){
+    document.getElementById("menu_lid").style.marginLeft = "calc(50vw - 5px)";
+    document.getElementById("navigation").style.width = "50vw";
+  }
+}
+function untoggleSidebar() {
+  if(window.innerWidth >= 768){
+    document.getElementById("menu_lid").style.marginLeft = "-5px";
+    document.getElementById("navigation").style.width = "0px";
+  }
+}
+
+//OPEN SYNOPSIS BOX
+var synopsisBoxExists = document.getElementsByClassName('open_synopsis_box')[0];
+
+if ( synopsisBoxExists ) {
+	document.getElementsByClassName('open_synopsis_box')[0].addEventListener('click', function(e) {
+	  toggleSynopsisBox();
+	});
+	var synopsisboxisclosed = true;
+	function toggleSynopsisBox() {
+		if (synopsisboxisclosed) {
+			document.getElementsByClassName('open_synopsis_box')[0].style.transform = "rotate(45deg)";
+			document.getElementsByClassName('synopsis_box')[0].classList.add("isopen");
+			this.synopsisboxisclosed = false;
+		} else {
+			document.getElementsByClassName('open_synopsis_box')[0].style.transform = "rotate(0deg)";
+			document.getElementsByClassName('synopsis_box')[0].classList.remove("isopen");
+			this.synopsisboxisclosed = true;
+		}
+	}
+}
+
+//BREAK LINES IN SYNOPSIS
+var synopsis = document.getElementsByClassName('synopsis')[0];
+var plainSynopsis = synopsis.innerHTML.toString();
+
+if (( synopsis ) && (synopsis.innerHTML.toString() == "")) {
+	document.getElementsByClassName('synopsis_box')[0].remove();
+} else if (( synopsis ) && (synopsis.innerHTML.toString() != "")) {
+	var synopsis_paragraphs = synopsis.innerHTML.split('&amp;&amp;');
+
+	var paragraphBox = document.createElement('div');
+	paragraphBox.setAttribute('class', 'paragraphBox');
+
+	for (let i = 0; i < synopsis_paragraphs.length; i++) {
+		var paragraph = document.createElement('p');
+		var paragraphText = document.createTextNode(synopsis_paragraphs[i]);
+		paragraph.setAttribute('class', 'synopsis');
+		paragraph.appendChild(paragraphText);
+		paragraphBox.appendChild(paragraph);
+	}
+	document.getElementsByClassName('synopsis')[0].innerHTML="";
+	document.getElementsByClassName('synopsis_box')[0].append(paragraphBox);
+}
+
+//MAKE AUTHOR'S NAME A LINK
+var authorsNameExists = document.getElementById('this_article_author');
+
+if ( authorsNameExists ) {
+	var authors_initial = document.getElementById('this_article_author').innerHTML;
+	var authors_without_by = authors_initial.replace('by ', '');
+
+	if (authors_without_by.includes(', ')){
+
+		document.getElementById('this_article_author').innerHTML="";
+		document.getElementById('this_article_author').append('by ');
+
+		var single_authors = authors_without_by.split(', ');
+
+		for (let i = 0; i < single_authors.length; i++) { //for each result in "persontags"…
+
+	    data = single_authors[i].split(' ');
+
+	    for (var j = 0; j < data.length; j++) { //capitalize first letter
+	      data[j] = data[j].charAt(0).toUpperCase() + data[j].slice(1);
+	    }
+
+	    if (data.length == 4) { //rearrange
+	      var author = data[3] + ' ' + data[0] + ' ' + data[1] + ' ' + data[2];
+	    } if (data.length == 3) {
+	      var author = data[2] + ' ' + data[0] + ' ' + data[1];
+	    } if (data.length == 2) {
+	      var author = data[1] + ' ' + data[0];
+	    }
+
+			let name = document.createElement('a');
+			let nameText = document.createTextNode(single_authors[i]);
+			name.setAttribute('href', 'https://harfenlabor.netlify.app/persontags#'+author);
+			if (i>0) {
+				this_article_author.append(', ');
+			}
+			name.appendChild(nameText);
+			document.getElementById('this_article_author').append(name);
+
+		}
+		
+	} else {
+
+		data = authors_without_by.split(' ');
+		for (var j = 0; j < data.length; j++) { //capitalize first letter
+	    data[j] = data[j].charAt(0).toUpperCase() + data[j].slice(1);
+	  }
+	  if (data.length == 4) { //rearrange
+	    var author_0 = data[3] + ' ' + data[0] + ' ' + data[1] + ' ' + data[2];
+	  } if (data.length == 3) {
+	    var author_0 = data[2] + ' ' + data[0] + ' ' + data[1];
+	  } if (data.length == 2) {
+	    var author_0 = data[1] + ' ' + data[0];
+	  }
+	  var name_0 = document.createElement('a');
+		var name_0Text = document.createTextNode(authors_without_by);
+		name_0.setAttribute('href', 'https://harfenlabor.netlify.app/persontags#'+author_0);
+		name_0.appendChild(name_0Text);
+		document.getElementById('this_article_author').innerHTML="";
+		document.getElementById('this_article_author').append("by ", name_0);
+	}
+}
+
+
+
+
+//FOOTER
+var footer = true;
+function toggleFooter(e) {
+	if (footer) {
+		e.style.width = "40vw";
+		this.footer = false;
+	} else {
+		e.style.width = "2em";
+		this.footer = true;
+	}
+}
+
+function showFooterText(e) {
+	var footertexts= document.querySelectorAll('.footer_text_'+e);
+	for(var i = 0; i < footertexts.length; ++i) {
+		document.getElementsByClassName("footer_text_1")[i].classList.remove('visible');
+		document.getElementsByClassName("footer_text_1")[i].classList.add('notvisible');
+	}
+}
+
+
+
+/* ========================================================================= */
+/*	Page Preloader
+/* ========================================================================= */
+
+$(window).on('load', function () {
+	$('.preloader').fadeOut(100);
+});
+
+jQuery(function ($) {
+	"use strict";
+
+	/* ========================================================================= */
+	/*	lazy load initialize
+	/* ========================================================================= */
+
+	const observer = lozad(); // lazy loads elements with default selector as ".lozad"
+	observer.observe();
+
+	/* ========================================================================= */
+	/*	Magnific popup
+	/* =========================================================================  */
+	$('.image-popup').magnificPopup({
+		type: 'image',
+		removalDelay: 160, //delay removal by X to allow out-animation
+		callbacks: {
+			beforeOpen: function () {
+				// just a hack that adds mfp-anim class to markup
+				this.st.image.markup = this.st.image.markup.replace('mfp-figure', 'mfp-figure mfp-with-anim');
+				this.st.mainClass = this.st.el.attr('data-effect');
+			}
+		},
+		closeOnContentClick: true,
+		midClick: true,
+		fixedContentPos: false,
+		fixedBgPos: true
+	});
+
+	/* ========================================================================= */
+	/*	Portfolio Filtering Hook
+	/* =========================================================================  */
+
+	var containerEl = document.querySelector('.shuffle-wrapper');
+	if (containerEl) {
+		var Shuffle = window.Shuffle;
+		var myShuffle = new Shuffle(document.querySelector('.shuffle-wrapper'), {
+			itemSelector: '.shuffle-item',
+			buffer: 1
+		});
+
+		jQuery('input[name="shuffle-filter"]').on('change', function (evt) {
+			var input = evt.currentTarget;
+			if (input.checked) {
+				myShuffle.filter(input.value);
+			}
+		});
+	}
+
+	/* ========================================================================= */
+	/*	Testimonial Carousel
+	/* =========================================================================  */
+
+	$("#testimonials").slick({
+		infinite: true,
+		arrows: false,
+		autoplay: true,
+		autoplaySpeed: 4000
+	});
+
+	/* ========================================================================= */
+	/*	animation scroll js
+	/* ========================================================================= */
+
+
+
+	function myFunction(x) {
+		if (x.matches) {
+			var topOf = 50
+		} else {
+			var topOf = 350
+		}
+	}
+
+	var html_body = $('html, body');
+	$('nav a, .page-scroll').on('click', function () { //use page-scroll class in any HTML tag for scrolling
+		if (location.pathname.replace(/^\//, '') === this.pathname.replace(/^\//, '') && location.hostname === this.hostname) {
+			var target = $(this.hash);
+			target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+			if (target.length) {
+				html_body.animate({
+					scrollTop: target.offset().top - 50
+				}, 1500, 'easeInOutExpo');
+				return false;
+			}
+		}
+	});
+
+	// easeInOutExpo Declaration
+	jQuery.extend(jQuery.easing, {
+		easeInOutExpo: function (x, t, b, c, d) {
+			if (t === 0) {
+				return b;
+			}
+			if (t === d) {
+				return b + c;
+			}
+			if ((t /= d / 2) < 1) {
+				return c / 2 * Math.pow(2, 10 * (t - 1)) + b;
+			}
+			return c / 2 * (-Math.pow(2, -10 * --t) + 2) + b;
+		}
+	});
+
+	/* ========================================================================= */
+	/*	counter up
+	/* ========================================================================= */
+	function counter() {
+		var oTop;
+		if ($('.count').length !== 0) {
+			oTop = $('.count').offset().top - window.innerHeight;
+		}
+		if ($(window).scrollTop() > oTop) {
+			$('.count').each(function () {
+				var $this = $(this),
+					countTo = $this.attr('data-count');
+				$({
+					countNum: $this.text()
+				}).animate({
+					countNum: countTo
+				}, {
+					duration: 1000,
+					easing: 'swing',
+					step: function () {
+						$this.text(Math.floor(this.countNum));
+					},
+					complete: function () {
+						$this.text(this.countNum);
+					}
+				});
+			});
+		}
+	}
+	$(window).on('scroll', function () {
+		counter();
+	});
+
+});
