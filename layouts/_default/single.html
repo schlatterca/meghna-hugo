@@ -73,9 +73,9 @@
     for (let i = 0; i < persontags_list.length; i++) {
       if ((typeof paragraphs[j].innerHTML !== 'undefined') && (paragraphs[j].innerHTML.includes(persontags_list[i]))){
 
+        //create link with the name
         var link = document.createElement('a');
         var linkText = document.createTextNode(persontags_list[i]);
-
         if (persontags_list[i].includes(' ')){
           var nameToSwap = persontags_list[i].split(' ');
           var first = nameToSwap[0];
@@ -86,11 +86,32 @@
         } else {
           var nameSwapped = persontags_list[i];
         }
-
         link.setAttribute('href', 'https://harfenlabor.netlify.app/persontags#'+nameSwapped);
         link.appendChild(linkText);
 
 
+        console.log(paragraphs[j], paragraphs[j].innerText, paragraphs[j].innerHTML);
+
+        var paragText = paragraphs[j].innerText.split(persontags_list[i]);
+
+        console.log(paragText[0]);
+        console.log(paragText[1]);
+
+        /*var span_0 = document.createElement('span');
+        var spanText_0 = document.createTextNode(paragText[0]);
+        span_0.appendChild(spanText_0);
+        var span_1 = document.createElement('span');
+        var spanText_1 = document.createTextNode(paragText[1]);
+        span_1.appendChild(spanText_1);*/
+
+        paragraphs[j].innerText = "";
+        paragraphs[j].append(span_0);
+        paragraphs[j].appendChild(link);
+        paragraphs[j].append(span_1);
+
+
+
+        paragraphs[j].appendChild(link);
 
 
         /*var targetWord = persontags_list[i];
