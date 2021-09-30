@@ -90,7 +90,7 @@
         link.setAttribute('href', 'https://harfenlabor.netlify.app/persontags#'+nameSwapped);
         link.appendChild(linkText);
 
-        var paragText = paragraphs[j].innerText.split(persontags_list[i]);
+        var paragText = paragraphs[j].innerHTML.split(persontags_list[i]);
 
         console.log(paragText[0]);
         console.log(paragText[1]);
