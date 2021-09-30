@@ -35,4 +35,15 @@
       <p>${snippet}</p>{ end }
     </div>
 </script>
+
+<!--Delay and scroll down to selected ID-->
+<script>
+  console.log(window.location.href);
+
+  var url = window.location.href;
+  if(url.includes('#')) {
+    console.log("included");
+  }
+</script>
+
 {{ end }}
