@@ -93,7 +93,8 @@
         var paragraphSplit = paragraphs[j].innerHTML.split(persontags_list[i]);
         console.log(paragraphSplit[0]);
         console.log(paragraphSplit[1]);
-        paragraphSplit[1].parentNode.insertBefore(link, paragraphSplit[1]);
+
+        paragraphs[j].append(link);
         //paragraphSplit[0].append(link);
         //paragraphs[j] = paragraphSplit.innerHTML.join(persontags_list[i]);
         
