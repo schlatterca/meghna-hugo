@@ -132,6 +132,7 @@ if(url.includes('#')) {
   console.log(url[1]);
 
   //document.getElementById(url[1]).scrollIntoView();
-  document.getElementById("Zemke%20Valentina").scrollIntoView();
+  //document.getElementById("Zemke%20Valentina").scrollIntoView();
+  console.log(document);
 }
 
