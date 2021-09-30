@@ -95,7 +95,7 @@
 
         //var proof_1 = paragraphs[j].replace(/\bpersontags_list[i]\b(?![^<]*?<\/a>)/gi, "<a href=\"www.ansa.it\">$&</a>");
         var notest = new RegExp(persontags_list[i], "");
-        var test = notest.replaceAll("\\/","");
+        var test = notest.replace("\\/","");
         console.log(notest, test);
         var proof_2 = paragraphs[j].innerText.replace(/\btest\b(?![^<]*?<\/a>)/gi, "<a href=\"www.ansa.it\">$&</a>");
         var proof_3 = paragraphs[j].innerHTML.replace(/\btest\b(?![^<]*?<\/a>)/gi, "<a href=\"www.ansa.it\">$&</a>");
