@@ -90,10 +90,11 @@
         link.appendChild(linkText);
 
 
-        console.log(paragraphs[j], paragraphs[j].innerText, paragraphs[j].innerHTML);
+        //console.log(paragraphs[j], paragraphs[j].innerText, paragraphs[j].innerHTML);
 
-        var paragText = paragraphs[j].innerText.split(persontags_list[i]);
+        var paragText = paragraphs[j].innerHTML.split(persontags_list[i]);
 
+        console.log(paragraphs[j].innerHTML);
         console.log(paragText[0]);
         console.log(paragText[1]);
 
@@ -107,7 +108,7 @@
         paragraphs[j].innerText = "";
         paragraphs[j].append(paragText[0]);
         paragraphs[j].appendChild(link);
-        paragraphs[j].append(paragText[0]);
+        paragraphs[j].append(paragText[1]);
 
 
 
