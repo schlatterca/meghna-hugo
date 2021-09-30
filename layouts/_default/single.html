@@ -90,7 +90,33 @@
         link.setAttribute('href', 'https://harfenlabor.netlify.app/persontags#'+nameSwapped);
         link.appendChild(linkText);
 
-        var paragText = paragraphs[j].innerHTML.split(persontags_list[i]);
+
+        var targetWord = persontags_list[i];
+        var textNode = paragraphs[j].firstChild;
+
+        // Find our text in the text node
+        var index = textNode.nodeValue.indexOf(targetWord);
+        if (index !== -1) {
+          // Split at the beginning of the text
+          var nodeWord = textNode.splitText(index);
+
+          // Split the new node again at the end of the word
+          var nodeAfter = nodeWord.splitText(targetWord.length);
+
+          // Insert a new anchor in front of the word
+          //var anchor = document.createElement('a');
+          //var anchor.href = "http://stackoverflow.com";
+          //p.insertBefore(anchor, nodeWord);
+          p.insertBefore(link, nodeWord);
+
+          // Now move the word *into* the anchor
+          anchor.appendChild(nodeWord);
+        }
+
+
+
+
+        /*var paragText = paragraphs[j].innerText.split(persontags_list[i]);
 
         console.log(paragText[0]);
         console.log(paragText[1]);
@@ -105,18 +131,19 @@
         paragraphs[j].innerText = "";
         paragraphs[j].append(span_0);
         paragraphs[j].append(link);
-        paragraphs[j].append(span_1);
+        paragraphs[j].append(span_1);*/
+
 
 
         /*var replacedText = paragraphs[j].innerText.replace(persontags_list[i], link);
         console.log(replacedText);
-
         paragraphs[j].appendChild(link);*/
+
+
 
         /*var paragraphSplit = paragraphs[j].innerHTML.split(persontags_list[i]);
         console.log(paragraphSplit[0]);
         console.log(paragraphSplit[1]);
-
         paragraphs[j].appendChild(link);*/
 
 
