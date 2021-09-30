@@ -65,6 +65,7 @@
 </footer>
 
 <script>
+  /*add links to each person that appears in the person_tag section*/
   var persontags_list = {{ .Params.person_tag }};
   var paragraphs = document.getElementsByClassName("articleContent")[0].childNodes;
 
@@ -88,7 +89,10 @@
 
         link.setAttribute('href', 'https://harfenlabor.netlify.app/persontags#'+nameSwapped);
         link.appendChild(linkText);
-        paragraphs[j].append(link);
+
+        var paragraphSplit = paragraphs[j].split(persontags_list[i]);
+        paragraphSplit[0].append(link);
+        paragraphs[j] = paragraphSplit.join(persontags_list[i]);
         
         //paragraphs[j].innerHTML.replace('a', 'lero');
         console.log(paragraphs[j].innerHTML, persontags_list[i]);
