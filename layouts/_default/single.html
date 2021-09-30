@@ -72,7 +72,7 @@
     for(var j = 0; j < paragraphs.length; j++) {
       if ((typeof paragraphs[j].innerHTML !== 'undefined') && (paragraphs[j].innerHTML.includes(persontags_list[i]))){
         
-        paragraphs[j].innerHTML.replace(persontags_list[i], "coso");
+        paragraphs[j].innerHTML.replace('a', 'lero');
         console.log(paragraphs[j].innerHTML, persontags_list[i]);
       }
     }
