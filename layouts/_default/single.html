@@ -71,8 +71,8 @@
   for (let i = 0; i < persontags_list.length; i++) {
     for(var j = 0; j < paragraphs.length; j++) {
       console.log(paragraphs[j]);
-      if (typeof paragraphs[j].innerHTML !== 'undefined'){
-        console.log(paragraphs[j].innerHTML);
+      if ((typeof paragraphs[j].innerHTML !== 'undefined') && (paragraphs[j].innerHTML.includes(persontags_list[i]))){
+        console.log(paragraphs[j].innerHTML, persontags_list[i]);
       }
       /*if (paragraphs[j].innerHTML.includes(persontags_list[i])){
         console.log("found: ", persontags_list[i]);
