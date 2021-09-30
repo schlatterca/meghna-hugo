@@ -95,6 +95,19 @@
         console.log(paragText[0]);
         console.log(paragText[1]);
 
+        var span_0 = document.createElement('span');
+        var spanText_0 = document.createTextNode(paragText[0]);
+        var span_0.appendChild(spanText_0);
+        var span_1 = document.createElement('span');
+        var spanText_1 = document.createTextNode(paragText[1]);
+        var span_1.appendChild(spanText_1);
+
+        paragText.innerText = "";
+        paragText.append(span_0);
+        paragText.append(link);
+        paragText.append(span_1);
+
+
         /*var replacedText = paragraphs[j].innerText.replace(persontags_list[i], link);
         console.log(replacedText);
 
