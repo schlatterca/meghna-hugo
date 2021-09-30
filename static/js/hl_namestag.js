@@ -123,16 +123,17 @@ function populateWithResults(myResults){
   //console.log(document.getElementById("this_article_title").innerHTML);
   //console.log(myResults.persontags.sort((a, b) => b.split(' ')[1].localeCompare(a.split(' ')[1])));
   //console.log(myResults.persontags.sort(x => myResults.persontags.map(y => y.split(' ')[1]) ).reverse());
+
+  //Delay and scroll down to selected ID
+  var url = window.location.href;
+  if(url.includes('#')) {
+    var url = url.split('#');
+    console.log(url[1]);
+
+    //document.getElementById(url[1]).scrollIntoView();
+    document.getElementById("Zemke%20Valentina").scrollIntoView();
+    console.log(document.getElementById("Zemke%20Valentina"));
+    console.log(document);
+  }
 };
-
-//Delay and scroll down to selected ID
-var url = window.location.href;
-if(url.includes('#')) {
-  var url = url.split('#');
-  console.log(url[1]);
-
-  //document.getElementById(url[1]).scrollIntoView();
-  //document.getElementById("Zemke%20Valentina").scrollIntoView();
-  console.log(document);
-}
 
