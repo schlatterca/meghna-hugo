@@ -68,15 +68,14 @@
   var persontags_list = {{ .Params.person_tag }};
   var paragraphs = document.getElementsByClassName("articleContent")[0].childNodes;
 
-  for (let i = 0; i < persontags_list.length; i++) {
-    for(var j = 0; j < paragraphs.length; j++) {
+  for(var j = 0; j < paragraphs.length; j++) {
+    for (let i = 0; i < persontags_list.length; i++) {
       if ((typeof paragraphs[j].innerHTML !== 'undefined') && (paragraphs[j].innerHTML.includes(persontags_list[i]))){
 
         var link = document.createElement('a');
         var linkText = document.createTextNode(persontags_list[i]);
-        link.setAttribute('href', 'https://harfenlabor.netlify.app/index#'+persontags_list[i]);
+        link.setAttribute('href', 'https://harfenlabor.netlify.app/persontags#'+persontags_list[i]);
         link.appendChild(linkText);
-
         paragraphs[j].append(link);
         
         //paragraphs[j].innerHTML.replace('a', 'lero');
