@@ -69,8 +69,11 @@
 
   var persontags_list = {{ .Params.person_tag }};
 
-  console.log(persontags_list[1]);
+  console.log(persontags_list.length);
 
+  for (let i = 0; i < persontags_list.length; i++) {
+    console.log(persontags_list[i]);
+  }
 
 </script>
 
