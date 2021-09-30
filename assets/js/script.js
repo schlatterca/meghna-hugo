@@ -70,6 +70,31 @@ if ( synopsisBoxExists ) {
 	}
 }
 
+//BREAK LINES IN SYNOPSIS
+var synopsis = document.getElementsByClassName('synopsis')[0];
+
+if (( synopsis ) && ( synopsis.innerHTML.isEmpty() == false)) {
+	
+	console.log("is not empty", synopsis.innerHTML);
+
+	var synopsis_paragraphs = synopsis.innerHTML.split('&amp;&amp;');
+
+	var paragraphBox = document.createElement('div');
+	paragraphBox.setAttribute('class', 'paragraphBox');
+
+	for (let i = 0; i < synopsis_paragraphs.length; i++) {
+		var paragraph = document.createElement('p');
+		var paragraphText = document.createTextNode(synopsis_paragraphs[i]);
+		paragraph.setAttribute('class', 'synopsis');
+		paragraph.appendChild(paragraphText);
+		paragraphBox.appendChild(paragraph);
+	}
+	document.getElementsByClassName('synopsis')[0].innerHTML="";
+	document.getElementsByClassName('synopsis_box')[0].append(paragraphBox);
+} else {
+	console.log("is empty!", synopsis.innerHTML);
+}
+
 //MAKE AUTHOR'S NAME A LINK
 var authorsNameExists = document.getElementById('this_article_author');
 
@@ -132,35 +157,6 @@ if ( authorsNameExists ) {
 		document.getElementById('this_article_author').append("by ", name_0);
 	}
 }
-
-//BREAK LINES IN SYNOPSIS
-var synopsis = document.getElementsByClassName('synopsis')[0];
-
-if ( synopsis ) {
-	var synopsisInnerText = document.getElementsByClassName('synopsis')[0].innerHTML;
-	console.log(synopsisInnerText);
-
-	var synopsis_paragraphs = synopsisInnerText.split('&amp;&amp;');
-
-	var paragraphBox = document.createElement('div');
-	paragraphBox.setAttribute('class', 'paragraphBox');
-
-	for (let i = 0; i < synopsis_paragraphs.length; i++) {
-		var paragraph = document.createElement('p');
-		var paragraphText = document.createTextNode(synopsis_paragraphs[i]);
-		paragraph.setAttribute('class', 'synopsis');
-		paragraph.appendChild(paragraphText);
-		paragraphBox.appendChild(paragraph);
-	}
-	document.getElementsByClassName('synopsis')[0].innerHTML="";
-	document.getElementsByClassName('synopsis_box')[0].append(paragraphBox);
-
-
-	
-} else {
-	console.log("is empty!");
-}
-
 
 
 
