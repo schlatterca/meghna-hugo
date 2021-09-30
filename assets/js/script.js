@@ -73,9 +73,8 @@ if ( synopsisBoxExists ) {
 //BREAK LINES IN SYNOPSIS
 var synopsis = document.getElementsByClassName('synopsis')[0];
 
-if (( synopsis ) && ( synopsis.toString().isEmpty() == false)) {
-
-	console.log("is not empty", synopsis.toString());
+if ( synopsis ) {
+	console.log(synopsis.innerHTML, synopsis.toString());
 
 	var synopsis_paragraphs = synopsis.innerHTML.split('&amp;&amp;');
 
@@ -92,7 +91,7 @@ if (( synopsis ) && ( synopsis.toString().isEmpty() == false)) {
 	document.getElementsByClassName('synopsis')[0].innerHTML="";
 	document.getElementsByClassName('synopsis_box')[0].append(paragraphBox);
 } else {
-	console.log("is empty!", synopsis.toString());
+	console.log("is empty!");
 }
 
 //MAKE AUTHOR'S NAME A LINK
