@@ -70,7 +70,8 @@
   var paragraphs = document.getElementsByClassName("articleContent")[0].childNodes;
 
   for (let i = 0; i < persontags_list.length; i++) {
-    for(var j = 0; j < paragraphs.length; j++) {
+    //for(var j = 0; j < paragraphs.length; j++) {
+    for(var j = 0; j < 2; j++) {
       if ((typeof paragraphs[j].innerHTML !== 'undefined') && (paragraphs[j].innerHTML.includes(persontags_list[i]))){
 
         //create link with the name
@@ -107,7 +108,7 @@
 
         paragraphs[j].innerText = "";
         paragraphs[j].append(paragText[0]);
-        paragraphs[j].appendChild(link);
+        paragraphs[j].append(link);
         paragraphs[j].append(paragText[1]);
 
 
