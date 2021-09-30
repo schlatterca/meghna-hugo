@@ -76,14 +76,14 @@
         var linkText = document.createTextNode(persontags_list[i]);
 
         if (persontags_list[i].includes(' ')){
-          let nameToSwap = persontags_list[i].split(' ');
-          let first = nameToSwap[0];
-          let last = nameToSwap[nameToSwap.length - 1];
+          var nameToSwap = persontags_list[i].split(' ');
+          var first = nameToSwap[0];
+          var last = nameToSwap[nameToSwap.length - 1];
           nameToSwap[0] = last;
           nameToSwap[nameToSwap.length - 1] = first;
-          let nameSwapped = nameToSwap.join(' ');
+          var nameSwapped = nameToSwap.join(' ');
         } else {
-          let nameSwapped = persontags_list[i];
+          var nameSwapped = persontags_list[i];
         }
 
         link.setAttribute('href', 'https://harfenlabor.netlify.app/persontags#'+nameSwapped);
