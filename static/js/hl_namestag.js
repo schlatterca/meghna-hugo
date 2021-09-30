@@ -128,12 +128,7 @@ function populateWithResults(myResults){
   var url = window.location.href;
   if(url.includes('#')) {
     var url = url.split('#');
-    console.log(url[1]);
-
-    //document.getElementById(url[1]).scrollIntoView();
-    document.getElementById("Zemke%20Valentina").scrollIntoView();
-    console.log(document.getElementById("Zemke%20Valentina"));
-    console.log(document);
+    document.getElementById(url[1]).scrollIntoView({ behavior: 'smooth'});
   }
 };
 
