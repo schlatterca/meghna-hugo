@@ -14,10 +14,19 @@
         
       </div>
 
+      {% if .Description %}
       <div class="synopsis_box">
         <p class="synopsis">{{ .Description }}</p>
         <div class="open_synopsis_box">+</div>
       </div>
+      {% endif %}
+
+      {% if Ciaociao %}
+      <div class="synopsis_box" style="color:red; margin-top: 20vh">
+        <p class="synopsis">{{ .Description }}</p>
+        <div class="open_synopsis_box">+</div>
+      </div>
+      {% endif %}
 
       <div class="col-lg-8 offset-lg-2">
         <div class="post-single-content">
