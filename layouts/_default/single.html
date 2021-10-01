@@ -20,7 +20,7 @@
         
       </div>
 
-      <div class="synopsis_box">
+      <div class="synopsis_box isopen">
         <p class="synopsis">{{ .Description }}</p>
         <div class="open_synopsis_box">+</div>
       </div>
@@ -136,22 +136,22 @@
   });*/
 
 
-  function replaceWithAnchor(selector,url) {
+  //SEMBRA FUNZIONARE
+  /*function replaceWithAnchor(selector,url) {
     $(selector).replaceWith(function() {
       return $("<a></a>").attr("href",url).append($(this).contents());
     });
   };
-
   $('span.person_tag').each(function() {
     console.log(this, this.innerHTML, this.innerText);
-
-    //replaceWithAnchor("span", "https://harfenlabor.netlify.app/persontags#");
-    
-  });
+    replaceWithAnchor("span", "https://harfenlabor.netlify.app/persontags#"+this.innerText); 
+  });*/
 
   //$("input").click(function() {
       //replaceWithAnchor("span", "http://google.com");
   //});
+
+
 
   /*add links to each person that appears in the person_tag section*/
   var persontags_list = {{ .Params.person_tag }};
