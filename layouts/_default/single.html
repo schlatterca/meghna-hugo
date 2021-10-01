@@ -164,14 +164,32 @@
         word: 'Luigi Rossi',
         link: 'http://www.something.com/else'
     }
-];
+  ];
 
-  $.each(words,
+  $('span#person_tag').each(
     function() {
-        //find an element with class "message" that contains "word" (from array)
-        $('span#person_tag:contains("' + this.word + '")')
-             //substitute html with a nice anchor tag
-             .html('<a href="' + this.link + '">' + this.word + '</a>');
+      $.each(words,
+        function() {
+          //find a span with id "person_tag" that contains "word" (from array)
+          $('span#person_tag:contains("' + this.word + '")')
+               //substitute html with a nice anchor tag
+               .html('<a href="' + this.link + '">' + this.word + '</a>');
+        });
+      }
+  );
+
+    function() {
+      //store it ("this" is gonna become the dom element in the next function)
+      var search = this;
+      $('p').each(
+        function() {
+          //if it's exactly the same
+          if ($(this).text() === search.word) {
+              //do your magic tricks
+              $(this).html('<a href="' + search.link + '">' + word + '</a>');
+          }
+        }
+      );
     }
   );
 
