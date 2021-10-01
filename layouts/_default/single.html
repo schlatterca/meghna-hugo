@@ -71,13 +71,13 @@
 </footer>
 
 <script>
-  jQuery(function($) {
+  /*jQuery(function($) {
 
     $("#theButton").click(function() {
       var targetWord, p, textNode, index, nodeWord, nodeAfter;
 
       // Our target word
-      let targetWords = ["the", "of", "example"];
+      let targetWords = ["the", "kind", "example"];
       for (let i = 0; i < targetWords.length; i++) {
         p = $("#example")[0];
         textNode = p.firstChild;
@@ -88,9 +88,11 @@
         //"This is", a href, 2, –
 
         // Find our text in the text node
-        //index = textNode.nodeValue.indexOf(targetWords[i]);
-        var index = textNode.nodeValue.indexOf(targetWords[i]);
-        console.log(p, textNode, textNode.nodeValue, targetWords[i], index);
+        index = textNode.nodeValue.indexOf(targetWords[i]);
+        index_2 = textNode.nodeValue.indexOf("kind");
+        //var index = textNode.nodeValue.indexOf(targetWords[i]);
+
+        console.log(p, textNode, textNode.nodeValue, targetWords[i], index, index_2);
 
         if (index !== -1) {
           // Split at the beginning of the text
@@ -112,6 +114,20 @@
         }
       }
     });
+  });*/
+
+  /*$('article.single').each(function() {
+    var text = $(this).text();
+    $(this).html(text.replaceAll('Name', '<a href="http://xxx.xx/name/">Name</a>')); 
+  });*/
+
+  $("#theButton").click(function() {
+    let targetWords = ["the", "kind", "example"];
+    p = $("#example")[0];
+    for (let i = 0; i < targetWords.length; i++) {
+      var text = $(this).text();
+      $(this).html(text.replaceAll(targetWords[i], '<a href="http://xxx.xx/name/">is</a>')); 
+    };
   });
 
   /*add links to each person that appears in the person_tag section*/
