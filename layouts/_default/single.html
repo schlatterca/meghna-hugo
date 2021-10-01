@@ -184,8 +184,8 @@
   var theRegex = /\b(Orazio Michi|Marco Marazzoli|Luigi Rossi)\b/g;
 
   jQuery("#person_tag").each(function() {
-    console.log(this);
-    this.replace(theRegex, function(s, theWord) {
+    console.log(this, this.innerHTML, this.innerText);
+    this.innerHTML.replace(theRegex, function(s, theWord) {
         return "<a href='" + replacementDict[theWord] + "'>" + theWord + "</a>";
     });
   });
