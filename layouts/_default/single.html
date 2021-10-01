@@ -121,9 +121,9 @@
     $(this).html(text.replaceAll('Name', '<a href="http://xxx.xx/name/">Name</a>')); 
   });*/
 
-  $("#theButton").click(function() {
+  $('article.single').each(function() {
     let targetWords = ["the", "kind", "example"];
-    //var p = $("#example")[0];
+    var text = $(this).text();
 
     console.log("ok");
 
@@ -132,7 +132,7 @@
       console.log(targetWords[i]);
 
       var p = $("#example")[0].text();
-      $("#example")[0].html(p.replaceAll(targetWords[i], '<a href="http://xxx.xx/name/">ciao</a>')); 
+      $(this).html(text.replaceAll(targetWords[i], '<a href="http://xxx.xx/name/">'+targetWords[i]+'</a>')); 
     };
   });
 
