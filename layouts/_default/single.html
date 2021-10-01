@@ -8,7 +8,7 @@
 
   <!--DELETE-->
   <input type="button" id="theButton" value="Make it a link">
-  <p id="example">This is the example paragraph.</p>
+  <p id="example">This is the kind of an example paragraph.</p>
   <!--DELETE-->
 
   <div class="container">
@@ -77,18 +77,19 @@
       var targetWord, p, textNode, index, nodeWord, nodeAfter;
 
       // Our target word
-      let targetWords = ["the", "example"];
+      let targetWords = ["the", "of", "example"];
       for (let i = 0; i < targetWords.length; i++) {
         p = $("#example")[0];
         textNode = p.firstChild;
         textNode_2 = p.children[0];
 
-        console.log(textNode, p.children[-1], p.children[0], p.children[1], i, p.children[i], p.children[i-1], p.children[i-2]);
+        console.log(textNode, p.children[0], i, p.children[i-1]);
+        //"This is", –, 0, –
+        //"This is", a href, 1, a href
 
         // Find our text in the text node
         index = textNode.nodeValue.indexOf(targetWords[i]);
-        console.log(p);
-        console.log(textNode, textNode.nodeValue, targetWords[i], index);
+        console.log(p, textNode, textNode.nodeValue, targetWords[i], index);
 
         if (index !== -1) {
           // Split at the beginning of the text
@@ -100,7 +101,8 @@
           // Insert a new anchor in front of the word
           anchor = document.createElement('a');
           anchor.href = "http://stackoverflow.com";
-          p.insertBefore(anchor, nodeWord);
+          //p.insertBefore(anchor, nodeWord);
+          p.insertBefore(anchor, nodeAfter);
 
           // Now move the word *into* the anchor
           anchor.appendChild(nodeWord);
