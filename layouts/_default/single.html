@@ -129,12 +129,15 @@
       var nameSwapped = persontags_list[i].replace;
     }
 
-    var Obj = {             
+    /*var Obj = {             
       word: [],
       link: []
     };
     Obj.word.push(persontags_list[i]);
-    Obj.link.push(nameSwapped);
+    Obj.link.push(nameSwapped);*/
+    var Obj = {}
+    Obj.word = persontags_list[i];
+    Obj.link = nameSwapped;
     words2.push(Obj);
   }
 
