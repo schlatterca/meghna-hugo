@@ -77,13 +77,17 @@
       var targetWord, p, textNode, index, nodeWord, nodeAfter;
 
       // Our target word
-      let targetWords = ["This", "example"];
+      let targetWords = ["the", "example"];
       for (let i = 0; i < targetWords.length; i++) {
         p = $("#example")[0];
         textNode = p.firstChild;
 
+        console.log(targetWords[i]);
+
         // Find our text in the text node
         index = textNode.nodeValue.indexOf(targetWords[i]);
+        console.log(index);
+
         if (index !== -1) {
           // Split at the beginning of the text
           nodeWord = textNode.splitText(index);
@@ -98,6 +102,8 @@
 
           // Now move the word *into* the anchor
           anchor.appendChild(nodeWord);
+
+          console.log(nodeWord, nodeAfter, anchor);
         }
       }
     });
