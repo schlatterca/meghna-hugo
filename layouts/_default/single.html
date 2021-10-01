@@ -122,14 +122,14 @@
   });*/
 
   $('p.single').each(function() {
-    let targetWords = ["the", "kind", "example"];
+    let targetWords = ["the", "kind", "paragraph"];
     var text = $(this).text();
 
     console.log("ok");
 
     for (let i = 0; i < targetWords.length; i++) {
 
-      console.log(targetWords[i]);
+      console.log(targetWords[i], $(this).html());
 
       $(this).html(text.replace(targetWords[i], '<a href="http://xxx.xx/name/">'+targetWords[i]+'</a>')); 
     };
