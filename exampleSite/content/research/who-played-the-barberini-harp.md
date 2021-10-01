@@ -1,7 +1,7 @@
 +++
 author = "Alexandra Ziane"
 barberiniharpproject = ""
-description = ""
+description = "The paper does not intend to seek a definite answer to this question, but rather to begin setting the context for harp performance practices of the early 17th century Rome, by mapping the known harpists of the time. The period saw two major influences conflate in Rome: the relocation of Neapolitan harp virtuosi and the import of the Ferraran concept of concerto delle donne, resulting in a rich, vibrant scene. Powerful Roman families, most notably the Barberini and the Borghese, encouraged and shaped this development through patronage of many musicians, in demonstration of their good taste, education, and political power. The patronage demanded visibility, which was also insured through construction of richly decorated instruments, like the Barberini Harp. The author thus states support for Chiara Granata’s hypothesis that there may have existed more than one Barberini Harp. "
 downloads = ""
 externallinks = ""
 image = "/images/image.jpg"
