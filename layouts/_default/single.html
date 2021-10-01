@@ -81,7 +81,7 @@
       for (let i = 0; i < targetWords.length; i++) {
         p = $("#example")[0];
         //textNode = p.firstChild;
-        textNode = p.children[i];
+        textNode = p.children[i+1];
 
         // Find our text in the text node
         index = textNode.nodeValue.indexOf(targetWords[i]);
