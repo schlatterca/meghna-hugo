@@ -143,8 +143,10 @@
   };
 
   $('span.person_tag').each(function() {
-    replaceWithAnchor("span", "https://harfenlabor.netlify.app/persontags#"+span.innerText);
-    console.log(span, span.innerText, span.innerHTML);
+    console.log(this, this.innerHTML, this.innerText);
+
+    replaceWithAnchor("span", "https://harfenlabor.netlify.app/persontags#");
+    
   });
 
   //$("input").click(function() {
