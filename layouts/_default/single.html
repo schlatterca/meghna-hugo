@@ -185,9 +185,10 @@
 
   jQuery("#person_tag").each(function() {
     console.log(this, this.innerHTML, this.innerText);
-    this.innerHTML.replace(theRegex, function(s, theWord) {
+    this.innerText.replace(theRegex, function(s, theWord) {
         return "<a href='" + replacementDict[theWord] + "'>" + theWord + "</a>";
     });
+    console.log("ok");
   });
 
 
