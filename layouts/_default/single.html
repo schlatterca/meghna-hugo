@@ -5,6 +5,12 @@
 {{/* - partial "footer.html" . -*/}}
 
 <section class="section">
+  
+  <!--DELETE-->
+  <input type="button" id="theButton" value="Make it a link">
+  <p id="example">This is the example paragraph.</p>
+  <!--DELETE-->
+
   <div class="container">
     <div class="row">
       <div class="col-lg-8 offset-lg-2 text-center">
@@ -65,6 +71,42 @@
 </footer>
 
 <script>
+  jQuery(function($) {
+
+    $("#theButton").click(function() {
+      var targetWord, p, textNode, index, nodeWord, nodeAfter;
+
+      // Our target word
+      targetWord = "example";
+
+      // Get the paragraph using jQuery; note that after we
+      // use jQuery to get it (because it fixes getElementById for
+      // us on older versions of IE), we then use [0] to access
+      // the *raw* `p` element.
+      // Then get the text node from it.
+      p = $("#example")[0];
+      textNode = p.firstChild;
+
+      // Find our text in the text node
+      index = textNode.nodeValue.indexOf(targetWord);
+      if (index !== -1) {
+        // Split at the beginning of the text
+        nodeWord = textNode.splitText(index);
+
+        // Split the new node again at the end of the word
+        nodeAfter = nodeWord.splitText(targetWord.length);
+
+        // Insert a new anchor in front of the word
+        anchor = document.createElement('a');
+        anchor.href = "http://stackoverflow.com";
+        p.insertBefore(anchor, nodeWord);
+
+        // Now move the word *into* the anchor
+        anchor.appendChild(nodeWord);
+      }
+    });
+  });
+
   /*add links to each person that appears in the person_tag section*/
   var persontags_list = {{ .Params.person_tag }};
   var paragraphs = document.getElementsByClassName("articleContent")[0].childNodes;
@@ -91,30 +133,24 @@
         link.appendChild(linkText);
 
 
-        console.log(paragraphs[j], paragraphs[j].innerText, paragraphs[j].innerHTML);
-
+        /*console.log(paragraphs[j], paragraphs[j].innerText, paragraphs[j].innerHTML);
         const test = new RegExp(persontags_list[i], "");
         console.log(test);
         //const proof_2 = paragraphs[j].innerText.replace(/\btest\b(?![^<]*?<\/a>)/gi, "<a href=\"www.ansa.it\">$&</a>");
         //const proof_3 = paragraphs[j].innerHTML.replace(/\btest\b(?![^<]*?<\/a>)/gi, "<a href=\"www.ansa.it\">$&</a>");
-        const proof_2 = paragraphs[j].children[0].innerText.replace(test, "<a href=\"www.ansa.it\">$&</a>");
-        const proof_3 = paragraphs[j].children[1].innerText.replace(test, "<a href=\"www.ansa.it\">$&</a>");
-
+        const proof_2 = paragraphs[j].innerText.replace(test, "<a href=\"www.ansa.it\">$&</a>");
+        const proof_3 = paragraphs[j].innerText.replace(test, "<a href=\"www.ansa.it\">$&</a>");
         let proof_2_par = document.createElement("p");
         proof_2_par.setAttribute('class', 'proof_2_par');
         proof_2_par.append(proof_2);
-
         let proof_3_par = document.createElement("p");
         proof_3_par.setAttribute('class', 'proof_3_par');
         proof_3_par.append(proof_3);
-
         //console.log(proof_2, proof_3);
-
         paragraphs[j].innerText = "";
         console.log(paragraphs[j].children);
         paragraphs[j].appendChild(proof_2_par);
-        paragraphs[j].appendChild(proof_3_par);
-
+        paragraphs[j].appendChild(proof_3_par);*/
 
 
 
@@ -133,6 +169,7 @@
         paragraphs[j].append(link);
         paragraphs[j].append(paragText[1]);
         paragraphs[j].appendChild(link);*/
+
 
 
         /*var targetWord = persontags_list[i];
