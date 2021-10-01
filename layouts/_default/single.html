@@ -77,7 +77,7 @@
       var targetWord, p, textNode, index, nodeWord, nodeAfter;
 
       // Our target word
-      let targetWords = ["the", "example"];
+      let targetWords = ["This", "example"];
       for (let i = 0; i < targetWords.length; i++) {
         p = $("#example")[0];
         textNode = p.firstChild;
@@ -88,7 +88,8 @@
         index = textNode.nodeValue.indexOf(targetWords[i]);
         console.log(index);
 
-        if (index !== -1) {
+        //if (index !== -1) {
+        if (index !== 0) {
           // Split at the beginning of the text
           nodeWord = textNode.splitText(index);
 
