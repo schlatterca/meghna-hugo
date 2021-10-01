@@ -126,9 +126,12 @@
       var nameSwapped = persontags_list[i];
     }
 
-    var Obj = new Object();
-    Obj[word] = persontags_list[i];
-    Obj[link] = nameSwapped;
+    var Obj = {             
+      word: [],
+      link: []
+    };
+    Obj.word.push(persontags_list[i]);
+    Obj.link.push(nameSwapped);
     words2.push(Obj);
   }
 
