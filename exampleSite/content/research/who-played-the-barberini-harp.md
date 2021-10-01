@@ -1,7 +1,7 @@
 +++
 author = "Alexandra Ziane"
 barberiniharpproject = ""
-description = ""
+description = "Questa è la sinossi."
 downloads = ""
 externallinks = ""
 image = "/images/image.jpg"
