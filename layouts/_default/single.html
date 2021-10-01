@@ -6,10 +6,10 @@
 
 <section class="section">
 
-  <!--DELETE-->
+  <!--DELETE
   <input type="button" id="theButton" value="Make it a link">
   <p id="example" class="single">This is the kind of an example paragraph.</p>
-  <!--DELETE-->
+  DELETE-->
 
   <div class="container">
     <div class="row">
@@ -175,19 +175,37 @@
     }
   );*/
 
-  var replacementDict = {
-    'Orazio Michi': 'http://www.foo.com/',
-    'Marco Marazzoli': 'http://www.bar.net/',
-    'Luigi Rossi': 'http://www.ansa.it/'
-  };
+  var words = [
+    {
+        word: 'Orazio Michi',
+        link: 'http://www.something.com'
+    },
+    {
+        word: 'Marco Marazzoli',
+        link: 'http://www.something.com/else'
+    },
+    {
+        word: 'Luigi Rossi',
+        link: 'http://www.something.com/else'
+    }
+  ];
 
-  var theRegex = /\b(Orazio Michi|Marco Marazzoli|Luigi Rossi)\b/g;
-
-  jQuery("#person_tag").each(function() {
-    console.log(this, this.innerHTML, this.innerText);
-    this.innerText.replace("Orazio Michi", "a");
-    console.log("ok");
-  });
+  $('#person_tag').each(words,
+    function() {
+        console.log(words);
+        //store it ("this" is gonna become the dom element in the next function)
+        var search = this;
+        $('.message').each(
+            function() {
+                //if it's exactly the same
+                if ($(this).text() === search.word) {
+                    //do your magic tricks
+                    $(this).html('<a href="' + search.link + '">' + search.link + '</a>');
+                }
+            }
+        );
+    }
+  );
 
 
 
