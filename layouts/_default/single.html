@@ -71,159 +71,7 @@
 </footer>
 
 <script>
-  /*jQuery(function($) {
-
-    $("#theButton").click(function() {
-      var targetWord, p, textNode, index, nodeWord, nodeAfter;
-
-      // Our target word
-      let targetWords = ["the", "kind", "example"];
-      for (let i = 0; i < targetWords.length; i++) {
-        p = $("#example")[0];
-        textNode = p.firstChild;
-
-        console.log(textNode, p.children[0], i, p.children[i-1]);
-        //"This is", –, 0, –
-        //"This is", a href, 1, a href
-        //"This is", a href, 2, –
-
-        // Find our text in the text node
-        index = textNode.nodeValue.indexOf(targetWords[i]);
-        index_2 = textNode.nodeValue.indexOf("kind");
-        //var index = textNode.nodeValue.indexOf(targetWords[i]);
-
-        console.log(p, textNode, textNode.nodeValue, targetWords[i], index, index_2);
-
-        if (index !== -1) {
-          // Split at the beginning of the text
-          nodeWord = textNode.splitText(index);
-
-          // Split the new node again at the end of the word
-          nodeAfter = nodeWord.splitText(targetWords[i].length);
-
-          // Insert a new anchor in front of the word
-          anchor = document.createElement('a');
-          anchor.href = "http://stackoverflow.com";
-          //p.insertBefore(anchor, nodeWord);
-          p.insertBefore(anchor, nodeAfter);
-
-          // Now move the word *into* the anchor
-          anchor.appendChild(nodeWord);
-
-          console.log(nodeWord, nodeAfter, anchor);
-        }
-      }
-    });
-  });*/
-
-  /*$('article.single').each(function() {
-    var text = $(this).text();
-    $(this).html(text.replaceAll('Name', '<a href="http://xxx.xx/name/">Name</a>')); 
-  });*/
-
-  /*$('p.single').each(function() {
-    let targetWords = ["the", "kind", "paragraph"];
-    var text = $(this).text();
-
-    console.log("ok");
-
-    for (let i = 0; i < targetWords.length; i++) {
-
-      console.log(targetWords[i], $(this).html(), text);
-
-      $(this).html(text.replace(targetWords[i], '<a href="http://xxx.xx/name/">'+targetWords[i]+'</a>')); 
-    };
-  });*/
-
-
-  //SEMBRA FUNZIONARE
-  /*function replaceWithAnchor(selector,url) {
-    $(selector).replaceWith(function() {
-      return $("<a></a>").attr("href",url).append($(this).contents());
-    });
-  };
-  $('span.person_tag').each(function() {
-    console.log(this, this.innerHTML, this.innerText);
-    replaceWithAnchor("span", "https://harfenlabor.netlify.app/persontags#"+this.innerText); 
-  });*/
-  //$("input").click(function() {
-      //replaceWithAnchor("span", "http://google.com");
-  //});
-
-
-  /*var words = [
-    {
-        word: 'Orazio Michi',
-        link: 'http://www.something.com'
-    },
-    {
-        word: 'Marco Marazzoli',
-        link: 'http://www.something.com/else'
-    },
-    {
-        word: 'Luigi Rossi',
-        link: 'http://www.something.com/else'
-    }
-  ];
-
-  $.each(words,
-    function() {
-      //find a span with id "person_tag" that contains "word" (from array)
-      $('span#person_tag:contains("' + this.word + '")')
-           //substitute html with a nice anchor tag
-           .html('<a href="' + this.link + '">' + this.word + '</a>');
-    }
-  );*/
-
-  var words = [
-    {
-        word: 'Orazio Michi'
-    },
-    {
-        word: 'Marco Marazzoli'
-    },
-    {
-        word: 'Luigi Rossi'
-    }
-  ];
-
-  $.each(words,
-    function() {
-      //store it ("this" is gonna become the dom element in the next function)
-      var search = this;
-      $('span#person_tag').each(
-        function() {
-          //if it's exactly the same
-          if ($(this).text() === search.word) {
-            //do your magic tricks
-            $(this).html('<a href="https://harfenlabor.netlify.app/persontags#' + search.word.replace(' ', '%20') + '">' + search.word + '</a>');
-          }
-        }
-      );
-    }
-  );
-
-
-
-
-
-  /*$.each(words,
-    function() {
-        //store it ("this" is gonna become the dom element in the next function)
-        var search = this;
-        $('.message').each(
-            function() {
-                //if it's exactly the same
-                if ($(this).text() === search.word) {
-                    //do your magic tricks
-                    $(this).html('<a href="' + search.link + '">' + search.link + '</a>');
-                }
-            }
-        );
-    }
-  );*/
-
-  /*add links to each person that appears in the person_tag section*/
+  //add links to each person that appears in the person_tag section
   var persontags_list = {{ .Params.person_tag }};
   var paragraphs = document.getElementsByClassName("articleContent")[0].childNodes;
 
@@ -247,112 +95,58 @@
         }
         link.setAttribute('href', 'https://harfenlabor.netlify.app/persontags#'+nameSwapped);
         link.appendChild(linkText);
-
-
-        /*console.log(paragraphs[j], paragraphs[j].innerText, paragraphs[j].innerHTML);
-        const test = new RegExp(persontags_list[i], "");
-        console.log(test);
-        //const proof_2 = paragraphs[j].innerText.replace(/\btest\b(?![^<]*?<\/a>)/gi, "<a href=\"www.ansa.it\">$&</a>");
-        //const proof_3 = paragraphs[j].innerHTML.replace(/\btest\b(?![^<]*?<\/a>)/gi, "<a href=\"www.ansa.it\">$&</a>");
-        const proof_2 = paragraphs[j].innerText.replace(test, "<a href=\"www.ansa.it\">$&</a>");
-        const proof_3 = paragraphs[j].innerText.replace(test, "<a href=\"www.ansa.it\">$&</a>");
-        let proof_2_par = document.createElement("p");
-        proof_2_par.setAttribute('class', 'proof_2_par');
-        proof_2_par.append(proof_2);
-        let proof_3_par = document.createElement("p");
-        proof_3_par.setAttribute('class', 'proof_3_par');
-        proof_3_par.append(proof_3);
-        //console.log(proof_2, proof_3);
-        paragraphs[j].innerText = "";
-        console.log(paragraphs[j].children);
-        paragraphs[j].appendChild(proof_2_par);
-        paragraphs[j].appendChild(proof_3_par);*/
-
-
-
-        /*var paragText = paragraphs[j].innerText.split(persontags_list[i]);
-        console.log(paragraphs[j].innerHTML);
-        console.log(paragText[0]);
-        console.log(paragText[1]);
-        //var span_0 = document.createElement('span');
-        //var spanText_0 = document.createTextNode(paragText[0]);
-        //span_0.appendChild(spanText_0);
-        //var span_1 = document.createElement('span');
-        //var spanText_1 = document.createTextNode(paragText[1]);
-        //span_1.appendChild(spanText_1);
-        paragraphs[j].innerText = "";
-        paragraphs[j].append(paragText[0]);
-        paragraphs[j].append(link);
-        paragraphs[j].append(paragText[1]);
-        paragraphs[j].appendChild(link);*/
-
-
-
-        /*var targetWord = persontags_list[i];
-        var textNode = paragraphs[j].firstChild.innerHTML;
-
-        console.log(paragraphs[j].firstChild, paragraphs[j].firstChild.innerText, paragraphs[j].firstChild.innerHTML);
-
-        // Find our text in the text node
-        var index = textNode.nodeValue.indexOf(targetWord);
-        if (index !== -1) {
-          // Split at the beginning of the text
-          var nodeWord = textNode.splitText(index);
-
-          // Split the new node again at the end of the word
-          var nodeAfter = nodeWord.splitText(targetWord.length);
-
-          // Insert a new anchor in front of the word
-          //var anchor = document.createElement('a');
-          //var anchor.href = "http://stackoverflow.com";
-          //p.insertBefore(anchor, nodeWord);
-          p.insertBefore(link, nodeWord);
-
-          // Now move the word *into* the anchor
-          anchor.appendChild(nodeWord);
-        }*/
-
-
-
-
-        /*var paragText = paragraphs[j].innerText.split(persontags_list[i]);
-
-        console.log(paragText[0]);
-        console.log(paragText[1]);
-
-        var span_0 = document.createElement('span');
-        var spanText_0 = document.createTextNode(paragText[0]);
-        span_0.appendChild(spanText_0);
-        var span_1 = document.createElement('span');
-        var spanText_1 = document.createTextNode(paragText[1]);
-        span_1.appendChild(spanText_1);
-
-        paragraphs[j].innerText = "";
-        paragraphs[j].append(span_0);
-        paragraphs[j].append(link);
-        paragraphs[j].append(span_1);*/
-
-
-
-        /*var replacedText = paragraphs[j].innerText.replace(persontags_list[i], link);
-        console.log(replacedText);
-        paragraphs[j].appendChild(link);*/
-
-
-
-        /*var paragraphSplit = paragraphs[j].innerHTML.split(persontags_list[i]);
-        console.log(paragraphSplit[0]);
-        console.log(paragraphSplit[1]);
-        paragraphs[j].appendChild(link);*/
-
-
-        //paragraphSplit[0].append(link);
-        //paragraphs[j] = paragraphSplit.innerHTML.join(persontags_list[i]);
-        //paragraphs[j].innerHTML.replace('a', 'lero');
-        //console.log(paragraphs[j].innerHTML, persontags_list[i]);
       }
     }
   }
+
+  //
+  var words = [
+    {
+        word: 'Orazio Michi'
+    },
+    {
+        word: 'Marco Marazzoli'
+    },
+    {
+        word: 'Luigi Rossi'
+    }
+  ];
+
+  var words2 = [];
+  for (let i = 0; i < persontags_list.length; i++) {
+    words2.append(persontags_list[i]);
+
+    if (persontags_list[i].includes(' ')){
+      var nameToSwap = persontags_list[i].split(' ');
+      var first = nameToSwap[0];
+      var last = nameToSwap[nameToSwap.length - 1];
+      nameToSwap[0] = last;
+      nameToSwap[nameToSwap.length - 1] = first;
+      var nameSwapped = nameToSwap.join(' ');
+    } else {
+      var nameSwapped = persontags_list[i];
+    }
+
+    words2.append(nameSwapped);
+  }
+
+  console.log(words, words2);
+
+  $.each(words,
+    function() {
+      //store it ("this" is gonna become the dom element in the next function)
+      var search = this;
+      $('span#person_tag').each(
+        function() {
+          //if it's exactly the same
+          if ($(this).text() === search.word) {
+            //do your magic tricks
+            $(this).html('<a href="https://harfenlabor.netlify.app/persontags#' + search.word.replace(' ', '%20') + '">' + search.word + '</a>');
+          }
+        }
+      );
+    }
+  );
 
 </script>
 
