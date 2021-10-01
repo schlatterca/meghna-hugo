@@ -123,7 +123,7 @@
 
   $("#theButton").click(function() {
     let targetWords = ["the", "kind", "example"];
-    var p = $("#example")[0];
+    //var p = $("#example")[0];
 
     console.log("ok");
 
@@ -131,8 +131,8 @@
 
       console.log(targetWords[i]);
 
-      var text = $(this).text();
-      $(this).html(text.replaceAll(targetWords[i], '<a href="http://xxx.xx/name/">is</a>')); 
+      var p = $("#example")[0].text();
+      $("#example")[0].html(p.replaceAll(targetWords[i], '<a href="http://xxx.xx/name/">ciao</a>')); 
     };
   });
 
