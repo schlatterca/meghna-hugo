@@ -60,11 +60,11 @@ if ( synopsisBoxExists ) {
 	function toggleSynopsisBox() {
 		if (synopsisboxisclosed) {
 			document.getElementsByClassName('open_synopsis_box')[0].style.transform = "rotate(45deg)";
-			document.getElementsByClassName('synopsis_box')[0].classList.add("isopen");
+			document.getElementsByClassName('synopsis_box')[0].classList.remove("isopen");
 			this.synopsisboxisclosed = false;
 		} else {
 			document.getElementsByClassName('open_synopsis_box')[0].style.transform = "rotate(0deg)";
-			document.getElementsByClassName('synopsis_box')[0].classList.remove("isopen");
+			document.getElementsByClassName('synopsis_box')[0].classList.add("isopen");
 			this.synopsisboxisclosed = true;
 		}
 	}
@@ -80,7 +80,7 @@ if (( synopsis ) && (synopsis.innerHTML.toString() == "")) {
 	var synopsis_paragraphs = synopsis.innerHTML.split('&amp;&amp;');
 
 	var paragraphBox = document.createElement('div');
-	paragraphBox.setAttribute('class', 'paragraphBox');
+	paragraphBox.setAttribute('class', 'paragraph_box');
 
 	for (let i = 0; i < synopsis_paragraphs.length; i++) {
 		var paragraph = document.createElement('p');
