@@ -146,12 +146,41 @@
     console.log(this, this.innerHTML, this.innerText);
     replaceWithAnchor("span", "https://harfenlabor.netlify.app/persontags#"+this.innerText); 
   });*/
-
   //$("input").click(function() {
       //replaceWithAnchor("span", "http://google.com");
   //});
 
 
+  var words = [
+    {
+        word: 'Orazio Michi',
+        link: 'http://www.something.com'
+    },
+    {
+        word: 'Marco Marazzoli',
+        link: 'http://www.something.com/else'
+    },
+    {
+        word: 'Luigi Rossi',
+        link: 'http://www.something.com/else'
+    }
+];
+
+  $.each(words,
+    function() {
+      //store it ("this" is gonna become the dom element in the next function)
+      var search = this;
+      $('p').each(
+        function() {
+          //if it's exactly the same
+          if ($(this).text() === search.word) {
+              //do your magic tricks
+              $(this).html('<a href="' + search.link + '">' + search.link + '</a>');
+          }
+        }
+      );
+    }
+  );
 
   /*add links to each person that appears in the person_tag section*/
   var persontags_list = {{ .Params.person_tag }};
