@@ -8,7 +8,7 @@
 
   <!--DELETE-->
   <input type="button" id="theButton" value="Make it a link">
-  <p id="example">This is the kind of an example paragraph.</p>
+  <p id="example" class="single">This is the kind of an example paragraph.</p>
   <!--DELETE-->
 
   <div class="container">
@@ -121,7 +121,7 @@
     $(this).html(text.replaceAll('Name', '<a href="http://xxx.xx/name/">Name</a>')); 
   });*/
 
-  $('article.single').each(function() {
+  $('p.single').each(function() {
     let targetWords = ["the", "kind", "example"];
     var text = $(this).text();
 
