@@ -177,33 +177,29 @@
 
   var words = [
     {
-        word: 'Orazio Michi',
-        link: 'http://www.something.com'
+        word: 'Orazio Michi';
     },
     {
-        word: 'Marco Marazzoli',
-        link: 'http://www.something.com/else'
+        word: 'Marco Marazzoli';
     },
     {
-        word: 'Luigi Rossi',
-        link: 'http://www.something.com/else'
+        word: 'Luigi Rossi';
     }
   ];
 
   $.each(words,
     function() {
-      console.log(this);
-        //store it ("this" is gonna become the dom element in the next function)
-        var search = this;
-        $('span#person_tag').each(
-            function() {
-                //if it's exactly the same
-                if ($(this).text() === search.word) {
-                    //do your magic tricks
-                    $(this).html('<a href="' + search.link + '">' + search.word + '</a>');
-                }
-            }
-        );
+      //store it ("this" is gonna become the dom element in the next function)
+      var search = this;
+      $('span#person_tag').each(
+        function() {
+          //if it's exactly the same
+          if ($(this).text() === search.word) {
+            //do your magic tricks
+            $(this).html('<a href="https://harfenlabor.netlify.app/persontags#' + search.word + '">' + search.word + '</a>');
+          }
+        }
+      );
     }
   );
 
