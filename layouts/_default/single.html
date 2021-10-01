@@ -5,7 +5,7 @@
 {{/* - partial "footer.html" . -*/}}
 
 <section class="section">
-  
+
   <!--DELETE-->
   <input type="button" id="theButton" value="Make it a link">
   <p id="example">This is the example paragraph.</p>
@@ -77,32 +77,28 @@
       var targetWord, p, textNode, index, nodeWord, nodeAfter;
 
       // Our target word
-      targetWord = "example";
+      let targetWords = ["This", "example"];
+      for (let i = 0; i < targetWords.length; i++) {
+        p = $("#example")[0];
+        textNode = p.firstChild;
 
-      // Get the paragraph using jQuery; note that after we
-      // use jQuery to get it (because it fixes getElementById for
-      // us on older versions of IE), we then use [0] to access
-      // the *raw* `p` element.
-      // Then get the text node from it.
-      p = $("#example")[0];
-      textNode = p.firstChild;
+        // Find our text in the text node
+        index = textNode.nodeValue.indexOf(targetWords[i]);
+        if (index !== -1) {
+          // Split at the beginning of the text
+          nodeWord = textNode.splitText(index);
 
-      // Find our text in the text node
-      index = textNode.nodeValue.indexOf(targetWord);
-      if (index !== -1) {
-        // Split at the beginning of the text
-        nodeWord = textNode.splitText(index);
+          // Split the new node again at the end of the word
+          nodeAfter = nodeWord.splitText(targetWords[i].length);
 
-        // Split the new node again at the end of the word
-        nodeAfter = nodeWord.splitText(targetWord.length);
+          // Insert a new anchor in front of the word
+          anchor = document.createElement('a');
+          anchor.href = "http://stackoverflow.com";
+          p.insertBefore(anchor, nodeWord);
 
-        // Insert a new anchor in front of the word
-        anchor = document.createElement('a');
-        anchor.href = "http://stackoverflow.com";
-        p.insertBefore(anchor, nodeWord);
-
-        // Now move the word *into* the anchor
-        anchor.appendChild(nodeWord);
+          // Now move the word *into* the anchor
+          anchor.appendChild(nodeWord);
+        }
       }
     });
   });
