@@ -127,13 +127,14 @@
 
     console.log("ok");
 
-    for (let i = 0; i < targetWords.length; i++) {
+    $(this).html(text.replace(targetWords[0], '<a href="http://xxx.xx/name/">'+targetWords[0]+'</a>').replace(targetWords[1], '<a href="http://xxx.xx/name/">'+targetWords[1]+'</a>').replace(targetWords[2], '<a href="http://xxx.xx/name/">'+targetWords[2]+'</a>'));
+
+    /*for (let i = 0; i < targetWords.length; i++) {
 
       console.log(targetWords[i], $(this).html(), text);
 
-      //$(this).html(text.replace(targetWords[i], '<a href="http://xxx.xx/name/">'+targetWords[i]+'</a>')); 
       $(this).html(text.replace(targetWords[i], '<a href="http://xxx.xx/name/">'+targetWords[i]+'</a>')); 
-    };
+    };*/
   });
 
   /*add links to each person that appears in the person_tag section*/
