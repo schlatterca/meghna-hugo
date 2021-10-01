@@ -19,7 +19,9 @@ I cannot add facts or new hypotheses to the question of who really played the Ba
 
 (Parma c. 1602/1605 – 1662 Rome)
 
-Unlike Orazio Michi, Marco Marazzoli is remembered more as a composer, than as a singer and harpist, as he left a considerable number of compositions behind. This includes cantate and canzonette, similar to works by Luigi Rossi, Giacomo Carissimi or Michi, but also music for the stage, especially for big productions for the [Palazzo Barberini](https://it.wikipedia.org/wiki/Palazzo_Barberini "Palazzo Barberini") in Rome. His instrumental music, however, is limited to parts of these theatrical works. Furthermore, his radius extended far beyond Rome: he was also active, for example, in Ferrara and Paris. Born around 1602 in Parma, Marazzoli moved to Rome in 1626.
+Unlike 
+
+<span id="person_tag">NAME</span>, <span id="person_tag">NAME</span> is remembered more as a composer, than as a singer and harpist, as he left a considerable number of compositions behind. This includes cantate and canzonette, similar to works by <span id="person_tag">NAME</span>, Giacomo Carissimi or Michi, but also music for the stage, especially for big productions for the [Palazzo Barberini](https://it.wikipedia.org/wiki/Palazzo_Barberini "Palazzo Barberini") in Rome. His instrumental music, however, is limited to parts of these theatrical works. Furthermore, his radius extended far beyond Rome: he was also active, for example, in Ferrara and Paris. Born around 1602 in Parma, Marazzoli moved to Rome in 1626.
 
 ![](/images/image.jpg)
 
