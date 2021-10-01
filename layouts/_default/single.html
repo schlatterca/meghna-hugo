@@ -100,19 +100,22 @@
   }
 
   
-  /*var words = [
+  var words = [
     {
-        word: 'Orazio Michi'
+        word: 'Orazio Michi',
+        link: 'ciao'
     },
     {
-        word: 'Marco Marazzoli'
+        word: 'Marco Marazzoli',
+        link: 'ciao'
     },
     {
-        word: 'Luigi Rossi'
+        word: 'Luigi Rossi',
+        link: 'ciao'
     }
-  ];*/
+  ];
 
-  var words = [];
+  var words2 = [];
   for (let i = 0; i < persontags_list.length; i++) {
 
     if (persontags_list[i].includes(' ')){
@@ -123,7 +126,7 @@
       nameToSwap[nameToSwap.length - 1] = first;
       var nameSwapped = nameToSwap.join(' ').replace(' ', '%20');
     } else {
-      var nameSwapped = persontags_list[i];
+      var nameSwapped = persontags_list[i].replace;
     }
 
     var Obj = {             
@@ -135,6 +138,7 @@
     words.push(Obj);
   }
 
+  console.log(words, words2);
 
   $.each(words,
     function() {
