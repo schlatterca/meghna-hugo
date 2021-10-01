@@ -114,7 +114,7 @@
 
   var words2 = [];
   for (let i = 0; i < persontags_list.length; i++) {
-    words2.append(persontags_list[i]);
+    words2.push(persontags_list[i]);
 
     if (persontags_list[i].includes(' ')){
       var nameToSwap = persontags_list[i].split(' ');
@@ -127,7 +127,7 @@
       var nameSwapped = persontags_list[i];
     }
 
-    words2.append(nameSwapped);
+    words2.push(nameSwapped);
   }
 
   console.log(words, words2);
