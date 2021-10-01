@@ -151,7 +151,7 @@
   //});
 
 
-  var words = [
+  /*var words = [
     {
         word: 'Orazio Michi',
         link: 'http://www.something.com'
@@ -173,7 +173,26 @@
            //substitute html with a nice anchor tag
            .html('<a href="' + this.link + '">' + this.word + '</a>');
     }
-  );
+  );*/
+
+  var replacementDict = {
+    'Orazio Michi': 'http://www.foo.com/',
+    'Marco Marazzoli': 'http://www.bar.net/',
+    'Luigi Rossi': 'http://www.ansa.it/'
+  };
+
+  var theRegex = /\b(Orazio Michi|Marco Marazzoli|Luigi Rossi)\b/g;
+
+  jQuery("#person_tag").each(function() {
+    console.log(this);
+    this.replace(theRegex, function(s, theWord) {
+        return "<a href='" + replacementDict[theWord] + "'>" + theWord + "</a>";
+    });
+  });
+
+
+
+
 
   /*$.each(words,
     function() {
