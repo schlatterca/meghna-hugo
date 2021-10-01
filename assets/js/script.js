@@ -59,11 +59,11 @@ if ( synopsisBoxExists ) {
 	var synopsisboxisclosed = true;
 	function toggleSynopsisBox() {
 		if (synopsisboxisclosed) {
-			document.getElementsByClassName('open_synopsis_box')[0].style.transform = "rotate(45deg)";
+			document.getElementsByClassName('open_synopsis_box')[0].style.transform = "rotate(0deg)";
 			document.getElementsByClassName('synopsis_box')[0].classList.remove("isopen");
 			this.synopsisboxisclosed = false;
 		} else {
-			document.getElementsByClassName('open_synopsis_box')[0].style.transform = "rotate(0deg)";
+			document.getElementsByClassName('open_synopsis_box')[0].style.transform = "rotate(45deg)";
 			document.getElementsByClassName('synopsis_box')[0].classList.add("isopen");
 			this.synopsisboxisclosed = true;
 		}
