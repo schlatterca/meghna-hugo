@@ -191,7 +191,7 @@
 	padding-top: 0.4em;
 	/*padding-right: 3em;*/
 	width: 20%;
-	height: 15%;
+	height: 12%;
 	overflow: auto;
 	margin-left: 3vw; /*was 4em*/
 	margin-top: 2em;
@@ -226,6 +226,7 @@
 	line-height: 1.7rem;
 	height: fit-content;
 	transition: transform 0.3s ease-out;
+	transform: rotate(45deg);
 	transform-origin: center; /* this will be a svg turning + into - */
 
 	margin-left: 0px;
@@ -237,6 +238,7 @@
 
 .paragraph_box {
 	flex-direction: column;
+	margin-right: auto;
 }
 
 /*ARTICLES*/
