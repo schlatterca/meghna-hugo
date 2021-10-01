@@ -168,17 +168,10 @@
 
   $.each(words,
     function() {
-      //store it ("this" is gonna become the dom element in the next function)
-      var search = this;
-      $('p').each(
-        function() {
-          //if it's exactly the same
-          if ($(this).text() === search.word) {
-              //do your magic tricks
-              $(this).html('<a href="' + search.link + '">' + search.link + '</a>');
-          }
-        }
-      );
+        //find an element with class "message" that contains "word" (from array)
+        $('p:contains("' + this.word + '")')
+             //substitute html with a nice anchor tag
+             .html('<a href="' + this.link + '">' + word + '</a>');
     }
   );
 
