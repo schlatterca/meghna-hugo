@@ -195,7 +195,7 @@
       console.log(this);
         //store it ("this" is gonna become the dom element in the next function)
         var search = this;
-        $('.message').each(
+        $('span#person_tag').each(
             function() {
                 //if it's exactly the same
                 if ($(this).text() === search.word) {
