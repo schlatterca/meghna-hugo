@@ -114,6 +114,13 @@
 
   var words2 = [];
   for (let i = 0; i < persontags_list.length; i++) {
+
+    var b = new Object();
+    words2.push(b);
+
+    words2.push(new Object("a", "b"));
+
+
     words2.push(persontags_list[i]);
 
     if (persontags_list[i].includes(' ')){
