@@ -116,7 +116,7 @@ if (( synopsis ) && (synopsis.innerHTML.toString() == "")) {
 }
 
 //BREAK LINES IN FOOTNOTES
-/*var footnotes = document.getElementsByClassName('footnotes')[0];
+var footnotes = document.getElementsByClassName('footnotes')[0];
 var plainfootnotes = footnotes.innerHTML.toString();
 
 if (( footnotes ) && (footnotes.innerHTML.toString() == "")) {
@@ -136,7 +136,7 @@ if (( footnotes ) && (footnotes.innerHTML.toString() == "")) {
 	}
 	document.getElementsByClassName('footnotes')[0].innerHTML="";
 	document.getElementsByClassName('footnotes_box')[0].append(paragraphBox);
-}*/
+}
 
 //MAKE AUTHOR'S NAME A LINK
 var authorsNameExists = document.getElementById('this_article_author');
