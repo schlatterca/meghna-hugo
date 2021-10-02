@@ -241,6 +241,51 @@
 	margin-right: auto;
 }
 
+/*ARTICLES SYNOPSIS*/
+.footnotes_box {
+	position: absolute;
+	background-color: white;
+	z-index: 1;
+	border-radius: 1.2em;
+	border: 0.15em solid var(--purpleColor);
+	padding: 1em;
+	padding-top: 0.4em;
+	/*padding-right: 3em;*/
+	width: 20%;
+	height: 12%;
+	overflow: auto;
+	margin-left: 3vw; /*was 4em*/
+	margin-top: 2em;
+	display: flex;
+	flex-direction: row-reverse;
+	transition: width 0.3s ease-out;
+	-ms-overflow-style: none;  /* hide scrollbar in IE and Edge */
+	scrollbar-width: none;  /* hide scrollbar in Firefox */
+}
+
+.footnotes_box::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for Chrome, Safari and Opera */
+}
+.footnotes {
+	color: var(--purpleColor);
+	padding-right: .5em;
+	margin-bottom: .5em;
+}
+
+.open_footnotes_box {
+	color: var(--purpleColor);
+	font-size: 1.5rem;
+	line-height: 1.7rem;
+	height: fit-content;
+	transition: transform 0.3s ease-out;
+	transform-origin: center; /* this will be a svg turning + into - */
+	margin-left: 0px;
+	margin-right: -.5em;
+	position: sticky;
+	bottom: 0;
+	top: 0;
+}
+
 /*ARTICLES*/
 .article_info{ /*unused?*/
 	margin-bottom: 1em;
