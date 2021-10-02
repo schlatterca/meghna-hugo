@@ -239,23 +239,22 @@
 .paragraph_box {
 	flex-direction: column;
 	margin-right: auto;
+	width: 90%;
 }
 
 /*ARTICLES SYNOPSIS*/
 .footnotes_box {
-	position: absolute;
+	position: relative;
+	float: right;
 	background-color: white;
 	z-index: 1;
 	border-radius: 1.2em;
 	border: 0.15em solid var(--purpleColor);
 	padding: 1em;
 	padding-top: 0.4em;
-	/*padding-right: 3em;*/
-	width: 20%;
-	height: 12%;
+	width: 30vw;
+	height: 6em;
 	overflow: auto;
-	margin-left: 3vw; /*was 4em*/
-	margin-top: 2em;
 	display: flex;
 	flex-direction: row-reverse;
 	transition: width 0.3s ease-out;
@@ -270,6 +269,8 @@
 	color: var(--purpleColor);
 	padding-right: .5em;
 	margin-bottom: .5em;
+	width: 95%;
+	position: relative;
 }
 
 .open_footnotes_box {
