@@ -32,23 +32,7 @@
         <!--div class="mt-5"-->
           {{/* .Date */}} <!--JUST TO TRY THE COMMENT-->
         <!--/div-->
-
-        <!--div class="footnotes_box">
-          <p class="footnotes">FOOTNOTES<br><br>{{ .Params.footnotes }}</p>
-          <div class="open_footnotes_box">+</div>
-        </div-->
       </div>
-
-      <div class="footnotes_box">
-        <p class="footnotes">{{ .Params.footnotes }}</p>
-        <div class="open_footnotes_box">+</div>
-      </div>
-
-      <!--div class="footnotes_box">
-        <p class="footnotes">{{ .Params.footnotes }}</p>
-        <div class="open_footnotes_box">+</div>
-      </div-->
-
     </div>
   </div>
 </section>
@@ -115,7 +99,23 @@
     }
   }
 
-  var words = [];
+  
+  /*var words = [
+    {
+        word: 'Orazio Michi',
+        link: 'ciao'
+    },
+    {
+        word: 'Marco Marazzoli',
+        link: 'ciao'
+    },
+    {
+        word: 'Luigi Rossi',
+        link: 'ciao'
+    }
+  ];*/
+
+  var words2 = [];
   for (let i = 0; i < persontags_list.length; i++) {
 
     if (persontags_list[i].includes(' ')){
@@ -129,18 +129,29 @@
       var nameSwapped = persontags_list[i].replace;
     }
 
+    /*var Obj = {             
+      word: [],
+      link: []
+    };
+    Obj.word.push(persontags_list[i]);
+    Obj.link.push(nameSwapped);*/
     var Obj = {}
     Obj.word = persontags_list[i];
     Obj.link = nameSwapped;
-    words.push(Obj);
+    words2.push(Obj);
   }
 
-  $.each(words,
+  //console.log(words2);
+
+  $.each(words2,
     function() {
+      //store it ("this" is gonna become the dom element in the next function)
       var search = this;
       $('span#person_tag').each(
         function() {
+          //if it's exactly the same
           if ($(this).text() === search.word) {
+            //do your magic tricks
             $(this).html('<a href="https://harfenlabor.netlify.app/persontags#' + search.link + '">' + search.word + '</a>');
           }
         }
