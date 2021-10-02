@@ -70,28 +70,6 @@ if ( synopsisBoxExists ) {
 	}
 }
 
-/*OPEN FOOTNOTES BOX*/
-var footnotesBoxExists = document.getElementsByClassName('open_footnotes_box')[0];
-
-if ( footnotesBoxExists ) {
-	document.getElementsByClassName('open_footnotes_box')[0].addEventListener('click', function(e) {
-	  toggleSynopsisBox();
-	});
-	var footnotesboxisclosed = true;
-	function toggleSynopsisBox() {
-		if (footnotesboxisclosed) {
-			document.getElementsByClassName('open_footnotes_box')[0].style.transform = "rotate(45deg)";
-			document.getElementsByClassName('footnotes_box')[0].classList.add("isopen");
-			this.footnotesboxisclosed = false;
-		} else {
-			document.getElementsByClassName('open_footnotes_box')[0].style.transform = "rotate(0deg)";
-			document.getElementsByClassName('footnotes_box')[0].classList.remove("isopen");
-			this.footnotesboxisclosed = true;
-		}
-	}
-}
-
-
 //BREAK LINES IN SYNOPSIS
 var synopsis = document.getElementsByClassName('synopsis')[0];
 var plainSynopsis = synopsis.innerHTML.toString();
@@ -113,29 +91,6 @@ if (( synopsis ) && (synopsis.innerHTML.toString() == "")) {
 	}
 	document.getElementsByClassName('synopsis')[0].innerHTML="";
 	document.getElementsByClassName('synopsis_box')[0].append(paragraphBox);
-}
-
-//BREAK LINES IN FOOTNOTES
-var footnotes = document.getElementsByClassName('footnotes')[0];
-var plainfootnotes = footnotes.innerHTML.toString();
-
-if (( footnotes ) && (footnotes.innerHTML.toString() == "")) {
-	document.getElementsByClassName('footnotes_box')[0].remove();
-} else if (( footnotes ) && (footnotes.innerHTML.toString() != "")) {
-	var footnotes_paragraphs = footnotes.innerHTML.split('&amp;&amp;');
-
-	var paragraphBox = document.createElement('div');
-	paragraphBox.setAttribute('class', 'paragraph_box');
-
-	for (let i = 0; i < footnotes_paragraphs.length; i++) {
-		var paragraph = document.createElement('p');
-		var paragraphText = document.createTextNode(footnotes_paragraphs[i]);
-		paragraph.setAttribute('class', 'footnotes');
-		paragraph.appendChild(paragraphText);
-		paragraphBox.appendChild(paragraph);
-	}
-	document.getElementsByClassName('footnotes')[0].innerHTML="";
-	document.getElementsByClassName('footnotes_box')[0].append(paragraphBox);
 }
 
 //MAKE AUTHOR'S NAME A LINK
