@@ -109,23 +109,7 @@
     }
   }
 
-  
-  /*var words = [
-    {
-        word: 'Orazio Michi',
-        link: 'ciao'
-    },
-    {
-        word: 'Marco Marazzoli',
-        link: 'ciao'
-    },
-    {
-        word: 'Luigi Rossi',
-        link: 'ciao'
-    }
-  ];*/
-
-  var words2 = [];
+  var words = [];
   for (let i = 0; i < persontags_list.length; i++) {
 
     if (persontags_list[i].includes(' ')){
@@ -139,35 +123,28 @@
       var nameSwapped = persontags_list[i].replace;
     }
 
-    /*var Obj = {             
-      word: [],
-      link: []
-    };
-    Obj.word.push(persontags_list[i]);
-    Obj.link.push(nameSwapped);*/
     var Obj = {}
     Obj.word = persontags_list[i];
     Obj.link = nameSwapped;
-    words2.push(Obj);
+    words.push(Obj);
   }
 
-  //console.log(words2);
-
-  $.each(words2,
+  $.each(words,
     function() {
-      //store it ("this" is gonna become the dom element in the next function)
       var search = this;
       $('span#person_tag').each(
         function() {
-          //if it's exactly the same
           if ($(this).text() === search.word) {
-            //do your magic tricks
             $(this).html('<a href="https://harfenlabor.netlify.app/persontags#' + search.link + '">' + search.word + '</a>');
           }
         }
       );
     }
   );
+
+  $(sup).each(){
+    console.log(this);
+  }
 
 </script>
 
