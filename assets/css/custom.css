@@ -272,6 +272,7 @@
 	width: -webkit-fill-available;
 	position: absolute;
 	margin-left: 1em;
+	overflow-x: hidden;
 }
 
 .open_footnotes_box {
