@@ -70,7 +70,7 @@ if ( synopsisBoxExists ) {
 	}
 }
 
-/*OPEN FOOTNOTES BOX
+/*OPEN FOOTNOTES BOX*/
 var footnotesBoxExists = document.getElementsByClassName('open_footnotes_box')[0];
 
 if ( footnotesBoxExists ) {
@@ -89,7 +89,8 @@ if ( footnotesBoxExists ) {
 			this.footnotesboxisclosed = true;
 		}
 	}
-}*/
+}
+
 
 //BREAK LINES IN SYNOPSIS
 var synopsis = document.getElementsByClassName('synopsis')[0];
