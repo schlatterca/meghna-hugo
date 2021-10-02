@@ -70,6 +70,27 @@ if ( synopsisBoxExists ) {
 	}
 }
 
+//OPEN FOOTNOTES BOX
+var footnotesBoxExists = document.getElementsByClassName('open_footnotes_box')[0];
+
+if ( footnotesBoxExists ) {
+	document.getElementsByClassName('open_footnotes_box')[0].addEventListener('click', function(e) {
+	  toggleSynopsisBox();
+	});
+	var footnotesboxisclosed = true;
+	function toggleSynopsisBox() {
+		if (footnotesboxisclosed) {
+			document.getElementsByClassName('open_footnotes_box')[0].style.transform = "rotate(45deg)";
+			document.getElementsByClassName('footnotes_box')[0].classList.add("isopen");
+			this.footnotesboxisclosed = false;
+		} else {
+			document.getElementsByClassName('open_footnotes_box')[0].style.transform = "rotate(0deg)";
+			document.getElementsByClassName('footnotes_box')[0].classList.remove("isopen");
+			this.footnotesboxisclosed = true;
+		}
+	}
+}
+
 //BREAK LINES IN SYNOPSIS
 var synopsis = document.getElementsByClassName('synopsis')[0];
 var plainSynopsis = synopsis.innerHTML.toString();
