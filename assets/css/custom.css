@@ -256,7 +256,7 @@
 	height: 6em;
 	overflow: auto;
 	display: flex;
-	flex-direction: row-reverse;
+	flex-direction: row;
 	transition: width 0.3s ease-out;
 	-ms-overflow-style: none;  /* hide scrollbar in IE and Edge */
 	scrollbar-width: none;  /* hide scrollbar in Firefox */
@@ -269,8 +269,9 @@
 	color: var(--purpleColor);
 	padding-right: .5em;
 	margin-bottom: .5em;
-	width: 95%;
-	position: relative;
+	width: -webkit-fill-available;
+	position: absolute;
+	margin-left: 1em;
 }
 
 .open_footnotes_box {
