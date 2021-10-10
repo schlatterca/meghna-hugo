@@ -106,5 +106,6 @@ fields:
     this example: Name Surname or Name Name Surname).'
 pages:
 - exampleSite/content/focus/Zemke_Haag.md
+- exampleSite/content/research/disegni-per-strumenti-musicali.md
 - exampleSite/content/research/example-with-a-video.md
 - exampleSite/content/research/who-played-the-barberini-harp.md
