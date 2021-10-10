@@ -31,7 +31,9 @@ Meno diffusi invece sono disegni preparatori per strumenti musicali, per gli int
 
 ![](/images/3b.jpg)
 
-###### ![](/images/3c.jpg)Giovanni Battista Soria attr., Progetto per un’arpa, inv. 1594 E, Gabinetto Disegni e Stampe degli Uffizi, Firenze. Foto: Ursula Verena Fischer Pace
+![](/images/3c.jpg)
+
+###### Giovanni Battista Soria attr., Progetto per un’arpa, inv. 1594 E, Gabinetto Disegni e Stampe degli Uffizi, Firenze. Foto: Ursula Verena Fischer Pace
 
 ###### 3a dettaglio 7915. Foto: UVFP
 
