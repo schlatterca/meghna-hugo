@@ -3,7 +3,6 @@ author = "Ursula Verena Fischer Pace"
 barberiniharpproject = ""
 description = ""
 downloads = ""
-draft = true
 externallinks = ""
 footnotes = ""
 image = "/images/1.jpeg"
