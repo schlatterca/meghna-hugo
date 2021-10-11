@@ -62,7 +62,8 @@
 }
 
 .nav-link-submenu {
-	font-size: 20px;
+	font-size: 26px;
+	line-height: 16px;
 }
 
 .nav-link:hover {
