@@ -5,62 +5,83 @@ home = "Home"
 languageCode = "en-us"
 languageName = "En"
 weight = 1
-[[Languages.en.menu.main]]
-name = "focus"
-url = "/focus"
-weight = 1
-[[Languages.en.menu.main]]
-name = "research"
-url = "/research"
-weight = 2
-[[Languages.en.menu.main]]
-name = "organology"
-url = ""
-weight = "2"
-[[Languages.en.menu.main]]
-name = "performance practice"
-url = ""
-weight = "2"
-[[Languages.en.menu.main]]
-name = "musicology"
-url = ""
-weight = "2"
-[[Languages.en.menu.main]]
-name = "HL editions"
-url = ""
-weight = "2"
-[[Languages.en.menu.main]]
-name = "iconography"
-url = ""
-weight = "2"
-[[Languages.en.menu.main]]
-name = "sociology of art"
-url = ""
-weight = "2"
-[[Languages.en.menu.main]]
-name = "timeline"
-url = ""
-weight = 3
-[[Languages.en.menu.main]]
-name = "map"
-url = ""
-weight = 4
-[[Languages.en.menu.main]]
-name = "index"
-url = "/persontags"
-weight = 5
-[[Languages.en.menu.main]]
-name = "search"
-url = "/search"
-weight = 6
-[[Languages.en.menu.main]]
-name = "mediathek"
-url = ""
-weight = 7
-[[Languages.en.menu.main]]
-name = "about"
-url = "/aboutpage"
-weight = 8
+[Languages.en.menu]
+  [[Languages.en.menu.main]]
+  identifier = "focus"
+  name = "focus"
+  url = "/focus"
+  weight = 1
+  [[Languages.en.menu.main]]
+  identifier = "research"
+  name = "research"
+  url = "/research"
+  weight = 2
+  [[Languages.en.menu.main]]
+  identifier = "organology"
+  name = "organology"
+  url = ""
+  parent = "research"
+  weight = "1"
+  [[Languages.en.menu.main]]
+  identifier = "performance practice"
+  name = "performance practice"
+  url = ""
+  parent = "research"
+  weight = "2"
+  [[Languages.en.menu.main]]
+  identifier = "musicology"
+  name = "musicology"
+  url = ""
+  parent = "research"
+  weight = "3"
+  [[Languages.en.menu.main]]
+  identifier = "HL editions"
+  name = "HL editions"
+  url = ""
+  parent = "research"
+  weight = "4"
+  [[Languages.en.menu.main]]
+  identifier = "iconography"
+  name = "iconography"
+  url = ""
+  parent = "research"
+  weight = "5"
+  [[Languages.en.menu.main]]
+  identifier = "sociology of art"
+  name = "sociology of art"
+  url = ""
+  parent = "research"
+  weight = "6"
+  [[Languages.en.menu.main]]
+  identifier = "timeline"
+  name = "timeline"
+  url = ""
+  weight = 3
+  [[Languages.en.menu.main]]
+  identifier = "map"
+  name = "map"
+  url = ""
+  weight = 4
+  [[Languages.en.menu.main]]
+  identifier = "index"
+  name = "index"
+  url = "/persontags"
+  weight = 5
+  [[Languages.en.menu.main]]
+  identifier = "search"
+  name = "search"
+  url = "/search"
+  weight = 6
+  [[Languages.en.menu.main]]
+  identifier = "mediathek"
+  name = "mediathek"
+  url = ""
+  weight = 7
+  [[Languages.en.menu.main]]
+  identifier = "about"
+  name = "about"
+  url = "/aboutpage"
+  weight = 8
 [Languages.fr]
 contentDir = "content/french"
 copyright = "Copyright &copy; 2020 Designed by [Themefisher](https://themefisher.com) & Developed by [Gethugothemes](https://gethugothemes.com)"
