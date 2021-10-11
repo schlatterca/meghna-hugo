@@ -97,7 +97,7 @@ function populateWithResults(myResults){
       persona.id = myResults[i].name;
     }
 
-    persona.setAttribute("style", "margin-bottom: 10px");
+    persona.setAttribute("style", "margin-top: 10px");
     quinome.id = "quinome";
     quinome.setAttribute("style", "font-size: 20px; color: black; margin-bottom: 0px; margin-top: 20px; line-height: 0px");
 
@@ -129,6 +129,6 @@ function populateWithResults(myResults){
   if(url.includes('#')) {
     var url = url.split('#');
     document.getElementById(url[1]).scrollIntoView({ behavior: 'smooth'});
+    document.getElementById(url[1]).children[0].style.color = "#B44BEB";
   }
 };
-
