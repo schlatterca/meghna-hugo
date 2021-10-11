@@ -61,6 +61,13 @@
 	text-transform: capitalize;
 }
 
+.nav-link-submenu {
+	color: var(--purpleColor)!important;
+	font-size: 20px;
+	text-decoration: none;
+	text-transform: capitalize;
+}
+
 .nav-link:hover {
 	color: black!important;
 }
