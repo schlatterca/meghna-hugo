@@ -26,7 +26,7 @@ name = "musicology"
 url = ""
 weight = "2"
 [[Languages.en.menu.main]]
-name = "hl editions"
+name = "HL editions"
 url = ""
 weight = "2"
 [[Languages.en.menu.main]]
