@@ -27,19 +27,21 @@ E naturalmente rappresentazioni del re Davide sono occasioni di dipingere un’a
 
 Meno diffusi invece sono disegni preparatori per strumenti musicali, per gli intagliatori, costruttori delle casse degli strumenti. È il caso di un disegno degli Uffizi, conosciuto e pubblicato da molto tempo<sup>4</sup>.
 
-![](/images/3.jpg)![](/images/3a.jpg)
-
-![](/images/3b.jpg)
-
-![](/images/3c.jpg)
+![](/images/3.jpg)
 
 ###### Giovanni Battista Soria attr., Progetto per un’arpa, inv. 1594 E, Gabinetto Disegni e Stampe degli Uffizi, Firenze. Foto: Ursula Verena Fischer Pace
 
-###### 3a dettaglio 7915. Foto: UVFP
+![](/images/3a.jpg)
 
-###### 3b dettaglio 7916. Foto: UVFP
+###### Dettaglio 7915. Foto: UVFP
 
-###### 3c dettaglio 7918. Foto: UVFP
+![](/images/3b.jpg)
+
+###### Dettaglio 7916. Foto: UVFP
+
+![](/images/3c.jpg)
+
+###### Dettaglio 7918. Foto: UVFP
 
 Già nel catalogo del Museo degli Strumenti Musicali di Roma è stato paragonato con l’arpa Barberini, ma non identificato come disegno preparatorio<sup>5</sup>.
 
@@ -47,13 +49,13 @@ Si tratta di un progetto per un’arpa riccamente ornata ad intaglio sulla colon
 
 ![](/images/4.jpg)
 
-###### 4. Giovanni Battista Soria attr. Inv. 1594E dettaglio. Foto: UVFP
+###### Giovanni Battista Soria attr. Inv. 1594E dettaglio. Foto: UVFP
 
 Lo stretto rapporto del disegno con la cosiddetta arpa Barberini conservata nel Museo degli Strumenti Musicali a Roma è ovvio, e di conseguenza anche con il dipinto di Giovanni Lanfranco _Venere che suona l’arpa o la Musica_ (Galleria Nazionale d’Arte Antica, Roma) proveniente dalla collezione del cardinale Antonio Barberini il Giovane<sup>6</sup>.
 
 ![](/images/5.jpeg)
 
-###### 5. Giovanni Lanfranco, Venere che suona l’arpa, Galleria Nazionale d’arte antica Palazzo Barberini, Roma. Foto: dal catalogo Giovanni Lanfranco. Un pittore barocco tra Parma, Roma e Napoli, a cura di Erich Schleier, Milano 2001, fig. p. 267.
+###### Giovanni Lanfranco, Venere che suona l’arpa, Galleria Nazionale d’arte antica Palazzo Barberini, Roma. Foto: dal catalogo Giovanni Lanfranco. Un pittore barocco tra Parma, Roma e Napoli, a cura di Erich Schleier, Milano 2001, fig. p. 267.
 
 Era stato proprio lui il committente dello strumento, che lo diede in uso al musicista Marco Marazzoli (1619–1663), detto appunto “dell’arpa”, attivo al servizio dei Barberini come cantore, strumentista e compositore. Dopo la sua morte lo strumento ritornò in possesso al cardinale Antonio cui pervenne anche il dipinto di Lanfranco che era stato invece commissionato dal musicista all’amico pittore.
 
@@ -71,7 +73,27 @@ I motivi plastici e l’aspetto stilistico sono piuttosto di derivazione cortone
 
 ###### Pietro da Cortona, Mazza da ceremonia, disegno, London, Victoria&Albert Museum, inv. D. 1708–1885. Foto da Karin Wolfe, Ten days in the life of a Cardinal Nephew at the Court of Pope Urban VIII: Antonio Barberini’s Diary of December 1630, in, I Barberini e la Cultura Europea Del Seicento, a cura di Lorenza Mochi Onori Sebastian schütze Francesco Solinas, Roma , Atti del convegno internazionale Palazzo Barberini alle Quattro Fontane, 7–11 dicembre 2004, Roma 2007, pp. 253–261, fig.2, p.254.
 
-I motivi architettonici, figurativi ed animaleschi si assomigliano, lo stesso vale per la tecnica mista, penna ed acquerello. Ma il disegnatore non è nemmeno Pietro da Cortona, pur se di un disegnatore a lui vicino. L’autore potrebbe naturalmente essere anche Giovanni Tubi, l’intagliatore dello strumento, tuttavia non sappiamo niente sulla sua formazione artistica nel campo del disegno. Tre progetti decorativi nella stessa collezione degli Uffizi (Inv. 1591 E; Inv. 1592 E (fig. 7); Inv. 1593 (fig. 8)) sembrano spettare allo stesso disegnatore<sup>12</sup>. Si potrebbe pensare sia a Bartolomeo de Rossi che a Giovanni Battista Soria, ambedue intagliatori attivi al servizio dei Barberini: il primo, p.e., nella cappella dei canonici in Vaticano fra il 1624 e 1627 e citati nelle carte d’archivio Barberini in quegli anni e il de Rossi come intagliatore per cornici<sup>13</sup>. Gli indizi stilistici sono tuttavia a favore del Soria nato nel 1581 da padre falegname che venne educato nella bottega di Giovanni Battista Montano, anche lui intagliatore di legname ed architetto<sup>14</sup>. Al Soria spettano sia disegno ed esecuzione della libreria Barberini, sia pure la realizzazione, nello stesso periodo, dei prospetti riccamente intagliati e dorati degli organi di S. Maria sopra Minerva su committenza del cardinale Scipione Borghese (1633). Per quanto riconoscibile dal basso il loro corredo decorativo è ad essi assai simile ed è suggestivo che si tratti anche di strumenti musicali. Tra l’altro anche il suo mentore Montano ideò ed eseguì prospetti per organi in varie chiese romane. Benché non si conoscano finora disegni decorativi del Soria, ma soltanto disegni di architettura, la sua professione di esperto ebanista ed architetto, molto attivo per committenze barberiniane accanto a Pietro da Cortona, lo favoriscono come autore e disegnatore di tale progetto<sup>15</sup>. Simili motivi di volute e racemi sono presenti nella custodia lignea che il Soria fece nel 1630 per la reliquia della cattedra Petri (fig. 9)<sup>16</sup>, come pure in un mobile tuttora a Palazzo Barberini che custodisce un affresco di Guido Reni di un _Putto dormiente_ (fig. 10)<sup>17</sup>. Qui il vocabolario decorativo assomiglia talmente sia a quello del disegno per l’arpa che a un altro degli Uffizi per una base di un mobile<sup>18</sup>, da potersi attribuire allo stesso ideatore. Questo tipo di decorazione naturalistica e scultorea non è ancora di stampo berniniano, sebbene per la sua ideazione, di “uno dei più begli strumenti musicali conosciuti” sia stato avanzato il nome del Bernini<sup>19</sup>. Ma come Alvar Gonzáles Palacios osserva, “è cosa più antica”, impregnata dalla cultura barberiniana di uno stile più grave<sup>20</sup>. La presenza sul foglio di uno schizzo architettonico potrebbe essere un altro indizio per la sua attività di architetto, pur considerando che essa fu meno importante di quanto a lungo creduto, come giustamente osservato di recente da Cristiano Marchegiani, che ha ridimensionato il suo profilo da architetto nella voce del Dizionario Biografico degli Italiani<sup>21</sup>. L’apprendistato presso Giovanni Battista Montano e da Antonio Pomarancio era garanzia per la sua solida professionalità artistica riconoscibile indubbiamente anche in questo progetto di raffinato corredo decorativo. Tra l’altro spetta al Soria l’edizione dei disegni architettonici del suo maestro Giovanni Battista Montano, il cui insegnamento fu altrettanto importante per il Cortona, artista barberiniano per eccellenza, oltretutto molto amico del Soria.
+I motivi architettonici, figurativi ed animaleschi si assomigliano, lo stesso vale per la tecnica mista, penna ed acquerello. Ma il disegnatore non è nemmeno Pietro da Cortona, pur se di un disegnatore a lui vicino. L’autore potrebbe naturalmente essere anche Giovanni Tubi, l’intagliatore dello strumento, tuttavia non sappiamo niente sulla sua formazione artistica nel campo del disegno. Tre progetti decorativi nella stessa collezione degli Uffizi (Inv. 1591 E; Inv. 1592 E; Inv. 1593) sembrano spettare allo stesso disegnatore<sup>12</sup>.
+
+![](/images/7.JPG)
+
+###### Anonimo (G. B. Soria?), Progetto per una cornice, inv. 1592 E, gabinetto Disegni e Stampe degli Uffizi, Firenze. Foto: UVFP
+
+![](/images/8.JPG)
+
+###### Anonimo (G.B. Soria?), Progetto per un mobile, inv. 1593 E, Gabinetto Disegni e Stampe degli Uffizi, Firenze. Foto: UVFP
+
+Si potrebbe pensare sia a Bartolomeo de Rossi che a Giovanni Battista Soria, ambedue intagliatori attivi al servizio dei Barberini: il primo, p.e., nella cappella dei canonici in Vaticano fra il 1624 e 1627 e citati nelle carte d’archivio Barberini in quegli anni e il de Rossi come intagliatore per cornici<sup>13</sup>. Gli indizi stilistici sono tuttavia a favore del Soria nato nel 1581 da padre falegname che venne educato nella bottega di Giovanni Battista Montano, anche lui intagliatore di legname ed architetto<sup>14</sup>. Al Soria spettano sia disegno ed esecuzione della libreria Barberini, sia pure la realizzazione, nello stesso periodo, dei prospetti riccamente intagliati e dorati degli organi di S. Maria sopra Minerva su committenza del cardinale Scipione Borghese (1633). Per quanto riconoscibile dal basso il loro corredo decorativo è ad essi assai simile ed è suggestivo che si tratti anche di strumenti musicali. Tra l’altro anche il suo mentore Montano ideò ed eseguì prospetti per organi in varie chiese romane. Benché non si conoscano finora disegni decorativi del Soria, ma soltanto disegni di architettura, la sua professione di esperto ebanista ed architetto, molto attivo per committenze barberiniane accanto a Pietro da Cortona, lo favoriscono come autore e disegnatore di tale progetto<sup>15</sup>. Simili motivi di volute e racemi sono presenti nella custodia lignea che il Soria fece nel 1630 per la reliquia della cattedra Petri<sup>16</sup>, come pure in un mobile tuttora a Palazzo Barberini che custodisce un affresco di Guido Reni di un _Putto dormiente_ <sup>17</sup>.
+
+![](/images/9.jpeg)
+
+###### Giovanni Battista Soria, Custodia della Cattedra Petri, Città del Vaticano, Fabbrica di S. Pietro. Foto: da Sankt Peter in Rom 1506 -2006. Beiträge der internationalen Tagung vom 22. – 25. Februar 2006 in Bonn, ed. Georg Satzinger und Sebastian Schütze, München 2008, p. 271, fig. 10.
+
+![](/images/10.jpeg)
+
+###### Guido Reni, Putto Dormiente, Galleria Nazionale d’Arte antica, Palazzo Barberini Roma. Foto: UVFP
+
+Qui il vocabolario decorativo assomiglia talmente sia a quello del disegno per l’arpa che a un altro degli Uffizi per una base di un mobile<sup>18</sup>, da potersi attribuire allo stesso ideatore. Questo tipo di decorazione naturalistica e scultorea non è ancora di stampo berniniano, sebbene per la sua ideazione, di “uno dei più begli strumenti musicali conosciuti” sia stato avanzato il nome del Bernini<sup>19</sup>. Ma come Alvar Gonzáles Palacios osserva, “è cosa più antica”, impregnata dalla cultura barberiniana di uno stile più grave<sup>20</sup>. La presenza sul foglio di uno schizzo architettonico potrebbe essere un altro indizio per la sua attività di architetto, pur considerando che essa fu meno importante di quanto a lungo creduto, come giustamente osservato di recente da Cristiano Marchegiani, che ha ridimensionato il suo profilo da architetto nella voce del Dizionario Biografico degli Italiani<sup>21</sup>. L’apprendistato presso Giovanni Battista Montano e da Antonio Pomarancio era garanzia per la sua solida professionalità artistica riconoscibile indubbiamente anche in questo progetto di raffinato corredo decorativo. Tra l’altro spetta al Soria l’edizione dei disegni architettonici del suo maestro Giovanni Battista Montano, il cui insegnamento fu altrettanto importante per il Cortona, artista barberiniano per eccellenza, oltretutto molto amico del Soria.
 
 La proposta attributiva al Soria dell’ideazione e del progetto per l’arpa Barberini trova infine una sua ulteriore giustificazione nello stretto rapporto dell’artista con le committenze barberiniane per i lavori a S. Pietro e a palazzo Barberini.
 
