@@ -97,7 +97,7 @@ function populateWithResults(myResults){
       persona.id = myResults[i].name;
     }
 
-    persona.setAttribute("style", "margin-top: 10px");
+    persona.setAttribute("style", "margin-top: 10px; line-height: 0.7em");
     quinome.id = "quinome";
     quinome.setAttribute("style", "font-size: 20px; color: black; margin-bottom: 0px; margin-top: 20px;");
 
