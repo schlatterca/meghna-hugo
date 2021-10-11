@@ -14,13 +14,11 @@
 				<ul class="navbar-nav ml-auto">
 					{{ range site.Menus.main }}
 					<li class="nav-item">
-            			<a class="nav-link" {{if findRE `^http` .URL}}target="_blank"{{end}}
-						href="{{if findRE `^#` .URL}}{{if not $.IsHome}}{{site.BaseURL | relLangURL}}{{end}}{{ .URL }}{{else}}{{.URL | relLangURL}}{{end}}">{{ .Name }}</a>
+            			<a class="nav-link" {{if findRE `^http` .URL}}target="_blank"{{end}} href="{{if findRE `^#` .URL}}{{if not $.IsHome}}{{site.BaseURL | relLangURL}}{{end}}{{ .URL }}{{else}}{{.URL | relLangURL}}{{end}}">{{ .Name }}</a>
 
 
 						{{ if .HasChildren }}
-						<a>CIAO</a>
-						<a class="nav-link">{{ .Name }}</a>
+						<!--a class="nav-link" {{if findRE `^http` .URL}}target="_blank"{{end}} href="{{if findRE `^#` .URL}}{{if not $.IsHome}}{{site.BaseURL | relLangURL}}{{end}}{{ .URL }}{{else}}{{.URL | relLangURL}}{{end}}">{{ .Name }}</a-->
 						<ul class="sub-menu">
 							{{ range .Children }}
 							<a class="nav-link">{{ .Name }}</a>
