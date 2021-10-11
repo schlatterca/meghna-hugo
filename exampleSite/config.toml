@@ -45,6 +45,7 @@ url = "/search"
 weight = 6
 [[Languages.en.menu.main]]
 name = "mediathek"
+url = "#mediathek"
 weight = 7
 [[Languages.en.menu.main]]
 name = "about"
