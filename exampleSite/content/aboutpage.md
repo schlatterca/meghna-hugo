@@ -1,6 +1,6 @@
 ---
-title: "About"
+title: "About Page"
 sitemap:
   priority : 0.1
-layout: "about"
+layout: "aboutpage"
 ---
