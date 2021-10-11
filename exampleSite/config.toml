@@ -21,7 +21,7 @@ languageName = "En"
 weight = 1
 [[Languages.en.menu.main]]
 name = "focus"
-url = "/focus"
+url = "#focus"
 weight = 1
 [[Languages.en.menu.main]]
 name = "research"
@@ -49,7 +49,7 @@ url = "#mediathek"
 weight = 7
 [[Languages.en.menu.main]]
 name = "about"
-url = "/about"
+url = "#about"
 weight = 8
 [Languages.fr]
 contentDir = "content/french"
