@@ -49,7 +49,7 @@ url = "#mediathek"
 weight = 7
 [[Languages.en.menu.main]]
 name = "about"
-url = "#about"
+url = "/aboutpage"
 weight = 8
 [Languages.fr]
 contentDir = "content/french"
