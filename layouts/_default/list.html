@@ -15,7 +15,7 @@
       </div>
       {{"<!-- /section title -->" | safeHTML}}
 
-      <h6>{{ .URL }}</h6>
+      <h6>{{ .URL | absURL }}</h6>
 
       {{ $paginator := .Paginate .Data.Pages }}
       {{ range $paginator.Pages }}
