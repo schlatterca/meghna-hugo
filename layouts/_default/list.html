@@ -14,6 +14,9 @@
         </div>
       </div>
       {{"<!-- /section title -->" | safeHTML}}
+
+      <h6>{{ .Site.BaseURL }}</h6>
+      
       {{ $paginator := .Paginate .Data.Pages }}
       {{ range $paginator.Pages }}
 
