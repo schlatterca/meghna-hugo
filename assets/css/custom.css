@@ -249,8 +249,10 @@
 
 /*ARTICLES FOOTNOTES*/
 .footnotes_box {
-	/*display: block;*/
-	position: relative;
+	position: absolute;
+	float: right;
+	bottom: 0;
+
 	background-color: white;
 	z-index: 1;
 	border-radius: 1.2em;
@@ -262,10 +264,8 @@
 	height: 6em;
 	overflow: auto;
 
-	float: right;
-	margin-right: 4em;
-
-	margin-top: 2em;
+	/*margin-right: 4em;
+	margin-top: 2em;*/
 
 	display: flex;
 	flex-direction: row-reverse;
@@ -431,6 +431,7 @@ p > img {
 @media (min-width: 576px) {
 	.container {
 		max-width: 960px!important;
+		position: relative;
 	}
 
 	.navbar-expand-lg {
@@ -444,5 +445,6 @@ p > img {
 @media (min-width: 768px) {
 	.container {
 		max-width: 100%!important; /* was 960px!important */
+		position: relative;
 	}
 }
