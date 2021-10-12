@@ -17,10 +17,11 @@
       {{ $paginator := .Paginate .Data.Pages }}
       {{ range $paginator.Pages }}
 
-      <h2>{{ .Title }}</h2>
+
+      {{ if .Type }}
       <h2>{{ .Type }}</h2>
-      <h2>{{ .Params.author }}</h2>
-      
+      {{ end }}
+
       {{ .Render "article" }}
       {{ end }}
       <div class="col-12">
