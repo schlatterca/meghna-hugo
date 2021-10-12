@@ -22,7 +22,7 @@
       <h6>{{ .Type }}</h6>
       <h6>{{ .Params.subtype }}</h6>
 
-        {{ range .Pages }}
+        {{ range .Pages.Params.subtype }}
         <h6>{{ .Params.subtype }}</h6>
         {{ end }}
 
