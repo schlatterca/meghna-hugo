@@ -1,21 +1,22 @@
 +++
-author = "Tizio Tizi, Caio Cai, Sempronio Semproni"
+author = "Eric Kleinmann, Volker Haag"
 barberiniharpproject = ""
 description = ""
 downloads = ""
 externallinks = ""
 footnotes = ""
-image = "/images/img1.jpg"
+image = "/images/christina_barberini.jpg"
 person_tag = ["luigi rossi", "volker haag", "Franco Maria Mario Ricci", "jean Paul sartre", "carlo Azeglio ciampi", "Tizio Tizi", "Caio Cai", " Sempronio Semproni", "Tiziano", "Raffaello", "Stuart Little", "Chet Baker", "Michelangelo Michelangelo", "Raffaello Raffaello", "Michelangelo"]
 status = ""
+subtype = ["Organology", "Performance Practice"]
 tags = ""
-title = "Video Example"
+title = "Eric Video"
 titolo = ""
 titolo_blocchi = []
 type = "Research"
 
 +++
-Lipsum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+Delete the person tags from this article. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
 <div class="embed-responsive embed-responsive-16by9"> <iframe src="https://player.vimeo.com/video/367709381?color=ffffff&title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe> </div>
 
