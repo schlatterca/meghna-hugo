@@ -15,18 +15,12 @@
       </div>
       {{"<!-- /section title -->" | safeHTML}}
       {{ $paginator := .Paginate .Data.Pages }}
-      
-      {{ range .Paginator.Pages }}
-      <h2>{{ .Title }}</h2>
-      {{ end }}
-
-
       {{ range $paginator.Pages }}
 
-
       <h2>{{ .Title }}</h2>
+      <h2>{{ .Type }}</h2>
+      <h2>{{ .Params.author }}</h2>
       
-
       {{ .Render "article" }}
       {{ end }}
       <div class="col-12">
