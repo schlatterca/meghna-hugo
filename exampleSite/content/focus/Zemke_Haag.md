@@ -24,44 +24,88 @@ type = "Focus"
 +++
 ![](/images/2018-12-17_barbe-dav_lineup_cl_2020-06-10-09_52_51_16-still001.jpg)
 
+###### ???
+
 ![](/images/2018-12-17_barbe-dav_lineup_cl_2020-06-10-10_01_55_19-still005.jpg)
+
+###### National Museum of Musical Instruments, Barberini Harp wood examination, Valentina Zemke of the Thünen Institute for Wood Research setting up, Rome, 2018
 
 ![](/images/2018-12-17_barbe-dav_lineup_cl_2020-06-10-10_17_16_12-still006.jpg)
 
+###### National Museum of Musical Instruments, Barberini Harp wood examination, Valentina Zemke of the Thünen Institute for Wood Research setting up 3D Reflected Light Microscope’s integrated image analysis software, Rome, 2018
+
 ![](/images/2018-12-17_barbe-dav_lineup_cl_2020-06-10-10_51_53_06-still015.jpg)
+
+###### National Museum of Musical Instruments, Barberini Harp wood examination, Volker Haag of the Thünen Institute for Wood Research setting up 3D Reflected Light Microscope, Rome, 2018
 
 ![](/images/2018-12-17_barbe-dav_lineup_cl_2020-06-10-10_55_07_05-still020.jpg)
 
+###### ???
+
 ![](/images/2018-12-17_barbe-dav_lineup_cl_2020-06-10-10_55_22_16-still075.jpg)
+
+###### National Museum of Musical Instruments, Barberini Harp wood examination, Volker Haag of the Thünen Institute for Wood Research holding the illuminator for 3D Reflected Light Microscope against a part of the column, Rome, 2018
 
 ![](/images/2018-12-17_barbe-dav_lineup_cl_2020-06-10-11_11_36_24-still026.jpg)
 
+###### ???
+
 ![](/images/2018-12-17_barbe-dav_lineup_cl_2020-06-10-11_43_01_24-still079.jpg)
+
+###### National Museum of Musical Instruments, Barberini Harp wood examination, Volker Haag of the Thünen Institute for Wood Research, examining the base of the harp with the illuminator for 3D Reflected Light Microscope, Rome, 2018
 
 ![](/images/2018-12-17_barbe-dav_lineup_cl_2020-06-10-12_52_55_19-still053.jpg)
 
+###### ???
+
 ![](/images/2018-12-17_barbe-dav_lineup_cl_2020-06-10-13_07_30_08-still054.jpg)
+
+###### ???
 
 ![](/images/2018-12-17_barbe-dav_lineup_cl_2020-06-10-13_12_11_00-still056.jpg)
 
+###### National Museum of Musical Instruments, Barberini Harp wood examination, examination of a button, Rome, 2018
+
 ![](/images/2018-12-17_barbe-dav_lineup_cl_2020-06-10-13_20_57_03-still058.jpg)
+
+###### National Museum of Musical Instruments, Barberini Harp wood examination, examination of a button, Rome, 2018
 
 ![](/images/2018-12-17_barbe-dav_lineup_cl_2020-06-10-13_36_52_10-still062.jpg)
 
+###### ???
+
 ![](/images/2018-12-17_barbe-dav_lineup_cl_2020-06-10-13_44_43_04-still065.jpg)
+
+###### ???
 
 ![](/images/2018-12-17_barbe-dav_lineup_cl_2020-06-10-13_46_27_00-still064.jpg)
 
+###### ???
+
 ![](/images/2018-12-17_barbe-dav_lineup_cl_2020-06-10-13_50_01_14-still066.jpg)
+
+###### ???
 
 ![](/images/2018-12-17_barbe-dav_lineup_cl_2020-06-10-13_51_03_22-still067.jpg)
 
+###### ???
+
 ![](/images/2018-12-17_barbe-dav_lineup_cl_2020-06-10-14_01_06_03-still069.jpg)
+
+###### ???
 
 ![](/images/2018-12-17_barbe-dav_lineup_cl_2020-06-10-14_30_17_13-still071.jpg)
 
+###### ???
+
 ![](/images/2019-11-28_barbe-dav_lineup_2020-06-10-01_00_01_16-still007.jpg)
+
+###### Thünen Institute for Wood Research, Barberini Harp wood examination, Volker Haag at his desk, studying material yielded by the examination, Hamburg, 2018
 
 ![](/images/2019-11-28_barbe-dav_lineup_2020-06-10-01_10_42_13-still009.jpg)
 
+###### ???
+
 ![](/images/2019-11-28_barbe-dav_lineup_2020-06-10-01_12_39_22-still017.jpg)
+
+###### Thünen Institute for Wood Research, Barberini Harp wood examination, Volker Haag explaining the wood identification process, Hamburg, 2018
