@@ -8,6 +8,18 @@ fields:
     required: false
   label: type
   description: e.g. Focus, Research…
+- name: subtype
+  type: tag_list
+  default:
+  - Organology
+  - Performance Practice
+  - Musicology
+  - HL Editions
+  - Iconography
+  - Sociology of Art
+  label: subtype
+  description: Only used for Research articles. Delete the categories unrelated to
+    this specific article.
 - name: title
   type: text
   config:
