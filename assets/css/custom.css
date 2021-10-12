@@ -258,7 +258,7 @@
 	padding: 1em;
 	padding-top: 0.4em;
 	/*padding-right: 3em;*/
-	width: 20%;
+	width: 30%;
 	height: 6em;
 	overflow: auto;
 
@@ -268,7 +268,7 @@
 	margin-top: 2em;
 
 	display: flex;
-	flex-direction: row;
+	flex-direction: row-reverse;
 
 	transition: width 0.3s ease-out;
 
@@ -282,26 +282,27 @@
 
 .footnotes {
 	color: var(--purpleColor);
-	padding-right: .5em;
+	padding-left: 0em;
+	padding-right: 1em;
 	margin-bottom: .5em;
-
 	width: 90%;
+	position: absolute;
 }
 
 .open_footnotes_box {
 	color: var(--purpleColor);
 	font-size: 1.5rem;
-	line-height: 1.7rem;
+	line-height: 1.5rem;
 	height: fit-content;
 	transition: transform 0.3s ease-out;
 	transform: rotate(0deg);
 	transform-origin: center; /* this will be a svg turning + into - */
 
 	margin-left: 0px;
-	margin-right: -.5em;
+	margin-right: 0em;
 	position: sticky;
-	bottom: 0;
 	top: 0;
+	bottom: 0;
 }
 
 
