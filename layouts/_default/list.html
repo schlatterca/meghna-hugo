@@ -18,7 +18,8 @@
       {{ range $paginator.Pages }}
 
 
-      <h2>{{ $paginator.Pages.Title }}</h2>
+      <h2>{{ $paginator.Pages }}</h2>
+      <h2>{{ .Render "title" }}</h2>
       
 
       {{ .Render "article" }}
