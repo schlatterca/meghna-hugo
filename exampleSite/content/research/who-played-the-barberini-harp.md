@@ -8,6 +8,7 @@ footnotes = "FOOTNOTES&&\n&&\n1. Mara Galassi, “The arpa a tre registri in sev
 image = "/images/christina_barberini.jpg"
 person_tag = ["Marco Marazzoli", "Orazio Michi", "Luigi Rossi", "Giacomo Carissimi", "Volker Haag", "Alexandra Ziane", "Antonio Barberini", "Giovanni Lanfranco", "François Collignon", "Andrea Sacchi", "Virgilio Mazzocchi"]
 status = "draft"
+subtype = ["Musicology", "Performance Practice", "Sociology of Art"]
 tags = ""
 title = "Who played the Barberini Harp? Harpists of the first half of the 17th century in Rome"
 titolo = ""
