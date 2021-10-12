@@ -11,7 +11,7 @@ status = "draft"
 tags = ""
 title = "Who played the Barberini Harp? Harpists of the first half of the 17th century in Rome"
 titolo = ""
-type = "Research — Performance Practice Ciao"
+type = "Research"
 
 +++
 I cannot add facts or new hypotheses to the question of who really played the Barberini Harp. Rather, I wish to present a whole panorama of harpists who were active in the first half of the 17th century in Rome, discuss where they performed, the circles and contexts, issues they faced – and in this way, in fact, end up with the question of whether they could have played the Barberini Harp or a similar instrument.
