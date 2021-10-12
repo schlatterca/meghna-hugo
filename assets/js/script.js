@@ -70,7 +70,7 @@ if ( synopsisBoxExists ) {
 	}
 }
 
-/*OPEN FOOTNOTES BOX
+/*OPEN FOOTNOTES BOX*/
 var footnotesBoxExists = document.getElementsByClassName('open_footnotes_box')[0];
 
 if ( footnotesBoxExists ) {
@@ -89,7 +89,7 @@ if ( footnotesBoxExists ) {
 			this.footnotesboxisclosed = true;
 		}
 	}
-}*/
+}
 
 
 //BREAK LINES IN SYNOPSIS
@@ -112,13 +112,10 @@ if ( synopsis ) {
 	document.getElementsByClassName('synopsis_box')[0].append(paragraphBox);
 }
 
-/*BREAK LINES IN FOOTNOTES
+/*BREAK LINES IN FOOTNOTES*/
 var footnotes = document.getElementsByClassName('footnotes')[0];
-var plainfootnotes = footnotes.innerHTML.toString();
 
-if (( footnotes ) && (footnotes.innerHTML.toString() == "")) {
-	document.getElementsByClassName('footnotes_box')[0].remove();
-} else if (( footnotes ) && (footnotes.innerHTML.toString() != "")) {
+if ( footnotes ) {
 	var footnotes_paragraphs = footnotes.innerHTML.split('&amp;&amp;');
 
 	var paragraphBox = document.createElement('div');
@@ -133,7 +130,7 @@ if (( footnotes ) && (footnotes.innerHTML.toString() == "")) {
 	}
 	document.getElementsByClassName('footnotes')[0].innerHTML="";
 	document.getElementsByClassName('footnotes_box')[0].append(paragraphBox);
-}*/
+}
 
 //MAKE AUTHOR'S NAME A LINK
 var authorsNameExists = document.getElementById('this_article_author');
