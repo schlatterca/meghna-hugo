@@ -8,6 +8,7 @@ footnotes = ""
 image = "/images/1.jpeg"
 person_tag = ["Ursula Verena Fischer Pace"]
 status = "draft"
+subtype = ["Organology", "Iconography", "Sociology of Art"]
 tags = ""
 title = "Disegni per strumenti musicali"
 type = "Research"
