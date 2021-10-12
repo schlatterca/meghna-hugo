@@ -26,10 +26,9 @@
         <div class="post-single-content articleContent">
           {{ .Content }}
         </div>
-        <!--div class="mt-5"-->
-          {{/* .Date */}} <!--JUST TO TRY THE COMMENT-->
-        <!--/div-->
-
+        {{ if .Params.footnotes }}
+        <div id="extraspace"></div>
+        {{ end }}
       </div>
 
       {{ if .Params.footnotes }}
