@@ -6,11 +6,6 @@
 
 <section class="section">
 
-  <!--DELETE
-  <input type="button" id="theButton" value="Make it a link">
-  <p id="example" class="single">This is the kind of an example paragraph.</p>
-  DELETE-->
-
   <div class="container">
     <div class="row">
       <div class="col-lg-8 offset-lg-2 text-center">
@@ -35,16 +30,14 @@
           {{/* .Date */}} <!--JUST TO TRY THE COMMENT-->
         <!--/div-->
 
-        <!--div class="footnotes_box">
-          <p class="footnotes">FOOTNOTES<br><br>{{ .Params.footnotes }}</p>
+        {{ if .Params.footnotes }}
+        <div class="footnotes_box">
+          <p class="footnotes">FOOTNOTES: {{ .Params.footnotes }}</p>
           <div class="open_footnotes_box">+</div>
-        </div-->
-      </div>
+        </div>
+        {{ end }}
 
-      <!--div class="footnotes_box">
-        <p class="footnotes">{{ .Params.footnotes }}</p>
-        <div class="open_footnotes_box">+</div>
-      </div-->
+      </div>
 
     </div>
   </div>
