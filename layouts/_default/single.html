@@ -20,10 +20,12 @@
         
       </div>
 
+      {{ if .Description }}
       <div class="synopsis_box">
-        <p class="synopsis">{{ .Description }}</p>
+        <p class="synopsis">SYNOPSIS: {{ .Description }}</p>
         <div class="open_synopsis_box">+</div>
       </div>
+      {{ end }}
 
       <div class="col-lg-8 offset-lg-2">
         <div class="post-single-content articleContent">
