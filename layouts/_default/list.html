@@ -19,8 +19,11 @@
 
 
       {{ if eq .Type "Research" }}
-      <h2>{{ .Type }}</h2>
-      <h2>{{ .Params.subtype }}</h2>
+      <h5>{{ .Type }}</h5>
+      <h5>{{ .Params.subtype }}</h5>
+
+      <h5>{{ .Site }}</h5>
+      <h5>{{ .Site.Sections }}</h5>
       {{ end }}
 
 
