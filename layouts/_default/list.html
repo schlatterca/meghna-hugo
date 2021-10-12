@@ -13,6 +13,12 @@
           <div class="border-meghna"></div>
         </div>
       </div>
+
+      {{ if .HasChildren }}
+      <h2>CIAO</h2>
+      {{ end }}
+
+
       {{"<!-- /section title -->" | safeHTML}}
       {{ $paginator := .Paginate .Data.Pages }}
       {{ range $paginator.Pages }}
