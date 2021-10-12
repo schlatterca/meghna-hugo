@@ -18,7 +18,7 @@
       {{ range $paginator.Pages }}
 
 
-      {{ if .Type }}
+      {{ if eq .Type "Research" }}
       <h2>{{ .Type }}</h2>
       {{ end }}
 
