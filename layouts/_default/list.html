@@ -17,8 +17,10 @@
       {{ $paginator := .Paginate .Data.Pages }}
       {{ range $paginator.Pages }}
 
-        
-        <h2>CIAO</h2>
+
+      <h2>{{ .Paginate }}</h2>
+      <h2>{{ .Data.Pages }}</h2>
+      
 
       {{ .Render "article" }}
       {{ end }}
