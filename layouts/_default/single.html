@@ -30,14 +30,14 @@
           {{/* .Date */}} <!--JUST TO TRY THE COMMENT-->
         <!--/div-->
 
-        {{ if .Params.footnotes }}
-        <div class="footnotes_box">
-          <p class="footnotes">FOOTNOTES: {{ .Params.footnotes }}</p>
-          <div class="open_footnotes_box">+</div>
-        </div>
-        {{ end }}
-
       </div>
+
+      {{ if .Params.footnotes }}
+      <div class="footnotes_box">
+        <p class="footnotes">FOOTNOTES: {{ .Params.footnotes }}</p>
+        <div class="open_footnotes_box">+</div>
+      </div>
+      {{ end }}
 
     </div>
   </div>
