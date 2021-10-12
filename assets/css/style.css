@@ -54,6 +54,8 @@ h6 { /* moved from upper to be edited */
   max-width: 70%;
   margin-left: auto;
   margin-right: auto;
+  margin-top: -0.5rem;
+  margin-bottom: 1.5rem;
 }
 
 p {
