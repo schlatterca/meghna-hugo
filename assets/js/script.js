@@ -75,10 +75,10 @@ var footnotesBoxExists = document.getElementsByClassName('open_footnotes_box')[0
 
 if ( footnotesBoxExists ) {
 	document.getElementsByClassName('open_footnotes_box')[0].addEventListener('click', function(e) {
-	  toggleSynopsisBox();
+	  toggleFootnotesBox();
 	});
 	var footnotesboxisclosed = true;
-	function toggleSynopsisBox() {
+	function toggleFootnotesBox() {
 		if (footnotesboxisclosed) {
 			document.getElementsByClassName('open_footnotes_box')[0].style.transform = "rotate(45deg)";
 			document.getElementsByClassName('footnotes_box')[0].classList.add("isopen");
