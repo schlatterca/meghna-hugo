@@ -19,11 +19,17 @@
 
 
       {{ if eq .Type "Research" }}
-      <h5>{{ .Type }}</h5>
-      <h5>{{ .Params.subtype }}</h5>
+      <h6>{{ .Type }}</h6>
+      <h6>{{ .Params.subtype }}</h6>
 
-      <h5>{{ .Site }}</h5>
-      <h5>{{ .Site.Sections }}</h5>
+      <h6>{{ .Site }}</h6>
+      <h6>{{ .Site.Sections }}</h6>
+
+        {{ range $paginator.Pages }}
+        <h6>{{ .Params.subtype }}</h6>
+        {{ end }}
+
+
       {{ end }}
 
 
