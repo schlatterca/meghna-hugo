@@ -18,7 +18,7 @@
       {{ range $paginator.Pages }}
 
 
-      <h2>{{ .Data.Pages }}</h2>
+      <h2>{{ $paginator.Pages }}</h2>
       
 
       {{ .Render "article" }}
