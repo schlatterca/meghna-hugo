@@ -16,11 +16,6 @@
       {{"<!-- /section title -->" | safeHTML}}
       {{ $paginator := .Paginate .Data.Pages }}
       {{ range $paginator.Pages }}
-
-        {{ if .HasChildren }}
-        <h2>CIAO</h2>
-        {{ end }}
-      
       {{ .Render "article" }}
       {{ end }}
       <div class="col-12">
