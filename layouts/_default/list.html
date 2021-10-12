@@ -15,7 +15,8 @@
       </div>
       {{"<!-- /section title -->" | safeHTML}}
 
-      <h6>{{ .URL | absURL }}</h6>
+      <h6>{{ .URL }}</h6>
+      <h6>{{ .RelPermalink }}</h6>
 
       {{ $paginator := .Paginate .Data.Pages }}
       {{ range $paginator.Pages }}
@@ -25,6 +26,7 @@
       <h6>{{ .Type }}</h6>
       <h6>{{ .Params.subtype }}</h6>
       <h6>{{ .URL }}</h6>
+      <h6>{{ .RelPermalink }}</h6>
 
         {{ range .Pages }}
         <h6>{{ .Params.subtype }}</h6>
