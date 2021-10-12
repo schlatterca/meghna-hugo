@@ -14,7 +14,7 @@ title = "Disegni per strumenti musicali"
 type = "Research"
 
 +++
-Quadri con rappresentazioni di concerti, musicisti, strumenti musicali abbondano sia nella pittura italiana del Seicento che in quella fiamminga<sup>1</sup>. Gli strumenti musicali dipinti nei quadri spesso corrispondono a precisi esemplari di proprietà dei committenti dei quadri. E alcuni pittori si dilettavano in musica e fabbricavano strumenti musicali. Sappiamo p.e. che il Domenichino è stato costruttore e ideatore di sofisticati strumenti musicali. La sua intima conoscenza si evince dalle rappresentazioni di strumenti musicali nei suoi dipinti, p.e. l’arpa minuziosamente raffigurata nel quadro con _Il re Davide che suona l’arpa_<sup>2</sup>.
+Quadri con rappresentazioni di concerti, musicisti, strumenti musicali abbondano sia nella pittura italiana del Seicento che in quella fiamminga<sup>1</sup>. Gli strumenti musicali dipinti nei quadri spesso corrispondono a precisi esemplari di proprietà dei committenti dei quadri. E alcuni pittori si dilettavano in musica e fabbricavano strumenti musicali. Sappiamo p.e. che il Domenichino è stato costruttore e ideatore di sofisticati strumenti musicali.<!--more--> La sua intima conoscenza si evince dalle rappresentazioni di strumenti musicali nei suoi dipinti, p.e. l’arpa minuziosamente raffigurata nel quadro con _Il re Davide che suona l’arpa_<sup>2</sup>.
 
 ![](/images/1.jpeg)
 
