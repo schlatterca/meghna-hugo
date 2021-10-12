@@ -250,7 +250,7 @@
 /*ARTICLES FOOTNOTES*/
 .footnotes_box {
 	/*display: block;*/
-	position: absolute;
+	position: relative;
 	background-color: white;
 	z-index: 1;
 	border-radius: 1.2em;
@@ -259,13 +259,16 @@
 	padding-top: 0.4em;
 	/*padding-right: 3em;*/
 	width: 20%;
-	height: 12%;
+	height: 6em;
 	overflow: auto;
-	margin-left: 3vw; /*was 4em*/
+
+	float: right;
+	margin-right: 4em;
+
 	margin-top: 2em;
 
 	display: flex;
-	flex-direction: row-reverse;
+	flex-direction: row;
 
 	transition: width 0.3s ease-out;
 
@@ -281,6 +284,8 @@
 	color: var(--purpleColor);
 	padding-right: .5em;
 	margin-bottom: .5em;
+
+	width: 90%;
 }
 
 .open_footnotes_box {
@@ -289,7 +294,7 @@
 	line-height: 1.7rem;
 	height: fit-content;
 	transition: transform 0.3s ease-out;
-	transform: rotate(45deg);
+	transform: rotate(0deg);
 	transform-origin: center; /* this will be a svg turning + into - */
 
 	margin-left: 0px;
