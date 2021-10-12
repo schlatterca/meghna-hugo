@@ -3,7 +3,7 @@
 {{ partial "navigation.html" . }}
 
 {{"<!-- Start Blog Section -->" | safeHTML}}
-<section id="blog" class="section">
+<section onload="research_section()" id="blog" class="section">
   <div class="container">
     <div class="row">
       <div class="col-12">
@@ -49,11 +49,18 @@
 {{"<!-- /blog -->" | safeHTML}}
 
 <script>
-  var url = window.location.href;
-  if(url.includes('#')) {
-    var url = url.split('#');
-    console.log(url[1]);
+
+  function research_section() {
+    var url = window.location.href;
+    if(url.includes('#')) {
+      var url = url.split('#');
+      console.log(url[1]);
+    }
+    if(url[1] == "organology") {
+      console.log("ok");
+    }
   }
+  
 </script>
 
 {{ end }}
