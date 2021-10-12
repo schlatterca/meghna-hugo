@@ -22,10 +22,7 @@
       <h6>{{ .Type }}</h6>
       <h6>{{ .Params.subtype }}</h6>
 
-      <h6>{{ .Site }}</h6>
-      <h6>{{ .Site.Sections }}</h6>
-
-        {{ range $paginator.Pages }}
+        {{ range .Pages }}
         <h6>{{ .Params.subtype }}</h6>
         {{ end }}
 
