@@ -5,8 +5,7 @@
     </div>
 
     <div class="content">
-      
-      <img class="img-fluid lozad" src='{{ .Params.image | absURL }}'>
+      <img class="img-fluid lozad" data-src="{{ .Params.Image_webp | absURL }}" onerror="this.onerror=console.log('ops');this.src='{{ .Params.image | absURL }}'">
       <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
       <p>{{ .Summary }}</p>
       <a class="btn btn-transparent" href="{{ .Permalink }}">{{ i18n "readMore" }}</a>
