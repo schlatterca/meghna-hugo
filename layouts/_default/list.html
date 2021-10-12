@@ -29,7 +29,6 @@
       <h6>{{ .Type }}</h6>
       <h6>{{ .Params.subtype }}</h6>
       <h6>{{ .URL }}</h6>
-      <h6>{{ .Permalink }}</h6>
 
         {{ range .Pages }}
         <h6>{{ .Params.subtype }}</h6>
@@ -48,5 +47,13 @@
   </div>
 </section>
 {{"<!-- /blog -->" | safeHTML}}
+
+<script>
+  var url = window.location.href;
+  if(url.includes('#')) {
+    var url = url.split('#');
+    console.log(url[1]);
+  }
+</script>
 
 {{ end }}
