@@ -15,8 +15,8 @@
       </div>
       {{"<!-- /section title -->" | safeHTML}}
 
-      <h6>{{ .Site.BaseURL }}</h6>
-      
+      <h6>{{ .Site.URL }}</h6>
+
       {{ $paginator := .Paginate .Data.Pages }}
       {{ range $paginator.Pages }}
 
@@ -24,7 +24,8 @@
       {{ if eq .Type "Research" }}
       <h6>{{ .Type }}</h6>
       <h6>{{ .Params.subtype }}</h6>
-      <h6>{{ .Site.BaseURL }}</h6>
+      <h6>{{ .Site.URL }}</h6>
+      <h6>{{ .Pages.URL }}</h6>
 
         {{ range .Pages }}
         <h6>{{ .Params.subtype }}</h6>
