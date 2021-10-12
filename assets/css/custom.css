@@ -361,6 +361,7 @@
 	width: 100%;
 	height: 14em;
 	object-fit: cover;
+	border-radius: .8em;
 }
 
 
@@ -406,6 +407,10 @@ p > img {
 	font-size: 1.5rem;
 	/*font-weight: 800;
 	font-family: "Quattrocento Sans", sans-serif;*/
+}
+
+#bibliografia {
+	margin-top: 2em;
 }
 
 /*GENERAL*/
