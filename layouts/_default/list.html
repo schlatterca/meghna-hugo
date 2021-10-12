@@ -15,14 +15,21 @@
       </div>
       {{"<!-- /section title -->" | safeHTML}}
       {{ $paginator := .Paginate .Data.Pages }}
+      
+      {{ range .Paginator.Pages }}
+      <h2>ciao</h2>
+      <h2>{{ .Title }}</h2>
+      {{ end }}
+
+
       {{ range $paginator.Pages }}
 
 
       <h2>{{ $paginator.Pages }}</h2>
       <h2>{{ .Data.Pages }}</h2>
       <h2>{{ .Data }}</h2>
+
       <h2>{{ .Data.Content }}</h2>
-      
       <h2>{{ .Data.Title }}</h2>
       <h2>{{ .Data.Page }}</h2>
       <h2>{{ .Render "title" }}</h2>
