@@ -350,6 +350,14 @@
 
 
 
+/*RESEARCH AND FOCUS PAGES*/
+.img-fluid {
+	width: 100%;
+	height: 14em;
+	object-fit: cover;
+}
+
+
 /*ARTICLES*/
 .article_info{ /*unused?*/
 	margin-bottom: 1em;
