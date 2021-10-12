@@ -24,8 +24,8 @@
       {{ if eq .Type "Research" }}
       <h6>{{ .Type }}</h6>
       <h6>{{ .Params.subtype }}</h6>
-      <h6>{{ .Site.URL }}</h6>
-      <h6>{{ .Pages.URL }}</h6>
+      <h6>{{ .Site }}</h6>
+      <h6>{{ .Pages }}</h6>
 
         {{ range .Pages }}
         <h6>{{ .Params.subtype }}</h6>
