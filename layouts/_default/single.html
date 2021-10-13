@@ -167,6 +167,19 @@
               var y = e.pageY;
               var box = $("#fn_appear");
 
+
+              if(x < window.innerWidth/2){
+                console.log("left");
+              } else {
+                console.log("right");
+              }
+
+              
+
+
+
+
+
               var fn_paragraph = document.createElement('p');
               var fn_insideText = document.createTextNode(footnotes[this.innerText].innerText);
               fn_paragraph.setAttribute('class', 'footnotes');
@@ -176,8 +189,6 @@
                 box.empty();
               }
 
-              console.log(fn_paragraph);
-              console.log(box.innerHTML);
               box.append(fn_paragraph);
 
               box.css('display', 'block');
