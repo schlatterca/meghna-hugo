@@ -151,10 +151,11 @@
         $('sup').each(
           function() {
             $(this).prop('id', 'footnote');
-            /*$(this).click(function() {
+
+            $(this).click(function() {
               alert(footnotes[this.innerText].innerText);
               return false; //break the "each" loop
-            });*/
+            });
 
             $(this).on("click", function(e) {
               var x = e.pageX;
@@ -164,6 +165,8 @@
               box.css('position', 'absolute');
               box.css("left", x);
               box.css("top", y);
+
+              console.log("ok", x, y);
             })
           }
         );
