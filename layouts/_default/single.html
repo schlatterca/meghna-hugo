@@ -171,7 +171,9 @@
               var fn_insideText = document.createTextNode(footnotes[this.innerText].innerText);
               fn_paragraph.setAttribute('class', 'footnotes');
               fn_paragraph.appendChild(fn_insideText);
-              box.appendChild(fn_paragraph);
+              //box.appendChild(fn_paragraph);
+              //$( ".inner" ).append( "<p>Test</p>" );
+              box.append(fn_paragraph);
 
               box.css('display', 'block');
               box.css('position', 'absolute');
