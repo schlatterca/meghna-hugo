@@ -315,7 +315,7 @@
 	display: none;
 
 	position: absolute;
-	background-color: red;
+	background-color: white;
 	z-index: 1;
 	border-radius: 1.2em;
 	border: 0.15em solid var(--purpleColor);
