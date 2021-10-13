@@ -167,6 +167,8 @@
               var y = e.pageY;
               var box = $("#fn_appear");
 
+              box.innerHTML="";
+
               var fn_paragraph = document.createElement('p');
               var fn_insideText = document.createTextNode(footnotes[this.innerText].innerText);
               fn_paragraph.setAttribute('class', 'footnotes');
