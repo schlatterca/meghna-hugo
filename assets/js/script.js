@@ -128,11 +128,11 @@ if ( footnotes ) {
 		paragraph.appendChild(paragraphText);
 		if (i == footnotes_paragraphs.length-1){
 			var extraSpace = document.createTextNode("ciao");
-			var extraSpace2 = document.createTextNode("");
+			var extraSpace2 = document.createTextNode("&nbsp;");
 			var extraSpace3 = document.createTextNode(" ");
 			paragraph.append(extraSpace);
 			paragraph.append(extraSpace2);
-			paragraph.append(extraSpace3);
+			paragraph.appendChild(extraSpace3);
 		}
 		paragraphBox.appendChild(paragraph);
 	}
