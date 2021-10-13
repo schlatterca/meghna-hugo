@@ -132,8 +132,9 @@ if ( footnotes ) {
 			var extraSpace = document.createTextNode("ciao");
 			var extraSpace2 = document.createTextNode("&nbsp;");
 			var extraSpace3 = document.createTextNode(" ");
-			paragraph.append(extraSpace);
-			paragraph.append(extraSpace2);
+			paragraph.setAttribute('class', 'footnotes');
+			paragraph.appendChild(extraSpace);
+			paragraph.appendChild(extraSpace2);
 			paragraph.appendChild(extraSpace3);
 			paragraphBox.appendChild(paragraph_extraSpace);
 		}
