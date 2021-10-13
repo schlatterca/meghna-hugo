@@ -272,6 +272,7 @@ a:hover {
 .section {
   padding: 30px 0; /*was 100px 0*/
   margin-left: 50px; /*added, same margin as sidebar's width*/
+  margin-right: 50px; /*to center the section*/
   transition: margin-left 0.3s ease-out;
 }
 
