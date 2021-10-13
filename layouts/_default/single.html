@@ -204,10 +204,17 @@
 
 
   //make a downloadable pdf
-  var element = document.getElementById('this_article_title');
+  var element = document.getElementsByClassName('container')[0];
+  var opt = {
+    margin:       1,
+    filename:     'myfile.pdf',
+    image:        { type: 'jpeg', quality: 0.98 },
+    html2canvas:  { scale: 2 },
+    jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait' }
+  };
 
   $("#this_article_title").on("click", function() {
-    html2pdf(element);
+    html2pdf().set(opt).from(element).save();
   })
   
 
