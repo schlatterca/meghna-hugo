@@ -141,19 +141,16 @@
   var footnotes = document.getElementsByClassName('footnotes')[0];
 
   if ( footnotes ) {
-    var footnotes_paragraphs = footnotes.innerHTML;
 
-    for (let i = 0; i < footnotes_paragraphs.length; i++) {
-      console.log(footnotes_paragraphs[i]);
+    for (let i = 0; i < footnotes.length; i++) {
+      console.log(footnotes);
+      console.log(footnotes.innerHTML);
     }
-  } else {
-    console.log("sorry");
   }
 
   $('sup').each(
     function() {
       //console.log($(this));
-      console.log(footnotes_box.innerHTML);
       $(this).prop('id', 'footnote');
       $(this).click(function() {
         alert("ciao");
