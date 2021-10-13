@@ -146,18 +146,16 @@
 
       for (let i = 0; i < footnotes.length; i++) {
 
-        console.log(footnotes.length);
-        console.log(footnotes);
-        console.log(footnotes[i]);
         console.log(footnotes[i].innerText);
-        console.log(footnotes[i].innerHTML);
 
         $('sup').each(
           function() {
             //console.log($(this));
             $(this).prop('id', 'footnote');
             $(this).click(function() {
-              alert(this.innerText);
+              //alert(this.innerText);
+              alert(footnotes[this.innerText].innerText);
+              break;
             });
           }
         );
