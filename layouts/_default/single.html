@@ -161,13 +161,6 @@
             });*/
 
             $(this).on("mouseover", function(e) {
-              if(x < window.innerWidth/2){
-                var x = e.pageX;
-              } else {
-                var x = window.innerWidth-e.pageX;
-              }
-
-              var y = e.pageY;
               var box = $("#fn_appear");
 
               var fn_paragraph = document.createElement('p');
@@ -183,14 +176,18 @@
               box.css('display', 'block');
               box.css('position', 'absolute');
 
+              var y = e.pageY;
+
               if(x < window.innerWidth/2){
-                box.css("left", "unset");
-                box.css("right", x);
-                console.log("right", window.innerWidth, x);
-              } else {
+                var x = e.pageX;
                 box.css("left", x);
                 box.css("right", "unset");
-                console.log("left", window.innerWidth, x);
+                console.log("left", x, window.innerWidth);
+              } else {
+                var x = window.innerWidth-e.pageX;
+                box.css("left", "unset");
+                box.css("right", x);
+                console.log("right", x, window.innerWidth);
               }
               box.css("top", y);
             });
