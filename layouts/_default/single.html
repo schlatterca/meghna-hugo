@@ -5,6 +5,10 @@
 {{/* - partial "footer.html" . -*/}}
 
 <section class="section">
+  
+  {{ if .Params.footnotes }}
+  <div id="fn_appear"></div>
+  {{ end }}
 
   <div class="container">
     <div class="row">
@@ -28,7 +32,6 @@
         </div>
         {{ if .Params.footnotes }}
         <div id="extraspace"></div>
-        <div id="fn_appear"></div>
         {{ end }}
       </div>
 
@@ -158,7 +161,7 @@
               return false; //break the "each" loop
             });
 
-            $(this).on("click", function(e) {
+            $(this).on("mouseover", function(e) {
               var x = e.pageX;
               var y = e.pageY;
               var box = $("#fn_appear");
