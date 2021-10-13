@@ -151,8 +151,6 @@
 
       for (let i = 0; i < footnotes.length; i++) {
 
-        console.log(footnotes[i].innerText);
-
         $('sup').each(
           function() {
             $(this).prop('id', 'footnote');
@@ -188,9 +186,11 @@
               if(x < window.innerWidth/2){
                 box.css("left", x);
                 box.css("right", "unset");
+                console.log("left", window.innerWidth, x);
               } else {
                 box.css("left", "unset");
                 box.css("right", x);
+                console.log("right", window.innerWidth, x);
               }
               box.css("top", y);
             });
