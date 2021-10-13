@@ -223,6 +223,7 @@
 	color: var(--purpleColor);
 	padding-right: .5em;
 	margin-bottom: .5em;
+	line-break: normal;
 }
 
 .open_synopsis_box {
@@ -287,6 +288,7 @@
 	color: var(--purpleColor);
 	padding-left: 0em;
 	margin-bottom: .5em;
+	line-break: normal;
 	/*left: 0;
 	width: 100%;
 	position: absolute;*/
