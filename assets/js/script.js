@@ -129,6 +129,8 @@ if ( footnotes ) {
 		paragraphBox.appendChild(paragraph);
 		if (i == footnotes_paragraphs.length-1){
 			var paragraph_extraSpace = document.createElement('p');
+			var extraSpace = document.createTextNode(" ");
+			paragraph_extraSpace.appendChild('extraSpace');
 			paragraph_extraSpace.setAttribute('class', 'footnotes');
 			paragraph_extraSpace.style.whiteSpace = 'break-spaces';
 			paragraphBox.appendChild(paragraph_extraSpace);
