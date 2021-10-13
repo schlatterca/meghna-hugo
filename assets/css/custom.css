@@ -251,6 +251,7 @@
 .footnotes_box {
 	position: absolute;
 	float: right;
+	right: 0;
 	bottom: 0;
 
 	background-color: white;
@@ -264,7 +265,7 @@
 	height: 6em;
 	overflow: auto;
 
-	margin-left: 60%;
+	margin-right: 10%;
 
 	display: flex;
 	flex-direction: row-reverse;
@@ -275,6 +276,11 @@
 
 .footnotes_box::-webkit-scrollbar {
   display: none; /* Hide scrollbar for Chrome, Safari and Opera */
+}
+
+.isopen_footnotes{
+	width: 60%;
+	height: 33em;
 }
 
 .footnotes {
