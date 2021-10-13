@@ -162,6 +162,8 @@
 
             $(this).on("mouseover", function(e) {
               var box = $("#fn_appear");
+              var y = e.pageY;
+              var x = e.pageX;
 
               var fn_paragraph = document.createElement('p');
               var fn_insideText = document.createTextNode(footnotes[this.innerText].innerText);
@@ -176,15 +178,13 @@
               box.css('display', 'block');
               box.css('position', 'absolute');
 
-              var y = e.pageY;
-
               if(x < window.innerWidth/2){
-                var x = e.pageX;
+                x = e.pageX;
                 box.css("left", x);
                 box.css("right", "unset");
                 console.log("left", x, window.innerWidth);
               } else {
-                var x = window.innerWidth-e.pageX;
+                x = window.innerWidth-e.pageX;
                 box.css("left", "unset");
                 box.css("right", x);
                 console.log("right", x, window.innerWidth);
