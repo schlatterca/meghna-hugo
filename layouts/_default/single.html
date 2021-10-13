@@ -202,6 +202,15 @@
     }
   })
 
+
+  //make a downloadable pdf
+  var element = document.getElementById('this_article_title');
+
+  $("#this_article_title").on("click", function() {
+    html2pdf(element);
+  })
+  
+
 </script>
 
 {{ end }}
