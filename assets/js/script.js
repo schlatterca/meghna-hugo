@@ -112,7 +112,7 @@ if ( synopsis ) {
 	document.getElementsByClassName('synopsis_box')[0].append(paragraphBox);
 }
 
-/*BREAK LINES IN FOOTNOTES
+//BREAK LINES IN FOOTNOTES
 var footnotes = document.getElementsByClassName('footnotes')[0];
 
 if ( footnotes ) {
@@ -130,7 +130,7 @@ if ( footnotes ) {
 	}
 	document.getElementsByClassName('footnotes')[0].innerHTML="";
 	document.getElementsByClassName('footnotes_box')[0].append(paragraphBox);
-}*/
+}
 
 //MAKE AUTHOR'S NAME A LINK
 var authorsNameExists = document.getElementById('this_article_author');
