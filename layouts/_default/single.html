@@ -182,12 +182,10 @@
                 x = e.pageX;
                 box.css("left", x);
                 box.css("right", "unset");
-                console.log("left", x, window.innerWidth);
               } else {
                 x = window.innerWidth-e.pageX;
                 box.css("left", "unset");
                 box.css("right", x);
-                console.log("right", x, window.innerWidth);
               }
               box.css("top", y);
             });
@@ -205,5 +203,8 @@
   })
 
 </script>
+
+<script src="js/html2pdf.bundle.min.js"></script>
+<script>console.log("ok")</script>
 
 {{ end }}
