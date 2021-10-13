@@ -141,6 +141,7 @@
   $('sup').each(
     function() {
       console.log($(this));
+      $(this).html('<sup id="#footnote' + this.innerText() + '">' + this.innerText() + '</sup>');
     }
   );
 
