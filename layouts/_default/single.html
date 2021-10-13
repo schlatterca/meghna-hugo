@@ -144,20 +144,20 @@
 
     for (let i = 0; i < footnotes.length; i++) {
 
+      console.log(footnotes);
+      console.log(footnotes[i]);
+      console.log(footnotes[i].innerText);
+      console.log(footnotes[i].innerHTML);
+
       $('sup').each(
         function() {
           //console.log($(this));
           $(this).prop('id', 'footnote');
           $(this).click(function() {
-            alert("ciao");
+            alert(this.innerText);
           });
         }
       );
-
-    console.log(footnotes);
-    console.log(footnotes[i]);
-    console.log(footnotes[i].innerText);
-    console.log(footnotes[i].innerHTML);
 
     }
   }
