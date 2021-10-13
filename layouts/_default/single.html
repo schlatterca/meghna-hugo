@@ -138,37 +138,34 @@
   );
 
   //make footnotes interactive
-  var footnotes = document.getElementsByClassName('footnotes');
-
+  //wait until the page is loaded and footnotes are replaced
   window.addEventListener('load', function () {
-  var eles = document.getElementsByClassName('footnotes');
-  console.log(eles);
-  console.log(eles.length);
-  console.log(eles[1]);
+    var footnotes = document.getElementsByClassName('footnotes');
+
+    if ( footnotes ) {
+
+      for (let i = 0; i < footnotes.length; i++) {
+
+        console.log(footnotes.length);
+        console.log(footnotes);
+        console.log(footnotes[i]);
+        console.log(footnotes[i].innerText);
+        console.log(footnotes[i].innerHTML);
+
+        $('sup').each(
+          function() {
+            //console.log($(this));
+            $(this).prop('id', 'footnote');
+            $(this).click(function() {
+              alert(this.innerText);
+            });
+          }
+        );
+
+      }
+    }
   })
 
-  if ( footnotes ) {
-
-    for (let i = 0; i < footnotes.length; i++) {
-
-      console.log(footnotes.length);
-      console.log(footnotes);
-      console.log(footnotes[i]);
-      console.log(footnotes[i].innerText);
-      console.log(footnotes[i].innerHTML);
-
-      $('sup').each(
-        function() {
-          //console.log($(this));
-          $(this).prop('id', 'footnote');
-          $(this).click(function() {
-            alert(this.innerText);
-          });
-        }
-      );
-
-    }
-  }
-
 </script>
+
 {{ end }}
