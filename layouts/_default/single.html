@@ -172,10 +172,10 @@
               fn_paragraph.setAttribute('class', 'footnotes');
               fn_paragraph.appendChild(fn_insideText);
 
-              if (box.contains(fn_paragraph)) {
+              if (box.children().length > 0 ) {
                 box.empty();
               }
-              
+
               console.log(fn_paragraph);
               console.log(box.innerHTML);
               box.append(fn_paragraph);
