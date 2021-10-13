@@ -414,6 +414,10 @@ p > img {
 	font-family: "Quattrocento Sans", sans-serif;*/
 }
 
+#footnote {
+	color: var(--purpleColor);
+}
+
 #bibliografia {
 	margin-top: 2em;
 }
