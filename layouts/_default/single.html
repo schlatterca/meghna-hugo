@@ -171,19 +171,18 @@
               var fn_insideText = document.createTextNode(footnotes[this.innerText].innerText);
               fn_paragraph.setAttribute('class', 'footnotes');
               fn_paragraph.appendChild(fn_insideText);
-              //box.appendChild(fn_paragraph);
-              //$( ".inner" ).append( "<p>Test</p>" );
+
+              console.log(fn_paragraph);
               box.append(fn_paragraph);
 
               box.css('display', 'block');
               box.css('position', 'absolute');
               box.css("left", x);
               box.css("top", y);
-
-              console.log("ok", x, y, box);
             });
 
             $(this).on("mouseout", function(e) {
+              var box = $("#fn_appear");
               box.css('display', 'none');
             });
           }
