@@ -126,6 +126,10 @@ if ( footnotes ) {
 		var paragraphText = document.createTextNode(footnotes_paragraphs[i]);
 		paragraph.setAttribute('class', 'footnotes');
 		paragraph.appendChild(paragraphText);
+		if (i == footnotes_paragraphs.length-1){
+			var extraSpace = document.createTextNode("ciao");
+			paragraph.appendChild(extraSpace);
+		}
 		paragraphBox.appendChild(paragraph);
 	}
 	document.getElementsByClassName('footnotes')[0].innerHTML="";
