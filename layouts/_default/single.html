@@ -150,15 +150,14 @@
 
         $('sup').each(
           function() {
-            //console.log($(this));
             $(this).prop('id', 'footnote');
             $(this).click(function() {
-              //alert(this.innerText);
               alert(footnotes[this.innerText].innerText);
-              return false;
+              return false; //break the "each" loop
             });
           }
         );
+        break; //break the "for" loop
 
       }
     }
