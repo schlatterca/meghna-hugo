@@ -140,6 +140,13 @@
   //make footnotes interactive
   var footnotes = document.getElementsByClassName('footnotes');
 
+  window.addEventListener('load', function () {
+  var eles = document.getElementsByClassName('footnotes');
+  console.log(eles);
+  console.log(eles.length);
+  console.log(eles[0]);
+  })
+
   if ( footnotes ) {
 
     for (let i = 0; i < footnotes.length; i++) {
