@@ -126,15 +126,17 @@ if ( footnotes ) {
 		var paragraphText = document.createTextNode(footnotes_paragraphs[i]);
 		paragraph.setAttribute('class', 'footnotes');
 		paragraph.appendChild(paragraphText);
+		paragraphBox.appendChild(paragraph);
 		if (i == footnotes_paragraphs.length-1){
+			var paragraph_extraSpace = document.createElement('p');
 			var extraSpace = document.createTextNode("ciao");
 			var extraSpace2 = document.createTextNode("&nbsp;");
 			var extraSpace3 = document.createTextNode(" ");
 			paragraph.append(extraSpace);
 			paragraph.append(extraSpace2);
 			paragraph.appendChild(extraSpace3);
+			paragraphBox.appendChild(paragraph_extraSpace);
 		}
-		paragraphBox.appendChild(paragraph);
 	}
 	document.getElementsByClassName('footnotes')[0].innerHTML="";
 	document.getElementsByClassName('footnotes_box')[0].append(paragraphBox);
