@@ -81,11 +81,11 @@ if ( footnotesBoxExists ) {
 	function toggleFootnotesBox() {
 		if (footnotesboxisclosed) {
 			document.getElementsByClassName('open_footnotes_box')[0].style.transform = "rotate(45deg)";
-			document.getElementsByClassName('footnotes_box')[0].classList.add("isopen");
+			document.getElementsByClassName('footnotes_box')[0].classList.add("isopen_footnotes");
 			this.footnotesboxisclosed = false;
 		} else {
 			document.getElementsByClassName('open_footnotes_box')[0].style.transform = "rotate(0deg)";
-			document.getElementsByClassName('footnotes_box')[0].classList.remove("isopen");
+			document.getElementsByClassName('footnotes_box')[0].classList.remove("isopen_footnotes");
 			this.footnotesboxisclosed = true;
 		}
 	}
