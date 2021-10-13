@@ -130,7 +130,7 @@ if ( footnotes ) {
 		if (i == footnotes_paragraphs.length-1){
 			var paragraph_extraSpace = document.createElement('p');
 			paragraph_extraSpace.setAttribute('class', 'footnotes');
-			paragraph_extraSpace.setAttribute('white-space', 'break-spaces');
+			paragraph_extraSpace.style.whiteSpace = 'break-spaces';
 			paragraphBox.appendChild(paragraph_extraSpace);
 		}
 	}
