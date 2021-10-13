@@ -141,7 +141,7 @@
   $('sup').each(
     function() {
       console.log($(this));
-      $(this).html('<span id="#footnote">' + this.innerText + '</span>');
+      $(this).prop('id', 'footnote');
       $(this).click(function() {
         alert("ciao");
       });
