@@ -28,6 +28,7 @@
         </div>
         {{ if .Params.footnotes }}
         <div id="extraspace"></div>
+        <div id="fn_appear"></div>
         {{ end }}
       </div>
 
@@ -166,7 +167,7 @@
               box.css("left", x);
               box.css("top", y);
 
-              console.log("ok", x, y);
+              console.log("ok", x, y, box);
             })
           }
         );
