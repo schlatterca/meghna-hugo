@@ -214,7 +214,8 @@
   };
 
   $("#this_article_title").on("click", function() {
-    html2pdf().set(opt).from(element).save();
+    var worker = html2pdf().set(opt).from(element).save();
+    //html2pdf().set(opt).from(element).save();
   })
   
 
