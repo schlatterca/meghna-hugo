@@ -285,11 +285,11 @@
 
 .footnotes {
 	color: var(--purpleColor);
-	padding-left: 1em;
-	left: 0;
+	padding-left: 0em;
 	margin-bottom: .5em;
-	width: 90%;
-	position: absolute;
+	/*left: 0;
+	width: 100%;
+	position: absolute;*/
 }
 
 .open_footnotes_box {
