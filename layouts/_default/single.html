@@ -138,11 +138,12 @@
   );
 
   //make footnotes interactive
-  var footnotes = document.getElementsByClassName('footnotes')[0];
+  var footnotes = document.getElementsByClassName('footnotes');
 
   if ( footnotes ) {
 
     for (let i = 0; i < footnotes.length; i++) {
+      console.log("ciao");
       console.log(footnotes);
       console.log(footnotes.innerHTML);
     }
