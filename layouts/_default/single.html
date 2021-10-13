@@ -5,11 +5,6 @@
 {{/* - partial "footer.html" . -*/}}
 
 <section class="section">
-  
-  {{ if .Params.footnotes }}
-  <div id="fn_appear"></div>
-  {{ end }}
-
   <div class="container">
     <div class="row">
       <div class="col-lg-8 offset-lg-2 text-center">
@@ -44,6 +39,12 @@
 
     </div>
   </div>
+
+  <!--if there are footnotes, the box appears on each footnote number-->
+  {{ if .Params.footnotes }}
+  <div id="fn_appear"></div>
+  {{ end }}
+
 </section>
 
 <footer>
@@ -156,15 +157,22 @@
           function() {
             $(this).prop('id', 'footnote');
 
-            $(this).click(function() {
+            /*$(this).click(function() {
               alert(footnotes[this.innerText].innerText);
               return false; //break the "each" loop
-            });
+            });*/
 
             $(this).on("mouseover", function(e) {
               var x = e.pageX;
               var y = e.pageY;
               var box = $("#fn_appear");
+
+              var fn_paragraph = document.createElement('p');
+              var fn_insideText = document.createTextNode(footnotes[this.innerText].innerText);
+              fn_paragraph.setAttribute('class', 'footnotes');
+              fn_paragraph.appendChild(fn_insideText);
+              box.appendChild(fn_paragraph);
+
               box.css('display', 'block');
               box.css('position', 'absolute');
               box.css("left", x);
@@ -172,6 +180,10 @@
 
               console.log("ok", x, y, box);
             })
+
+            $(this).on("mouseout", function(e) {
+              box.css('display', 'none');
+            }
           }
         );
         break; //break the "for" loop
