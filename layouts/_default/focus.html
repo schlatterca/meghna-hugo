@@ -10,37 +10,16 @@
         {{"<!-- section title -->" | safeHTML}}
         <div class="title text-center wow fadeInDown">
           <h2>{{ .Title }}</h2>
-          <h2>CIAO</h2>
           <div class="border-meghna"></div>
         </div>
       </div>
       {{"<!-- /section title -->" | safeHTML}}
-
-      <h6>{{/* .URL */}}</h6>
-      <h6>{{/* .RelPermalink */}}</h6>
-      <h6>{{/* .Permalink */}}</h6>
-      <h6>{{/* .Page.Permalink */}}</h6>
       
-
       {{ $paginator := .Paginate .Data.Pages }}
       {{ range $paginator.Pages }}
-
-
-      {{ if eq .Type "Research" }}
-      <h6>{{/* .Type */}}</h6>
-      <h6>{{/* .Params.subtype */}}</h6>
-      <h6>{{/* .URL */}}</h6>
-
-        {{ range .Pages }}
-        <h6>{{/* .Params.subtype */}}</h6>
-        {{ end }}
-
-
+      {{ .Render "article_onepage" }}
       {{ end }}
 
-
-      {{ .Render "article" }}
-      {{ end }}
       <div class="col-12">
         {{ template "_internal/pagination.html" . }}
       </div>
