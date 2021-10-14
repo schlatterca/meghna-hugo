@@ -133,8 +133,12 @@ iframe {
   background-color: transparent;
   color: black; /*was white*/
   padding: 10px 30px;
-  border-radius: 0;
   transition: all .3s ease-in 0s;
+  border-radius: .8em;
+  margin-left: auto;
+  margin-right: auto;
+  width: fit-content;
+  display: block;
 }
 
 .btn:focus {
