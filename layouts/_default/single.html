@@ -148,6 +148,7 @@
   //FOOTER:
   //make each external link clickable
   var extlinks = {{ .Params.externallinks }};
+  document.getElementsByClassName('footer_insidebox_3')[0].innerHTML = "";
 
   if (extlinks.includes(', ')){
     var extlinks_array = extlinks.split(', ');
@@ -156,6 +157,7 @@
       let extlink_par = document.createElement('p');
       let extlink_text = document.createTextNode(extlinks_array[i]);
 
+      extlink_par.setAttribute('class', 'footer_insidetext extlinks');
       extlink_par.appendChild(extlink_text);
       document.getElementsByClassName('footer_insidebox_3')[0].append(extlink_par);
 
