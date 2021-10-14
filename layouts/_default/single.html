@@ -151,15 +151,15 @@
 
   if (extlinks.includes(', ')){
     var extlinks_array = extlinks.split(', ');
-    for (let i = 0; i < extlinks.length; i++) { //for each result in "extlinks"…
+    for (let i = 0; i < extlinks_array.length; i++) { //for each result in "extlinks"…
       
       let extlink_par = document.createElement('p');
-      let extlink_text = document.createTextNode(extlinks[i]);
+      let extlink_text = document.createTextNode(extlinks_array[i]);
 
       extlink_par.appendChild(extlink_text);
       document.getElementsByClassName('footer_insidebox_3')[0].append(extlink_par);
 
-      console.log(extlinks[i]);
+      console.log(extlinks_array[i]);
       console.log(extlink_par);
 
     }
