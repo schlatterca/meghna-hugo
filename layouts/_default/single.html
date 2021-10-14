@@ -148,26 +148,17 @@
   //FOOTER:
   //make each external link clickable
   var extlinks = {{ .Params.externallinks }};
-  document.getElementsByClassName('footer_insidebox_3')[0].innerHTML = "";
 
   if (extlinks.includes(', ')){
+    document.getElementsByClassName('footer_insidebox_3')[0].innerHTML = "";
     var extlinks_array = extlinks.split(', ');
-    for (let i = 0; i < extlinks_array.length; i++) { //for each result in "extlinks"…
-      
+    for (let i = 0; i < extlinks_array.length; i++) {
       let extlink_par = document.createElement('p');
       let extlink_text = document.createTextNode(extlinks_array[i]);
-
       extlink_par.setAttribute('class', 'footer_insidetext extlinks');
       extlink_par.appendChild(extlink_text);
       document.getElementsByClassName('footer_insidebox_3')[0].append(extlink_par);
-
-      console.log(extlinks_array[i]);
-      console.log(extlink_par);
-
     }
-    
-  } else {
-    console.log("ops");
   }
 
   $('p.extlinks').each(
