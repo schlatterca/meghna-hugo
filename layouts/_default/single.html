@@ -69,7 +69,10 @@
   <div id="footer" class="foot4" onmouseover="toggleFooter(this)" onmouseout="toggleFooter(this)">
     <p class="footer_title footitle4">Tags</p>
     <div class="footer_insidebox">
-      <p class="footer_insidetext">{{ .Params.tags }}</p>
+      <p class="footer_insidetext tagspers">Persons: {{ .Params.person_tag }}</p>
+      <p class="footer_insidetext tagssubj">Subjects: {{ .Params.tags }}</p>
+      <p class="footer_insidetext tagstime">Timeline: {{ .Params.tags }}</p>
+      <p class="footer_insidetext tagsmap">Map: {{ .Params.tags }}</p>
     </div>
   </div>
   <div id="footer" class="foot5" onmouseover="toggleFooter(this)" onmouseout="toggleFooter(this)">
@@ -148,7 +151,7 @@
 
   $('p.extlinks').each(
     function() {
-      $(this).html('<a href="' + this.innerText + '">' + this.innerText + '</a>');
+      $(this).html('<a href="https://' + this.innerText + '">' + this.innerText + '</a>');
       console.log(this.innerText);
     }
   );
