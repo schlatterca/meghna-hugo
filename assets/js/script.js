@@ -130,29 +130,20 @@ if ( footnotesBoxExists ) {
 var synopsis = document.getElementsByClassName('synopsis')[0];
 
 if ( synopsis ) {
+	var synopsis_paragraphs = synopsis.innerHTML.split('&amp;&amp;');
 
-	$('.synopsis').each(
-    function() {
-    	$(this).on("click", function() {
-				toggleFootnotesBox();
-			});
+	var paragraphBox = document.createElement('div');
+	paragraphBox.setAttribute('class', 'paragraph_box');
 
-			var synopsis_paragraphs = $(this).innerHTML.split('&amp;&amp;');
-
-			var paragraphBox = document.createElement('div');
-			paragraphBox.setAttribute('class', 'paragraph_box');
-
-			for (let i = 0; i < synopsis_paragraphs.length; i++) {
-				var paragraph = document.createElement('p');
-				var paragraphText = document.createTextNode(synopsis_paragraphs[i]);
-				paragraph.setAttribute('class', 'synopsis');
-				paragraph.appendChild(paragraphText);
-				paragraphBox.appendChild(paragraph);
-			}
-			$(this).innerHTML="";
-			$(this).parent().append(paragraphBox);
-    }
-  );
+	for (let i = 0; i < synopsis_paragraphs.length; i++) {
+		var paragraph = document.createElement('p');
+		var paragraphText = document.createTextNode(synopsis_paragraphs[i]);
+		paragraph.setAttribute('class', 'synopsis');
+		paragraph.appendChild(paragraphText);
+		paragraphBox.appendChild(paragraph);
+	}
+	document.getElementsByClassName('synopsis')[0].innerHTML="";
+	document.getElementsByClassName('synopsis_box')[0].append(paragraphBox);
 }
 
 //BREAK LINES IN FOOTNOTES
