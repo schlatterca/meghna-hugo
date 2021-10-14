@@ -1,14 +1,36 @@
 <article class="col-lg-8 offset-lg-2 text-center">
   <div class="post-block">
     <div class="media-wrapper">
-      <img class="img-fluid" data-src="{{ .Params.Image_webp | absURL }}" src="{{ .Params.image | absURL }}">
+      <img class="img-fluid" style="height: auto" data-src="{{ .Params.Image_webp | absURL }}" src="{{ .Params.image | absURL }}">
     </div>
 
     <div class="content">
 
       <p id="this_article_author">{{ .Params.author }}</p>
       <h1><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
+
+      <!--from here-->
+      {{ if .Description }}
+      <div class="synopsis_box">
+        <p class="synopsis">Synopsis: {{ .Description }}</p>
+        <div class="open_synopsis_box">+</div>
+      </div>
+      {{ end }}
+      <!--to here-->
+
       <p>{{ .Content }}</p>
+
+      <!--from here-->
+      {{ if .Params.footnotes }}
+      <div id="extraspace"></div>
+      {{ end }}
+      {{ if .Params.footnotes }}
+      <div class="footnotes_box">
+        <p class="footnotes">Footnotes: {{ .Params.footnotes }}</p>
+        <div class="open_footnotes_box">+</div>
+      </div>
+      {{ end }}
+      <!--to here-->
 
     </div>
   </div>
