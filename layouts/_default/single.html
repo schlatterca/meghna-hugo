@@ -50,25 +50,25 @@
 <footer>
   <div id="footer" class="foot1" onmouseover="toggleFooter(this)" onmouseout="toggleFooter(this)">
     <p class="footer_title footitle1">Barberini Harp Project</p>
-    <div class="footer_insidebox">
+    <div class="footer_insidebox_1">
       <p class="footer_insidetext">{{ .Params.barberiniharpproject }}</p>
     </div>
   </div>
   <div id="footer" class="foot2" onmouseover="toggleFooter(this)" onmouseout="toggleFooter(this)">
     <p class="footer_title footitle2">Related Research</p>
-    <div class="footer_insidebox">
+    <div class="footer_insidebox_2">
       <!--p class="footer_insidetext">Related Research here</p-->
     </div>
   </div>
   <div id="footer" class="foot3" onmouseover="toggleFooter(this)" onmouseout="toggleFooter(this)">
     <p class="footer_title footitle3">External Links</p>
-    <div class="footer_insidebox">
+    <div class="footer_insidebox_3">
       <p class="footer_insidetext extlinks">{{ .Params.externallinks }}</p>
     </div>
   </div>
   <div id="footer" class="foot4" onmouseover="toggleFooter(this)" onmouseout="toggleFooter(this)">
     <p class="footer_title footitle4">Tags</p>
-    <div class="footer_insidebox">
+    <div class="footer_insidebox_3">
       <p class="footer_insidetext tagspers">Persons: {{ .Params.person_tag }}</p>
       <p class="footer_insidetext tagssubj">Subjects: {{ .Params.tags }}</p>
       <p class="footer_insidetext tagstime">Timeline: {{ .Params.tags }}</p>
@@ -77,7 +77,7 @@
   </div>
   <div id="footer" class="foot5" onmouseover="toggleFooter(this)" onmouseout="toggleFooter(this)">
     <p class="footer_title footitle5">Downloads</p>
-    <div class="footer_insidebox">
+    <div class="footer_insidebox_5">
       <p class="footer_insidetext">{{ .Params.downloads }}</p>
     </div>
   </div>
@@ -149,10 +149,29 @@
   //make each external link clickable
   var extlinks = {{ .Params.externallinks }};
 
+  if (extlinks.includes(', ')){
+    var extlinks_array = extlinks.split(', ');
+    for (let i = 0; i < extlinks.length; i++) { //for each result in "extlinks"…
+      
+      let extlink_par = document.createElement('p');
+      let extlink_text = document.createTextNode(extlinks[i]);
+      
+      extlink_par.appendChild(extlink_text);
+
+      document.getElementsByClassName('footer_insidebox_3').append(extlink_par);
+
+      console.log(extlinks[i]);
+      console.log(extlink_par);
+
+    }
+    
+  } else {
+    console.log("ops");
+  }
+
   $('p.extlinks').each(
     function() {
       $(this).html('<a href="https://' + this.innerText + '">' + this.innerText + '</a>');
-      console.log(this.innerText);
     }
   );
 
