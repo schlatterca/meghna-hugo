@@ -53,18 +53,35 @@ function untoggleSidebar() {
 var synopsisBoxExists = document.getElementsByClassName('open_synopsis_box')[0];
 
 if ( synopsisBoxExists ) {
-	document.getElementsByClassName('open_synopsis_box')[0].addEventListener('click', function(e) {
+	/*document.getElementsByClassName('open_synopsis_box')[0].addEventListener('click', function(e) {
 	  toggleSynopsisBox();
-	});
+	});*/
+
+	$('.open_synopsis_box').each(
+    function() {
+    	$(this).on("click", function() {
+				toggleSynopsisBox();
+			});
+    }
+  );
+
 	var synopsisboxisclosed = true;
 	function toggleSynopsisBox() {
 		if (synopsisboxisclosed) {
-			document.getElementsByClassName('open_synopsis_box')[0].style.transform = "rotate(45deg)";
-			document.getElementsByClassName('synopsis_box')[0].classList.add("isopen");
+			//document.getElementsByClassName('open_synopsis_box')[0].style.transform = "rotate(45deg)";
+			//document.getElementsByClassName('synopsis_box')[0].classList.add("isopen");
+			
+			$('.open_synopsis_box').css('transform', 'rotate(45deg)');
+			$('.synopsis_box').addClass('isopen');
+
 			this.synopsisboxisclosed = false;
 		} else {
-			document.getElementsByClassName('open_synopsis_box')[0].style.transform = "rotate(0deg)";
-			document.getElementsByClassName('synopsis_box')[0].classList.remove("isopen");
+			//document.getElementsByClassName('open_synopsis_box')[0].style.transform = "rotate(0deg)";
+			//document.getElementsByClassName('synopsis_box')[0].classList.remove("isopen");
+			
+			$('.open_synopsis_box').css('transform', 'rotate(0deg)');
+			$('.synopsis_box').removeClass('isopen');
+
 			this.synopsisboxisclosed = true;
 		}
 	}
@@ -113,20 +130,29 @@ if ( footnotesBoxExists ) {
 var synopsis = document.getElementsByClassName('synopsis')[0];
 
 if ( synopsis ) {
-	var synopsis_paragraphs = synopsis.innerHTML.split('&amp;&amp;');
 
-	var paragraphBox = document.createElement('div');
-	paragraphBox.setAttribute('class', 'paragraph_box');
+	$('.synopsis').each(
+    function() {
+    	$(this).on("click", function() {
+				toggleFootnotesBox();
+			});
 
-	for (let i = 0; i < synopsis_paragraphs.length; i++) {
-		var paragraph = document.createElement('p');
-		var paragraphText = document.createTextNode(synopsis_paragraphs[i]);
-		paragraph.setAttribute('class', 'synopsis');
-		paragraph.appendChild(paragraphText);
-		paragraphBox.appendChild(paragraph);
-	}
-	document.getElementsByClassName('synopsis')[0].innerHTML="";
-	document.getElementsByClassName('synopsis_box')[0].append(paragraphBox);
+			var synopsis_paragraphs = $(this).innerHTML.split('&amp;&amp;');
+
+			var paragraphBox = document.createElement('div');
+			paragraphBox.setAttribute('class', 'paragraph_box');
+
+			for (let i = 0; i < synopsis_paragraphs.length; i++) {
+				var paragraph = document.createElement('p');
+				var paragraphText = document.createTextNode(synopsis_paragraphs[i]);
+				paragraph.setAttribute('class', 'synopsis');
+				paragraph.appendChild(paragraphText);
+				paragraphBox.appendChild(paragraph);
+			}
+			$(this).innerHTML="";
+			$(this).parent().append(paragraphBox);
+    }
+  );
 }
 
 //BREAK LINES IN FOOTNOTES
