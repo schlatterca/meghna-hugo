@@ -71,21 +71,25 @@ if ( synopsisBoxExists ) {
 }
 
 /*OPEN FOOTNOTES BOX*/
-var footnotesBoxExists = document.getElementsByClassName('open_footnotes_box');
+var footnotesBoxExists = document.getElementsByClassName('open_footnotes_box')[0];
 
 if ( footnotesBoxExists ) {
-	document.getElementsByClassName('open_footnotes_box').addEventListener('click', function(e) {
-	  toggleFootnotesBox();
-	});
+	$('.open_footnotes_box').each(
+    function() {
+    	$(this).addEventListener('click', function(e) {
+				toggleFootnotesBox();
+			});
+    }
+  );
 	var footnotesboxisclosed = true;
 	function toggleFootnotesBox() {
 		if (footnotesboxisclosed) {
-			document.getElementsByClassName('open_footnotes_box').style.transform = "rotate(45deg)";
-			document.getElementsByClassName('footnotes_box').classList.add("isopen_footnotes");
+			document.getElementsByClassName('open_footnotes_box')[0].style.transform = "rotate(45deg)";
+			document.getElementsByClassName('footnotes_box')[0].classList.add("isopen_footnotes");
 			this.footnotesboxisclosed = false;
 		} else {
-			document.getElementsByClassName('open_footnotes_box').style.transform = "rotate(0deg)";
-			document.getElementsByClassName('footnotes_box').classList.remove("isopen_footnotes");
+			document.getElementsByClassName('open_footnotes_box')[0].style.transform = "rotate(0deg)";
+			document.getElementsByClassName('footnotes_box')[0].classList.remove("isopen_footnotes");
 			this.footnotesboxisclosed = true;
 		}
 	}
