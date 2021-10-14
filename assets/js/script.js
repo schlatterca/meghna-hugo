@@ -71,21 +71,21 @@ if ( synopsisBoxExists ) {
 }
 
 /*OPEN FOOTNOTES BOX*/
-var footnotesBoxExists = document.getElementsByClassName('open_footnotes_box')[0];
+var footnotesBoxExists = document.getElementsByClassName('open_footnotes_box');
 
 if ( footnotesBoxExists ) {
-	document.getElementsByClassName('open_footnotes_box')[0].addEventListener('click', function(e) {
+	document.getElementsByClassName('open_footnotes_box').addEventListener('click', function(e) {
 	  toggleFootnotesBox();
 	});
 	var footnotesboxisclosed = true;
 	function toggleFootnotesBox() {
 		if (footnotesboxisclosed) {
-			document.getElementsByClassName('open_footnotes_box')[0].style.transform = "rotate(45deg)";
-			document.getElementsByClassName('footnotes_box')[0].classList.add("isopen_footnotes");
+			document.getElementsByClassName('open_footnotes_box').style.transform = "rotate(45deg)";
+			document.getElementsByClassName('footnotes_box').classList.add("isopen_footnotes");
 			this.footnotesboxisclosed = false;
 		} else {
-			document.getElementsByClassName('open_footnotes_box')[0].style.transform = "rotate(0deg)";
-			document.getElementsByClassName('footnotes_box')[0].classList.remove("isopen_footnotes");
+			document.getElementsByClassName('open_footnotes_box').style.transform = "rotate(0deg)";
+			document.getElementsByClassName('footnotes_box').classList.remove("isopen_footnotes");
 			this.footnotesboxisclosed = true;
 		}
 	}
@@ -140,7 +140,68 @@ if ( footnotes ) {
 	document.getElementsByClassName('footnotes_box')[0].append(paragraphBox);
 }
 
+//MAKE AUTHOR'S NAME A LINK
+var authorsNameExists = document.getElementById('this_article_author');
 
+if ( authorsNameExists ) {
+	var authors_initial = document.getElementById('this_article_author').innerHTML;
+	var authors_without_by = authors_initial.replace('by ', '');
+
+	if (authors_without_by.includes(', ')){
+
+		document.getElementById('this_article_author').innerHTML="";
+		document.getElementById('this_article_author').append('by ');
+
+		var single_authors = authors_without_by.split(', ');
+
+		for (let i = 0; i < single_authors.length; i++) { //for each result in "persontags"…
+
+	    data = single_authors[i].split(' ');
+
+	    for (var j = 0; j < data.length; j++) { //capitalize first letter
+	      data[j] = data[j].charAt(0).toUpperCase() + data[j].slice(1);
+	    }
+
+	    if (data.length == 4) { //rearrange
+	      var author = data[3] + ' ' + data[0] + ' ' + data[1] + ' ' + data[2];
+	    } if (data.length == 3) {
+	      var author = data[2] + ' ' + data[0] + ' ' + data[1];
+	    } if (data.length == 2) {
+	      var author = data[1] + ' ' + data[0];
+	    }
+
+			let name = document.createElement('a');
+			let nameText = document.createTextNode(single_authors[i]);
+			name.setAttribute('href', 'https://harfenlabor.netlify.app/persontags#'+author);
+			if (i>0) {
+				this_article_author.append(', ');
+			}
+			name.appendChild(nameText);
+			document.getElementById('this_article_author').append(name);
+
+		}
+		
+	} else {
+
+		data = authors_without_by.split(' ');
+		for (var j = 0; j < data.length; j++) { //capitalize first letter
+	    data[j] = data[j].charAt(0).toUpperCase() + data[j].slice(1);
+	  }
+	  if (data.length == 4) { //rearrange
+	    var author_0 = data[3] + ' ' + data[0] + ' ' + data[1] + ' ' + data[2];
+	  } if (data.length == 3) {
+	    var author_0 = data[2] + ' ' + data[0] + ' ' + data[1];
+	  } if (data.length == 2) {
+	    var author_0 = data[1] + ' ' + data[0];
+	  }
+	  var name_0 = document.createElement('a');
+		var name_0Text = document.createTextNode(authors_without_by);
+		name_0.setAttribute('href', 'https://harfenlabor.netlify.app/persontags#'+author_0);
+		name_0.appendChild(name_0Text);
+		document.getElementById('this_article_author').innerHTML="";
+		document.getElementById('this_article_author').append("by ", name_0);
+	}
+}
 
 
 
