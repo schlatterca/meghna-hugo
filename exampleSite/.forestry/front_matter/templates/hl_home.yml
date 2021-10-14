@@ -97,7 +97,7 @@ fields:
     schema:
       format: markdown
   label: externallinks
-  description: External links.
+  description: Please separate each link with a comma ("www.google.it, www.google.com").
 - name: tags
   type: textarea
   default: ''
