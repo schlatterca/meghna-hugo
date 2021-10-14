@@ -74,13 +74,18 @@ if ( synopsisBoxExists ) {
 var footnotesBoxExists = document.getElementsByClassName('open_footnotes_box')[0];
 
 if ( footnotesBoxExists ) {
+	/*document.getElementsByClassName('open_footnotes_box')[0].addEventListener('click', function(e) {
+	  toggleFootnotesBox();
+	});*/
+
 	$('.open_footnotes_box').each(
     function() {
-    	$(this).addEventListener('click', function(e) {
+    	$(this).on("click", function() {
 				toggleFootnotesBox();
 			});
     }
   );
+
 	var footnotesboxisclosed = true;
 	function toggleFootnotesBox() {
 		if (footnotesboxisclosed) {
