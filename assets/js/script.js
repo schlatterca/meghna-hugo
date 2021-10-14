@@ -93,7 +93,7 @@ if ( footnotesBoxExists ) {
 			//document.getElementsByClassName('footnotes_box')[0].classList.add("isopen_footnotes");
 
 			$('.open_footnotes_box').css('transform', 'rotate(45deg)');
-			$('.open_footnotes_box').addClass('isopen_footnotes');
+			$('.footnotes_box').addClass('isopen_footnotes');
 
 			this.footnotesboxisclosed = false;
 		} else {
@@ -101,7 +101,7 @@ if ( footnotesBoxExists ) {
 			//document.getElementsByClassName('footnotes_box')[0].classList.remove("isopen_footnotes");
 				
 			$('.open_footnotes_box').css('transform', 'rotate(0deg)');
-			$('.open_footnotes_box').removeClass('isopen_footnotes');
+			$('.footnotes_box').removeClass('isopen_footnotes');
 
 			this.footnotesboxisclosed = true;
 		}
