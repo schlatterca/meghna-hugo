@@ -155,10 +155,9 @@
       
       let extlink_par = document.createElement('p');
       let extlink_text = document.createTextNode(extlinks[i]);
-      
-      extlink_par.appendChild(extlink_text);
 
-      document.getElementsByClassName('footer_insidebox_3').append(extlink_par);
+      extlink_par.appendChild(extlink_text);
+      document.getElementsByClassName('footer_insidebox_3')[0].append(extlink_par);
 
       console.log(extlinks[i]);
       console.log(extlink_par);
