@@ -30,6 +30,14 @@ fields:
   config:
     required: false
   label: author
+  description: Authors of the article. Please remember to also paste the authors'
+    names in the "person tag" section below.
+- name: person_tag
+  type: tag_list
+  default: []
+  label: Person Tag
+  description: 'Person quoted in the article (for indexing purpose, please follow
+    this example: Name Surname or Name Name Surname).'
 - name: status
   type: select
   default: draft
@@ -110,12 +118,6 @@ fields:
       format: markdown
   label: downloads
   description: Downloads.
-- name: person_tag
-  type: tag_list
-  default: []
-  label: Person Tag
-  description: 'Person quoted in the article (for indexing purpose, please follow
-    this example: Name Surname or Name Name Surname).'
 pages:
 - exampleSite/content/focus/Zemke_Haag.md
 - exampleSite/content/focus/prova-di-articolo.md
