@@ -63,7 +63,7 @@
   <div id="footer" class="foot3" onmouseover="toggleFooter(this)" onmouseout="toggleFooter(this)">
     <p class="footer_title footitle3">External Links</p>
     <div class="footer_insidebox">
-      <p class="footer_insidetext">{{ .Params.externallinks }}</p>
+      <p class="footer_insidetext extlinks">{{ .Params.externallinks }}</p>
     </div>
   </div>
   <div id="footer" class="foot4" onmouseover="toggleFooter(this)" onmouseout="toggleFooter(this)">
@@ -139,6 +139,17 @@
           }
         }
       );
+    }
+  );
+
+  //FOOTER:
+  //make each external link clickable
+  var extlinks = {{ .Params.externallinks }};
+
+  $('p.extlinks').each(
+    function() {
+      $(this).html('<a href="' + this.innerText + '">' + this.innerText + '</a>');
+      console.log(this.innerText);
     }
   );
 
