@@ -164,9 +164,12 @@
 
       $('span#tagspers').each(
         function() {
-          console.log(this);
+          //console.log(this);
           if ($(this).text() === this.word) {
+            console.log("yes", this);
             $(this).html('<a href="https://harfenlabor.netlify.app/persontags#' + this.link + '">' + this.word + '</a>');
+          } else {
+            console.log("no", this, this.text(), this.word, this.link);
           }
         }
       );
