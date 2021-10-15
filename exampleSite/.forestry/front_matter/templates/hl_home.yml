@@ -38,17 +38,17 @@ fields:
   label: Person Tag
   description: 'Person quoted in the article (for indexing purpose, please follow
     this example: Name Surname or Name Name Surname).'
+- name: timeline_tag
+  type: tag_list
+  default: []
+  label: Timeline tag
+  description: 'Years or periods quoted in the article (for example: 1602, 17th century).'
 - name: map_tag
   type: tag_list
   default: []
   label: Map Tag
   description: 'Places quoted in the article (use the language of the origin country,
     for example: Wien, Milano, London).'
-- name: timeline_tag
-  type: tag_list
-  default: []
-  label: Timeline tag
-  description: 'Years or periods quoted in the article (for example: 1602, 17th century).'
 - name: status
   type: select
   default: draft
