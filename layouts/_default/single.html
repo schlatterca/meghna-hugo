@@ -155,10 +155,10 @@
 
       let tagspers_span = document.createElement('span');
       let tagspers_text = document.createTextNode({{ .Params.person_tag }}[tagspers_count]);
-      tagspers_par.setAttribute('class', 'footer_insidetext');
-      tagspers_par.setAttribute('id', 'tagspers');
-      tagspers_par.appendChild(tagspers_text);
-      document.getElementById('tagspers').append(tagspers_par);
+      tagspers_span.setAttribute('class', 'footer_insidetext');
+      tagspers_span.setAttribute('id', 'tagspers');
+      tagspers_span.appendChild(tagspers_text);
+      document.getElementById('tagspers').append(tagspers_span);
 
       tagspers_count = tagspers_count+1;
 
