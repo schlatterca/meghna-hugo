@@ -262,7 +262,7 @@ function showFooterText(e) { //CHECK ??? ###
 
 //MAKE EACH IMAGE CLICKABLE TO BE SEEN FULL SCREEN
 $("img").click(function(){
-	alert("it works!");
+	console.log(this);
 });
 
 
