@@ -129,21 +129,17 @@
     document.getElementsByClassName('footer_insidebox_3')[0].innerHTML = "";
     var extlinks_array = extlinks.split(', ');
     for (let i = 0; i < extlinks_array.length; i++) {
-      console.log(extlinks_array[i]);
       let extlink_par = document.createElement('p');
       let extlink_text = document.createTextNode(extlinks_array[i]);
-      console.log(extlink_text);
       extlink_par.setAttribute('class', 'footer_insidetext extlinks');
       extlink_par.appendChild(extlink_text);
       document.getElementsByClassName('footer_insidebox_3')[0].append(extlink_par);
-      console.log(extlink_par);
     }
   }
 
   $('p.extlinks').each(
     function() {
-      console.log(this, this.textContent);
-      //$(this).html('<a href="https://' + this.innerText + '">' + this.innerText + '</a>');
+      $(this).html('<a href="https://' + this.textContent + '">' + this.textContent + '</a>');
     }
   );
 
