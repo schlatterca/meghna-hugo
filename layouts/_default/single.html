@@ -138,13 +138,11 @@
       document.getElementsByClassName('footer_insidebox_3')[0].append(extlink_par);
       console.log(extlink_par);
     }
-  } else {
-    console.log("no commas");
   }
 
   $('p.extlinks').each(
     function() {
-      console.log(this, this.innerText);
+      console.log(this, this.textContent);
       //$(this).html('<a href="https://' + this.innerText + '">' + this.innerText + '</a>');
     }
   );
