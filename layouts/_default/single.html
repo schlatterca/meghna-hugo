@@ -118,30 +118,7 @@
     }
   );
 
-  //FOOTER:
-  //make each external link clickable (External Links)
-  var extlinks = {{ .Params.externallinks }};
-
-  if (extlinks.includes(', ')){
-    //document.getElementsByClassName('footer_insidebox_3')[0].innerHTML = "";
-    var extlinks_array = extlinks.split(', ');
-    for (let i = 0; i < extlinks_array.length; i++) {
-      console.log(extlinks_array[i]);
-      let extlink_par = document.createElement('p');
-      let extlink_text = document.createTextNode(extlinks_array[i]);
-      extlink_par.setAttribute('class', 'footer_insidetext extlinks');
-      extlink_par.appendChild(extlink_text);
-      document.getElementsByClassName('footer_insidebox_3')[0].append(extlink_par);
-      console.log(extlink_par);
-    }
-  }
-
-  $('p.extlinks').each(
-    function() {
-      console.log(this);
-      $(this).html('<a href="https://' + this.innerText + '">' + this.innerText + '</a>');
-    }
-  );
+  
 
 
 
