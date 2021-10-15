@@ -64,6 +64,7 @@
     <p class="footer_title footitle3">External Links</p>
     <div class="footer_insidebox_3">
       <p class="footer_insidetext extlinks">{{ .Params.externallinks }}</p>
+      <p class="footer_insidetext extlinks">CIAO</p>
     </div>
   </div>
   <div id="footer" class="foot4" onmouseover="toggleFooter(this)" onmouseout="toggleFooter(this)">
@@ -125,11 +126,13 @@
     //document.getElementsByClassName('footer_insidebox_3')[0].innerHTML = "";
     var extlinks_array = extlinks.split(', ');
     for (let i = 0; i < extlinks_array.length; i++) {
+      console.log(extlinks_array[i]);
       let extlink_par = document.createElement('p');
       let extlink_text = document.createTextNode(extlinks_array[i]);
       extlink_par.setAttribute('class', 'footer_insidetext extlinks');
       extlink_par.appendChild(extlink_text);
       document.getElementsByClassName('footer_insidebox_3')[0].append(extlink_par);
+      console.log(extlink_par);
     }
   }
 
@@ -150,7 +153,6 @@
 
   $.each(words,
     function() {
-      console.log(this, tagspers_count);
       var search = this;
 
       let tagspers_span = document.createElement('span');
@@ -169,7 +171,6 @@
       $('span#tagspers').each(
         function() {
           if ($(this).text() === search.word) {
-            console.log("yes", search, search.word, search.link);
             $(this).html('<a href="https://harfenlabor.netlify.app/persontags#' + search.link + '">' + search.word + '</a>');
           }
         }
