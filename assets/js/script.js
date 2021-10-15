@@ -252,13 +252,19 @@ function toggleFooter(e) {
 	}
 }
 
-function showFooterText(e) {
+function showFooterText(e) { //CHECK ??? ###
 	var footertexts= document.querySelectorAll('.footer_text_'+e);
 	for(var i = 0; i < footertexts.length; ++i) {
 		document.getElementsByClassName("footer_text_1")[i].classList.remove('visible');
 		document.getElementsByClassName("footer_text_1")[i].classList.add('notvisible');
 	}
 }
+
+//MAKE EACH IMAGE CLICKABLE TO BE SEEN FULL SCREEN
+$("img").click(function(){
+	alert("it works!");
+});
+
 
 
 
