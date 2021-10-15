@@ -69,7 +69,7 @@
   <div id="footer" class="foot4" onmouseover="toggleFooter(this)" onmouseout="toggleFooter(this)">
     <p class="footer_title footitle4">Tags</p>
     <div class="footer_insidebox_3">
-      <p class="footer_insidetext tagspers">Persons: {{ .Params.person_tag }}</p>
+      <p id="tagspers" class="footer_insidetext tagspers">Persons:</p>
       <p class="footer_insidetext tagssubj">Subjects: {{ .Params.tags }}</p>
       <p class="footer_insidetext tagstime">Timeline: {{ .Params.tags }}</p>
       <p class="footer_insidetext tagsmap">Map: {{ .Params.tags }}</p>
@@ -96,7 +96,7 @@
       nameToSwap[nameToSwap.length - 1] = first;
       var nameSwapped = nameToSwap.join(' ').replace(' ', '%20');
     } else {
-      var nameSwapped = persontags_list[i].replace;
+      var nameSwapped = persontags_list[i];
     }
     var Obj = {}
     Obj.word = persontags_list[i];
@@ -141,8 +141,37 @@
 
 
 
-  
+  //make each person tag clickable (Tags)
 
+  //var persontags_list = {{ .Params.person_tag }};
+
+  console.log(document.getElementById('tagspers'));
+
+  var tagspers_count = 0;
+
+  $.each(words,
+    function() {
+      console.log(this, tagspers_count);
+
+      let tagspers_span = document.createElement('span');
+      let tagspers_text = document.createTextNode({{ .Params.person_tag }}[tagspers_count]);
+      tagspers_par.setAttribute('class', 'footer_insidetext');
+      tagspers_par.setAttribute('id', 'tagspers');
+      tagspers_par.appendChild(tagspers_text);
+      document.getElementById('tagspers').append(tagspers_par);
+
+      tagspers_count = tagspers_count+1;
+
+      $('span#tagspers').each(
+        function() {
+          console.log(this);
+          if ($(this).text() === this.word) {
+            $(this).html('<a href="https://harfenlabor.netlify.app/persontags#' + this.link + '">' + this.word + '</a>');
+          }
+        }
+      );
+    }
+  );
 
 
 
