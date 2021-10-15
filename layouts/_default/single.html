@@ -69,7 +69,7 @@
   <div id="footer" class="foot4" onmouseover="toggleFooter(this)" onmouseout="toggleFooter(this)">
     <p class="footer_title footitle4">Tags</p>
     <div class="footer_insidebox_3">
-      <p id="tagspers" class="footer_insidetext tagspers">Persons:</p>
+      <p class="footer_insidetext tagspers">Persons: {{ .Params.person_tag }}</p>
       <p class="footer_insidetext tagssubj">Subjects: {{ .Params.tags }}</p>
       <p class="footer_insidetext tagstime">Timeline: {{ .Params.tags }}</p>
       <p class="footer_insidetext tagsmap">Map: {{ .Params.tags }}</p>
@@ -86,8 +86,35 @@
 <script>
   //add links to each person that appears in the person_tag section
   var persontags_list = {{ .Params.person_tag }};
+  var paragraphs = document.getElementsByClassName("articleContent")[0].childNodes;
+
+  for (let i = 0; i < persontags_list.length; i++) {
+    //for(var j = 0; j < paragraphs.length; j++) {
+    for(var j = 0; j < 8; j++) {
+      if ((typeof paragraphs[j].innerHTML !== 'undefined') && (paragraphs[j].innerHTML.includes(persontags_list[i]))){
+
+        //create link with the name
+        var link = document.createElement('a');
+        var linkText = document.createTextNode(persontags_list[i]);
+        if (persontags_list[i].includes(' ')){
+          var nameToSwap = persontags_list[i].split(' ');
+          var first = nameToSwap[0];
+          var last = nameToSwap[nameToSwap.length - 1];
+          nameToSwap[0] = last;
+          nameToSwap[nameToSwap.length - 1] = first;
+          var nameSwapped = nameToSwap.join(' ');
+        } else {
+          var nameSwapped = persontags_list[i];
+        }
+        link.setAttribute('href', 'https://harfenlabor.netlify.app/persontags#'+nameSwapped);
+        link.appendChild(linkText);
+      }
+    }
+  }
+
   var words = [];
   for (let i = 0; i < persontags_list.length; i++) {
+
     if (persontags_list[i].includes(' ')){
       var nameToSwap = persontags_list[i].split(' ');
       var first = nameToSwap[0];
@@ -96,8 +123,9 @@
       nameToSwap[nameToSwap.length - 1] = first;
       var nameSwapped = nameToSwap.join(' ').replace(' ', '%20');
     } else {
-      var nameSwapped = persontags_list[i];
+      var nameSwapped = persontags_list[i].replace;
     }
+
     var Obj = {}
     Obj.word = persontags_list[i];
     Obj.link = nameSwapped;
@@ -118,7 +146,7 @@
   );
 
   //FOOTER:
-  //make each external link clickable (External Links)
+  //make each external link clickable
   var extlinks = {{ .Params.externallinks }};
 
   if (extlinks.includes(', ')){
@@ -131,55 +159,13 @@
       extlink_par.appendChild(extlink_text);
       document.getElementsByClassName('footer_insidebox_3')[0].append(extlink_par);
     }
-    console.log("1");
   }
-  console.log("2");
 
   $('p.extlinks').each(
     function() {
-      console.log("3");
       $(this).html('<a href="https://' + this.innerText + '">' + this.innerText + '</a>');
-      console.log(this);
     }
   );
-  console.log("4");
-
-
-
-  //make each person tag clickable (Tags)
-  var tagspers_count = 0;
-
-  $.each(words,
-    function() {
-      console.log(this, tagspers_count);
-      var search = this;
-
-      let tagspers_span = document.createElement('span');
-      let tagspers_text = document.createTextNode({{ .Params.person_tag }}[tagspers_count]);
-      let tagspers_span_space = document.createElement('span');
-      let tagspers_text_space = document.createTextNode(' ');
-      tagspers_span.setAttribute('class', 'footer_insidetext');
-      tagspers_span.setAttribute('id', 'tagspers');
-      tagspers_span.appendChild(tagspers_text);
-      tagspers_span_space.appendChild(tagspers_text_space);
-      document.getElementById('tagspers').append(tagspers_space);
-      document.getElementById('tagspers').append(tagspers_span);
-
-      tagspers_count = tagspers_count+1;
-
-      $('span#tagspers').each(
-        function() {
-          if ($(this).text() === search.word) {
-            console.log("yes", search, search.word, search.link);
-            $(this).html('<a href="https://harfenlabor.netlify.app/persontags#' + search.link + '">' + search.word + '</a>');
-          }
-        }
-      );
-    }
-  );
-
-
-
 
   //make footnotes interactive
   //wait until the page is loaded and footnotes are replaced
