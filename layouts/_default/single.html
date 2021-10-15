@@ -131,17 +131,52 @@
       extlink_par.appendChild(extlink_text);
       document.getElementsByClassName('footer_insidebox_3')[0].append(extlink_par);
     }
+    console.log("1");
   }
+  console.log("2");
 
   $('p.extlinks').each(
     function() {
+      console.log("3");
       $(this).html('<a href="https://' + this.innerText + '">' + this.innerText + '</a>');
+      console.log(this);
     }
   );
+  console.log("4");
 
 
 
-  
+  //make each person tag clickable (Tags)
+  var tagspers_count = 0;
+
+  $.each(words,
+    function() {
+      console.log(this, tagspers_count);
+      var search = this;
+
+      let tagspers_span = document.createElement('span');
+      let tagspers_text = document.createTextNode({{ .Params.person_tag }}[tagspers_count]);
+      let tagspers_span_space = document.createElement('span');
+      let tagspers_text_space = document.createTextNode(' ');
+      tagspers_span.setAttribute('class', 'footer_insidetext');
+      tagspers_span.setAttribute('id', 'tagspers');
+      tagspers_span.appendChild(tagspers_text);
+      tagspers_span_space.appendChild(tagspers_text_space);
+      document.getElementById('tagspers').append(tagspers_space);
+      document.getElementById('tagspers').append(tagspers_span);
+
+      tagspers_count = tagspers_count+1;
+
+      $('span#tagspers').each(
+        function() {
+          if ($(this).text() === search.word) {
+            console.log("yes", search, search.word, search.link);
+            $(this).html('<a href="https://harfenlabor.netlify.app/persontags#' + search.link + '">' + search.word + '</a>');
+          }
+        }
+      );
+    }
+  );
 
 
 
