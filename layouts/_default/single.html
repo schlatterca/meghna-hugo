@@ -75,7 +75,7 @@
       <p></p>
       <p id="tagsyears" class="footer_insidetext tagstime">Timeline:</p>
       <p></p>
-      <p id="tagsplaces" class="footer_insidetext tagsmap"></p>
+      <p id="tagsplaces" class="footer_insidetext tagsmap">Map: </p>
     </div>
   </div>
   <div id="footer" class="foot5" onmouseover="toggleFooter(this)" onmouseout="toggleFooter(this)">
@@ -234,7 +234,7 @@
       let tagstime_span_space = document.createElement('span');
       let tagstime_text_space = document.createTextNode(' ');
       tagstime_span.setAttribute('class', 'footer_insidetext');
-      tagstime_span.setAttribute('id', 'tagstime');
+      tagstime_span.setAttribute('id', 'tagsyears');
       tagstime_span.appendChild(tagstime_text);
       tagstime_span_space.appendChild(tagstime_text_space);
       document.getElementById('tagsyears').append(tagstime_span_space);
