@@ -452,6 +452,7 @@ p > img {
 	margin-right: auto;
 	display: block;
 	border-radius: 0.8em;
+	cursor: zoom-in;
 }
 
 .row {
