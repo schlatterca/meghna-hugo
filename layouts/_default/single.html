@@ -70,9 +70,12 @@
     <p class="footer_title footitle4">Tags</p>
     <div class="footer_insidebox_3">
       <p id="tagspers" class="footer_insidetext tagspers">Persons:</p>
+      <p></p>
       <p class="footer_insidetext tagssubj">Subjects: {{ .Params.tags }}</p>
-      <p class="footer_insidetext tagstime">Timeline: {{ .Params.tags }}</p>
-      <p class="footer_insidetext tagsmap">Map: {{ .Params.tags }}</p>
+      <p></p>
+      <p id="tagsyears" class="footer_insidetext tagstime">Timeline:</p>
+      <p></p>
+      <p id="tagsplaces" class="footer_insidetext tagsmap"></p>
     </div>
   </div>
   <div id="footer" class="foot5" onmouseover="toggleFooter(this)" onmouseout="toggleFooter(this)">
@@ -84,6 +87,7 @@
 </footer>
 
 <script>
+  //ARTICLE
   //add links to each person that appears in the person_tag section
   var persontags_list = {{ .Params.person_tag }};
   var words = [];
@@ -117,9 +121,53 @@
     }
   );
 
+  //ARTICLE
+  //add links to each year that appears in the timeline_tag section
+  var timelinetags_list = {{ .Params.timeline_tag }};
+  var words_timeline = [];
+  for (let i = 0; i < timelinetags_list.length; i++) {
+    var Obj = {}
+    Obj.word = timelinetags_list[i];
+    Obj.link = timelinetags_list[i];
+    words_timeline.push(Obj);
+  }
 
+  $.each(words_timeline,
+    function() {
+      var search = this;
+      $('span#timeline_tag').each(
+        function() {
+          if ($(this).text() === search.word) {
+            $(this).html('<a href="https://harfenlabor.netlify.app/persontags#' + search.link + '">' + search.word + '</a>');
+          }
+        }
+      );
+    }
+  );
 
+  //ARTICLE
+  //add links to each year that appears in the map_tag section
+  var maptags_list = {{ .Params.map_tag }};
+  var words_map = [];
+  for (let i = 0; i < maptags_list.length; i++) {
+    var Obj = {}
+    Obj.word = maptags_list[i];
+    Obj.link = maptags_list[i];
+    words_map.push(Obj);
+  }
 
+  $.each(words_map,
+    function() {
+      var search = this;
+      $('span#map_tag').each(
+        function() {
+          if ($(this).text() === search.word) {
+            $(this).html('<a href="https://harfenlabor.netlify.app/persontags#' + search.link + '">' + search.word + '</a>');
+          }
+        }
+      );
+    }
+  );
 
   //FOOTER:
   //make each external link clickable (External Links)
@@ -143,11 +191,7 @@
     }
   );
 
-
-
-
-
-
+  //FOOTER:
   //make each person tag clickable (Tags)
   var tagspers_count = 0;
 
@@ -178,6 +222,66 @@
     }
   );
 
+  //make each timeline tag clickable (Tags)
+  var tagsyears_count = 0;
+
+  $.each(words_timeline,
+    function() {
+      var search = this;
+
+      let tagstime_span = document.createElement('span');
+      let tagstime_text = document.createTextNode({{ .Params.timeline_tag }}[tagsyears_count]);
+      let tagstime_span_space = document.createElement('span');
+      let tagstime_text_space = document.createTextNode(' ');
+      tagstime_span.setAttribute('class', 'footer_insidetext');
+      tagstime_span.setAttribute('id', 'tagstime');
+      tagstime_span.appendChild(tagstime_text);
+      tagstime_span_space.appendChild(tagstime_text_space);
+      document.getElementById('tagstime').append(tagstime_span_space);
+      document.getElementById('tagstime').append(tagstime_span);
+
+      tagsyears_count = tagsyears_count+1;
+
+      $('span#tagsyears').each(
+        function() {
+          if ($(this).text() === search.word) {
+            $(this).html('<a href="https://harfenlabor.netlify.app/persontags#' + search.link + '">' + search.word + '</a>');
+          }
+        }
+      );
+    }
+  );
+
+  //make each map tag clickable (Tags)
+  var tagsplaces_count = 0;
+
+  $.each(words_map,
+    function() {
+      var search = this;
+
+      let tagsplaces_span = document.createElement('span');
+      let tagsplaces_text = document.createTextNode({{ .Params.map_tag }}[tagsplaces_count]);
+      let tagsplaces_span_space = document.createElement('span');
+      let tagsplaces_text_space = document.createTextNode(' ');
+      tagsplaces_span.setAttribute('class', 'footer_insidetext');
+      tagsplaces_span.setAttribute('id', 'tagsplaces');
+      tagsplaces_span.appendChild(tagsplaces_text);
+      tagsplaces_span_space.appendChild(tagsplaces_text_space);
+      document.getElementById('tagsplaces').append(tagsplaces_span_space);
+      document.getElementById('tagsplaces').append(tagsplaces_span);
+
+      tagsplaces_count = tagsplaces_count+1;
+
+      $('span#tagsplaces').each(
+        function() {
+          if ($(this).text() === search.word) {
+            $(this).html('<a href="https://harfenlabor.netlify.app/persontags#' + search.link + '">' + search.word + '</a>');
+          }
+        }
+      );
+    }
+  );
+
 
 
 
@@ -193,11 +297,6 @@
         $('sup').each(
           function() {
             $(this).prop('id', 'footnote');
-
-            /*$(this).click(function() {
-              alert(footnotes[this.innerText].innerText);
-              return false; //break the "each" loop
-            });*/
 
             $(this).on("mouseover", function(e) {
               var box = $("#fn_appear");
@@ -236,7 +335,6 @@
           }
         );
         break; //break the "for" loop
-
       }
     }
   })
