@@ -141,42 +141,7 @@
 
 
 
-  //make each person tag clickable (Tags)
-
-  //var persontags_list = {{ .Params.person_tag }};
-
-  console.log(document.getElementById('tagspers'));
-
-  var tagspers_count = 0;
-
-  $.each(words,
-    function() {
-      console.log(this, tagspers_count);
-      var search = this;
-
-      let tagspers_span = document.createElement('span');
-      let tagspers_text = document.createTextNode({{ .Params.person_tag }}[tagspers_count]);
-      let tagspers_space = document.createTextNode(' ');
-      tagspers_span.setAttribute('class', 'footer_insidetext');
-      tagspers_span.setAttribute('id', 'tagspers');
-      tagspers_span.appendChild(tagspers_text);
-      document.getElementById('tagspers').append(tagspers_span);
-
-      tagspers_count = tagspers_count+1;
-
-      $('span#tagspers').each(
-        function() {
-          //console.log(this);
-          if ($(this).text() === search.word) {
-            console.log("yes", search, search.word, search.link);
-            $(this).html('<a href="https://harfenlabor.netlify.app/persontags#' + search.link + '">' + search.word + '</a>');
-          } else {
-            console.log("no", search, search.word, search.link);
-          }
-        }
-      );
-    }
-  );
+  
 
 
 
