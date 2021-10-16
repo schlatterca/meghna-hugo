@@ -9,11 +9,13 @@ image = ""
 map_tag = []
 news = true
 person_tag = []
+show_in_news = true
 status = "draft"
 subjects_tag = []
 subtype = []
 timeline_tag = []
 title = "Between the Strings, Festival of Historical Harp — First edition: Haydn’s Folk Harp"
+type = "News"
 
 +++
 An artistic-scientific duel between the Single-Action-Harp around Haydn and its Alpine counterpart, the Tyrolean Folk Harp.  
