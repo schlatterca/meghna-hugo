@@ -7,8 +7,10 @@
     </div>
 
     <div class="content">
-      
+
+      {{ if .Params.author }}
       <p id="this_article_author" style="text-align: center">{{ .Params.author }}</p>
+      {{ end }}
       <h1 style="text-align: center"><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
 
       <!--from here-->
