@@ -15,10 +15,21 @@
       </div>
       {{"<!-- /section title -->" | safeHTML}}
       
-      {{ $paginator := .Paginate .Data.Pages }}
-      {{ range $paginator.Pages }}
-      {{ .Render "article_onepage" }}
+      {{/* $paginator := .Paginate .Data.Pages */}}
+      {{/* range $paginator.Pages */}}
+      {{/* .Render "article_onepage" */}}
+      {{/* end */}}
+
+      {{ range (.Paginator 5).Pages }}
+      <h6>{{/* .Type */}}</h6>
+      <h6>{{/* .Params.show_in_news */}}</h6>
       {{ end }}
+
+      {{ range .Pages }}
+      <h6>{{/* .Type */}}</h6>
+      <h6>{{/* .Params.show_in_news */}}</h6>
+      {{ end }}
+
 
       <div class="col-12">
         {{ template "_internal/pagination.html" . }}
@@ -27,20 +38,5 @@
   </div>
 </section>
 {{"<!-- /blog -->" | safeHTML}}
-
-<!--script>
-
-  function research_section() {
-    var thisUrl = window.location.href;
-    if(thisUrl.includes('#')) {
-      var thisUrl = thisUrl.split('#');
-      console.log(thisUrl[1]);
-    }
-    if(thisUrl[1] == "organology") {
-      console.log("ok");
-    }
-  }
-  
-</script-->
 
 {{ end }}
