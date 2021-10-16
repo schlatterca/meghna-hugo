@@ -23,8 +23,9 @@
       {{ $paginator := .Paginate .Data.Pages }}
       {{ range $paginator.Pages }}
       <h6>1</h6>
-      <h6>{{ .Type }}</h6>
-      <h6>{{ .Params.show_in_news }}</h6>
+      <h6>{{ .Paginate }}</h6>
+      <h6>{{ .Data.Pages }}</h6>
+      <h6>{{ $paginator }}</h6>
       {{ end }}
 
       {{ range (.Paginator 5).Pages }}
@@ -46,23 +47,9 @@
         <h6>{{ .Params.show_in_news }}</h6>
       {{ end }}
 
-      {{ $pag := .Paginate (where .Data.Pages "Type" "Research") 5 }}
+      {{ $pag := .Paginate (where .Data.Pages "Type" "CIAO") 5 }}
       {{ range $pag.Pages }}
         <h6>5</h6>
-        <h6>{{ .Type }}</h6>
-        <h6>{{ .Params.show_in_news }}</h6>
-      {{ end }}
-
-      {{ $pagg := .Paginate (where .Data.Pages "Type" "News") 5 }}
-      {{ range $pagg.Pages }}
-        <h6>6</h6>
-        <h6>{{ .Type }}</h6>
-        <h6>{{ .Params.show_in_news }}</h6>
-      {{ end }}
-
-      {{ $paggg := .Paginate (where .Data.Pages "Type" "CIAO") 5 }}
-      {{ range $paggg.Pages }}
-        <h6>7</h6>
         <h6>{{ .Type }}</h6>
         <h6>{{ .Params.show_in_news }}</h6>
       {{ end }}
