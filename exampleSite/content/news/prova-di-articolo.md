@@ -10,7 +10,7 @@ person_tag = ["Carlo Schlatter"]
 status = "draft"
 subtype = []
 tags = ""
-title = "Between the Strings, Festival of Historical Harp"
+title = "Articolo Esempio"
 type = "Focus — Prova"
 
 +++
