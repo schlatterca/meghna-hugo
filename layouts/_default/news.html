@@ -22,7 +22,13 @@
 
       {{ with .Site.GetPage "/research" }}
         {{ .Title }}
-        <h6>2</h6>
+        <h6>1</h6>
+        <h6>{{ . }}</h6>
+      {{ end }}
+
+      {{ $bis := .Site.GetPage "/research" }}
+      {{ range $bis.Data }}
+        <h6>1bis</h6>
         <h6>{{ . }}</h6>
       {{ end }}
 
