@@ -174,7 +174,7 @@ if ( footnotes ) {
 	document.getElementsByClassName('footnotes_box')[0].append(paragraphBox);
 }
 
-/*MAKE AUTHOR'S NAME A LINK
+//MAKE AUTHOR'S NAME A LINK
 var authorsNameExists = document.getElementById('this_article_author');
 
 if ( authorsNameExists ) {
@@ -235,7 +235,7 @@ if ( authorsNameExists ) {
 		document.getElementById('this_article_author').innerHTML="";
 		document.getElementById('this_article_author').append("by ", name_0);
 	}
-}*/
+}
 
 
 
