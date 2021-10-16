@@ -20,10 +20,10 @@
       {{/* .Render "article_onepage" */}}
       {{/* end */}}
 
-      {{ $t := .Site.GetPage "/research" }}
-      {{ range first 10 $t.Data.Terms.ByCount }}
-          <h6>2</h6>
-          <li>{{ . }}</li>
+      {{ with .Site.GetPage "/research" }}
+        {{ .Title }}
+        <h6>2</h6>
+        <h6>{{ . }}</h6>
       {{ end }}
 
       {{ range (.Paginator 5).Pages }}
