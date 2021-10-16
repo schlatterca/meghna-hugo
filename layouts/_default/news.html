@@ -25,20 +25,20 @@
 
       {{ $news := .Paginate .Data.Pages }}
       {{ range $news.Pages }}
-        {{/* .Title }
-        {{ .Type }}
-        {{ .Params.show_in_news }}
-        {{ . */}}
-        
+        {{/* .Title */}}
+        {{/* .Type */}}
+        {{/* .Params.show_in_news */}}
+        {{/* . */}}
+
         {{ .Render "article_onepage" }}
       {{ end }}
 
       {{ $research := .Site.GetPage "/research" }}
       {{ range $research.Data.Pages }}
-        {{/* .Title }
-        {{ .Type }}
-        {{ .Params.show_in_news }}
-        {{ . */}}
+        {{/* .Title */}}
+        {{/* .Type */}}
+        {{/* .Params.show_in_news */}}
+        {{/* . */}}
 
         {{ if eq .Params.show_in_news "true" }}
         {{ .Render "article_onepage" }}
