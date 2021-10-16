@@ -25,10 +25,10 @@
 
       {{ $news := .Paginate .Data.Pages }}
       {{ range $news.Pages }}
-        <h6>{{ .Title }}</h6>
-        {{/* .Type */}}
-        <h6>{{ .Params.show_in_news }}</h6>
-        {{/* . */}}
+        {{/* .Title }}
+        {{ .Type }}
+        {{ .Params.show_in_news }}
+        {{ . */}}
 
         {{ if .Params.show_in_news }}
         {{ .Render "article_onepage" }}
@@ -37,10 +37,10 @@
 
       {{ $research := .Site.GetPage "/research" }}
       {{ range $research.Data.Pages }}
-        <h6>{{ .Title }}</h6>
-        {{/* .Type */}}
-        <h6>{{ .Params.show_in_news }}</h6>
-        {{/* . */}}
+        {{/* .Title }}
+        {{ .Type }}
+        {{ .Params.show_in_news }}
+        {{ . */}}
 
         {{ if .Params.show_in_news }}
         {{ .Render "article_onepage" }}
