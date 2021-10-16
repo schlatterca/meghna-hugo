@@ -32,7 +32,13 @@
         <h6>4</h6>
         <h6>{{ .Type }}</h6>
         <h6>{{ .Params.show_in_news }}</h6>
-          {{ .Title }}
+      {{ end }}
+
+      {{ $pag := .Paginate (where .Data.Pages "Type" "Research") 5 }}
+      {{ range $pag.Pages }}
+        <h6>5</h6>
+        <h6>{{ .Type }}</h6>
+        <h6>{{ .Params.show_in_news }}</h6>
       {{ end }}
 
       {{ range (.Paginator 5).Pages }}
