@@ -32,6 +32,11 @@ fields:
   label: Person Tag
   description: 'Person quoted in the article (for indexing purpose, please follow
     this example: Name Surname or Name Name Surname).'
+- name: subjects_tag
+  type: tag_list
+  default: []
+  description: Subjects quoted in the article.
+  label: Subjects Tag
 - name: timeline_tag
   type: tag_list
   default: []
@@ -103,16 +108,6 @@ fields:
       format: markdown
   label: externallinks
   description: Please separate each link with a comma ("www.google.it, www.google.com").
-- name: tags
-  type: textarea
-  default: ''
-  config:
-    required: false
-    wysiwyg: false
-    schema:
-      format: markdown
-  label: tags
-  description: Tags.
 - name: downloads
   type: textarea
   default: ''
