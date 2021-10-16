@@ -2,6 +2,10 @@
 label: HL_article
 hide_body: false
 fields:
+- name: news
+  type: boolean
+  label: News
+  description: Toggle active to publish this article in the News section.
 - name: subtype
   type: tag_list
   default:
