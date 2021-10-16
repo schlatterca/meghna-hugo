@@ -16,7 +16,7 @@
 
       {{ if .Description }}
       <div class="synopsis_box">
-        <p class="synopsis"><span style="color: black">Synopsis: </span>{{ .Description }}</p>
+        <p class="synopsis">Synopsis: {{ .Description }}</p>
         <div class="open_synopsis_box">+</div>
       </div>
       {{ end }}
@@ -32,7 +32,7 @@
 
       {{ if .Params.footnotes }}
       <div class="footnotes_box">
-        <p class="footnotes"><span style="color: black">Footnotes: </span>{{ .Params.footnotes }}</p>
+        <p class="footnotes">Footnotes: {{ .Params.footnotes }}</p>
         <div class="open_footnotes_box">+</div>
       </div>
       {{ end }}
@@ -91,83 +91,89 @@
   //add links to each person that appears in the person_tag section
   var persontags_list = {{ .Params.person_tag }};
   var words = [];
-  for (let i = 0; i < persontags_list.length; i++) {
-    if (persontags_list[i].includes(' ')){
-      var nameToSwap = persontags_list[i].split(' ');
-      var first = nameToSwap[0];
-      var last = nameToSwap[nameToSwap.length - 1];
-      nameToSwap[0] = last;
-      nameToSwap[nameToSwap.length - 1] = first;
-      var nameSwapped = nameToSwap.join(' ').replace(' ', '%20');
-    } else {
-      var nameSwapped = persontags_list[i];
+  if (persontags_list) {
+    for (let i = 0; i < persontags_list.length; i++) {
+      if (persontags_list[i].includes(' ')){
+        var nameToSwap = persontags_list[i].split(' ');
+        var first = nameToSwap[0];
+        var last = nameToSwap[nameToSwap.length - 1];
+        nameToSwap[0] = last;
+        nameToSwap[nameToSwap.length - 1] = first;
+        var nameSwapped = nameToSwap.join(' ').replace(' ', '%20');
+      } else {
+        var nameSwapped = persontags_list[i];
+      }
+      var Obj = {}
+      Obj.word = persontags_list[i];
+      Obj.link = nameSwapped;
+      words.push(Obj);
     }
-    var Obj = {}
-    Obj.word = persontags_list[i];
-    Obj.link = nameSwapped;
-    words.push(Obj);
-  }
 
-  $.each(words,
-    function() {
-      var search = this;
-      $('span#person_tag').each(
-        function() {
-          if ($(this).text() === search.word) {
-            $(this).html('<a href="https://harfenlabor.netlify.app/persontags#' + search.link + '">' + search.word + '</a>');
+    $.each(words,
+      function() {
+        var search = this;
+        $('span#person_tag').each(
+          function() {
+            if ($(this).text() === search.word) {
+              $(this).html('<a href="https://harfenlabor.netlify.app/persontags#' + search.link + '">' + search.word + '</a>');
+            }
           }
-        }
-      );
-    }
-  );
+        );
+      }
+    );
+  }
 
   //ARTICLE
   //add links to each year that appears in the timeline_tag section
   var timelinetags_list = {{ .Params.timeline_tag }};
   var words_timeline = [];
-  for (let i = 0; i < timelinetags_list.length; i++) {
-    var Obj = {}
-    Obj.word = timelinetags_list[i];
-    Obj.link = timelinetags_list[i];
-    words_timeline.push(Obj);
-  }
-
-  $.each(words_timeline,
-    function() {
-      var search = this;
-      $('span#timeline_tag').each(
-        function() {
-          if ($(this).text() === search.word) {
-            $(this).html('<a href="https://harfenlabor.netlify.app/persontags#' + search.link + '">' + search.word + '</a>');
-          }
-        }
-      );
+  if (timelinetags_list) {
+    for (let i = 0; i < timelinetags_list.length; i++) {
+      var Obj = {}
+      Obj.word = timelinetags_list[i];
+      Obj.link = timelinetags_list[i];
+      words_timeline.push(Obj);
     }
-  );
+
+    $.each(words_timeline,
+      function() {
+        var search = this;
+        $('span#timeline_tag').each(
+          function() {
+            if ($(this).text() === search.word) {
+              $(this).html('<a href="https://harfenlabor.netlify.app/persontags#' + search.link + '">' + search.word + '</a>');
+            }
+          }
+        );
+      }
+    );
+  }
 
   //ARTICLE
   //add links to each year that appears in the map_tag section
   var maptags_list = {{ .Params.map_tag }};
   var words_map = [];
-  for (let i = 0; i < maptags_list.length; i++) {
-    var Obj = {}
-    Obj.word = maptags_list[i];
-    Obj.link = maptags_list[i];
-    words_map.push(Obj);
-  }
-
-  $.each(words_map,
-    function() {
-      var search = this;
-      $('span#map_tag').each(
-        function() {
-          if ($(this).text() === search.word) {
-            $(this).html('<a href="https://harfenlabor.netlify.app/persontags#' + search.link + '">' + search.word + '</a>');
-          }
-        }
-      );
+  if (maptags_list) {
+    for (let i = 0; i < maptags_list.length; i++) {
+      var Obj = {}
+      Obj.word = maptags_list[i];
+      Obj.link = maptags_list[i];
+      words_map.push(Obj);
     }
-  );
+
+    $.each(words_map,
+      function() {
+        var search = this;
+        $('span#map_tag').each(
+          function() {
+            if ($(this).text() === search.word) {
+              $(this).html('<a href="https://harfenlabor.netlify.app/persontags#' + search.link + '">' + search.word + '</a>');
+            }
+          }
+        );
+      }
+    );
+  }
 
   //FOOTER:
   //make each external link clickable (External Links)
