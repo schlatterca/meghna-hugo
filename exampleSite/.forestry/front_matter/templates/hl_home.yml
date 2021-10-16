@@ -119,8 +119,6 @@ fields:
   label: downloads
   description: Downloads.
 pages:
-- exampleSite/content/focus/Zemke_Haag.md
-- exampleSite/content/focus/prova-di-articolo.md
 - exampleSite/content/research/barberini-harp-wood-species-identification.md
 - exampleSite/content/research/disegni-per-strumenti-musicali.md
 - exampleSite/content/research/example-with-a-video.md
