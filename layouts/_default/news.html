@@ -25,24 +25,24 @@
 
       {{ $news := .Paginate .Data.Pages }}
       {{ range $news.Pages }}
-        {{/* .Title }}
-        {{ .Type */}}
-        <div>{{ .Params.show_in_news }}</div>
+        <h6>{{ .Title }}</h6>
+        {{/* .Type */}}
+        <h6>{{ .Params.show_in_news }}</h6>
         {{/* . */}}
 
-        {{ if eq .Params.show_in_news "true" }}
+        {{ if .Params.show_in_news }}
         {{ .Render "article_onepage" }}
         {{ end }}
       {{ end }}
 
       {{ $research := .Site.GetPage "/research" }}
       {{ range $research.Data.Pages }}
-        {{/* .Title }}
-        {{ .Type */}}
-        <div>{{ .Params.show_in_news }}</div>
+        <h6>{{ .Title }}</h6>
+        {{/* .Type */}}
+        <h6>{{ .Params.show_in_news }}</h6>
         {{/* . */}}
 
-        {{ if eq .Params.show_in_news "true" }}
+        {{ if .Params.show_in_news }}
         {{ .Render "article_onepage" }}
         {{ end }}
       {{ end }}
