@@ -1,15 +1,19 @@
 +++
-author = "Eric Kleinmann, Volker Haag"
-barberiniharpproject = ""
+author = "Eric Kleinmann"
+barberiniharpproject = "The one most important surviving Italian Baroque harp the Barberini Harp is a chromatic harp with three parallel rows of strings constructed (1632-33) for the harpist Marco Marazzoli by the instrument maker Girolamo Acciari and the wood-carver Giovanni Tubi under the patronage of Cardinal Antonio Barberini. As we lack crucial understanding of this famous harp Harfenlabor has initiated The Barberini Harp Project in order to conduct and share basic research on this harp in the fields of organology musicology and performance practice and within relevant historical and art-historical contexts. This publication presents three stages of The Barberini Harp Project: 1. Convening around the Barberini Harp Project 2. Interviews with Experts and 3. Examinations."
 description = ""
 downloads = ""
-externallinks = ""
+externallinks = "https://www.austriacult.roma.it/de/istituto-storico-austriaco, http://museostrumentimusicali.beniculturali.it,       https://www.factum-arte.com/pag/800/recording-and-creating-the-facsimile-of-the-barberini-harp, https://www.eric-harps.de, www.jstor.org/stable/26381197"
 footnotes = ""
 image = "/images/christina_barberini.jpg"
-person_tag = ["luigi rossi", "volker haag", "Franco Maria Mario Ricci", "jean Paul sartre", "carlo Azeglio ciampi", "Tizio Tizi", "Caio Cai", " Sempronio Semproni", "Tiziano", "Raffaello", "Stuart Little", "Chet Baker", "Michelangelo Michelangelo", "Raffaello Raffaello", "Michelangelo"]
+map_tag = ["Roma", "Rangendingen"]
+news = false
+person_tag = ["Eric Kleinmann", "Volker Haag"]
 status = ""
+subjects_tag = ["Practical Examination", "Barberini Harp", "harp maker", "master historical harp builders", "construction", "changes to neck", "original", "string", "stringing", "examinations", "cracks", "gilding", "decoration", "pinholes", "soundboard", "dendrochronological examination", "wood", "Little Ice Age", "360-degree camera", "soundbox", "ties", "column", "walnut wood", "OEHI Rome", "The German Embassy in Rome", "National Museum of Musical Instruments Rome"]
 subtype = ["Organology", "Performance Practice"]
 tags = ""
+timeline_tag = ["1570", "1605", "1632", "1633", "1644", "2016"]
 title = "Eric Video"
 titolo = ""
 titolo_blocchi = []
