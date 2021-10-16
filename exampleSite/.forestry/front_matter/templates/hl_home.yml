@@ -30,8 +30,8 @@ fields:
   type: tag_list
   default: []
   label: Person Tag
-  description: 'Person quoted in the article (for indexing purpose, please follow
-    this example: Name Surname or Name Name Surname).'
+  description: 'Person quoted in the article, separated by a comma (for indexing purpose,
+    please follow this example: Name Surname or Name Name Surname).'
 - name: subjects_tag
   type: tag_list
   default: []
