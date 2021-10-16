@@ -19,39 +19,49 @@ title = "Barberini Harp wood species identification"
 +++
 ![](/images/2018-12-17_barbe-dav_lineup_cl_2020-06-10-14_30_17_13-still071.jpg)
 
-###### National Museum of Musical Instruments, Barberini Harp wood examination, Valentina Zemke of the Thünen Institute for Wood Research setting up, Rome, 2018
+###### Set-up of the equipment.  
+For the investigation comprehensive microscopy equipment was transported from Hamburg to Rome. At the heart of the equipment is a state-of-the-art "3D-RLM" microscope (3D-reclected-light-microscopy). This modern technology enables a completely non-destructive material analysis with which the types of wood from which the harp was built can be identified. In addition to various eyepieces and stands for different applications, a special computer with special image analysis software is also part of the scientists' repertoire.  
+National Museum of Musical Instruments, Barberini Harp wood examination, Valentina Zemke of the Thünen Institute for Wood Research setting up, Rome, 2018
 
 ![](/images/2018-12-17_barbe-dav_lineup_cl_2020-06-10-10_17_16_12-still006.jpg)
 
-###### National Museum of Musical Instruments, Barberini Harp wood examination, Valentina Zemke of the Thünen Institute for Wood Research setting up 3D Reflected Light Microscope’s integrated image analysis software, Rome, 2018
+###### The set-up alone, as well as the detailed settings for the special images, require a great amount of time and concentration from the scientists.  
+National Museum of Musical Instruments, Barberini Harp wood examination, Valentina Zemke of the Thünen Institute for Wood Research setting up 3D Reflected Light Microscope’s integrated image analysis software, Rome, 2018
 
 ![](/images/2018-12-17_barbe-dav_lineup_cl_2020-06-10-09_52_51_16-still001.jpg)
 
-###### National Museum of Musical Instruments, Barberini Harp wood examination, Volker Haag of the Thünen Institute for Wood Research setting up 3D Reflected Light Microscope, Rome, 2018
+###### Fine adjustment of the device setting for 3D reflected light microscopy. Preparations for the microscopic investigation.  
+National Museum of Musical Instruments, Barberini Harp wood examination, Volker Haag of the Thünen Institute for Wood Research setting up 3D Reflected Light Microscope, Rome, 2018
 
 ![](/images/2018-12-17_barbe-dav_lineup_cl_2020-06-10-11_43_01_24-still079.jpg)
 
-###### National Museum of Musical Instruments, Barberini Harp wood examination, Valentina Zemke and Volker Haag of the Thünen Institute for Wood Research testing image resolution for the 3D Reflected Light Microscope’s integrated image analysis software, Rome, 2018
+###### Examination of the harp's base with 3D reflected-light microscopy. While the lens transmits "live" to the computer screen by hand, the surfaces of the instrument are examined.  
+National Museum of Musical Instruments, Barberini Harp wood examination, Valentina Zemke and Volker Haag of the Thünen Institute for Wood Research testing image resolution for the 3D Reflected Light Microscope’s integrated image analysis software, Rome, 2018
 
 ![](/images/2018-12-17_barbe-dav_lineup_cl_2020-06-10-12_52_55_19-still053.jpg)
 
-###### National Museum of Musical Instruments, Barberini Harp wood examination, Volker Haag of the Thünen Institute for Wood Research holding the illuminator for 3D Reflected Light Microscope against a part of the column, Rome, 2018
+###### Examination of a column fragment. Due to frequent touching of the instrument, the stain and varnish layer is particularly thin here and allows an examination of the wood surface.  
+National Museum of Musical Instruments, Barberini Harp wood examination, Volker Haag of the Thünen Institute for Wood Research holding the illuminator for 3D Reflected Light Microscope against a part of the column, Rome, 2018
 
 ![](/images/2018-12-17_barbe-dav_lineup_cl_2020-06-10-10_51_53_06-still015.jpg)
 
-###### National Museum of Musical Instruments, Barberini Harp wood examination, Volker Haag of the Thünen Institute for Wood Research holding the illuminator for 3D Reflected Light Microscope against the soundboard, Rome, 2018
+###### Macroscopic examination of the harp neck and tailpieces with a hand magnifier.  
+National Museum of Musical Instruments, Barberini Harp wood examination, Volker Haag of the Thünen Institute for Wood Research holding the illuminator for 3D Reflected Light Microscope against the soundboard, Rome, 2018
 
 ![](/images/2018-12-17_barbe-dav_lineup_cl_2020-06-10-10_55_22_16-still075.jpg)
 
-###### National Museum of Musical Instruments, Barberini Harp wood examination, Valentina Zemke and Volker Haag of the Thünen Institute for Wood Research, examining the base of the harp with the illuminator for 3D Reflected Light Microscope, Rome, 2018
+###### Macroscopic surface examination and search for suitable positions for microscopic examination.  
+National Museum of Musical Instruments, Barberini Harp wood examination, Valentina Zemke and Volker Haag of the Thünen Institute for Wood Research, examining the base of the harp with the illuminator for 3D Reflected Light Microscope, Rome, 2018
 
 ![](/images/2018-12-17_barbe-dav_lineup_cl_2020-06-10-10_55_07_05-still020.jpg)
 
-###### National Museum of Musical Instruments, Barberini Harp wood examination, Volker Haag of the Thünen Institute for Wood Research, examining the base of the harp with the illuminator for 3D Reflected Light Microscope, Rome, 2018
+###### Examination of the damaged paint surface and search for suitable positions for microscopic examination.  
+National Museum of Musical Instruments, Barberini Harp wood examination, Volker Haag of the Thünen Institute for Wood Research, examining the base of the harp with the illuminator for 3D Reflected Light Microscope, Rome, 2018
 
 ![](/images/2018-12-17_barbe-dav_lineup_cl_2020-06-10-10_01_55_19-still005.jpg)
 
-###### National Museum of Musical Instruments, Barberini Harp wood examination, Volker Haag of the Thünen Institute for Wood Research with an illustration of harp parts and a photograph of the Barberini harp, Rome, 2018
+###### Transcript of the examination protocol.  
+National Museum of Musical Instruments, Barberini Harp wood examination, Volker Haag of the Thünen Institute for Wood Research with an illustration of harp parts and a photograph of the Barberini harp, Rome, 2018
 
 ![](/images/2018-12-17_barbe-dav_lineup_cl_2020-06-10-13_12_11_00-still056.jpg)
 
