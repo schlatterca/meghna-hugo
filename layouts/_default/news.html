@@ -20,10 +20,9 @@
       {{/* .Render "article_onepage" */}}
       {{/* end */}}
 
-      {{ $paginator := .Paginate .Data.Pages }}
-      {{ range $paginator.Pages }}
+      {{ $pagins := .Paginate .Data.Pages }}
+      {{ range $pagins.Pages }}
       <h6>1</h6>
-      <h6>{{ .Paginate }}</h6>
       <h6>{{ .Data.Pages }}</h6>
       {{ end }}
 
