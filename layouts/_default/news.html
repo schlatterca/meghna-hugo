@@ -20,45 +20,28 @@
       {{/* .Render "article_onepage" */}}
       {{/* end */}}
 
-      {{ with .Site.GetPage "/research" }}
-        {{ .Title }}
-        <h6>1</h6>
+
+
+
+      {{ $news := .Paginate .Data.Pages }}
+      {{ range $news.Pages }}
+        <p>{{ .Title }}</p>
+        <h6>{{ .Type }}</h6>
+        <h6>{{ .Params.show_in_news }}</h6>
         <h6>{{ . }}</h6>
       {{ end }}
 
-      {{ $bis := .Site.GetPage "/research" }}
-      {{ range $bis.Data.Pages }}
-        <h6>1bis</h6>
-        {{ .Title }}
+      {{ $research := .Site.GetPage "/research" }}
+      {{ range $research.Data.Pages }}
+        <p>{{ .Title }}</p>
+        <h6>{{ .Type }}</h6>
+        <h6>{{ .Params.show_in_news }}</h6>
         <h6>{{ . }}</h6>
       {{ end }}
 
-      {{ range (.Paginator 5).Pages }}
-      <h6>2</h6>
-      <h6>{{ .Type }}</h6>
-      <h6>{{ .Params.show_in_news }}</h6>
-      {{ end }}
 
-      {{ range .Pages }}
-      <h6>3</h6>
-      <h6>{{ .Type }}</h6>
-      <h6>{{ .Params.show_in_news }}</h6>
-      {{ end }}
 
-      {{ $ps := .Paginate .Sections }}
-      {{ range $ps.Pages }}
-        <h6>4</h6>
-        <h6>{{ .Type }}</h6>
-        <h6>{{ .Params.show_in_news }}</h6>
-      {{ end }}
-
-      {{ $pag := .Paginate (where .Data.Pages "Type" "CIAO") 5 }}
-      {{ range $pag.Pages }}
-        <h6>5</h6>
-        <h6>{{ .Type }}</h6>
-        <h6>{{ .Params.show_in_news }}</h6>
-      {{ end }}
-
+      
 
       <div class="col-12">
         {{ template "_internal/pagination.html" . }}
