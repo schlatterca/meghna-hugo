@@ -16,7 +16,7 @@
 
       {{ if .Description }}
       <div class="synopsis_box">
-        <p class="synopsis">Synopsis: {{ .Description }}</p>
+        <p class="synopsis"><span style="color: black">Synopsis: </span>{{ .Description }}</p>
         <div class="open_synopsis_box">+</div>
       </div>
       {{ end }}
@@ -32,7 +32,7 @@
 
       {{ if .Params.footnotes }}
       <div class="footnotes_box">
-        <p class="footnotes">Footnotes: {{ .Params.footnotes }}</p>
+        <p class="footnotes"><span style="color: black">Footnotes: </span>{{ .Params.footnotes }}</p>
         <div class="open_footnotes_box">+</div>
       </div>
       {{ end }}
