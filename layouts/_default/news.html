@@ -27,8 +27,9 @@
       {{ end }}
 
       {{ $bis := .Site.GetPage "/research" }}
-      {{ range $bis.Data }}
+      {{ range $bis.Data.Pages }}
         <h6>1bis</h6>
+        {{ .Title }}
         <h6>{{ . }}</h6>
       {{ end }}
 
