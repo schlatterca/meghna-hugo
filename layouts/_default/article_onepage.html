@@ -1,11 +1,13 @@
 <article class="col-lg-8 offset-lg-2">
   <div class="post-block">
     <div class="media-wrapper">
+      {{ if .Params.image }}
       <img class="img-fluid" style="height: auto" data-src="{{ .Params.Image_webp | absURL }}" src="{{ .Params.image | absURL }}">
+      {{ end }}
     </div>
 
     <div class="content">
-
+      
       <p id="this_article_author" style="text-align: center">{{ .Params.author }}</p>
       <h1 style="text-align: center"><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
 
