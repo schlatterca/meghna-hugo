@@ -25,7 +25,7 @@
       <h6>1</h6>
       <h6>{{ .Paginate }}</h6>
       <h6>{{ .Data.Pages }}</h6>
-      <h6>{{ $paginator }}</h6>
+      <h6>{{ $paginator.Pages }}</h6>
       {{ end }}
 
       {{ range (.Paginator 5).Pages }}
