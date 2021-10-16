@@ -7,9 +7,9 @@ languageName = "En"
 weight = 1
 [Languages.en.menu]
   [[Languages.en.menu.main]]
-  identifier = "focus"
-  name = "focus"
-  url = "/focus"
+  identifier = "news"
+  name = "news"
+  url = "/news"
   weight = 1
   [[Languages.en.menu.main]]
   identifier = "research"
