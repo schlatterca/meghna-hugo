@@ -51,6 +51,10 @@ function persontags(data){
           } else {
             var SurnameName = result.persontags[i];
           }
+          //exceptions in the name (unusable characters)
+          if (SurnameName.includes('ç')){
+            SurnameName = SurnameName.replace('ç', 'c');
+          }
 
           allNames.push(SurnameName);
           allLinks.push(result.permalink);
@@ -97,7 +101,7 @@ function populateWithResults(myResults){
       persona.id = myResults[i].name;
     }
 
-    persona.setAttribute("style", "margin-top: 10px; line-height: 0.7em");
+    persona.setAttribute("style", "margin-top: 10px; line-height: 0.6em");
     quinome.id = "quinome";
     quinome.setAttribute("style", "font-size: 20px; color: black; margin-bottom: 0px; margin-top: 20px;");
 
