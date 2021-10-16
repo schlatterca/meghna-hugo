@@ -10,7 +10,7 @@
       <div class="col-lg-8 offset-lg-2 text-center">
         <p id="this_article_type"><a href="..\"{{ .Type }}>{{ .Type }}</a></p>
         <h1 id="this_article_title">{{ .Title }}</h1>
-        {{ if .Params.author }}
+        {{ if eq .Type "Research" }}
         <p id="this_article_author">by {{ .Params.author }}</p>
         {{ end }}
         
@@ -104,12 +104,12 @@
         nameToSwap[0] = last;
         nameToSwap[nameToSwap.length - 1] = first;
         var nameSwapped = nameToSwap.join(' ').replace(' ', '%20');
-        if (nameSwapped.includes('ç')){
-          console.log(nameSwapped);
-          nameSwapped = nameSwapped.replace('ç', 'c');
-        }
       } else {
         var nameSwapped = persontags_list[i];
+      }
+      //exceptions in the name (unusable characters)
+      if (nameSwapped.includes('ç')){
+        nameSwapped = nameSwapped.replace('ç', 'c');
       }
       var Obj = {}
       Obj.word = persontags_list[i];
