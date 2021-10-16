@@ -8,12 +8,14 @@ footnotes = ""
 image = "/images/2018-12-17_barbe-dav_lineup_cl_2020-06-10-11_43_01_24-still079.jpg"
 map_tag = ["Roma", "Hamburg"]
 person_tag = ["Volker Haag", "Valentina Zemke"]
+show_in_news = false
 status = "draft"
 subjects_tag = ["Barberini Harp", "wood", "soundboard", "neck", "column", "structure", "microscope", "database", "National Museum of Musical Instruments", "Thünen Institute of Wood Research"]
 subtype = ["Organology"]
 tags = ""
 timeline_tag = ["1632", "1633", "2018", "2019"]
 title = "Barberini Harp wood species identification"
+type = "Research"
 
 +++
 ![](/images/2018-12-17_barbe-dav_lineup_cl_2020-06-10-14_30_17_13-still071.jpg)
