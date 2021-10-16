@@ -8,9 +8,11 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-8 offset-lg-2 text-center">
-        <p id="this_article_type"><a href="..\Research">Research</a></p>
+        <p id="this_article_type"><a href="..\"{{ .Type }}>{{ .Type }}</a></p>
         <h1 id="this_article_title">{{ .Title }}</h1>
+        {{ if .Params.author }}
         <p id="this_article_author">by {{ .Params.author }}</p>
+        {{ end }}
         
       </div>
 
@@ -47,6 +49,7 @@
 
 </section>
 
+{{ if .Type == "Research" }}
 <footer>
   <div id="footer" class="foot1" onmouseover="toggleFooter(this)" onmouseout="toggleFooter(this)">
     <p class="footer_title footitle1">Barberini Harp Project</p>
@@ -85,6 +88,7 @@
     </div>
   </div>
 </footer>
+{{ end }}
 
 <script>
   //ARTICLE
