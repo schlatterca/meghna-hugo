@@ -26,9 +26,9 @@
       {{ $news := .Paginate .Data.Pages }}
       {{ range $news.Pages }}
         {{/* .Title }}
-        {{ .Type }}
-        {{ .Params.show_in_news }}
-        {{ . */}}
+        {{ .Type */}}
+        <div>{{ .Params.show_in_news }}</div>
+        {{/* . */}}
 
         {{ if eq .Params.show_in_news "true" }}
         {{ .Render "article_onepage" }}
@@ -38,9 +38,9 @@
       {{ $research := .Site.GetPage "/research" }}
       {{ range $research.Data.Pages }}
         {{/* .Title }}
-        {{ .Type }}
-        {{ .Params.show_in_news }}
-        {{ . */}}
+        {{ .Type */}}
+        <div>{{ .Params.show_in_news }}</div>
+        {{/* . */}}
 
         {{ if eq .Params.show_in_news "true" }}
         {{ .Render "article_onepage" }}
