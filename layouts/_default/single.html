@@ -104,6 +104,10 @@
         nameToSwap[0] = last;
         nameToSwap[nameToSwap.length - 1] = first;
         var nameSwapped = nameToSwap.join(' ').replace(' ', '%20');
+        if (nameSwapped.includes('ç')){
+          console.log(nameSwapped);
+          nameSwapped = nameSwapped.replace('ç', 'c');
+        }
       } else {
         var nameSwapped = persontags_list[i];
       }
