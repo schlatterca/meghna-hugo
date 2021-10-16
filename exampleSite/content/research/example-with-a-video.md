@@ -9,6 +9,7 @@ image = "/images/christina_barberini.jpg"
 map_tag = ["Roma", "Rangendingen"]
 news = false
 person_tag = ["Eric Kleinmann", "Volker Haag"]
+show_in_news = true
 status = ""
 subjects_tag = ["Practical Examination", "Barberini Harp", "harp maker", "master historical harp builders", "construction", "changes to neck", "original", "string", "stringing", "examinations", "cracks", "gilding", "decoration", "pinholes", "soundboard", "dendrochronological examination", "wood", "Little Ice Age", "360-degree camera", "soundbox", "ties", "column", "walnut wood", "OEHI Rome", "The German Embassy in Rome", "National Museum of Musical Instruments Rome"]
 subtype = ["Organology", "Performance Practice"]
