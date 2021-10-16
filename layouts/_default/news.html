@@ -29,6 +29,7 @@
         <h6>{{ .Type }}</h6>
         <h6>{{ .Params.show_in_news }}</h6>
         <h6>{{ . }}</h6>
+        {{ .Render "article_onepage" }}
       {{ end }}
 
       {{ $research := .Site.GetPage "/research" }}
@@ -37,10 +38,11 @@
         <h6>{{ .Type }}</h6>
         <h6>{{ .Params.show_in_news }}</h6>
         <h6>{{ . }}</h6>
+        {{ .Render "article_onepage" }}
       {{ end }}
 
 
-      
+    
 
 
 
