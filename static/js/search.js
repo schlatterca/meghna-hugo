@@ -86,6 +86,8 @@ function populateResults(result){
     postBlock.setAttribute('class', 'post-block');
     /****/let mediaWrapper = document.createElement('div');
     mediaWrapper.setAttribute('class', 'media-wrapper');
+    /******/let imgFluid = document.createElement('img');
+    imgFluid.setAttribute('class', 'img-fluid');
     /****/let content = document.createElement('div');
     content.setAttribute('class', 'content');
     /******/let title = document.createElement('h3');
@@ -94,8 +96,13 @@ function populateResults(result){
     readMore.setAttribute('class', 'btn btn-transparent');
     readMore.setAttribute('href', 'www.ansa.it');
 
-    article.append(postBlock);
+    mediaWrapper.append(imgFluid);
+    content.append(title);
+    content.append(summary);
+    content.append(readMore);
     postBlock.append(mediaWrapper);
+    postBlock.append(content);
+    article.append(postBlock);
     document.getElementById('toBePopulated').append(article);
 
     /*<article class="col-lg-4 col-md-6 col-12 clearfix wow fadeInUp mb-4" data-wow-duration="500ms">
