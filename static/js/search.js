@@ -78,7 +78,6 @@ function populateResults(result){
 
     console.log(this);
     console.log(this.item);
-    console.log(this.item.title);
 
     let article = document.createElement('article');
     article.setAttribute('class', 'col-lg-4 col-md-6 col-12 clearfix wow fadeInUp mb-4');
@@ -92,15 +91,19 @@ function populateResults(result){
     /****/let content = document.createElement('div');
     content.setAttribute('class', 'content');
     /******/let title = document.createElement('h3');
+    /********/let title_link = document.createElement('a');
+    title_link.setAttribute('href', this.item.permalink);
+    let title_link_text = document.createTextNode(this.item.title);
+    title_link.appendChild(title_link_text);
+    title.appendChild(title_link);
     /******/let summary = document.createElement('p');
-    /********/let permalink = document.createElement('a');
-    permalink.setAttribute('href', this.item.permalink);
-    let permalink_text = document.createTextNode(this.item.title);
-    permalink.appendChild(permalink_text);
-    summary.appendChild(permalink);
+    let summary_text = document.createTextNode(this.item.contents);
+    summary.appendChild(summary_text);
     /******/let readMore = document.createElement('a');
     readMore.setAttribute('class', 'btn btn-transparent');
-    readMore.setAttribute('href', 'www.ansa.it');
+    readMore.setAttribute('href', this.item.permalink);
+    let readMore_text = document.createTextNode("Read more");
+    readMore.appendChild(readMore_text);
 
     mediaWrapper.append(imgFluid);
     content.append(title);
