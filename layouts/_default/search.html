@@ -33,10 +33,10 @@
         </div>
       </div>
       {{"<!-- /section title -->" | safeHTML}}
-      {{ $paginator := .Paginate .Data.Pages }}
+      {{/* $paginator := .Paginate .Data.Pages }}
       {{ range $paginator.Pages }}
       {{ .Render "article" }}
-      {{ end }}
+      {{ end */}}
       <div class="col-12">
         {{ template "_internal/pagination.html" . }}
       </div>
