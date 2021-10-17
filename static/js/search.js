@@ -40,6 +40,12 @@ function executeSearch(searchQuery){
   });
 }
 
+/*to be used for summary contents, when rendering the articles*/
+function shorten(str, maxLen, separator = ' ') {
+  if (str.length <= maxLen) return str;
+  return str.substr(0, str.lastIndexOf(separator, maxLen));
+}
+
 function populateResults(result){
   $.each(result,function(key,value){
     var contents= value.item.contents;
@@ -95,8 +101,11 @@ function populateResults(result){
     title_link.appendChild(title_link_text);
     title.appendChild(title_link);
     /******/let summary = document.createElement('p');
-    let summary_text = document.createTextNode(this.item.contents.replace(/^(.{550}[^\s]*).*/, "$1"));
+    
+    let summary_text = document.createTextNode(shorten(this.item.contents, 550));
+    //let summary_text = document.createTextNode(this.item.contents.replace(/^(.{550}[^\s]*).*/, "$1"));
     console.log(this.item.contents);
+
     summary.appendChild(summary_text);
     /******/let readMore = document.createElement('a');
     readMore.setAttribute('class', 'btn btn-transparent');
