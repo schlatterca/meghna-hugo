@@ -92,6 +92,8 @@ function populateResults(result){
     content.setAttribute('class', 'content');
     /******/let title = document.createElement('h3');
     /******/let summary = document.createElement('p');
+    let summary_text = document.createTextNode(${title});
+    summary.appendChild(summary_text);
     /******/let readMore = document.createElement('a');
     readMore.setAttribute('class', 'btn btn-transparent');
     readMore.setAttribute('href', 'www.ansa.it');
