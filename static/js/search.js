@@ -88,7 +88,7 @@ function populateResults(result){
     mediaWrapper.setAttribute('class', 'media-wrapper');
     /******/let imgFluid = document.createElement('img');
     imgFluid.setAttribute('class', 'img-fluid');
-    imgFluid.setAttribute('src', '{{ '+this.item.image+' | absURL }}');
+    imgFluid.setAttribute('src', '{{ href="https://harfenlabor.netlify.app'+this.item.image+'" | absURL }}');
     /****/let content = document.createElement('div');
     content.setAttribute('class', 'content');
     /******/let title = document.createElement('h3');
