@@ -77,6 +77,10 @@ function populateResults(result){
     */
 
     console.log(this);
+    console.log(output);
+    console.log(value);
+    console.log(value.item);
+    console.log(value.item.contents);
     console.log(this.item);
 
     let article = document.createElement('article');
