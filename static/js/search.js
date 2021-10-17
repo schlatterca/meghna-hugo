@@ -92,7 +92,7 @@ function populateResults(result){
     content.setAttribute('class', 'content');
     /******/let title = document.createElement('h3');
     /******/let summary = document.createElement('p');
-    let summary_text = document.createTextNode(${title});
+    let summary_text = document.createTextNode("ok");
     summary.appendChild(summary_text);
     /******/let readMore = document.createElement('a');
     readMore.setAttribute('class', 'btn btn-transparent');
