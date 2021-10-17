@@ -78,6 +78,40 @@ function populateResults(result){
 
     console.log(this);
     console.log(document.getElementById('toBePopulated'));
+
+    let article = document.createElement('article');
+    article.setAttribute('class', 'col-lg-4 col-md-6 col-12 clearfix wow fadeInUp mb-4');
+    article.setAttribute('data-wow-duration', '500ms');
+    /**/let postBlock = document.createElement('div');
+    postBlock.setAttribute('class', 'post-block');
+    /****/let mediaWrapper = document.createElement('div');
+    mediaWrapper.setAttribute('class', 'media-wrapper');
+    /****/let content = document.createElement('div');
+    content.setAttribute('class', 'content');
+    /******/let title = document.createElement('h3');
+    /******/let summary = document.createElement('p');
+    /******/let readMore = document.createElement('a');
+    readMore.setAttribute('class', 'btn btn-transparent');
+    readMore.setAttribute('href', 'www.ansa.it');
+
+    article.append(postBlock);
+    postBlock.append(mediaWrapper);
+    document.getElementById('toBePopulated').append(article);
+
+    /*<article class="col-lg-4 col-md-6 col-12 clearfix wow fadeInUp mb-4" data-wow-duration="500ms">
+      <div class="post-block">
+        <div class="media-wrapper">
+          <img class="img-fluid" data-src="{{ .Params.Image_webp | absURL }}" src="{{ .Params.image | absURL }}">
+        </div>
+
+        <div class="content">
+          <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+          <p>{{ .Summary }}</p>
+          <a class="btn btn-transparent" href="{{ .Permalink }}">{{ i18n "readMore" }}</a>
+        </div>
+      </div>
+    </article>*/
+
     
   });
 }
