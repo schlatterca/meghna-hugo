@@ -26,13 +26,7 @@
       <p>${snippet}</p>
       ${ isset tags }<p>Tags: ${tags}</p>${ end }
       ${ isset categories }<p>Categories: ${categories}</p>$
-      console.log($);
       { end }
     </div>
-
-    {{/* $paginator := .Paginate .Data.Pages }}
-    {{ range $paginator.Pages }}
-    {{ .Render "article" }}
-    {{ end */}}
 </script>
 {{ end }}
