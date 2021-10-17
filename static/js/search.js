@@ -77,6 +77,7 @@ function populateResults(result){
     */
 
     console.log(this);
+    console.log(document.getElementById('toBePopulated'));
     
   });
 }
