@@ -77,10 +77,6 @@ function populateResults(result){
     */
 
     console.log(this);
-    console.log(output);
-    console.log(value);
-    console.log(value.item);
-    console.log(value.item.contents);
     console.log(this.item);
 
     let article = document.createElement('article');
@@ -92,6 +88,7 @@ function populateResults(result){
     mediaWrapper.setAttribute('class', 'media-wrapper');
     /******/let imgFluid = document.createElement('img');
     imgFluid.setAttribute('class', 'img-fluid');
+    imgFluid.setAttribute('src', '{{ '+this.item.image+' | absURL }}');
     /****/let content = document.createElement('div');
     content.setAttribute('class', 'content');
     /******/let title = document.createElement('h3');
