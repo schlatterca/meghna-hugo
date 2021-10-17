@@ -77,7 +77,8 @@ function populateResults(result){
     */
 
     console.log(this);
-    console.log(document.getElementById('toBePopulated'));
+    console.log(this.item);
+    console.log(this.item.title);
 
     let article = document.createElement('article');
     article.setAttribute('class', 'col-lg-4 col-md-6 col-12 clearfix wow fadeInUp mb-4');
@@ -92,8 +93,11 @@ function populateResults(result){
     content.setAttribute('class', 'content');
     /******/let title = document.createElement('h3');
     /******/let summary = document.createElement('p');
-    let summary_text = document.createTextNode("ok");
-    summary.appendChild(summary_text);
+    /********/let permalink = document.createElement('a');
+    permalink.setAttribute('href', this.item.permalink);
+    let permalink_text = document.createTextNode(this.item.title);
+    permalink.appendChild(permalink_text);
+    summary.appendChild(permalink);
     /******/let readMore = document.createElement('a');
     readMore.setAttribute('class', 'btn btn-transparent');
     readMore.setAttribute('href', 'www.ansa.it');
