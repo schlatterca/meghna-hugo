@@ -26,12 +26,13 @@
       <p>${snippet}</p>
       ${ isset tags }<p>Tags: ${tags}</p>${ end }
       ${ isset categories }<p>Categories: ${categories}</p>$
+      console.log($);
       { end }
     </div>
 
-    {{ $paginator := .Paginate .Data.Pages }}
+    {{/* $paginator := .Paginate .Data.Pages }}
     {{ range $paginator.Pages }}
     {{ .Render "article" }}
-    {{ end }}
+    {{ end */}}
 </script>
 {{ end }}
