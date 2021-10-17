@@ -76,9 +76,6 @@ function populateResults(result){
     });
     */
 
-    console.log(this);
-    console.log(this.item);
-
     let article = document.createElement('article');
     article.setAttribute('class', 'col-lg-4 col-md-6 col-12 clearfix wow fadeInUp mb-4');
     article.setAttribute('data-wow-duration', '500ms');
@@ -98,7 +95,8 @@ function populateResults(result){
     title_link.appendChild(title_link_text);
     title.appendChild(title_link);
     /******/let summary = document.createElement('p');
-    let summary_text = document.createTextNode(this.item.contents.replace(/^(.{550}[^\s]*).*/, "$0"));
+    let summary_text = document.createTextNode(this.item.contents.replace(/^(.{550}[^\s]*).*/, "$1"));
+    console.log(this.item.contents);
     summary.appendChild(summary_text);
     /******/let readMore = document.createElement('a');
     readMore.setAttribute('class', 'btn btn-transparent');
