@@ -98,7 +98,7 @@ function populateResults(result){
     title_link.appendChild(title_link_text);
     title.appendChild(title_link);
     /******/let summary = document.createElement('p');
-    let summary_text = document.createTextNode(this.item.contents.replace(/^(.{550}[^\s]*).*/, "$1"));
+    let summary_text = document.createTextNode(this.item.contents.replace(/^(.{550}[^\s]*).*/));
     summary.appendChild(summary_text);
     /******/let readMore = document.createElement('a');
     readMore.setAttribute('class', 'btn btn-transparent');
