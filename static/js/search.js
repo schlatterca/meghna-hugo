@@ -101,10 +101,7 @@ function populateResults(result){
     title_link.appendChild(title_link_text);
     title.appendChild(title_link);
     /******/let summary = document.createElement('p');
-    
-    let summary_text = document.createTextNode(shorten(this.item.contents, 550));
-    //let summary_text = document.createTextNode(this.item.contents.replace(/^(.{550}[^\s]*).*/, "$1"));
-    console.log(this.item.contents);
+    let summary_text = document.createTextNode(shorten(this.item.contents, 550)+'…');
 
     summary.appendChild(summary_text);
     /******/let readMore = document.createElement('a');
@@ -120,23 +117,7 @@ function populateResults(result){
     postBlock.append(mediaWrapper);
     postBlock.append(content);
     article.append(postBlock);
-    document.getElementById('toBePopulated').append(article);
-
-    /*<article class="col-lg-4 col-md-6 col-12 clearfix wow fadeInUp mb-4" data-wow-duration="500ms">
-      <div class="post-block">
-        <div class="media-wrapper">
-          <img class="img-fluid" data-src="{{ .Params.Image_webp | absURL }}" src="{{ .Params.image | absURL }}">
-        </div>
-
-        <div class="content">
-          <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
-          <p>{{ .Summary }}</p>
-          <a class="btn btn-transparent" href="{{ .Permalink }}">{{ i18n "readMore" }}</a>
-        </div>
-      </div>
-    </article>*/
-
-    
+    document.getElementById('toBePopulated').append(article);    
   });
 }
 
