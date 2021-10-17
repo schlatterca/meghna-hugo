@@ -21,7 +21,7 @@ type = "News"
 An artistic-scientific duel between the Single-Action-Harp around Haydn and its Alpine counterpart, the Tyrolean Folk Harp.  
 11–14 November 2021, Haus der Musik Innsbruck and Tiroler Landesmuseen Ferdinandeum.
 
-![](/images/hay-flyer-digital-1.jpg)
+![flyerimage](/images/hay-flyer-digital-1.jpg "flyerimg")
 
 ![](/images/hay-flyer-digital-2.jpg)
 
