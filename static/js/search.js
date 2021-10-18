@@ -33,7 +33,9 @@ function executeSearch(searchQuery){
     var result = fuse.search(searchQuery);
     console.log({"matches":result});
     document.getElementById('searchTitle').appendChild(document.createTextNode(" results for: "));
-    document.getElementById('searchTitle').appendChild(document.createTextNode(searchQuery).setAttribute('style', 'color:#B44BEB;text-transform:capitalize'));
+    let searchTitleResult = document.createTextNode(searchQuery);
+    searchTitleResult.setAttribute('style', 'color:#B44BEB;text-transform:capitalize');
+    document.getElementById('searchTitle').appendChild(searchTitleResult);
     if(result.length > 0){
       populateResults(result);
     }else{
