@@ -437,7 +437,7 @@ p > img {
 
 /*INDEX BOXES WITH LINKS*/
 .index_box {
-	display: none;
+	display: none; /*should become flex*/
 	position: absolute;
 	float: left;
 	left: 0;
@@ -453,7 +453,6 @@ p > img {
 	overflow: auto;
 	margin-left: 10%;
 	margin-top: 3em;
-	display: flex;
 	flex-direction: row;
 	transition: width .3s ease-out,height .3s ease-out;
 	-ms-overflow-style: none;
