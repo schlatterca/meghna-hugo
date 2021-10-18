@@ -78,6 +78,7 @@ function persontags(data){
   }
 
   populateWithResults(sortedNames);
+  makeItInteractive();
   return false;
 }
 
@@ -139,3 +140,18 @@ function populateWithResults(myResults){
     document.getElementById(url[1]).children[0].style.color = "#B44BEB";
   }
 };
+
+function makeItInteractive(){
+  console.log("ciao")
+  $('span#quinome').each(
+    function() {
+      console.log(this);
+      $(this).on("mouseover", function(e) {
+        this.css('color', '#B44BEB');
+      });
+      $(this).on("mouseout", function(e) {
+        this.css('color', 'black');
+      });
+    }
+  );
+}
