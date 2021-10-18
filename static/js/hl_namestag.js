@@ -117,7 +117,7 @@ function populateWithResults(myResults){
       //persona.append(quilink);
     }    
 
-    $('#main_person_tags').append(persona);
+    $('#persontags-search-results').append(persona);
 
   }
 
