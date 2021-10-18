@@ -487,7 +487,7 @@ p > img {
 	line-height: 1.5rem;
 	height: fit-content;
 	transition: transform 0.3s ease-out;
-	transform: rotate(0deg);
+	transform: rotate(45deg);
 	transform-origin: center; /* this will be a svg turning + into - */
 
 	margin-left: 0px;
