@@ -7,6 +7,7 @@ function getJsonArray(){
       success: persontags
   })
 }
+
 function clean(array) {
   for (var key in array) {
     if (array[key] === null || array[key] === undefined) {
@@ -146,7 +147,12 @@ function makeItInteractive(){
     function() {
       $(this).on("mouseover", function(e) {
 
-        console.log(this);
+        $('span#quinome').each(
+          function() {
+            $(this).css('color', 'black');
+          }
+        );
+        
         $(this).css('color', '#B44BEB');
       });
       $(this).on("mouseout", function(e) {
