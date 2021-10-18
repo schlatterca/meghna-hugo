@@ -98,12 +98,12 @@ function populateWithResults(myResults){
 
     if (myResults[i].name.includes(" ")){
       var nameForID = myResults[i].name.replaceAll(" ", "%20");
-      persona.id = nameForID;
+      persona.id = "persona "+nameForID;
     } else {
       persona.id = myResults[i].name;
     }
 
-    persona.setAttribute("style", "margin-top: 10px; line-height: 0.6em");
+    persona.setAttribute("style", "margin-top: 10px; line-height: 0.6em; cursor: pointer;");
     quinome.id = "quinome";
     quinome.setAttribute("style", "font-size: 20px; color: black; margin-bottom: 0px; margin-top: 20px;");
 
@@ -142,7 +142,6 @@ function populateWithResults(myResults){
 };
 
 function makeItInteractive(){
-  console.log("ciao")
   $('span#quinome').each(
     function() {
       $(this).on("mouseover", function(e) {
@@ -152,11 +151,15 @@ function makeItInteractive(){
             $(this).css('color', 'black');
           }
         );
-        
+
         $(this).css('color', '#B44BEB');
       });
       $(this).on("mouseout", function(e) {
         $(this).css('color', 'black');
+      });
+
+      $(this).on("click", function(e) {
+        console.log(this);
       });
     }
   );
