@@ -91,11 +91,12 @@ function populateWithResults(myResults){
 
     const persona = document.createElement("span");
     const quinome = document.createElement("span");
+    const spaceAfter = document.createElement("span");
 
     //persona.id = "persona";
 
     if (myResults[i].name.includes(" ")){
-      var nameForID = myResults[i].name.replace(" ", "%20");
+      var nameForID = myResults[i].name.replaceAll(" ", "%20");
       persona.id = nameForID;
     } else {
       persona.id = myResults[i].name;
@@ -107,6 +108,8 @@ function populateWithResults(myResults){
 
     quinome.innerHTML = myResults[i].name;
     persona.append(quinome);
+    spaceAfter.innerHTML = "&nbsp;";
+    persona.append(spaceAfter);
 
     for (var j = 0; j < myResults[i].link.length; j++) {
       const quilink = document.createElement("a");
