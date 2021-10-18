@@ -43,6 +43,8 @@
 <script>
   $('span#quinome').each(
     function() {
+      console.log("ciao");
+      console.log(this);
       $(this).on("mouseover", function(e) {
         this.css('color', '#B44BEB');
       });
