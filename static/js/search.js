@@ -32,7 +32,7 @@ function executeSearch(searchQuery){
     var fuse = new Fuse(pages, fuseOptions);
     var result = fuse.search(searchQuery);
     console.log({"matches":result});
-    document.getElementById('searchTitle').appendChild(" results for "+searchQuery);
+    document.getElementById('searchTitle').appendChild(document.createTextNode(" results for "+searchQuery));
     if(result.length > 0){
       populateResults(result);
     }else{
