@@ -208,7 +208,7 @@ function makeItInteractive(){
 
       $(this).on("click", function(e) {
         indexBackground.style.display = "block";
-        console.log(this);
+        console.log(this).textContent.replaceAll(" ", "%20");
         /*$(".index_box").style.display = "flex"*/
       });
     }
