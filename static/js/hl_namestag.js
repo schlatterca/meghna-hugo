@@ -138,6 +138,7 @@ function populateWithResults(myResults){
     closeIndexBox.setAttribute('class', 'close_index_box');
 
     indexBoxName.innerHTML = myResults[i].name;
+    closeIndexBox.innerHTML. = "+";
 
     for (var j = 0; j < myResults[i].link.length; j++) {
       const quilink = document.createElement("a");
