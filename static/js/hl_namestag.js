@@ -124,6 +124,44 @@ function populateWithResults(myResults){
 
     $('#persontags-search-results').append(persona);
 
+    //make a box for each result
+    const indexBox = document.createElement("div");
+    indexBox.setAttribute('class', 'index_box');
+    const indexBoxInside = document.createElement("div");
+    indexBoxInside.setAttribute('class', 'index_box_inside');
+    indexBoxInside.style.width = "100%";
+    const indexBoxName = document.createElement("p");
+    indexBoxName.setAttribute('class', 'index_box_name');
+    const indexBoxText = document.createElement("p");
+    indexBoxText.setAttribute('class', 'index_box_text');
+    const closeIndexBox = document.createElement("div");
+    closeIndexBox.setAttribute('class', 'close_index_box');
+
+    indexBoxName.innerHTML = myResults[i].name;
+
+    for (var j = 0; j < myResults[i].link.length; j++) {
+      const quilink = document.createElement("a");
+      quilink.id = "quilink";
+      quilink.setAttribute("href", myResults[i].link[j]);
+      //quilink.setAttribute("style", "font-size: 16px; color: grey;");
+      quilink.innerHTML = myResults[i].title[j]+"<br>";
+      indexBoxText.append(quilink);
+    }
+
+    /*<div class="index_box">
+        <div class="index_box_inside" style="width: 100%">
+          <p class="index_box_name">Name Surname</p>
+          <p class="index_box_text">Links</p>
+        </div>
+        <div class="close_index_box">+</div>
+      </div>*/
+
+    indexBoxInside.append(indexBoxName);
+    indexBoxInside.append(indexBoxText);
+    indexBox.append(indexBoxInside);
+    indexBox.append(closeIndexBox);
+    $('#indexboxspace').append(indexBox);
+
   }
 
   //console.log(sortedNames.length);
