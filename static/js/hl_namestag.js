@@ -126,6 +126,14 @@ function populateWithResults(myResults){
 
     //make a box for each result
     const indexBox = document.createElement("div");
+
+    if (myResults[i].name.includes(" ")){
+      var nameForID = myResults[i].name.replaceAll(" ", "%20");
+      indexBox.id = nameForID;
+    } else {
+      indexBox.id = myResults[i].name;
+    }
+
     indexBox.setAttribute('class', 'index_box');
     const indexBoxInside = document.createElement("div");
     indexBoxInside.setAttribute('class', 'index_box_inside');
@@ -138,7 +146,7 @@ function populateWithResults(myResults){
     closeIndexBox.setAttribute('class', 'close_index_box');
 
     indexBoxName.innerHTML = myResults[i].name;
-    closeIndexBox.innerHTML. = "+";
+    closeIndexBox.innerHTML = "+";
 
     for (var j = 0; j < myResults[i].link.length; j++) {
       const quilink = document.createElement("a");
