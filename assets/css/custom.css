@@ -431,6 +431,75 @@ p > img {
 	height: 6em;
 }
 
+
+
+
+
+/*INDEX BOXES WITH LINKS*/
+.index_box {
+	position: absolute;
+	float: left;
+	left: 0;
+	top: 0;
+	background-color: #fff;
+	z-index: 1;
+	border-radius: 1.2em;
+	border: .15em solid var(--purpleColor);
+	padding: 1em;
+	padding-top: .4em;
+	width: 80%;
+	height: auto;
+	overflow: auto;
+	margin-left: 10%;
+	margin-top: 3em;
+	display: flex;
+	flex-direction: row-reverse;
+	transition: width .3s ease-out,height .3s ease-out;
+	-ms-overflow-style: none;
+	scrollbar-width: none;
+}
+
+.footnotes_box::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for Chrome, Safari and Opera */
+}
+
+.isopen_footnotes{
+	width: 70%;
+	height: 23em;
+}
+
+.footnotes {
+	color: var(--purpleColor);
+	padding-left: 0em;
+	margin-bottom: .5em;
+	line-break: normal;
+	font-size: 1rem;
+	line-height: 1.2rem;
+	/*left: 0;
+	width: 100%;
+	position: absolute;*/
+}
+
+.open_footnotes_box {
+	color: var(--purpleColor);
+	font-size: 1.5rem;
+	line-height: 1.5rem;
+	height: fit-content;
+	transition: transform 0.3s ease-out;
+	transform: rotate(0deg);
+	transform-origin: center; /* this will be a svg turning + into - */
+
+	margin-left: 0px;
+	margin-right: 0em;
+	position: sticky;
+	top: 0;
+	bottom: 0;
+}
+
+
+
+
+
 /*GENERAL*/
 .visible {
 	opacity: 1;
