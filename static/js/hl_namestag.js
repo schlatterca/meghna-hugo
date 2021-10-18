@@ -89,8 +89,8 @@ function populateWithResults(myResults){
   for (var i = 0; i < myResults.length; i++) {
     //console.log(myResults[i].name, myResults[i].link, myResults[i].title);
 
-    const persona = document.createElement("div");
-    const quinome = document.createElement("p");
+    const persona = document.createElement("span");
+    const quinome = document.createElement("span");
 
     //persona.id = "persona";
 
@@ -114,7 +114,7 @@ function populateWithResults(myResults){
       quilink.setAttribute("href", myResults[i].link[j]);
       quilink.setAttribute("style", "font-size: 16px; color: grey;")
       quilink.innerHTML = myResults[i].title[j]+"<br>";
-      persona.append(quilink);
+      //persona.append(quilink);
     }    
 
     $('#main_person_tags').append(persona);
