@@ -33,17 +33,10 @@
   </div>
 
 </section>
-<script id="persontags-result" type="text/x-js-template">
-    <div id="summary-${key}">
-      <h4>${title}</h4>
-      <p>${snippet}</p>{ end }
-    </div>
-</script>
-
 <script>
+  console.log("ciao")
   $('span#quinome').each(
     function() {
-      console.log("ciao");
       console.log(this);
       $(this).on("mouseover", function(e) {
         this.css('color', '#B44BEB');
@@ -53,6 +46,13 @@
       });
     }
   );
+</script>
+
+<script id="persontags-result" type="text/x-js-template">
+    <div id="summary-${key}">
+      <h4>${title}</h4>
+      <p>${snippet}</p>{ end }
+    </div>
 </script>
 
 {{ end }}
