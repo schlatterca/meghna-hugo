@@ -207,8 +207,12 @@ function makeItInteractive(){
       });
 
       $(this).on("click", function(e) {
-        console.log(this);
+        indexBackground.style.display = "block";
       });
     }
   );
+
+  $(".close_index_box").on("click", function(e) {
+    document.getElementById("indexBackground").style.display="none"
+  });
 }
