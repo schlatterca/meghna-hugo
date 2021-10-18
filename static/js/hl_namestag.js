@@ -98,7 +98,8 @@ function populateWithResults(myResults){
 
     if (myResults[i].name.includes(" ")){
       var nameForID = myResults[i].name.replaceAll(" ", "%20");
-      persona.id = "persona "+nameForID;
+      persona.id = +nameForID;
+      persona.setAttribute("class", "persona");
     } else {
       persona.id = myResults[i].name;
     }
