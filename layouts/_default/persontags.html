@@ -40,4 +40,17 @@
     </div>
 </script>
 
+<script>
+  $('span#quinome').each(
+    function() {
+      $(this).on("mouseover", function(e) {
+        this.css('color', '#B44BEB');
+      });
+      $(this).on("mouseout", function(e) {
+        this.css('color', 'black');
+      });
+    }
+  );
+</script>
+
 {{ end }}
