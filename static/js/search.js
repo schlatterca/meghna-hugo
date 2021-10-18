@@ -32,7 +32,8 @@ function executeSearch(searchQuery){
     var fuse = new Fuse(pages, fuseOptions);
     var result = fuse.search(searchQuery);
     console.log({"matches":result});
-    document.getElementById('searchTitle').appendChild(document.createTextNode(" results for "+searchQuery));
+    document.getElementById('searchTitle').appendChild(document.createTextNode(" results for: "));
+    document.getElementById('searchTitle').appendChild(document.createTextNode(searchQuery).setAttribute('style', 'color:#B44BEB;text-transform:capitalize'));
     if(result.length > 0){
       populateResults(result);
     }else{
