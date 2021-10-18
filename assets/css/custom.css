@@ -437,6 +437,7 @@ p > img {
 
 /*INDEX BOXES WITH LINKS*/
 .index_box {
+	display: none;
 	position: absolute;
 	float: left;
 	left: 0;
