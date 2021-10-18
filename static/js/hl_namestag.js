@@ -208,11 +208,18 @@ function makeItInteractive(){
 
       $(this).on("click", function(e) {
         indexBackground.style.display = "block";
+        console.log(this);
+        /*$(".index_box").style.display = "flex"*/
       });
     }
   );
 
   $(".close_index_box").on("click", function(e) {
-    document.getElementById("indexBackground").style.display="none"
+    document.getElementById("indexBackground").style.display="none";
+    $('.index_box').each(
+      function() {
+        $(this).style.display="none";
+      }
+    );
   });
 }
