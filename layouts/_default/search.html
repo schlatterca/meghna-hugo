@@ -10,18 +10,6 @@
 {{ define "main" }}
 {{ partial "navigation.html" . }}
 
-<section class="section resume-section p-3 p-lg-5 d-flex flex-column">
-  <div class="my-auto">
-    <form action="{{ .Permalink }}">
-      <input id="search-query" name="s"/>
-    </form>
-    <!--div id="search-results">
-     <h3>Matching pages</h3>
-    </div-->
-  </div>
-</section>
-
-
 <section id="blog" class="section">
   <div class="container">
     <div id="toBePopulated" class="row">
@@ -29,6 +17,10 @@
         {{"<!-- section title -->" | safeHTML}}
         <div class="title text-center wow fadeInDown">
           <h2 id="searchTitle" style="text-transform: none;">{{ .Title }}</h2>
+          <!--search form-->
+          <form action="{{ .Permalink }}">
+            <input id="search-query" name="s"/>
+          </form>
           <div class="border-meghna"></div>
         </div>
       </div>
