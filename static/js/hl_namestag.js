@@ -7,7 +7,6 @@ function getJsonArray(){
       success: persontags
   })
 }
-
 function clean(array) {
   for (var key in array) {
     if (array[key] === null || array[key] === undefined) {
