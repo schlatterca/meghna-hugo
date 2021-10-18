@@ -210,7 +210,8 @@ function makeItInteractive(){
         indexBackground.style.display = "block";
         var thisIndexBox = this.textContent.replaceAll(" ", "%20");
         //$(".index_box#thisIndexBox").style.display = "flex"; //THISSSSSSSSS *** !!! ???
-        document.getElementsByClassName("index_box").getElementById(thisIndexBox).style.display = "flex";
+        $("#"+thisIndexBox).style.display = "flex";
+        //document.getElementsByClassName("index_box").getElementById(thisIndexBox).style.display = "flex";
       });
     }
   );
