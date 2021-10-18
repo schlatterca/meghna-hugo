@@ -34,7 +34,8 @@ function executeSearch(searchQuery){
     console.log({"matches":result});
     document.getElementById('searchTitle').appendChild(document.createTextNode(" results for: "));
     let searchTitleResult = document.createTextNode(searchQuery);
-    searchTitleResult.setAttribute('style', 'color:#B44BEB;text-transform:capitalize');
+    searchTitleResult.style.color = "#B44BEB";
+    searchTitleResult.style.textTransform = "capitalize";
     document.getElementById('searchTitle').appendChild(searchTitleResult);
     if(result.length > 0){
       populateResults(result);
