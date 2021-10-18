@@ -208,8 +208,9 @@ function makeItInteractive(){
 
       $(this).on("click", function(e) {
         indexBackground.style.display = "block";
-        var thisindexBox = this.textContent.replaceAll(" ", "%20");
-        $(".index_box#thisindexBox").style.display = "flex"; //THISSSSSSSSS *** !!! ???
+        var thisIndexBox = this.textContent.replaceAll(" ", "%20");
+        //$(".index_box#thisIndexBox").style.display = "flex"; //THISSSSSSSSS *** !!! ???
+        document.getElementsByClassName("index_box").getElementById(thisIndexBox).style.display = "flex";
       });
     }
   );
