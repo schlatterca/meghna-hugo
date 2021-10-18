@@ -145,12 +145,12 @@ function makeItInteractive(){
   console.log("ciao")
   $('span#quinome').each(
     function() {
-      console.log(this);
+      console.log(this.style);
       $(this).on("mouseover", function(e) {
-        this.css('color', '#B44BEB');
+        this.style('color', '#B44BEB');
       });
       $(this).on("mouseout", function(e) {
-        this.css('color', 'black');
+        this.style('color', 'black');
       });
     }
   );
