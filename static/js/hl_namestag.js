@@ -209,7 +209,7 @@ function makeItInteractive(){
       $(this).on("click", function(e) {
         indexBackground.style.display = "block";
         var thisindexBox = this.textContent.replaceAll(" ", "%20");
-        $(".index_box#"+thisindexBox).style.display = "flex";
+        $(".index_box#thisindexBox").style.display = "flex"; //THISSSSSSSSS *** !!! ???
       });
     }
   );
