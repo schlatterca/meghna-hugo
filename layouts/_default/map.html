@@ -1,0 +1,35 @@
+{{ define "footerfiles" }}
+{{ end }}
+
+{{ define "main" }}
+{{ partial "navigation.html" . }}
+
+<section class="section">
+  <div class="col-12">
+    <div class="title text-center wow fadeInDown">
+      <h1>Map</h1>
+      <div class="border-meghna"></div>
+    </div>
+  </div>
+  
+  <div class="col-lg-8 offset-lg-2">
+    <div class="post-single-content">
+
+      <div id="maptags-search-results"></div>
+
+      <div id="indexboxspace_map">
+        <div id="indexBackground" style="background-color:rgba(0, 0, 0, 0.5);width:100vw;height:100vh;position:fixed;top:0;left:0;z-index:2;display:none"></div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<script id="maptag-result" type="text/x-js-template">
+    <div id="summary-${key}">
+      <h4>${title}</h4>
+      <p>${snippet}</p>{ end }
+    </div>
+</script>
+
+{{ end }}
