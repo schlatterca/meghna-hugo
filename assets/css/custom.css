@@ -487,6 +487,7 @@ p > img {
 	line-height: 1.5rem;
 	height: fit-content;
 	cursor: pointer;
+	transform: rotate(45deg);
 
 	margin-left: 0px;
 	margin-right: 0em;
