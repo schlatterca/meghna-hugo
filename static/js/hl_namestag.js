@@ -216,9 +216,8 @@ function makeItInteractive(){
         //$("#Acciari%20Girolamo.index_box").style.display = "flex";
         console.log(this);
         console.log(thisIndexBox);
-        $("#"+thisIndexBox+".index_box").style.display = "flex";
-
-        //document.getElementsByClassName("index_box").getElementById(thisIndexBox).style.display = "flex";
+        console.log($("#"+thisIndexBox+".index_box"));
+        //$("#"+thisIndexBox+".index_box").style.display = "flex";
       });
     }
   );
