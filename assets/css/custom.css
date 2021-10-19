@@ -91,7 +91,7 @@
 	bottom: 0;
 	right: 0;
 	transition: width 0.3s ease-out;
-
+	z-index: 2;
 	border-radius: 1.5em 0 0 1.5em;
 	border: 2px solid white;
 	border-right: 0;
@@ -267,12 +267,12 @@
 	transition: transform 0.3s ease-out;
 	transform: rotate(0deg);
 	transform-origin: center; /* this will be a svg turning + into - */
-
 	margin-left: 0px;
 	margin-right: -.5em;
 	position: sticky;
 	bottom: 0;
 	top: 0;
+	user-select: none;
 }
 
 .paragraph_box {
@@ -337,12 +337,12 @@
 	transition: transform 0.3s ease-out;
 	transform: rotate(0deg);
 	transform-origin: center; /* this will be a svg turning + into - */
-
 	margin-left: 0px;
 	margin-right: 0em;
 	position: sticky;
 	top: 0;
 	bottom: 0;
+	user-select: none;
 }
 
 /*FOOTNOTES BOX APPEARING ON ARTICLE*/
@@ -488,12 +488,12 @@ p > img {
 	height: fit-content;
 	cursor: pointer;
 	transform: rotate(45deg);
-
 	margin-left: 0px;
 	margin-right: 0em;
 	position: sticky;
 	top: 0;
 	bottom: 0;
+	user-select: none;
 }
 
 
