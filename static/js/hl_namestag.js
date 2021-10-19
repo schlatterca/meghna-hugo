@@ -212,7 +212,7 @@ function makeItInteractive(){
         //$(".index_box#thisIndexBox").style.display = "flex";
         //$('#'+$(this)).style.display = "flex";
         
-        $(".index_box#Acciari%20Girolamo").style.display = "flex";
+        $("#Acciari%20Girolamo.index_box").style.display = "flex";
 
         //document.getElementsByClassName("index_box").getElementById(thisIndexBox).style.display = "flex";
       });
