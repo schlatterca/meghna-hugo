@@ -130,7 +130,7 @@ function populateWithResults_timeline(myResults){
     indexBoxInside.append(indexBoxText);
     indexBox.append(indexBoxInside);
     indexBox.append(closeIndexBox);
-    $('#indexboxspace').append(indexBox);
+    $('#indexboxspace_timeline').append(indexBox);
   }
 
   //Delay and scroll down to selected ID
