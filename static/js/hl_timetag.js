@@ -69,27 +69,18 @@ function populateWithResults_timeline(myResults){
   var templateDefinition = $('#timetag-result').html();
 
   for (var i = 0; i < myResults.length; i++) {
-    //console.log(myResults[i].name, myResults[i].link, myResults[i].title);
 
     const persona = document.createElement("span");
     const quinome = document.createElement("span");
     const spaceAfter = document.createElement("span");
 
-    //persona.id = "persona";
-
-    if (myResults[i].name.includes(" ")){
-      var nameForID = myResults[i].name.replaceAll(" ", "%20");
-      persona.id = nameForID;
-      persona.setAttribute("class", "persona");
-    } else {
-      persona.id = myResults[i].name;
-    }
+    persona.id = myResults[i].name;
 
     persona.setAttribute("style", "margin-top: 10px; line-height: 0.6em; cursor: pointer;");
     quinome.id = "quinome";
     quinome.setAttribute("style", "font-size: 20px; color: black; margin-bottom: 0px; margin-top: 20px;");
 
-    quinome.innerHTML = myResults[i].name;
+    quinome.innerHTML = myResults[i].name+"anno Domini"; //DELETE
     persona.append(quinome);
     spaceAfter.innerHTML = "&nbsp;";
     persona.append(spaceAfter);
@@ -100,7 +91,6 @@ function populateWithResults_timeline(myResults){
       quilink.setAttribute("href", myResults[i].link[j]);
       quilink.setAttribute("style", "font-size: 16px; color: grey;")
       quilink.innerHTML = myResults[i].title[j]+"<br>";
-      //persona.append(quilink);
     }    
 
     $('#timelinetags-search-results').append(persona);
@@ -171,7 +161,6 @@ function makeItInteractive_timeline(){
 
       $(this).on("click", function(e) {
         indexBackground.style.display = "block";
-        var thisIndexBox = this.textContent.replaceAll(" ", "-");
         $("#"+thisIndexBox+".index_box").css('display', 'flex');
       });
     }
