@@ -103,13 +103,13 @@
         var last = nameToSwap[nameToSwap.length - 1];
         nameToSwap[0] = last;
         nameToSwap[nameToSwap.length - 1] = first;
-        var nameSwapped = nameToSwap.join(' ').replace(' ', '%20');
+        var nameSwapped = nameToSwap.join(' ').replaceAll(' ', '%20');
       } else {
         var nameSwapped = persontags_list[i];
       }
       //exceptions in the name (unusable characters)
       if (nameSwapped.includes('ç')){
-        nameSwapped = nameSwapped.replace('ç', 'c');
+        nameSwapped = nameSwapped.replaceAll('ç', 'c');
       }
       var Obj = {}
       Obj.word = persontags_list[i];
@@ -120,8 +120,11 @@
     $.each(words,
       function() {
         var search = this;
+        console.log(this);
         $('span#person_tag').each(
           function() {
+            console.log(this);
+            console.log(search.word);
             if ($(this).text() === search.word) {
               console.log("article: ", search.word, search.link);
               $(this).html('<a href="https://harfenlabor.netlify.app/indextag#' + search.link + '">' + search.word + '</a>');
