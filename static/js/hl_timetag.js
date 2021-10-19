@@ -161,6 +161,7 @@ function makeItInteractive_timeline(){
 
       $(this).on("click", function(e) {
         indexBackground.style.display = "block";
+        var thisIndexBox = this.textContent;
         $("#"+thisIndexBox+".index_box").css('display', 'flex');
       });
     }
