@@ -4,7 +4,8 @@ function getJsonArray(){
   $.ajax({
       url: '/index.json',
       type: 'GET',
-      success: timelinetags
+      success: persontags
+      //success: timelinetags
   })
 }
 
