@@ -22,13 +22,16 @@ var allLinks= [];
 var allTitles= [];
 
 function timelinetags(data){
+  console.log("1");
   json = data; //fetch my json
   for (var key in json) { //for each key in the json…
+    console.log(key);
     if (json.hasOwnProperty(key)) { //unless that key is not used…
       var dirtyArray = json[key]; //create an array of those results…
       var result = clean(dirtyArray); //and clean it.
-
+      console.log("1", result);
       if (result.hasOwnProperty("timelinetags")) { //and if the key "personags" exists…
+        console.log("2", result);
         for (let i = 0; i < result.timelinetags.length; i++) { //for each result in "timelinetags"…
 
           var SurnameName = result.timelinetags[i];
