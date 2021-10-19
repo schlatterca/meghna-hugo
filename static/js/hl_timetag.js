@@ -5,7 +5,6 @@ function getJsonArray(){
       url: '/index.json',
       type: 'GET',
       success: persontags
-      //success: timelinetags
   })
 }
 
@@ -22,21 +21,36 @@ var allNames = [];
 var allLinks= [];
 var allTitles= [];
 
-function timelinetags(data){
-  console.log("1");
+function persontags(data){
   json = data; //fetch my json
   for (var key in json) { //for each key in the json…
-    console.log(key);
     if (json.hasOwnProperty(key)) { //unless that key is not used…
       var dirtyArray = json[key]; //create an array of those results…
       var result = clean(dirtyArray); //and clean it.
-      console.log("1", result);
-      if (result.hasOwnProperty("timelinetags")) { //and if the key "personags" exists…
-        console.log("2", result);
-        for (let i = 0; i < result.timelinetags.length; i++) { //for each result in "timelinetags"…
 
-          var SurnameName = result.timelinetags[i];
-          
+      if (result.hasOwnProperty("persontags")) { //and if the key "personags" exists…
+        for (let i = 0; i < result.persontags.length; i++) { //for each result in "persontags"…
+
+          if (result.persontags[i].includes(" ")){
+
+            var data = result.persontags[i]; //split it and change name with surname…
+            data = data.split(' ');
+
+            for (var j = 0; j < data.length; j++) { //capitalize first letter
+              data[j] = data[j].charAt(0).toUpperCase() + data[j].slice(1);
+            }
+
+            if (data.length == 4) { //rearrange
+              var SurnameName = data[3] + ' ' + data[0] + ' ' + data[1] + ' ' + data[2];
+            } if (data.length == 3) {
+              var SurnameName = data[2] + ' ' + data[0] + ' ' + data[1];
+            } if (data.length == 2) {
+              var SurnameName = data[1] + ' ' + data[0];
+            }
+
+          } else {
+            var SurnameName = result.persontags[i];
+          }
           //exceptions in the name (unusable characters)
           if (SurnameName.includes('ç')){
             SurnameName = SurnameName.replace('ç', 'c');
@@ -138,15 +152,33 @@ function populateWithResults(myResults){
       const quilink = document.createElement("a");
       quilink.id = "quilink";
       quilink.setAttribute("href", myResults[i].link[j]);
+      //quilink.setAttribute("style", "font-size: 16px; color: grey;");
       quilink.innerHTML = myResults[i].title[j]+"<br>";
       indexBoxText.append(quilink);
     }
+
+    /*<div class="index_box">
+        <div class="index_box_inside" style="width: 100%">
+          <p class="index_box_name">Name Surname</p>
+          <p class="index_box_text">Links</p>
+        </div>
+        <div class="close_index_box">+</div>
+      </div>*/
+
     indexBoxInside.append(indexBoxName);
     indexBoxInside.append(indexBoxText);
     indexBox.append(indexBoxInside);
     indexBox.append(closeIndexBox);
     $('#indexboxspace').append(indexBox);
+
   }
+
+  //console.log(sortedNames.length);
+  //console.log(myResults.persontags);
+  //console.log(Object.keys(myResults));
+  //console.log(document.getElementById("this_article_title").innerHTML);
+  //console.log(myResults.persontags.sort((a, b) => b.split(' ')[1].localeCompare(a.split(' ')[1])));
+  //console.log(myResults.persontags.sort(x => myResults.persontags.map(y => y.split(' ')[1]) ).reverse());
 
   //Delay and scroll down to selected ID
   var url = window.location.href;
