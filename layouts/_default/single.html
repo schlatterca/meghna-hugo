@@ -123,6 +123,7 @@
         $('span#person_tag').each(
           function() {
             if ($(this).text() === search.word) {
+              console.log("article: "+search);
               $(this).html('<a href="https://harfenlabor.netlify.app/indextag#' + search.link + '">' + search.word + '</a>');
             }
           }
@@ -255,6 +256,7 @@
       $('span#tagspers').each(
         function() {
           if ($(this).text() === search.word) {
+            console.log("tags: "+search);
             $(this).html('<a href="https://harfenlabor.netlify.app/indextag#' + search.link + '">' + search.word + '</a>');
           }
         }
