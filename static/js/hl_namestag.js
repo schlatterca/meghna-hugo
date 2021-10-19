@@ -128,7 +128,7 @@ function populateWithResults(myResults){
     const indexBox = document.createElement("div");
 
     if (myResults[i].name.includes(" ")){
-      var nameForID = myResults[i].name.replaceAll(" ", "-");
+      var nameForID = myResults[i].name.replaceAll(" ", "");
       indexBox.id = nameForID;
     } else {
       indexBox.id = myResults[i].name;
@@ -208,7 +208,7 @@ function makeItInteractive(){
 
       $(this).on("click", function(e) {
         indexBackground.style.display = "block";
-        var thisIndexBox = this.textContent.replaceAll(" ", "-");
+        var thisIndexBox = this.textContent.replaceAll(" ", "");
         //$(".index_box#thisIndexBox").style.display = "flex";
         //$('#'+$(this)).style.display = "flex";
         
