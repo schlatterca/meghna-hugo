@@ -255,17 +255,18 @@ a:hover {
 }*/
 
 .btn-main {
-  background: #57cbcc;
-  color: #fff;
+  background: white;
+  color: var(--purpleColor);
   display: inline-block;
   font-size: 14px;
   letter-spacing: 1px;
   padding: 10px 35px;
   text-transform: uppercase;
+  border: 1px solid #4e595f;
 }
 
 .btn-main:hover {
-  background: #2c9091;
+  background: var(--purpleColor);
   color: #fff;
 }
 
