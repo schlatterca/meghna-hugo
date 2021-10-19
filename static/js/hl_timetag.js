@@ -99,7 +99,7 @@ function populateWithResults_timeline(myResults){
     const indexBox = document.createElement("div");
 
     if (myResults[i].name.includes(" ")){
-      var nameForID = myResults[i].name; //????
+      var nameForID = myResults[i].name.replaceAll(" ", "-");
       indexBox.id = nameForID;
     } else {
       indexBox.id = myResults[i].name;
@@ -161,8 +161,7 @@ function makeItInteractive_timeline(){
 
       $(this).on("click", function(e) {
         indexBackground.style.display = "block";
-        var thisIndexBox = this.textContent.slice(0, -1);
-        console.log(thisIndexBox);
+        var thisIndexBox = this.textContent.slice(0, -1).replaceAll(" ", "-");
         $("#"+thisIndexBox+".index_box").css('display', 'flex');
       });
     }
