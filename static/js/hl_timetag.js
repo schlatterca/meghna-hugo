@@ -68,6 +68,8 @@ function timelinetags(data){
 function populateWithResults_timeline(myResults){
   var templateDefinition = $('#timetag-result').html();
 
+  console.log(myResults);
+
   for (var i = 0; i < myResults.length; i++) {
 
     const persona = document.createElement("span");
