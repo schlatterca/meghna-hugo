@@ -209,16 +209,7 @@ function makeItInteractive(){
       $(this).on("click", function(e) {
         indexBackground.style.display = "block";
         var thisIndexBox = this.textContent.replaceAll(" ", "-");
-        //$(".index_box#thisIndexBox").style.display = "flex";
-        //$('#'+$(this)).style.display = "flex";
-        
-        //$("#Acciari%20Girolamo").style.display = "flex";
-        //$("#Acciari%20Girolamo.index_box").style.display = "flex";
-        console.log(this);
-        console.log(thisIndexBox);
-        console.log($("#"+thisIndexBox+".index_box"));
         $("#"+thisIndexBox+".index_box").css('display', 'flex');
-        //$("#"+thisIndexBox+".index_box").style.display = "flex";
       });
     }
   );
@@ -227,7 +218,7 @@ function makeItInteractive(){
     document.getElementById("indexBackground").style.display="none";
     $('.index_box').each(
       function() {
-        $(this).style.display="none";
+        $(this).css('display', 'none');
       }
     );
   });
