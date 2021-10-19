@@ -206,7 +206,7 @@ if ( authorsNameExists ) {
 
 			let name = document.createElement('a');
 			let nameText = document.createTextNode(single_authors[i]);
-			name.setAttribute('href', 'https://harfenlabor.netlify.app/persontags#'+author);
+			name.setAttribute('href', 'https://harfenlabor.netlify.app/indextag#'+author);
 			if (i>0) {
 				this_article_author.append(', ');
 			}
@@ -230,7 +230,7 @@ if ( authorsNameExists ) {
 	  }
 	  var name_0 = document.createElement('a');
 		var name_0Text = document.createTextNode(authors_without_by);
-		name_0.setAttribute('href', 'https://harfenlabor.netlify.app/persontags#'+author_0);
+		name_0.setAttribute('href', 'https://harfenlabor.netlify.app/indextag#'+author_0);
 		name_0.appendChild(name_0Text);
 		document.getElementById('this_article_author').innerHTML="";
 		document.getElementById('this_article_author').append("by ", name_0);
