@@ -4,7 +4,7 @@ function getJsonArray(){
   $.ajax({
       url: '/index.json',
       type: 'GET',
-      success: persontags
+      success: timelinetags
   })
 }
 
@@ -21,19 +21,13 @@ var allNames = [];
 var allLinks= [];
 var allTitles= [];
 
-console.log("ue!");
-
-function persontags(data){
-  console.log("1");
+function timelinetags(data){
   json = data; //fetch my json
   for (var key in json) { //for each key in the json…
-    console.log(key);
     if (json.hasOwnProperty(key)) { //unless that key is not used…
       var dirtyArray = json[key]; //create an array of those results…
       var result = clean(dirtyArray); //and clean it.
-      console.log("1", result);
       if (result.hasOwnProperty("timelinetags")) { //and if the key "personags" exists…
-        console.log("2", result);
         for (let i = 0; i < result.timelinetags.length; i++) { //for each result in "timelinetags"…
 
           var SurnameName = result.timelinetags[i];
@@ -109,7 +103,7 @@ function populateWithResults(myResults){
       //persona.append(quilink);
     }    
 
-    $('#persontags-search-results').append(persona);
+    $('#timelinetags-search-results').append(persona);
 
     //make a box for each result
     const indexBox = document.createElement("div");
