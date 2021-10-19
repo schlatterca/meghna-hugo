@@ -209,8 +209,11 @@ function makeItInteractive(){
       $(this).on("click", function(e) {
         indexBackground.style.display = "block";
         var thisIndexBox = this.textContent.replaceAll(" ", "%20");
-        //$(".index_box#thisIndexBox").style.display = "flex"; //THISSSSSSSSS *** !!! ???
-        $("#"+thisIndexBox).style.display = "flex";
+        //$(".index_box#thisIndexBox").style.display = "flex";
+        //$('#'+$(this)).style.display = "flex";
+        
+        $(".index_box#Acciari%20Girolamo").style.display = "flex";
+
         //document.getElementsByClassName("index_box").getElementById(thisIndexBox).style.display = "flex";
       });
     }
