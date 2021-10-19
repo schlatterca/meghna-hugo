@@ -98,12 +98,29 @@
   if (persontags_list) {
     for (let i = 0; i < persontags_list.length; i++) {
       if (persontags_list[i].includes(' ')){
+
         var nameToSwap = persontags_list[i].split(' ');
+        for (var j = 0; j < nameToSwap.length; j++) { //capitalize first letter
+          nameToSwap[j] = nameToSwap[j].charAt(0).toUpperCase() + nameToSwap[j].slice(1);
+        }
+        if (nameToSwap.length == 4) { //rearrange
+          var nameSwapped = nameToSwap[3] + ' ' + nameToSwap[0] + ' ' + nameToSwap[1] + ' ' + nameToSwap[2];
+        } if (nameToSwap.length == 3) {
+          var nameSwapped = nameToSwap[2] + ' ' + nameToSwap[0] + ' ' + nameToSwap[1];
+        } if (nameToSwap.length == 2) {
+          var nameSwapped = nameToSwap[1] + ' ' + nameToSwap[0];
+        }
+
+        /*var nameToSwap = persontags_list[i].split(' ');
         var first = nameToSwap[0];
         var last = nameToSwap[nameToSwap.length - 1];
         nameToSwap[0] = last;
         nameToSwap[nameToSwap.length - 1] = first;
-        var nameSwapped = nameToSwap.join(' ').replaceAll(' ', '%20');
+        var nameSwapped = nameToSwap.join(' ').replaceAll(' ', '%20');*/
+
+
+
+
       } else {
         var nameSwapped = persontags_list[i];
       }
