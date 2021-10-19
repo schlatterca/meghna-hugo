@@ -55,12 +55,12 @@ weight = 1
   [[Languages.en.menu.main]]
   identifier = "timeline"
   name = "timeline"
-  url = ""
+  url = "/timeline"
   weight = 3
   [[Languages.en.menu.main]]
   identifier = "map"
   name = "map"
-  url = ""
+  url = "/map"
   weight = 4
   [[Languages.en.menu.main]]
   identifier = "index"
