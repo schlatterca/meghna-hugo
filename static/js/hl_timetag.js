@@ -21,7 +21,9 @@ var allNames = [];
 var allLinks= [];
 var allTitles= [];
 
-function timelinetags(data){
+console.log("ue!");
+
+function persontags(data){
   console.log("1");
   json = data; //fetch my json
   for (var key in json) { //for each key in the json…
