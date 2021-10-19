@@ -99,7 +99,7 @@ function populateWithResults_timeline(myResults){
     const indexBox = document.createElement("div");
 
     if (myResults[i].name.includes(" ")){
-      var nameForID = myResults[i].name.replaceAll(" ", "-");
+      var nameForID = myResults[i].name;
       indexBox.id = nameForID;
     } else {
       indexBox.id = myResults[i].name;
