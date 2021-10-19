@@ -76,7 +76,7 @@ function populateWithResults_timeline(myResults){
 
     persona.id = myResults[i].name;
 
-    persona.setAttribute("style", "margin-top: 10px; line-height: 0.6em; cursor: pointer;");
+    persona.setAttribute("style", "margin-top: 10px; line-height: 0.6em; cursor: pointer; display: inline-block;");
     quinome.id = "quinome";
     quinome.setAttribute("style", "font-size: 20px; color: black; margin-bottom: 0px; margin-top: 20px;");
 
