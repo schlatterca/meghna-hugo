@@ -128,7 +128,7 @@ function populateWithResults(myResults){
     const indexBox = document.createElement("div");
 
     if (myResults[i].name.includes(" ")){
-      var nameForID = myResults[i].name.replaceAll(" ", "%20");
+      var nameForID = myResults[i].name.replaceAll(" ", "-");
       indexBox.id = nameForID;
     } else {
       indexBox.id = myResults[i].name;
@@ -208,13 +208,14 @@ function makeItInteractive(){
 
       $(this).on("click", function(e) {
         indexBackground.style.display = "block";
-        var thisIndexBox = this.textContent.replaceAll(" ", "%20");
+        //var thisIndexBox = this.textContent.replaceAll(" ", "%20");
         //$(".index_box#thisIndexBox").style.display = "flex";
         //$('#'+$(this)).style.display = "flex";
         
-        $("#Acciari%20Girolamo").style.display = "flex";
+        //$("#Acciari%20Girolamo").style.display = "flex";
         //$("#Acciari%20Girolamo.index_box").style.display = "flex";
-        //$("#"+$(this)+".index_box").style.display = "flex";
+        console.log(this);
+        $("#"+$(this)+".index_box").style.display = "flex";
 
         //document.getElementsByClassName("index_box").getElementById(thisIndexBox).style.display = "flex";
       });
