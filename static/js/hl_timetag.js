@@ -80,7 +80,7 @@ function populateWithResults_timeline(myResults){
     quinome.id = "quinome";
     quinome.setAttribute("style", "font-size: 20px; color: black; margin-bottom: 0px; margin-top: 20px;");
 
-    quinome.innerHTML = myResults[i].name;//+" "
+    quinome.innerHTML = myResults[i].name+" ";
     persona.append(quinome);
     spaceAfter.innerHTML = "&nbsp;";
     persona.append(spaceAfter);
