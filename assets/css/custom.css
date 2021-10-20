@@ -443,7 +443,7 @@ p > img {
   justify-content: center;
   align-items: center;
   height: 40px;
-  color: var(--purpleColor);
+  color: black;
 }
 
 .index_sel_box:first-child > p { margin-left:auto;margin-right: 20px;cursor:pointer; }
