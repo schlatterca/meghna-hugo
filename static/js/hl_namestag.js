@@ -120,7 +120,7 @@ function persontags(data){
 
 function populateWithResults(myResults){
   console.log(this);
-  console.log(myResults);
+  console.log(myResults[0]);
 
   if(myResults == "sortedNames"){
     console.log("1");
@@ -128,7 +128,10 @@ function populateWithResults(myResults){
     console.log("2");
   } if (myResults.hasOwnProperty(name)) {
     console.log("3");
+  } if (myResults[0].hasOwnProperty(name)) {
+    console.log("4");
   }
+
 
   var templateDefinition = $('#persontags-result').html();
 
