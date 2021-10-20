@@ -125,11 +125,9 @@ function populateWithResults(myResults){
   if(myResults == "sortedNames"){
     console.log("1");
   } if(myResults === "sortedNames"){
-    console.log("3");
-  } if(myResults == sortedNames){
     console.log("2");
-  } if(myResults === sortedNames){
-    console.log("4");
+  } if (myResults.hasOwnProperty(name)) {
+    console.log("3");
   }
 
   var templateDefinition = $('#persontags-result').html();
