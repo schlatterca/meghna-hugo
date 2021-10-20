@@ -58,7 +58,7 @@ function shorten(str, maxLen, separator = ' ') {
 function populateResults(result){
   $.each(result,function(key,value){
     var contents= value.item.contents;
-    var snippet = "";
+    /*var snippet = "";
     var snippetHighlights=[];
     var tags =[];
     if( fuseOptions.tokenize ){
@@ -78,7 +78,7 @@ function populateResults(result){
 
     if(snippet.length<1){
       snippet += contents.substring(0,summaryInclude*2);
-    }
+    }*/
     //pull template from hugo template definition
     var templateDefinition = $('#search-result-template').html();
     //replace values
