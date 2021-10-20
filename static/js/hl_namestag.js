@@ -122,39 +122,62 @@ function populateWithResults(myResults){
   var templateDefinition = $('#persontags-result').html();
 
   for (var i = 0; i < myResults.length; i++) {
-    //console.log(myResults[i].name, myResults[i].link, myResults[i].title);
 
     const persona = document.createElement("span");
     const quinome = document.createElement("span");
     const spaceAfter = document.createElement("span");
 
-    //persona.id = "persona";
-
-    if (myResults[i].name.includes(" ")){
-      var nameForID = myResults[i].name.replaceAll(" ", "%20");
-      persona.id = nameForID;
-      persona.setAttribute("class", "persona");
-    } else {
-      persona.id = myResults[i].name;
+    if (this == "sortedNames"){
+      if (myResults[i].name.includes(" ")){
+        var nameForID = myResults[i].name.replaceAll(" ", "%20");
+        persona.id = nameForID;
+      } else {
+        persona.id = myResults[i].name;
+      }
     }
+
+    if (this == "sortedSubjects"){
+      if (myResults[i].subject.includes(" ")){
+        var nameForID = myResults[i].subject.replaceAll(" ", "%20");
+        persona.id = nameForID;
+      } else {
+        persona.id = myResults[i].subject;
+      }
+    }
+
 
     persona.setAttribute("style", "margin-top: 10px; line-height: 0.6em; cursor: pointer;");
     quinome.id = "quinome";
     quinome.setAttribute("style", "font-size: 20px; color: black; margin-bottom: 0px; margin-top: 20px;");
 
-    quinome.innerHTML = myResults[i].name;
+    if (this == "sortedNames"){
+      quinome.innerHTML = myResults[i].name;
+    }
+    if (this == "sortedSubjects"){
+      quinome.innerHTML = myResults[i].subject;
+    }
     persona.append(quinome);
     spaceAfter.innerHTML = "&nbsp;";
     persona.append(spaceAfter);
 
-    for (var j = 0; j < myResults[i].link.length; j++) {
-      const quilink = document.createElement("a");
-      quilink.id = "quilink";
-      quilink.setAttribute("href", myResults[i].link[j]);
-      quilink.setAttribute("style", "font-size: 16px; color: grey;")
-      quilink.innerHTML = myResults[i].title[j]+"<br>";
-      //persona.append(quilink);
-    }    
+    if (this == "sortedNames"){
+      for (var j = 0; j < myResults[i].link.length; j++) {
+        const quilink = document.createElement("a");
+        quilink.id = "quilink";
+        quilink.setAttribute("href", myResults[i].link[j]);
+        quilink.setAttribute("style", "font-size: 16px; color: grey;")
+        quilink.innerHTML = myResults[i].title[j]+"<br>";
+      }
+    }
+    if (this == "sortedSubjects"){
+      for (var j = 0; j < myResults[i].link_subject.length; j++) {
+        const quilink = document.createElement("a");
+        quilink.id = "quilink";
+        quilink.setAttribute("href", myResults[i].link_subject[j]);
+        quilink.setAttribute("style", "font-size: 16px; color: grey;")
+        quilink.innerHTML = myResults[i].title_subject[j]+"<br>";
+      }
+    }
 
     console.log(this);
     if (this == "sortedNames"){
@@ -169,11 +192,21 @@ function populateWithResults(myResults){
     //make a box for each result
     const indexBox = document.createElement("div");
 
-    if (myResults[i].name.includes(" ")){
-      var nameForID = myResults[i].name.replaceAll(" ", "-");
-      indexBox.id = nameForID;
-    } else {
-      indexBox.id = myResults[i].name;
+    if (this == "sortedNames"){
+      if (myResults[i].name.includes(" ")){
+        var nameForID = myResults[i].name.replaceAll(" ", "-");
+        indexBox.id = nameForID;
+      } else {
+        indexBox.id = myResults[i].name;
+      }
+    }
+    if (this == "sortedSubjects"){
+      if (myResults[i].subject.includes(" ")){
+        var nameForID = myResults[i].subject.replaceAll(" ", "-");
+        indexBox.id = nameForID;
+      } else {
+        indexBox.id = myResults[i].subject;
+      }
     }
 
     indexBox.setAttribute('class', 'index_box');
@@ -187,25 +220,34 @@ function populateWithResults(myResults){
     const closeIndexBox = document.createElement("div");
     closeIndexBox.setAttribute('class', 'close_index_box');
 
-    indexBoxName.innerHTML = myResults[i].name;
+    if (this == "sortedNames"){
+      indexBoxName.innerHTML = myResults[i].name;
+    }
+    if (this == "sortedSubjects"){
+      indexBoxName.innerHTML = myResults[i].subject;
+    }
     closeIndexBox.innerHTML = "+";
 
-    for (var j = 0; j < myResults[i].link.length; j++) {
-      const quilink = document.createElement("a");
-      quilink.id = "quilink";
-      quilink.setAttribute("href", myResults[i].link[j]);
-      //quilink.setAttribute("style", "font-size: 16px; color: grey;");
-      quilink.innerHTML = myResults[i].title[j]+"<br>";
-      indexBoxText.append(quilink);
+    if (this == "sortedNames"){
+      for (var j = 0; j < myResults[i].link.length; j++) {
+        const quilink = document.createElement("a");
+        quilink.id = "quilink";
+        quilink.setAttribute("href", myResults[i].link[j]);
+        quilink.innerHTML = myResults[i].title[j]+"<br>";
+        indexBoxText.append(quilink);
+      }
+    }
+    if (this == "sortedSubjects"){
+      for (var j = 0; j < myResults[i].link_subject.length; j++) {
+        const quilink = document.createElement("a");
+        quilink.id = "quilink";
+        quilink.setAttribute("href", myResults[i].link_subject[j]);
+        quilink.innerHTML = myResults[i].title_subject[j]+"<br>";
+        indexBoxText.append(quilink);
+      }
     }
 
-    /*<div class="index_box">
-        <div class="index_box_inside" style="width: 100%">
-          <p class="index_box_name">Name Surname</p>
-          <p class="index_box_text">Links</p>
-        </div>
-        <div class="close_index_box">+</div>
-      </div>*/
+    
 
     indexBoxInside.append(indexBoxName);
     indexBoxInside.append(indexBoxText);
@@ -214,13 +256,6 @@ function populateWithResults(myResults){
     $('#indexboxspace').append(indexBox);
 
   }
-
-  //console.log(sortedNames.length);
-  //console.log(myResults.persontags);
-  //console.log(Object.keys(myResults));
-  //console.log(document.getElementById("this_article_title").innerHTML);
-  //console.log(myResults.persontags.sort((a, b) => b.split(' ')[1].localeCompare(a.split(' ')[1])));
-  //console.log(myResults.persontags.sort(x => myResults.persontags.map(y => y.split(' ')[1]) ).reverse());
 
   //Delay and scroll down to selected ID
   var url = window.location.href;
