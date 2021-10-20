@@ -1,10 +1,4 @@
 {{ define "footerfiles" }}
-{%comment%}
-<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.0/fuse.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js"></script>
-<script src="{{ "js/search.js" | absURL }}"></script>
-{%endcomment%}
 {{ end }}
 
 {{ define "main" }}
@@ -21,8 +15,14 @@
   <div class="col-lg-8 offset-lg-2">
     <div class="post-single-content">
       <!--h2 id="main_person_tags">Person tags:</h2-->
+      <p>
+        <span id="personButton" style="color:var(--purpleColor);cursor:pointer">Persons</span>
+        <span class="border-meghna"></span>
+        <span id="subjectButton" style="color:var(--purpleColor);cursor:pointer">Subjects</span>
+      </p>
 
       <div id="persontags-search-results"></div>
+      <div id="subjecttags-search-results"></div>
 
       <div id="indexboxspace">
         <div id="indexBackground" style="background-color:rgba(0, 0, 0, 0.5);width:100vw;height:100vh;position:fixed;top:0;left:0;z-index:2;display:none"></div>
