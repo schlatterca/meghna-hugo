@@ -16,9 +16,9 @@
     <div class="post-single-content">
       <!--h2 id="main_person_tags">Person tags:</h2-->
       <div class="index_sel_container">
-        <div class="index_sel_box"><p>Persons</p></div>
-        <div class="index_sel_box" style="flex:0"><p>|</p></div>
-        <div class="index_sel_box"><p>Subjects</p></div>
+        <div class="index_sel_box personsButton" onclick="personsActive()"><p>Persons</p></div>
+        <div class="index_sel_box" style="flex:0;"><p>|</p></div>
+        <div class="index_sel_box subjectButton" onclick="subjectsActive()"><p>Subjects</p></div>
       </div>
 
       <div id="persontags-search-results"></div>
@@ -44,6 +44,16 @@
       <h4>${title}</h4>
       <p>${snippet}</p>{ end }
     </div>
+</script>
+
+<script>
+  function personsActive(){
+    console.log("hello");
+  }
+
+  function subjectsActive(){
+    console.log("ciao");
+  }
 </script>
 
 {{ end }}
