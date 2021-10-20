@@ -47,7 +47,11 @@
 </script>
 
 <script>
-  var persActive = true;
+  if (document.getElementsByClassName('personsButton')[0].classList.contains('index_sel_box_active')){
+    var persActive = true;
+  } else {
+    var persActive = false;
+  }
 
   function personsActive(){
     if (persActive == false){
