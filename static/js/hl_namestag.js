@@ -156,7 +156,7 @@ function populateWithResults(myResults){
       //persona.append(quilink);
     }    
 
-    console.(this);
+    console.log(this);
     if (this == "sortedNames"){
       $('#persontags-search-results').append(persona);
       console.log("name");
