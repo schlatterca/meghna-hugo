@@ -42,10 +42,11 @@ fields:
   label: Publish date
   description: The date this article was published.
   config:
-    required: false
-    date_format: 
+    required: true
+    date_format: DD/MM/YYYY
     time_format: 
     display_utc: false
+    export_format: DD/MM/YYYY h:mm A
 - name: person_tag
   type: tag_list
   default: []
