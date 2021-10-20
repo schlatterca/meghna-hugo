@@ -161,7 +161,6 @@ function populateWithResults(myResults){
     persona.append(spaceAfter);
 
     if (myResults[0].hasOwnProperty("name")) {
-      console.log("name", myResults[i]);
       for (var j = 0; j < myResults[i].link.length; j++) {
         const quilink = document.createElement("a");
         quilink.id = "quilink";
@@ -171,7 +170,6 @@ function populateWithResults(myResults){
       }
     }
     if (myResults[0].hasOwnProperty("subject")) {
-      console.log("subject", myResults[i]);
       for (var j = 0; j < myResults[i].link_subject.length; j++) {
         const quilink = document.createElement("a");
         quilink.id = "quilink";
@@ -183,11 +181,9 @@ function populateWithResults(myResults){
 
     if (myResults[0].hasOwnProperty("name")) {
       $('#persontags-search-results').append(persona);
-      console.log("name");
     }
     if (myResults[0].hasOwnProperty("subject")) {
       $('#subjecttags-search-results').append(persona);
-      console.log("subject");
     }
     
 
