@@ -260,7 +260,13 @@ function populateWithResults(myResults){
   if(url.includes('#')) {
     var url = url.split('#');
     if (document.getElementById(url[1])){
-      console.log(document.getElementById(url[1]).parentElement);
+      if (document.getElementById(url[1]).parentElement.id == "subjecttags-search-results"){
+        document.getElementById("persontags-search-results").remove('index_sel_active');
+        document.getElementById("persontags-search-results").add('index_sel_inactive');
+        document.getElementById("subjecttags-search-results").remove('index_sel_inactive');
+        document.getElementById("subjecttags-search-results").add('index_sel_active');
+        console.log(document.getElementById(url[1]).parentElement.id);
+      }
       document.getElementById(url[1]).scrollIntoView({ behavior: 'smooth'});
       document.getElementById(url[1]).children[0].style.color = "#B44BEB";
     }
