@@ -43,7 +43,7 @@ fields:
   description: The date this article was published.
   config:
     required: true
-    date_format: DD/MM/YYYY
+    date_format: ''
     time_format: 
     display_utc: false
     export_format: DD-MM-YYYY h:mm A
