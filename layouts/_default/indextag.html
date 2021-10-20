@@ -52,8 +52,10 @@
   } else {
     var persActive = false;
   }
-
+  console.log(persActive);
   function personsActive(){
+    console.log(document.getElementsByClassName('personsButton')[0].classList);
+    console.log(persActive);
     if (persActive == false){
       document.getElementsByClassName('subjectButton')[0].classList.remove('index_sel_box_active');
       document.getElementsByClassName('personsButton')[0].classList.add('index_sel_box_active');
