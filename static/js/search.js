@@ -33,7 +33,7 @@ function executeSearch(searchQuery){
     var pages = data;
     var fuse = new Fuse(pages, fuseOptions);
     var result = fuse.search(searchQuery);
-    console.log({"matches":result});
+    //console.log({"matches":result});
     document.getElementById('searchTitle').appendChild(document.createTextNode(" results for: "));
     let searchedWords = document.createElement('span');
     searchedWords.style.color = "#B44BEB";
