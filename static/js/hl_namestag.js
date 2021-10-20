@@ -126,9 +126,9 @@ function populateWithResults(myResults){
     console.log("1");
   } if(myResults === "sortedNames"){
     console.log("2");
-  } if (myResults.hasOwnProperty(name)) {
+  } if (myResults.hasOwnProperty("name")) {
     console.log("3");
-  } if (myResults[0].hasOwnProperty(name)) {
+  } if (myResults[0].hasOwnProperty("name")) {
     console.log("4");
   }
 
