@@ -137,8 +137,10 @@ function populateWithResults_timeline(myResults){
   var url = window.location.href;
   if(url.includes('#')) {
     var url = url.split('#');
-    document.getElementById(url[1]).scrollIntoView({ behavior: 'smooth'});
-    document.getElementById(url[1]).children[0].style.color = "#B44BEB";
+    if (document.getElementById(url[1])){
+      document.getElementById(url[1]).scrollIntoView({ behavior: 'smooth'});
+      document.getElementById(url[1]).children[0].style.color = "#B44BEB";
+    }
   }
 };
 
