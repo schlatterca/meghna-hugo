@@ -441,9 +441,9 @@ p > img {
   flex: 1;
   display: flex;
   justify-content: center;
-
   align-items: center;
   height: 40px;
+  color: var(--purpleColor);
 }
 
 .index_sel_box:first-child > p { margin-left:auto;margin-right: 20px;cursor:pointer; }
