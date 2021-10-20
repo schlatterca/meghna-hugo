@@ -442,13 +442,24 @@ p > img {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 40px;
+  height: auto;
+	margin-bottom: 1em;
   color: black;
 }
 
 .index_sel_box:first-child > p { margin-left:auto;margin-right: 20px;cursor:pointer; }
 
 .index_sel_box:last-child  > p { margin-right:auto;margin-left: 20px;cursor:pointer; }
+
+.index_sel_active{
+	display: block;
+}
+.index_sel_inactive{
+	display: none;
+}
+.index_sel_box_active{
+	color: var(--purpleColor);
+}
 
 /*INDEX BOXES WITH LINKS*/
 .index_box {
