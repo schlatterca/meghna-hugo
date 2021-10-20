@@ -9,7 +9,7 @@ fields:
 - name: type
   type: text
   config:
-    required: false
+    required: true
   label: Type
   description: This article's type (News or Research). If an article is News, the
     toolbar won't be visible.
@@ -28,12 +28,12 @@ fields:
 - name: title
   type: text
   config:
-    required: false
+    required: true
   label: title
 - name: author
   type: text
   config:
-    required: false
+    required: true
   label: author
   description: Authors of the article. Please remember to also paste the authors'
     names in the "person tag" section below.
