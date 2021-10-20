@@ -16,13 +16,13 @@
     <div class="post-single-content">
       <!--h2 id="main_person_tags">Person tags:</h2-->
       <div class="index_sel_container">
-        <div class="index_sel_box personsButton" onclick="personsActive()"><p>Persons</p></div>
+        <div class="index_sel_box personsButton index_sel_box_active" onclick="personsActive()"><p>Persons</p></div>
         <div class="index_sel_box" style="flex:0;"><p>|</p></div>
         <div class="index_sel_box subjectButton" onclick="subjectsActive()"><p>Subjects</p></div>
       </div>
 
-      <div id="persontags-search-results"></div>
-      <div id="subjecttags-search-results"></div>
+      <div id="persontags-search-results index_sel_active"></div>
+      <div id="subjecttags-search-results index_sel_inactive"></div>
 
       <div id="indexboxspace">
         <div id="indexBackground" style="background-color:rgba(0, 0, 0, 0.5);width:100vw;height:100vh;position:fixed;top:0;left:0;z-index:2;display:none"></div>
@@ -47,12 +47,30 @@
 </script>
 
 <script>
+  var personsActive = true;
+
   function personsActive(){
-    console.log("hello");
+    if (personsActive == false){
+      document.getElementsByClassName('subjectButton')[0].classList.remove('index_sel_box_active');
+      document.getElementsByClassName('personsButton')[0].classList.add('index_sel_box_active');
+      document.getElementById('persontags-search-results').classList.remove('index_sel_inactive');
+      document.getElementById('persontags-search-results').classList.add('index_sel_active');
+      document.getElementById('subjecttags-search-results').classList.remove('index_sel_active');
+      document.getElementById('subjecttags-search-results').classList.add('index_sel_inactive');
+    }
+    personsActive = true;
   }
 
   function subjectsActive(){
-    console.log("ciao");
+    if (personsActive == true){
+      document.getElementsByClassName('personsButton')[0].classList.remove('index_sel_box_active');
+      document.getElementsByClassName('subjectButton')[0].classList.add('index_sel_box_active');
+      document.getElementById('persontags-search-results').classList.remove('index_sel_active');
+      document.getElementById('persontags-search-results').classList.add('index_sel_inactive');
+      document.getElementById('subjecttags-search-results').classList.remove('index_sel_inactive');
+      document.getElementById('subjecttags-search-results').classList.add('index_sel_active');
+    }
+    personsActive = false;   
   }
 </script>
 
