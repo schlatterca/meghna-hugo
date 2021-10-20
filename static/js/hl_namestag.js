@@ -260,6 +260,7 @@ function populateWithResults(myResults){
   if(url.includes('#')) {
     var url = url.split('#');
     if (document.getElementById(url[1])){
+      console.log(document.getElementById(url[1]).parentElement);
       document.getElementById(url[1]).scrollIntoView({ behavior: 'smooth'});
       document.getElementById(url[1]).children[0].style.color = "#B44BEB";
     }
