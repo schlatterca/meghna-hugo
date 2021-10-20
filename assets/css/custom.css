@@ -446,9 +446,9 @@ p > img {
   height: 40px;
 }
 
-.index_sel_box:first-child > p { margin-left: auto;margin-right: 20px; }
+.index_sel_box:first-child > p { margin-left:auto;margin-right: 20px;cursor:pointer; }
 
-.index_sel_box:last-child  > p { margin-right: auto;margin-left: 20px;  }
+.index_sel_box:last-child  > p { margin-right:auto;margin-left: 20px;cursor:pointer; }
 
 /*INDEX BOXES WITH LINKS*/
 .index_box {
