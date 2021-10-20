@@ -5,8 +5,10 @@
     </div>
 
     <div class="content">
+      <h6>{{ .Author }}</a></h6>
       <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
       <p>{{ .Summary }}</p>
+      <h6>{{ .Date }}</a></h6>
       <a class="btn btn-transparent" href="{{ .Permalink }}">{{ i18n "readMore" }}</a>
     </div>
   </div>
