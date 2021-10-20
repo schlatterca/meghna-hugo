@@ -122,6 +122,16 @@ function populateWithResults(myResults){
   console.log(this);
   console.log(myResults);
 
+  if(myResults == "sortedNames"){
+    console.log("1");
+  } if(myResults === "sortedNames"){
+    console.log("3");
+  } if(myResults == sortedNames){
+    console.log("2");
+  } if(myResults === sortedNames){
+    console.log("4");
+  }
+
   var templateDefinition = $('#persontags-result').html();
 
   for (var i = 0; i < myResults.length; i++) {
