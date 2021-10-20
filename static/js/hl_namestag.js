@@ -267,7 +267,6 @@ function populateWithResults(myResults){
         document.getElementById("persontags-search-results").classList.add('index_sel_inactive');
         document.getElementById("subjecttags-search-results").classList.remove('index_sel_inactive');
         document.getElementById("subjecttags-search-results").classList.add('index_sel_active');
-        var persActive = false;
       }
       document.getElementById(url[1]).scrollIntoView({ behavior: 'smooth'});
       document.getElementById(url[1]).children[0].style.color = "#B44BEB";
