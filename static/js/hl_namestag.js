@@ -70,7 +70,7 @@ function persontags(data){
       if (result.hasOwnProperty("subjectstags")) { //and if the key "personags" exists…
         for (let i = 0; i < result.subjectstags.length; i++) { //for each result in "persontags"…
 
-          var SubjectName = result.persontags[i];
+          var SubjectName = result.subjectstags[i];
           
           //exceptions in the name (unusable characters)
           if (SubjectName.includes('ç')){
