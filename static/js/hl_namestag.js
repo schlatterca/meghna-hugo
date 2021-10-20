@@ -20,6 +20,9 @@ function clean(array) {
 var allNames = [];
 var allLinks= [];
 var allTitles= [];
+var allSubjects = [];
+var allLinks_subject= [];
+var allTitles_subject= [];
 
 function persontags(data){
   json = data; //fetch my json
@@ -28,6 +31,7 @@ function persontags(data){
       var dirtyArray = json[key]; //create an array of those results…
       var result = clean(dirtyArray); //and clean it.
 
+      //for the persons
       if (result.hasOwnProperty("persontags")) { //and if the key "personags" exists…
         for (let i = 0; i < result.persontags.length; i++) { //for each result in "persontags"…
 
@@ -61,11 +65,31 @@ function persontags(data){
           allTitles.push(result.title);
         }
       }
+
+      //now for the subjects
+      if (result.hasOwnProperty("subjectstags")) { //and if the key "personags" exists…
+        for (let i = 0; i < result.subjectstags.length; i++) { //for each result in "persontags"…
+
+          var SubjectName = result.persontags[i];
+          
+          //exceptions in the name (unusable characters)
+          if (SubjectName.includes('ç')){
+            SubjectName = SubjectName.replace('ç', 'c');
+          }
+
+          allSubjects.push(SubjectName);
+          allLinks_subject.push(result.permalink);
+          allTitles_subject.push(result.title);
+        }
+      }
     }
   }
 
   const sortedNames = allNames.map((key, ind) => ({ 'name': key, 'link': [allLinks[ind]], 'title': [allTitles[ind]]}));
   sortedNames.sort((a, b) => (a.name > b.name) ? 1 : -1);
+
+  const sortedSubjects = allSubjects.map((key, ind) => ({ 'subject': key, 'link_subject': [allLinks_subject[ind]], 'title_subject': [allTitles_subject[ind]]}));
+  sortedSubjects.sort((a, b) => (a.subject > b.subject) ? 1 : -1);
 
   //adjust, remove duplicates
   for (var i = 0; i < sortedNames.length; i++) {
@@ -77,7 +101,17 @@ function persontags(data){
     }
   }
 
+  for (var i = 0; i < sortedSubjects.length; i++) {
+    if ((i != 0)&&(sortedSubjects[i].subject == sortedSubjects[i-1].subject)){
+      sortedSubjects[i-1].link_subject.push(sortedSubjects[i].link_subject[0]);
+      sortedSubjects[i-1].title_subject.push(sortedSubjects[i].title_subject[0]);
+      sortedSubjects.splice(i, 1);
+      i = i-1;
+    }
+  }
+
   populateWithResults(sortedNames);
+  populateWithResults(sortedSubjects);
   makeItInteractive();
   return false;
 }
@@ -122,7 +156,15 @@ function populateWithResults(myResults){
       //persona.append(quilink);
     }    
 
-    $('#persontags-search-results').append(persona);
+    console.(this);
+    if (this == "sortedNames"){
+      $('#persontags-search-results').append(persona);
+      console.log("name");
+    } if (this == "sortedSubjects"){
+      $('#subjecttags-search-results').append(persona);
+      console.log("subject");
+    }
+    
 
     //make a box for each result
     const indexBox = document.createElement("div");
