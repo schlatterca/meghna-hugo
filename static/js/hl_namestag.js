@@ -119,6 +119,9 @@ function persontags(data){
 
 
 function populateWithResults(myResults){
+  console.log(this);
+  console.log(myResults);
+
   var templateDefinition = $('#persontags-result').html();
 
   for (var i = 0; i < myResults.length; i++) {
@@ -179,7 +182,6 @@ function populateWithResults(myResults){
       }
     }
 
-    console.log(this);
     if (this == "sortedNames"){
       $('#persontags-search-results').append(persona);
       console.log("name");
