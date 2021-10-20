@@ -153,7 +153,7 @@ function populateWithResults(myResults){
     if (myResults[0].hasOwnProperty("name")) {
       quinome.innerHTML = myResults[i].name;
     }
-    if (myResults[0].hasOwnProperty("title")) {
+    if (myResults[0].hasOwnProperty("subject")) {
       quinome.innerHTML = myResults[i].subject;
     }
     persona.append(quinome);
@@ -170,7 +170,7 @@ function populateWithResults(myResults){
         quilink.innerHTML = myResults[i].title[j]+"<br>";
       }
     }
-    if (myResults[0].hasOwnProperty("title")) {
+    if (myResults[0].hasOwnProperty("subject")) {
       console.log("subject", myResults[i]);
       for (var j = 0; j < myResults[i].link_subject.length; j++) {
         const quilink = document.createElement("a");
@@ -185,7 +185,7 @@ function populateWithResults(myResults){
       $('#persontags-search-results').append(persona);
       console.log("name");
     }
-    if (myResults[0].hasOwnProperty("title")) {
+    if (myResults[0].hasOwnProperty("subject")) {
       $('#subjecttags-search-results').append(persona);
       console.log("subject");
     }
@@ -225,7 +225,7 @@ function populateWithResults(myResults){
     if (myResults[0].hasOwnProperty("name")) {
       indexBoxName.innerHTML = myResults[i].name;
     }
-    if (myResults[0].hasOwnProperty("title")) {
+    if (myResults[0].hasOwnProperty("subject")) {
       indexBoxName.innerHTML = myResults[i].subject;
     }
     closeIndexBox.innerHTML = "+";
@@ -239,7 +239,7 @@ function populateWithResults(myResults){
         indexBoxText.append(quilink);
       }
     }
-    if (myResults[0].hasOwnProperty("title")) {
+    if (myResults[0].hasOwnProperty("subject")) {
       for (var j = 0; j < myResults[i].link_subject.length; j++) {
         const quilink = document.createElement("a");
         quilink.id = "quilink";
