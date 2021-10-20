@@ -74,7 +74,7 @@ function populateWithResults_map(myResults){
     const quinome = document.createElement("span");
     const spaceAfter = document.createElement("span");
 
-    persona.id = myResults[i].name;
+    persona.id = myResults[i].name.replaceAll(" ", "%20");
 
     persona.setAttribute("style", "margin-top: 10px; line-height: 0.6em; cursor: pointer; display: inline-block;");
     quinome.id = "quinome";
