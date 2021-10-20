@@ -8,7 +8,7 @@
       <h6 style="margin-bottom:0.5rem; max-width: 100%; text-align: center;">{{ .Params.author }}</a></h6>
       <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
       <p>{{ .Summary }}</p>
-      <h6 style="max-width: 100%;">{{ .PublishDate }}</a></h6>
+      <h6 style="max-width: 100%;">{{ .PublishDate.Format "January 2, 2006" }}</a></h6>
       <a class="btn btn-transparent" href="{{ .Permalink }}">{{ i18n "readMore" }}</a>
     </div>
   </div>
