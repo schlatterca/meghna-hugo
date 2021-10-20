@@ -47,12 +47,10 @@
 </script>
 
 <script>
-  var personsActive = true;
+  var persActive = true;
 
   function personsActive(){
-    console.log(personsActive);
-    if (personsActive == false){
-      console.log("1");
+    if (persActive == false){
       document.getElementsByClassName('subjectButton')[0].classList.remove('index_sel_box_active');
       document.getElementsByClassName('personsButton')[0].classList.add('index_sel_box_active');
       document.getElementById('persontags-search-results').classList.remove('index_sel_inactive');
@@ -60,13 +58,11 @@
       document.getElementById('subjecttags-search-results').classList.remove('index_sel_active');
       document.getElementById('subjecttags-search-results').classList.add('index_sel_inactive');
     }
-    personsActive = true;
+    persActive = true;
   }
 
   function subjectsActive(){
-    console.log(personsActive);
-    if (personsActive == true){
-      console.log("2");
+    if (persActive == true){
       document.getElementsByClassName('personsButton')[0].classList.remove('index_sel_box_active');
       document.getElementsByClassName('subjectButton')[0].classList.add('index_sel_box_active');
       document.getElementById('persontags-search-results').classList.remove('index_sel_active');
@@ -74,7 +70,7 @@
       document.getElementById('subjecttags-search-results').classList.remove('index_sel_inactive');
       document.getElementById('subjecttags-search-results').classList.add('index_sel_active');
     }
-    personsActive = false;   
+    persActive = false;   
   }
 </script>
 
