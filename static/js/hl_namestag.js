@@ -119,20 +119,6 @@ function persontags(data){
 
 
 function populateWithResults(myResults){
-  console.log(this);
-  console.log(myResults[0]);
-
-  if(myResults == "sortedNames"){
-    console.log("1");
-  } if(myResults === "sortedNames"){
-    console.log("2");
-  } if (myResults.hasOwnProperty("name")) {
-    console.log("3");
-  } if (myResults[0].hasOwnProperty("name")) {
-    console.log("4");
-  }
-
-
   var templateDefinition = $('#persontags-result').html();
 
   for (var i = 0; i < myResults.length; i++) {
@@ -141,7 +127,7 @@ function populateWithResults(myResults){
     const quinome = document.createElement("span");
     const spaceAfter = document.createElement("span");
 
-    if (this == "sortedNames"){
+    if (myResults[0].hasOwnProperty("name")) {
       if (myResults[i].name.includes(" ")){
         var nameForID = myResults[i].name.replaceAll(" ", "%20");
         persona.id = nameForID;
@@ -150,7 +136,7 @@ function populateWithResults(myResults){
       }
     }
 
-    if (this == "sortedSubjects"){
+    if (myResults[0].hasOwnProperty("subject")) {
       if (myResults[i].subject.includes(" ")){
         var nameForID = myResults[i].subject.replaceAll(" ", "%20");
         persona.id = nameForID;
@@ -164,17 +150,17 @@ function populateWithResults(myResults){
     quinome.id = "quinome";
     quinome.setAttribute("style", "font-size: 20px; color: black; margin-bottom: 0px; margin-top: 20px;");
 
-    if (this == "sortedNames"){
+    if (myResults[0].hasOwnProperty("name")) {
       quinome.innerHTML = myResults[i].name;
     }
-    if (this == "sortedSubjects"){
+    if (myResults[0].hasOwnProperty("title")) {
       quinome.innerHTML = myResults[i].subject;
     }
     persona.append(quinome);
     spaceAfter.innerHTML = "&nbsp;";
     persona.append(spaceAfter);
 
-    if (this == "sortedNames"){
+    if (myResults[0].hasOwnProperty("name")) {
       for (var j = 0; j < myResults[i].link.length; j++) {
         const quilink = document.createElement("a");
         quilink.id = "quilink";
@@ -183,7 +169,7 @@ function populateWithResults(myResults){
         quilink.innerHTML = myResults[i].title[j]+"<br>";
       }
     }
-    if (this == "sortedSubjects"){
+    if (myResults[0].hasOwnProperty("title")) {
       for (var j = 0; j < myResults[i].link_subject.length; j++) {
         const quilink = document.createElement("a");
         quilink.id = "quilink";
@@ -193,10 +179,11 @@ function populateWithResults(myResults){
       }
     }
 
-    if (this == "sortedNames"){
+    if (myResults[0].hasOwnProperty("name")) {
       $('#persontags-search-results').append(persona);
       console.log("name");
-    } if (this == "sortedSubjects"){
+    }
+    if (myResults[0].hasOwnProperty("title")) {
       $('#subjecttags-search-results').append(persona);
       console.log("subject");
     }
@@ -205,7 +192,7 @@ function populateWithResults(myResults){
     //make a box for each result
     const indexBox = document.createElement("div");
 
-    if (this == "sortedNames"){
+    if (myResults[0].hasOwnProperty("name")) {
       if (myResults[i].name.includes(" ")){
         var nameForID = myResults[i].name.replaceAll(" ", "-");
         indexBox.id = nameForID;
@@ -213,7 +200,7 @@ function populateWithResults(myResults){
         indexBox.id = myResults[i].name;
       }
     }
-    if (this == "sortedSubjects"){
+    if (myResults[0].hasOwnProperty("subject")) {
       if (myResults[i].subject.includes(" ")){
         var nameForID = myResults[i].subject.replaceAll(" ", "-");
         indexBox.id = nameForID;
@@ -233,15 +220,15 @@ function populateWithResults(myResults){
     const closeIndexBox = document.createElement("div");
     closeIndexBox.setAttribute('class', 'close_index_box');
 
-    if (this == "sortedNames"){
+    if (myResults[0].hasOwnProperty("name")) {
       indexBoxName.innerHTML = myResults[i].name;
     }
-    if (this == "sortedSubjects"){
+    if (myResults[0].hasOwnProperty("title")) {
       indexBoxName.innerHTML = myResults[i].subject;
     }
     closeIndexBox.innerHTML = "+";
 
-    if (this == "sortedNames"){
+    if (myResults[0].hasOwnProperty("name")) {
       for (var j = 0; j < myResults[i].link.length; j++) {
         const quilink = document.createElement("a");
         quilink.id = "quilink";
@@ -250,7 +237,7 @@ function populateWithResults(myResults){
         indexBoxText.append(quilink);
       }
     }
-    if (this == "sortedSubjects"){
+    if (myResults[0].hasOwnProperty("title")) {
       for (var j = 0; j < myResults[i].link_subject.length; j++) {
         const quilink = document.createElement("a");
         quilink.id = "quilink";
