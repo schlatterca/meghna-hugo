@@ -37,6 +37,15 @@ fields:
   label: author
   description: Authors of the article. Please remember to also paste the authors'
     names in the "person tag" section below.
+- name: PublishDate
+  type: datetime
+  label: Publish date
+  description: The date this article was published.
+  config:
+    required: false
+    date_format: 
+    time_format: 
+    display_utc: false
 - name: person_tag
   type: tag_list
   default: []
