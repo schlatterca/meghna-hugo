@@ -443,19 +443,12 @@ p > img {
   justify-content: center;
 
   align-items: center;
-  border: 1px solid #ccc;
-  background-color: lightgreen;
   height: 40px;
 }
 
-.index_sel_p {
-  text-align: center;
-  margin: 5px 0 0 0;
-}
+.index_sel_box:first-child > p { margin-left: auto;margin-right: 20px; }
 
-.index_sel_box:first-child > span { margin-right: auto; }
-
-.index_sel_box:last-child  > span { margin-left: auto;  }
+.index_sel_box:last-child  > p { margin-right: auto;margin-left: 20px;  }
 
 /*INDEX BOXES WITH LINKS*/
 .index_box {
