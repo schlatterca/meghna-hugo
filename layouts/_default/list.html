@@ -28,30 +28,4 @@
 </section>
 {{"<!-- /blog -->" | safeHTML}}
 
-<script>
-
-  function research_section() {
-    var thisUrl = window.location.href;
-    if(thisUrl.includes('#')) {
-      var thisUrl = thisUrl.split('#');
-      console.log(thisUrl[1]);
-    }
-    if(thisUrl[1] == "organology") {
-      console.log("ok");
-    }
-  }
-
-  window.addEventListener('load', function () {
-    var subcategory = param("sub");
-    if(subcategory){
-      console.log(subcategory);
-      //$("#search-query").val(subcategory);
-    }else {
-      console.log("no");
-      //$('#search-results').append("<p>Please enter a word or phrase above</p>");
-    }
-  })
-  
-</script>
-
 {{ end }}
