@@ -9,10 +9,14 @@
       <div class="col-12">
         {{"<!-- section title -->" | safeHTML}}
         <div class="title text-center wow fadeInDown">
+          <h1>{{ .Title }}</h1>
           <div class="border-meghna"></div>
         </div>
       </div>
+      
+      
       <div class="col-12">
+        {{ template "_internal/pagination.html" . }}
       </div>
     </div>
   </div>
