@@ -72,7 +72,7 @@ function populateWithResults_timeline(myResults){
 
     const persona = document.createElement("span");
     const quinome = document.createElement("span");
-    //const spaceAfter = document.createElement("span");
+    const spaceAfter = document.createElement("span");
 
     persona.id = myResults[i].name.replaceAll(" ", "%20");
 
@@ -80,10 +80,10 @@ function populateWithResults_timeline(myResults){
     quinome.id = "quinome";
     quinome.setAttribute("style", "font-size: 20px; color: black; margin-bottom: 0px; margin-top: 20px;");
 
-    quinome.innerHTML = myResults[i].name+" ";
+    //quinome.innerHTML = myResults[i].name+" ";
     persona.append(quinome);
-    //spaceAfter.innerHTML = "&nbsp;";
-    //persona.append(spaceAfter);
+    spaceAfter.innerHTML = "&nbsp;";
+    persona.append(spaceAfter);
 
     for (var j = 0; j < myResults[i].link.length; j++) {
       const quilink = document.createElement("a");
