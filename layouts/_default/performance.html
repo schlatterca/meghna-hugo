@@ -1,0 +1,32 @@
+{{ define "main" }}
+
+{{ partial "navigation.html" . }}
+
+{{"<!-- Start Blog Section -->" | safeHTML}}
+<section id="blog" class="section">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        {{"<!-- section title -->" | safeHTML}}
+        <div class="title text-center wow fadeInDown">
+          <h1>{{ .Title }}</h1>
+          <div class="border-meghna"></div>
+        </div>
+      </div>
+      {{"<!-- /section title -->" | safeHTML}}
+
+      {{ $research := .Site.GetPage "/research" }}
+      {{ range $research.Data.Pages }}
+        {{ if in .Params.subtype "Performance Practice" }}
+        {{ .Render "article" }}
+        {{ end }}
+      {{ end }}
+      
+      <div class="col-12">
+      </div>
+    </div>
+  </div>
+</section>
+{{"<!-- /blog -->" | safeHTML}}
+
+{{ end }}
