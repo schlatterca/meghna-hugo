@@ -17,7 +17,9 @@
 
       {{ $paginator := .Paginate .Data.Pages }}
       {{ range $paginator.Pages }}
-      {{ .Render "article" }}
+        {{ if or (ne .Title "Organology") (ne .Title "Performace Practice") (ne .Title "Musicology") (ne .Title "HL Editions") (ne .Title "Iconography") (ne .Title "Sociology Of Art") }}
+        {{ .Render "article" }}
+        {{ end }}
       {{ end }}
       
       <div class="col-12">
