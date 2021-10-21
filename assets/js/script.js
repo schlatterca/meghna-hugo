@@ -233,8 +233,9 @@ if ( authorsNameExists ) {
 
 	  author = author.replaceAll("-", " ");
 
-	  var name = document.createElement('a');
-		var nameText = document.createTextNode(authors_without_by);
+	  let name = document.createElement('a');
+		let nameText = document.createTextNode(authors_without_by);
+		console.log(name);
 		name.setAttribute('href', '..\/..\/indextag#'+author);
 		name.appendChild(nameText);
 		document.getElementById('this_article_author').innerHTML="";
