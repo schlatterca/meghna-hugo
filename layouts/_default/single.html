@@ -249,7 +249,7 @@
       var search = this;
 
       let tagspers_span = document.createElement('span');
-      let tagspers_text = document.createTextNode({{ .Params.person_tag }}[tagspers_count]);
+      let tagspers_text = document.createTextNode({{ .Params.person_tag }}[tagspers_count].replaceAll("-", " "));
       let tagspers_span_space = document.createElement('span');
       let tagspers_text_space = document.createTextNode(' ');
       tagspers_span.setAttribute('class', 'footer_insidetext');
