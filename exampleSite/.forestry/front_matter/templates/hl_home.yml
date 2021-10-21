@@ -35,8 +35,9 @@ fields:
   config:
     required: true
   label: author
-  description: Authors of the article. Please remember to also paste the authors'
-    names in the "person tag" section below.
+  description: Authors of the article. In case of double name or surname, use an hyphen
+    (i.e. Name-Name Surname-Surname). Please remember to also <strong>paste the authors'
+    names in the "person tag" section</strong> below.
 - name: PublishDate
   type: datetime
   label: Publish date
