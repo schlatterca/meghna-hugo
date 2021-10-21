@@ -51,8 +51,9 @@ fields:
   type: tag_list
   default: []
   label: Person Tag
-  description: 'Person quoted in the article, separated by a comma (for indexing purpose,
-    please follow this example: Name Surname or Name Name Surname).'
+  description: 'Person quoted in the article, separated by a comma. Use an <strong>hyphen</strong>
+    ( - ) between two or more names or surnames. Please follow this example: Name
+    Surname or Name-Name Surname-Surname (i.e. Ludwig van-Beethoven).'
 - name: subjects_tag
   type: tag_list
   default: []
