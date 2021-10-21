@@ -14,18 +14,6 @@
         </div>
       </div>
       {{"<!-- /section title -->" | safeHTML}}
-
-      {{ $research := .Site.GetPage "/news" }}
-      {{ range $research.Data.Pages }}
-        {{/* .Title }}
-        {{ .Type }}
-        {{ .Params.show_in_news }}
-        {{ . */}}
-
-        {{ if .Params.show_in_news }}
-        {{ .Render "article_onepage" }}
-        {{ end }}
-      {{ end }}
       
       <div class="col-12">
         {{ template "_internal/pagination.html" . }}
