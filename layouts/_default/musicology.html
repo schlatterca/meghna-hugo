@@ -17,6 +17,7 @@
 
       {{ $research := .Site.GetPage "/research" }}
       {{ range $research.Data.Pages }}
+        <h6>{{ .Params.subtype }}</h6>
         {{ if eq .Params.subtype "Musicology" }}
         {{ .Render "article" }}
         {{ end }}
