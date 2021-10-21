@@ -20,7 +20,7 @@
         {{/* if or (ne .Title "Organology") (ne .Title "Performace Practice") (ne .Title "Musicology") (ne .Title "HL Editions") (ne .Title "Iconography") (ne .Title "Sociology Of Art") */}}
         {{/* if ne .Title "Musicology" */}}
         {{/* if ne .Title (slice "Organology" "Performace Practice" "Musicology" "HL Editions" "Iconography" "Sociology Of Art") */}}
-        {{ if or (ne .Title "Musicology") (.Title "Organology") (.Title "Performace Practice") (.Title "HL Editions") (.Title "Iconography") (.Title "Sociology Of Art") }}
+        {{ if .Title or (not "Musicology") (not "Organology") (not "Performace Practice") (not "HL Editions") (not "Iconography") (not "Sociology Of Art") }}
         
         
 
