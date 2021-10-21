@@ -25,31 +25,31 @@ weight = 1
   [[Languages.en.menu.main]]
   identifier = "performance practice"
   name = "performance practice"
-  url = ""
+  url = "/research/performance"
   parent = "research"
   weight = "2"
   [[Languages.en.menu.main]]
   identifier = "musicology"
   name = "musicology"
-  url = "/research/?sub=musicology"
+  url = "/research/musicology"
   parent = "research"
   weight = "3"
   [[Languages.en.menu.main]]
   identifier = "HL editions"
   name = "HL editions"
-  url = ""
+  url = "/research/HLeditions"
   parent = "research"
   weight = "4"
   [[Languages.en.menu.main]]
   identifier = "iconography"
   name = "iconography"
-  url = ""
+  url = "/research/iconography"
   parent = "research"
   weight = "5"
   [[Languages.en.menu.main]]
   identifier = "sociology of art"
   name = "sociology of art"
-  url = ""
+  url = "/research/sociology"
   parent = "research"
   weight = "6"
   [[Languages.en.menu.main]]
