@@ -9,37 +9,17 @@
       <div class="col-12">
         {{"<!-- section title -->" | safeHTML}}
         <div class="title text-center wow fadeInDown">
-          <h2>{{ .Title }}</h2>
+          <h1>{{ .Title }}</h1>
           <div class="border-meghna"></div>
         </div>
       </div>
       {{"<!-- /section title -->" | safeHTML}}
 
-      <h6>{{/* .URL */}}</h6>
-      <h6>{{/* .RelPermalink */}}</h6>
-      <h6>{{/* .Permalink */}}</h6>
-      <h6>{{/* .Page.Permalink */}}</h6>
-      
-
       {{ $paginator := .Paginate .Data.Pages }}
       {{ range $paginator.Pages }}
-
-
-      {{ if eq .Type "Research" }}
-      <h6>{{/* .Type */}}</h6>
-      <h6>{{/* .Params.subtype */}}</h6>
-      <h6>{{/* .URL */}}</h6>
-
-        {{ range .Pages }}
-        <h6>{{/* .Params.subtype */}}</h6>
-        {{ end }}
-
-
-      {{ end }}
-
-
       {{ .Render "article" }}
       {{ end }}
+      
       <div class="col-12">
         {{ template "_internal/pagination.html" . }}
       </div>
@@ -48,7 +28,7 @@
 </section>
 {{"<!-- /blog -->" | safeHTML}}
 
-<!--script>
+<script>
 
   function research_section() {
     var thisUrl = window.location.href;
@@ -60,7 +40,18 @@
       console.log("ok");
     }
   }
+
+  window.addEventListener('load', function () {
+    var subcategory = param("sub");
+    if(subcategory){
+      console.log(subcategory);
+      //$("#search-query").val(subcategory);
+    }else {
+      console.log("no");
+      //$('#search-results').append("<p>Please enter a word or phrase above</p>");
+    }
+  })
   
-</script-->
+</script>
 
 {{ end }}
