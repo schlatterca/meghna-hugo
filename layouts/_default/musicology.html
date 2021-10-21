@@ -15,9 +15,11 @@
       </div>
       {{"<!-- /section title -->" | safeHTML}}
 
-      {{ $paginator := .Paginate .Data.Pages }}
-      {{ range $paginator.Pages }}
-      {{ .Render "article" }}
+      {{ $research := .Site.GetPage "/research" }}
+      {{ range $research.Data.Pages }}
+        {{ if eq .Param.subtype "Musicology" }}
+        {{ .Render "article" }}
+        {{ end }}
       {{ end }}
       
       <div class="col-12">
