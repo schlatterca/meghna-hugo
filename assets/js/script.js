@@ -224,21 +224,21 @@ if ( authorsNameExists ) {
 	    data[j] = data[j].charAt(0).toUpperCase() + data[j].slice(1);
 	  }
 	  if (data.length == 4) { //rearrange
-	    var author_0 = data[3] + ' ' + data[0] + ' ' + data[1] + ' ' + data[2];
+	    var author = data[3] + ' ' + data[0] + ' ' + data[1] + ' ' + data[2];
 	  } if (data.length == 3) {
-	    var author_0 = data[2] + ' ' + data[0] + ' ' + data[1];
+	    var author = data[2] + ' ' + data[0] + ' ' + data[1];
 	  } if (data.length == 2) {
-	    var author_0 = data[1] + ' ' + data[0];
+	    var author = data[1] + ' ' + data[0];
 	  }
 
-	  author_0 = author.replaceAll("-", " ");
+	  author = author.replaceAll("-", " ");
 
-	  var name_0 = document.createElement('a');
-		var name_0Text = document.createTextNode(authors_without_by);
-		name_0.setAttribute('href', '..\/..\/indextag#'+author_0);
-		name_0.appendChild(name_0Text);
+	  var name = document.createElement('a');
+		var nameText = document.createTextNode(authors_without_by);
+		name.setAttribute('href', '..\/..\/indextag#'+author);
+		name.appendChild(nameText);
 		document.getElementById('this_article_author').innerHTML="";
-		document.getElementById('this_article_author').append("by ", name_0);
+		document.getElementById('this_article_author').append("by ", name);
 	}
 }
 
