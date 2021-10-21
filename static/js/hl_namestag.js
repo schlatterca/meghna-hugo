@@ -45,22 +45,24 @@ function persontags(data){
             }
 
             if (data.length == 4) { //rearrange
-              var SurnameName = data[3] + ' ' + data[0] + ' ' + data[1] + ' ' + data[2];
+              var surnameName = data[3] + ' ' + data[0] + ' ' + data[1] + ' ' + data[2];
             } if (data.length == 3) {
-              var SurnameName = data[2] + ' ' + data[0] + ' ' + data[1];
+              var surnameName = data[2] + ' ' + data[0] + ' ' + data[1];
             } if (data.length == 2) {
-              var SurnameName = data[1] + ' ' + data[0];
+              var surnameName = data[1] + ' ' + data[0];
             }
 
           } else {
-            var SurnameName = result.persontags[i];
+            var surnameName = result.persontags[i];
           }
           //exceptions in the name (unusable characters)
-          if (SurnameName.includes('ç')){
-            SurnameName = SurnameName.replace('ç', 'c');
+          surnameName = surnameName.replaceAll("-", " ");
+
+          if (surnameName.includes('ç')){
+            surnameName = surnameName.replace('ç', 'c');
           }
 
-          allNames.push(SurnameName);
+          allNames.push(surnameName);
           allLinks.push(result.permalink);
           allTitles.push(result.title);
         }
@@ -70,14 +72,14 @@ function persontags(data){
       if (result.hasOwnProperty("subjectstags")) { //and if the key "personags" exists…
         for (let i = 0; i < result.subjectstags.length; i++) { //for each result in "persontags"…
 
-          var SubjectName = result.subjectstags[i];
+          var subjectName = result.subjectstags[i];
           
           //exceptions in the name (unusable characters)
-          if (SubjectName.includes('ç')){
-            SubjectName = SubjectName.replace('ç', 'c');
+          if (subjectName.includes('ç')){
+            subjectName = subjectName.replace('ç', 'c');
           }
 
-          allSubjects.push(SubjectName);
+          allSubjects.push(subjectName);
           allLinks_subject.push(result.permalink);
           allTitles_subject.push(result.title);
         }
