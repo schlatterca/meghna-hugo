@@ -207,7 +207,7 @@ if ( authorsNameExists ) {
 	    author = author.replaceAll("-", " ");
 
 			let name = document.createElement('a');
-			let nameText = document.createTextNode(single_authors[i]);
+			let nameText = document.createTextNode(single_authors[i].replaceAll("-", " "));
 			name.setAttribute('href', '..\/..\/indextag#'+author);
 			if (i>0) {
 				this_article_author.append(', ');
@@ -234,8 +234,7 @@ if ( authorsNameExists ) {
 	  author = author.replaceAll("-", " ");
 
 	  let name = document.createElement('a');
-		let nameText = document.createTextNode(authors_without_by);
-		console.log(name);
+		let nameText = document.createTextNode(authors_without_by.replaceAll("-", " "));
 		name.setAttribute('href', '..\/..\/indextag#'+author);
 		name.appendChild(nameText);
 		document.getElementById('this_article_author').innerHTML="";
